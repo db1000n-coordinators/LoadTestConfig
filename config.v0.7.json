@@ -913,6 +913,38 @@
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
+    },
+    {
+      "type": "http",
+      "count": 10,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://www.cse-rus.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.129.100.112:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 10,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://www.cse-rus.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.129.100.112:443",
+            "is_tls": true
+          }
+        }
+      }
     }
   ]
 }
