@@ -1,393 +1,564 @@
 {
   "jobs": [{
       "type": "http",
-      "count": 32,
+      "count": 18,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://express.dhl.ru"
+          "path": "http://fss.gov.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "185.165.123.50:443",
-            "is_tls": true
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 32,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://express.dhl.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "217.73.60.2:443",
-            "is_tls": true
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 32,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://ponyexpress.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.10.63.194:443",
-            "is_tls": true
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 32,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://ponyexpress.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.10.63.194:80",
+            "addr": "193.148.44.189:80",
             "is_tls": false
           }
         }
       }
     }, {
       "type": "http",
-      "count": 32,
+      "count": 18,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://ponyexpress.ru"
+          "path": "https://fss.gov.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "82.146.44.236:443",
+            "addr": "193.148.44.189:443",
             "is_tls": true
           }
         }
       }
     }, {
       "type": "http",
-      "count": 32,
+      "count": 18,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://ponyexpress.ru"
+          "path": "http://fss.ru"
         },
         "client": {
           "static_host": {
-            "addr": "82.146.44.236:80",
+            "addr": "193.148.44.189:80",
             "is_tls": false
           }
         }
       }
     }, {
       "type": "http",
-      "count": 32,
+      "count": 18,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://ponyexpress.ru"
+          "path": "https://fss.ru"
         },
         "client": {
           "static_host": {
-            "addr": "95.163.180.40:443",
+            "addr": "193.148.44.189:443",
             "is_tls": true
           }
         }
       }
     }, {
       "type": "http",
-      "count": 32,
+      "count": 18,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://ponyexpress.ru"
+          "path": "http://forum.fss.ru"
         },
         "client": {
           "static_host": {
-            "addr": "95.163.180.40:80",
+            "addr": "193.148.44.189:80",
             "is_tls": false
           }
         }
       }
     }, {
       "type": "http",
-      "count": 32,
+      "count": 18,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://ponyexpress.ru"
+          "path": "https://forum.fss.ru"
         },
         "client": {
           "static_host": {
-            "addr": "185.10.63.192:443",
+            "addr": "193.148.44.189:443",
             "is_tls": true
           }
         }
       }
     }, {
       "type": "http",
-      "count": 32,
+      "count": 18,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://ponyexpress.ru"
+          "path": "http://wiki.fss.ru"
         },
         "client": {
           "static_host": {
-            "addr": "185.10.63.192:80",
+            "addr": "193.148.44.189:80",
             "is_tls": false
           }
         }
       }
     }, {
       "type": "http",
-      "count": 32,
+      "count": 18,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://dostavista.ru"
+          "path": "https://wiki.fss.ru"
         },
         "client": {
           "static_host": {
-            "addr": "185.71.67.112:443",
+            "addr": "193.148.44.189:443",
             "is_tls": true
           }
         }
       }
     }, {
       "type": "http",
-      "count": 32,
+      "count": 18,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://dostavista.ru"
+          "path": "http://www.fss.ru"
         },
         "client": {
           "static_host": {
-            "addr": "185.71.67.112:80",
+            "addr": "193.148.44.189:80",
             "is_tls": false
           }
         }
       }
     }, {
       "type": "http",
-      "count": 32,
+      "count": 18,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://dostavista.ru"
+          "path": "https://www.fss.ru"
         },
         "client": {
           "static_host": {
-            "addr": "185.215.4.10:443",
+            "addr": "193.148.44.189:443",
+            "is_tls": true
+          }
+        }
+      }
+    }, {
+      "type": "tcp",
+      "count": 18,
+      "args": {
+        "address": "193.148.44.179:53",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "udp",
+      "filter": "{{ (.Value (ctx_key \"global\")).EnablePrimitiveJobs }}",
+      "count": 18,
+      "args": {
+        "address": "193.148.44.179:53",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1000
+      }
+    }, {
+      "type": "tcp",
+      "count": 18,
+      "args": {
+        "address": "193.148.44.179:25",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "http",
+      "count": 18,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://autodiscover.fss.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.148.44.179:443",
+            "is_tls": true
+          }
+        }
+      }
+    }, {
+      "type": "tcp",
+      "count": 18,
+      "args": {
+        "address": "193.148.44.179:25",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 18,
+      "args": {
+        "address": "193.148.44.179:53",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "udp",
+      "filter": "{{ (.Value (ctx_key \"global\")).EnablePrimitiveJobs }}",
+      "count": 18,
+      "args": {
+        "address": "193.148.44.179:53",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1000
+      }
+    }, {
+      "type": "tcp",
+      "count": 18,
+      "args": {
+        "address": "193.148.44.180:25",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 18,
+      "args": {
+        "address": "193.148.44.180:53",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "udp",
+      "filter": "{{ (.Value (ctx_key \"global\")).EnablePrimitiveJobs }}",
+      "count": 18,
+      "args": {
+        "address": "193.148.44.180:53",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1000
+      }
+    }, {
+      "type": "http",
+      "count": 18,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://portal.fss.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.148.44.186:80",
+            "is_tls": false
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 18,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://portal.fss.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.148.44.186:443",
             "is_tls": true
           }
         }
       }
     }, {
       "type": "http",
-      "count": 32,
+      "count": 18,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://dostavista.ru"
+          "path": "http://data.fss.ru"
         },
         "client": {
           "static_host": {
-            "addr": "185.215.4.10:80",
+            "addr": "193.148.44.186:80",
             "is_tls": false
           }
         }
       }
     }, {
       "type": "http",
-      "count": 32,
+      "count": 18,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://delivery-club.ru"
+          "path": "https://data.fss.ru"
         },
         "client": {
           "static_host": {
-            "addr": "5.61.236.230:443",
+            "addr": "193.148.44.186:443",
             "is_tls": true
           }
         }
       }
     }, {
       "type": "http",
-      "count": 32,
+      "count": 18,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://delivery-club.ru"
+          "path": "http://docs.fss.ru"
         },
         "client": {
           "static_host": {
-            "addr": "5.61.236.230:80",
+            "addr": "193.148.44.187:80",
             "is_tls": false
           }
         }
       }
     }, {
       "type": "http",
-      "count": 32,
+      "count": 18,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://delivery-club.ru"
+          "path": "https://docs.fss.ru"
         },
         "client": {
           "static_host": {
-            "addr": "128.140.175.200:443",
+            "addr": "193.148.44.187:443",
             "is_tls": true
           }
         }
       }
     }, {
       "type": "http",
-      "count": 32,
+      "count": 18,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://delivery-club.ru"
+          "path": "http://beta.fss.ru"
         },
         "client": {
           "static_host": {
-            "addr": "128.140.175.200:80",
+            "addr": "193.148.44.29:80",
             "is_tls": false
           }
         }
       }
     }, {
       "type": "http",
-      "count": 32,
+      "count": 18,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://delivery-club.ru"
+          "path": "https://beta.fss.ru"
         },
         "client": {
           "static_host": {
-            "addr": "128.140.175.205:443",
+            "addr": "193.148.44.29:443",
             "is_tls": true
           }
         }
       }
     }, {
       "type": "http",
-      "count": 32,
+      "count": 18,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://delivery-club.ru"
+          "path": "http://pfrf.ru"
         },
         "client": {
           "static_host": {
-            "addr": "128.140.175.205:80",
+            "addr": "195.161.52.80:80",
             "is_tls": false
           }
         }
       }
     }, {
       "type": "http",
-      "count": 32,
+      "count": 18,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://dotochki.com"
+          "path": "https://pfrf.ru"
         },
         "client": {
           "static_host": {
-            "addr": "195.42.165.13:443",
+            "addr": "195.161.52.80:443",
             "is_tls": true
           }
         }
       }
     }, {
       "type": "http",
-      "count": 32,
+      "count": 18,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://dotochki.com"
+          "path": "http://hosting.pfrf.ru"
         },
         "client": {
           "static_host": {
-            "addr": "195.42.165.13:80",
+            "addr": "195.161.52.80:80",
             "is_tls": false
           }
         }
       }
     }, {
       "type": "http",
-      "count": 32,
+      "count": 18,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://broniboy.ru"
+          "path": "https://hosting.pfrf.ru"
         },
         "client": {
           "static_host": {
-            "addr": "185.137.235.138:443",
+            "addr": "195.161.52.80:443",
             "is_tls": true
           }
         }
       }
     }, {
       "type": "http",
-      "count": 32,
+      "count": 18,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://broniboy.ru"
+          "path": "http://school.pfrf.ru"
         },
         "client": {
           "static_host": {
-            "addr": "185.137.235.138:80",
+            "addr": "195.161.52.80:80",
             "is_tls": false
           }
         }
       }
     }, {
       "type": "http",
-      "count": 32,
+      "count": 18,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://broniboy.ru"
+          "path": "https://school.pfrf.ru"
         },
         "client": {
           "static_host": {
-            "addr": "82.202.251.98:443",
+            "addr": "195.161.52.80:443",
             "is_tls": true
           }
         }
       }
     }, {
       "type": "http",
-      "count": 32,
+      "count": 18,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://broniboy.ru"
+          "path": "http://es.pfrf.ru"
         },
         "client": {
           "static_host": {
-            "addr": "82.202.251.98:80",
+            "addr": "195.161.52.80:80",
             "is_tls": false
           }
         }
+      }
+    }, {
+      "type": "http",
+      "count": 18,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://es.pfrf.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "195.161.52.80:443",
+            "is_tls": true
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 18,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://www.es.pfrf.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "195.161.52.80:80",
+            "is_tls": false
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 18,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://www.es.pfrf.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "195.161.52.80:443",
+            "is_tls": true
+          }
+        }
+      }
+    }, {
+      "type": "tcp",
+      "count": 18,
+      "args": {
+        "address": "95.173.128.77:53",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "udp",
+      "filter": "{{ (.Value (ctx_key \"global\")).EnablePrimitiveJobs }}",
+      "count": 18,
+      "args": {
+        "address": "95.173.128.77:53",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1000
+      }
+    }, {
+      "type": "tcp",
+      "count": 18,
+      "args": {
+        "address": "195.161.52.77:53",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "udp",
+      "filter": "{{ (.Value (ctx_key \"global\")).EnablePrimitiveJobs }}",
+      "count": 18,
+      "args": {
+        "address": "195.161.52.77:53",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1000
+      }
+    }, {
+      "type": "tcp",
+      "count": 18,
+      "args": {
+        "address": "195.161.53.77:53",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "udp",
+      "filter": "{{ (.Value (ctx_key \"global\")).EnablePrimitiveJobs }}",
+      "count": 18,
+      "args": {
+        "address": "195.161.53.77:53",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1000
       }
     }
   ]
