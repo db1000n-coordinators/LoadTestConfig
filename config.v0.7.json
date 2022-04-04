@@ -1,7 +1,7 @@
 {
   "jobs": [{
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -9,14 +9,14 @@
         },
         "client": {
           "static_host": {
-            "addr": "62.76.148.81:80",
+            "addr": "62.76.145.81:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 39,
       "args": {
         "request": {
           "method": "GET",
@@ -24,14 +24,44 @@
         },
         "client": {
           "static_host": {
-            "addr": "62.76.148.81:443",
+            "addr": "62.76.145.81:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://argus.vetrf.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "62.76.145.81:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 39,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://argus.vetrf.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "62.76.145.81:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 39,
       "args": {
         "request": {
           "method": "GET",
@@ -39,14 +69,14 @@
         },
         "client": {
           "static_host": {
-            "addr": "62.76.148.80:80",
+            "addr": "62.76.145.80:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 39,
       "args": {
         "request": {
           "method": "GET",
@@ -54,205 +84,44 @@
         },
         "client": {
           "static_host": {
-            "addr": "62.76.148.80:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 12,
-      "args": {
-        "address": "62.76.145.39:25",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 12,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://mail.vetrf.ru/mail/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "62.76.145.39:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 12,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://mail.vetrf.ru/mail/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "62.76.145.39:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 12,
-      "args": {
-        "address": "62.76.145.30:25",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 12,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://mail.fsvps.gov.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "62.76.145.30:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 12,
-      "args": {
-        "address": "62.76.145.30:110",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 12,
-      "args": {
-        "address": "62.76.145.30:143",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 12,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://mail.fsvps.gov.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "62.76.145.30:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 12,
-      "args": {
-        "address": "62.76.145.30:587",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 12,
-      "args": {
-        "address": "62.76.145.30:993",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 12,
-      "args": {
-        "address": "62.76.145.30:995",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 12,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://ivis-sso.vetrf.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "62.76.145.221:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 12,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://ivis-sso.vetrf.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "62.76.145.221:443",
+            "addr": "62.76.145.80:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://assol-express.vetrf.ru"
+          "path": "http://api2.vetrf.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "62.76.145.203:80",
+            "addr": "62.76.145.85:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://assol-express.vetrf.ru"
+          "path": "https://api2.vetrf.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "62.76.145.203:443",
+            "addr": "62.76.145.85:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 12,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://assol-express.vetrf.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "62.76.145.203:8080",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -267,7 +136,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -282,7 +151,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -297,7 +166,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -312,7 +181,7 @@
       }
     }, {
       "type": "http",
-      "count": 50,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -327,7 +196,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 39,
       "args": {
         "request": {
           "method": "GET",
@@ -342,7 +211,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -357,7 +226,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -372,7 +241,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -387,7 +256,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -402,7 +271,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -417,7 +286,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -432,7 +301,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -447,7 +316,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -462,7 +331,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -477,7 +346,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -492,7 +361,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -507,7 +376,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -522,7 +391,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -537,7 +406,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -552,7 +421,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -567,7 +436,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -582,7 +451,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -597,7 +466,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -612,7 +481,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -627,7 +496,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -642,7 +511,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -657,7 +526,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -672,7 +541,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -687,7 +556,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -702,97 +571,37 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://help.vetrf.ru/wiki/"
+          "path": "http://mercury-vetrf-ru.ru/gis"
         },
         "client": {
           "static_host": {
-            "addr": "62.76.145.83:80",
+            "addr": "88.212.235.10:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://help.vetrf.ru/wiki/"
+          "path": "https://mercury-vetrf-ru.ru/gis"
         },
         "client": {
           "static_host": {
-            "addr": "62.76.145.83:443",
+            "addr": "88.212.235.10:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 12,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://t2-idp.vetrf.ru/idp/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "62.76.145.85:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 12,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://t2-idp.vetrf.ru/idp/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "62.76.145.85:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 12,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://t2-aplms.vetrf.ru/pub/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "62.76.145.85:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 12,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://t2-aplms.vetrf.ru/pub/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "62.76.145.85:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -807,7 +616,7 @@
       }
     }, {
       "type": "http",
-      "count": 12,
+      "count": 19,
       "args": {
         "request": {
           "method": "GET",
@@ -817,85 +626,6 @@
           "static_host": {
             "addr": "62.76.145.84:443",
             "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "udp",
-      "filter": "{{ (.Value (ctx_key \"global\")).EnablePrimitiveJobs }}",
-      "count": 12,
-      "args": {
-        "address": "62.76.145.10:53",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1000
-      }
-    }, {
-      "type": "tcp",
-      "count": 12,
-      "args": {
-        "address": "62.76.145.10:53",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 12,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://ns.fsvps.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "62.76.145.10:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 12,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://ns.fsvps.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "62.76.145.10:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "udp",
-      "filter": "{{ (.Value (ctx_key \"global\")).EnablePrimitiveJobs }}",
-      "count": 12,
-      "args": {
-        "address": "62.76.145.9:53",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1000
-      }
-    }, {
-      "type": "tcp",
-      "count": 12,
-      "args": {
-        "address": "62.76.145.9:53",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 12,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://ns2.fsvps.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "62.76.145.9:80",
-            "is_tls": "false"
           }
         }
       }
