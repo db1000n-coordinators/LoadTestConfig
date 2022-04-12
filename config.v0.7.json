@@ -305,6 +305,41 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "https://suzgrid.crpt.ru:16443/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.230.251.77:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 21,
+      "args": {
+        "request": {
+          "method": "POST",
+          "path": "https://suzgrid.crpt.ru:16443/api/v2/integration/connection?omsId={{random_uuid}}",
+          "headers": {
+            "Content-Type": "application/json;charset=UTF-8",
+            "X-RegistrationKey": "{{random_uuid}}"
+          },
+          "body": "{\"address\":\"Hell\"}"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.230.251.77:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 21,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "http://suz2.crpt.ru"
         },
         "client": {
