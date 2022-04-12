@@ -425,6 +425,36 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "http://nrz.api.mdlp.crpt.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.230.251.76:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 21,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://nrz.api.mdlp.crpt.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.230.251.76:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 21,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "http://api.sb.mdlp.crpt.ru"
         },
         "client": {
@@ -485,7 +515,7 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://xn--80aqu.xn----7sbabas4ajkhfocclk9d3cvfsa.xn--p1ai/v3/feed-product?apikey={{if ge (random_int_n 10) 5}}{{random_int_n 10000000000000}}{{else}}{{random_alphanum 12}}{{end}}?gtin={{random_int_n 9999999999999}}"
+          "path": "https://xn--80aqu.xn----7sbabas4ajkhfocclk9d3cvfsa.xn--p1ai/v3/feed-product?apikey={{if ge (random_int_n 10) 5}}{{random_int_n 10000000000000}}{{else}}{{random_payload_byte (random_int_n 10) | base64_encode}}{{end}}&gtin={{random_int_n 9999999999999}}"
         },
         "client": {
           "static_host": {
