@@ -2775,6 +2775,546 @@
             }
         },
         {
+            "type": "loop",
+            "args": {
+                "job": {
+                    "type": "discard-error",
+                    "args": {
+                        "job": {
+                            "type": "timeout",
+                            "args": {
+                                "timeout": "1h",
+                                "job": {
+                                    "type": "sequence",
+                                    "args": {
+                                        "jobs": [
+                                            {
+                                                "type": "set-value",
+                                                "name": "useragent",
+                                                "args": {
+                                                    "value": "{{ random_user_agent }}"
+                                                }
+                                            },
+                                            {
+                                                "type": "http-request",
+                                                "name": "initial",
+                                                "args": {
+                                                    "request": {
+                                                        "method": "GET",
+                                                        "path": "https://rarus.ru",
+                                                        "headers": {
+                                                            "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                                                            "Accept": "text/html",
+                                                            "Accept-Language": "en-US",
+                                                            "Connection": "keep-alive"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "type": "set-value",
+                                                "name": "source",
+                                                "args": {
+                                                    "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                                                }
+                                            },
+                                            {
+                                                "type": "set-value",
+                                                "name": "extract-script",
+                                                "args": {
+                                                    "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                                                }
+                                            },
+                                            {
+                                                "type": "js",
+                                                "name": "exec-script",
+                                                "args": {
+                                                    "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                                                }
+                                            },
+                                            {
+                                                "type": "parallel",
+                                                "args": {
+                                                    "jobs": [
+                                                        {
+                                                            "type": "http",
+                                                            "count": 5,
+                                                            "args": {
+                                                                "request": {
+                                                                    "method": "GET",
+                                                                    "path": "https://rarus.ru",
+                                                                    "headers": {
+                                                                        "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                                                    },
+                                                                    "cookies": {
+                                                                        "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "loop",
+            "args": {
+                "job": {
+                    "type": "discard-error",
+                    "args": {
+                        "job": {
+                            "type": "timeout",
+                            "args": {
+                                "timeout": "1h",
+                                "job": {
+                                    "type": "sequence",
+                                    "args": {
+                                        "jobs": [
+                                            {
+                                                "type": "set-value",
+                                                "name": "useragent",
+                                                "args": {
+                                                    "value": "{{ random_user_agent }}"
+                                                }
+                                            },
+                                            {
+                                                "type": "http-request",
+                                                "name": "initial",
+                                                "args": {
+                                                    "request": {
+                                                        "method": "GET",
+                                                        "path": "https://rhelper.rarus.ru",
+                                                        "headers": {
+                                                            "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                                                            "Accept": "text/html",
+                                                            "Accept-Language": "en-US",
+                                                            "Connection": "keep-alive"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "type": "set-value",
+                                                "name": "source",
+                                                "args": {
+                                                    "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                                                }
+                                            },
+                                            {
+                                                "type": "set-value",
+                                                "name": "extract-script",
+                                                "args": {
+                                                    "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                                                }
+                                            },
+                                            {
+                                                "type": "js",
+                                                "name": "exec-script",
+                                                "args": {
+                                                    "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                                                }
+                                            },
+                                            {
+                                                "type": "parallel",
+                                                "args": {
+                                                    "jobs": [
+                                                        {
+                                                            "type": "http",
+                                                            "count": 5,
+                                                            "args": {
+                                                                "request": {
+                                                                    "method": "GET",
+                                                                    "path": "https://rhelper.rarus.ru",
+                                                                    "headers": {
+                                                                        "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                                                    },
+                                                                    "cookies": {
+                                                                        "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },        
+        {
+            "type": "loop",
+            "args": {
+                "job": {
+                    "type": "discard-error",
+                    "args": {
+                        "job": {
+                            "type": "timeout",
+                            "args": {
+                                "timeout": "1h",
+                                "job": {
+                                    "type": "sequence",
+                                    "args": {
+                                        "jobs": [
+                                            {
+                                                "type": "set-value",
+                                                "name": "useragent",
+                                                "args": {
+                                                    "value": "{{ random_user_agent }}"
+                                                }
+                                            },
+                                            {
+                                                "type": "http-request",
+                                                "name": "initial",
+                                                "args": {
+                                                    "request": {
+                                                        "method": "GET",
+                                                        "path": "https://update.rarus.ru/public",
+                                                        "headers": {
+                                                            "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                                                            "Accept": "text/html",
+                                                            "Accept-Language": "en-US",
+                                                            "Connection": "keep-alive"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "type": "set-value",
+                                                "name": "source",
+                                                "args": {
+                                                    "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                                                }
+                                            },
+                                            {
+                                                "type": "set-value",
+                                                "name": "extract-script",
+                                                "args": {
+                                                    "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                                                }
+                                            },
+                                            {
+                                                "type": "js",
+                                                "name": "exec-script",
+                                                "args": {
+                                                    "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                                                }
+                                            },
+                                            {
+                                                "type": "parallel",
+                                                "args": {
+                                                    "jobs": [
+                                                        {
+                                                            "type": "http",
+                                                            "count": 5,
+                                                            "args": {
+                                                                "request": {
+                                                                    "method": "GET",
+                                                                    "path": "https://update.rarus.ru/public",
+                                                                    "headers": {
+                                                                        "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                                                    },
+                                                                    "cookies": {
+                                                                        "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }, 
+        {
+            "type": "loop",
+            "args": {
+                "job": {
+                    "type": "discard-error",
+                    "args": {
+                        "job": {
+                            "type": "timeout",
+                            "args": {
+                                "timeout": "1h",
+                                "job": {
+                                    "type": "sequence",
+                                    "args": {
+                                        "jobs": [
+                                            {
+                                                "type": "set-value",
+                                                "name": "useragent",
+                                                "args": {
+                                                    "value": "{{ random_user_agent }}"
+                                                }
+                                            },
+                                            {
+                                                "type": "http-request",
+                                                "name": "initial",
+                                                "args": {
+                                                    "request": {
+                                                        "method": "GET",
+                                                        "path": "https://techlab.rarus.ru",
+                                                        "headers": {
+                                                            "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                                                            "Accept": "text/html",
+                                                            "Accept-Language": "en-US",
+                                                            "Connection": "keep-alive"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "type": "set-value",
+                                                "name": "source",
+                                                "args": {
+                                                    "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                                                }
+                                            },
+                                            {
+                                                "type": "set-value",
+                                                "name": "extract-script",
+                                                "args": {
+                                                    "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                                                }
+                                            },
+                                            {
+                                                "type": "js",
+                                                "name": "exec-script",
+                                                "args": {
+                                                    "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                                                }
+                                            },
+                                            {
+                                                "type": "parallel",
+                                                "args": {
+                                                    "jobs": [
+                                                        {
+                                                            "type": "http",
+                                                            "count": 5,
+                                                            "args": {
+                                                                "request": {
+                                                                    "method": "GET",
+                                                                    "path": "https://techlab.rarus.ru",
+                                                                    "headers": {
+                                                                        "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                                                    },
+                                                                    "cookies": {
+                                                                        "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }, 
+        {
+            "type": "loop",
+            "args": {
+                "job": {
+                    "type": "discard-error",
+                    "args": {
+                        "job": {
+                            "type": "timeout",
+                            "args": {
+                                "timeout": "1h",
+                                "job": {
+                                    "type": "sequence",
+                                    "args": {
+                                        "jobs": [
+                                            {
+                                                "type": "set-value",
+                                                "name": "useragent",
+                                                "args": {
+                                                    "value": "{{ random_user_agent }}"
+                                                }
+                                            },
+                                            {
+                                                "type": "http-request",
+                                                "name": "initial",
+                                                "args": {
+                                                    "request": {
+                                                        "method": "GET",
+                                                        "path": "https://bo.rarus.ru",
+                                                        "headers": {
+                                                            "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                                                            "Accept": "text/html",
+                                                            "Accept-Language": "en-US",
+                                                            "Connection": "keep-alive"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "type": "set-value",
+                                                "name": "source",
+                                                "args": {
+                                                    "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                                                }
+                                            },
+                                            {
+                                                "type": "set-value",
+                                                "name": "extract-script",
+                                                "args": {
+                                                    "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                                                }
+                                            },
+                                            {
+                                                "type": "js",
+                                                "name": "exec-script",
+                                                "args": {
+                                                    "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                                                }
+                                            },
+                                            {
+                                                "type": "parallel",
+                                                "args": {
+                                                    "jobs": [
+                                                        {
+                                                            "type": "http",
+                                                            "count": 5,
+                                                            "args": {
+                                                                "request": {
+                                                                    "method": "GET",
+                                                                    "path": "https://bo.rarus.ru",
+                                                                    "headers": {
+                                                                        "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                                                    },
+                                                                    "cookies": {
+                                                                        "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "loop",
+            "args": {
+                "job": {
+                    "type": "discard-error",
+                    "args": {
+                        "job": {
+                            "type": "timeout",
+                            "args": {
+                                "timeout": "1h",
+                                "job": {
+                                    "type": "sequence",
+                                    "args": {
+                                        "jobs": [
+                                            {
+                                                "type": "set-value",
+                                                "name": "useragent",
+                                                "args": {
+                                                    "value": "{{ random_user_agent }}"
+                                                }
+                                            },
+                                            {
+                                                "type": "http-request",
+                                                "name": "initial",
+                                                "args": {
+                                                    "request": {
+                                                        "method": "GET",
+                                                        "path": "https://pos.rarus.ru",
+                                                        "headers": {
+                                                            "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                                                            "Accept": "text/html",
+                                                            "Accept-Language": "en-US",
+                                                            "Connection": "keep-alive"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "type": "set-value",
+                                                "name": "source",
+                                                "args": {
+                                                    "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                                                }
+                                            },
+                                            {
+                                                "type": "set-value",
+                                                "name": "extract-script",
+                                                "args": {
+                                                    "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                                                }
+                                            },
+                                            {
+                                                "type": "js",
+                                                "name": "exec-script",
+                                                "args": {
+                                                    "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                                                }
+                                            },
+                                            {
+                                                "type": "parallel",
+                                                "args": {
+                                                    "jobs": [
+                                                        {
+                                                            "type": "http",
+                                                            "count": 5,
+                                                            "args": {
+                                                                "request": {
+                                                                    "method": "GET",
+                                                                    "path": "https://pos.rarus.ru",
+                                                                    "headers": {
+                                                                        "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                                                    },
+                                                                    "cookies": {
+                                                                        "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
             "type": "encrypted",
             "count": 7,
             "args":
