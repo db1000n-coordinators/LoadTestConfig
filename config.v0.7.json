@@ -769,103 +769,88 @@
       },
       "count": 3
     }, {
-      "type": "http",
-      "count": 3,
+      "type": "loop",
       "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.rbc.ru/search/?query=%D0%B0%20%D1%81%20%D0%BA%20%D0%BD%D0%B0%20%D0%B2%20%D0%BE%D1%82",
-          "headers": {
-            "type": "loop",
-            "args": {
-              "job": {
-                "type": "discard-error",
-                "args": {
-                  "job": {
-                    "type": "timeout",
-                    "args": {
-                      "timeout": "1h",
-                      "job": {
-                        "type": "sequence",
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://www.rbc.ru/search/?query=%D0%B0%20%D1%81%20%D0%BA%20%D0%BD%D0%B0%20%D0%B2%20%D0%BE%D1%82",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
                         "args": {
                           "jobs": [{
-                              "type": "set-value",
-                              "name": "useragent",
-                              "args": {
-                                "value": "{{ random_user_agent }}"
-                              }
-                            }, {
-                              "type": "http-request",
-                              "name": "initial",
+                              "type": "http",
+                              "count": 7,
                               "args": {
                                 "request": {
                                   "method": "GET",
                                   "path": "https://www.rbc.ru/search/?query=%D0%B0%20%D1%81%20%D0%BA%20%D0%BD%D0%B0%20%D0%B2%20%D0%BE%D1%82",
                                   "headers": {
-                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
-                                    "Accept": "text/html",
-                                    "Accept-Language": "en-US",
-                                    "Connection": "keep-alive"
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
                                   }
                                 }
-                              }
-                            }, {
-                              "type": "set-value",
-                              "name": "source",
-                              "args": {
-                                "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
-                              }
-                            }, {
-                              "type": "set-value",
-                              "name": "extract-script",
-                              "args": {
-                                "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
-                              }
-                            }, {
-                              "type": "js",
-                              "name": "exec-script",
-                              "args": {
-                                "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
-                              }
-                            }, {
-                              "type": "parallel",
-                              "args": {
-                                "jobs": [{
-                                    "type": "http",
-                                    "count": 7,
-                                    "args": {
-                                      "request": {
-                                        "method": "GET",
-                                        "path": "https://www.rbc.ru/search/?query=%D0%B0%20%D1%81%20%D0%BA%20%D0%BD%D0%B0%20%D0%B2%20%D0%BE%D1%82",
-                                        "headers": {
-                                          "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
-                                        },
-                                        "cookies": {
-                                          "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
-                                        }
-                                      }
-                                    }
-                                  }
-                                ]
                               }
                             }
                           ]
                         }
                       }
-                    }
+                    ]
                   }
                 }
               }
             }
           }
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.119:443",
-            "is_tls": true
-          }
         }
-      }
+      },
+      "count": 3
     }, {
       "type": "http",
       "count": 3,
