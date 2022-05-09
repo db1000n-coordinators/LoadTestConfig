@@ -7532,6 +7532,1646 @@
           }
         }
       }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://tvzvezda.ru/schedule/",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 1,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://tvzvezda.ru/schedule/",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://www.moypolk.ru/",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 1,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://www.moypolk.ru/",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://smotrim.ru/channels",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 1,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://smotrim.ru/channels",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://api.smotrim.ru/",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 1,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://api.smotrim.ru/",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://www.1tv.ru/shows/den-pobedy",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 1,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://www.1tv.ru/shows/den-pobedy",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://tlxmob.1tv.ru/",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 1,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://tlxmob.1tv.ru/",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://kino.1tv.ru/",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 1,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://kino.1tv.ru/",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://users.1tv.ru/",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 1,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://users.1tv.ru/",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://admin.kino.1tv.ru/",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 1,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://admin.kino.1tv.ru/",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://agents.okko.tv",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 1,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://agents.okko.tv",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://premiere.okko.tv/",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 1,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://premiere.okko.tv/",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://show.okko.tv",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 1,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://show.okko.tv",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://vgtrk.ru/russiatv",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 1,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://vgtrk.ru/russiatv",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://ria.ru/politics/",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 1,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://ria.ru/politics/",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://www.rbc.ru/textonlines/08/05/2022/6216fb4d9a79474dc80e8821?from=from_main_2",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 1,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://www.rbc.ru/textonlines/08/05/2022/6216fb4d9a79474dc80e8821?from=from_main_2",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://tv.rbc.ru/archive/",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 1,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://tv.rbc.ru/archive/",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://www.kp.ru/daily/euromaidan/",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 1,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://www.kp.ru/daily/euromaidan/",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://www.kommersant.ru/theme/3423?from=anons",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 1,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://www.kommersant.ru/theme/3423?from=anons",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://2022.polkrf.ru/",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 1,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://2022.polkrf.ru/",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "type": "loop",
+      "args": {
+        "job": {
+          "type": "discard-error",
+          "args": {
+            "job": {
+              "type": "timeout",
+              "args": {
+                "timeout": "1h",
+                "job": {
+                  "type": "sequence",
+                  "args": {
+                    "jobs": [{
+                        "type": "set-value",
+                        "name": "useragent",
+                        "args": {
+                          "value": "{{ random_user_agent }}"
+                        }
+                      }, {
+                        "type": "http-request",
+                        "name": "initial",
+                        "args": {
+                          "request": {
+                            "method": "GET",
+                            "path": "https://www.vsemayki.ru/catalog/I_am_Russian",
+                            "headers": {
+                              "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}",
+                              "Accept": "text/html",
+                              "Accept-Language": "en-US",
+                              "Connection": "keep-alive"
+                            }
+                          }
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "source",
+                        "args": {
+                          "value": "{{ index (.Value (ctx_key \"data.initial\")) \"response\" \"body\" }}"
+                        }
+                      }, {
+                        "type": "set-value",
+                        "name": "extract-script",
+                        "args": {
+                          "value": "{{ index (split (index (split (.Value (ctx_key \"data.source\")) \"function() {\") 1) \"var config\") 0 }}"
+                        }
+                      }, {
+                        "type": "js",
+                        "name": "exec-script",
+                        "args": {
+                          "script": "{{ .Value (ctx_key \"data.extract-script\") }}"
+                        }
+                      }, {
+                        "type": "parallel",
+                        "args": {
+                          "jobs": [{
+                              "type": "http",
+                              "count": 1,
+                              "args": {
+                                "request": {
+                                  "method": "GET",
+                                  "path": "https://www.vsemayki.ru/catalog/I_am_Russian",
+                                  "headers": {
+                                    "User-Agent": "{{ .Value (ctx_key \"data.useragent\") }}"
+                                  },
+                                  "cookies": {
+                                    "_pcl": "{{ .Value (ctx_key \"data.exec-script\") }}"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   ]
 }
