@@ -6,6 +6,44 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "http://rc-art.roscongress.org/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "80.78.254.170:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://rc-art.roscongress.org/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "80.78.254.170:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "http://time4photo.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -147,120 +185,6 @@
         "client": {
           "static_host": {
             "addr": "109.167.254.105:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.roscongressclub.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "212.41.3.163:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.roscongressclub.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "212.41.3.163:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.roscongressclub.ru/news/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "212.41.3.163:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.roscongressclub.ru/news/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "212.41.3.163:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://rc-art.roscongress.org/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "80.78.254.170:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://rc-art.roscongress.org/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "80.78.254.170:443",
             "is_tls": true
           }
         }
@@ -424,14 +348,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://forbusiness.roscongress.org/",
+          "path": "http://www.roscongressclub.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "80.78.254.170:80",
+            "addr": "212.41.3.163:80",
             "is_tls": false
           }
         }
@@ -443,14 +367,242 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://forbusiness.roscongress.org/",
+          "path": "https://www.roscongressclub.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "80.78.254.170:443",
+            "addr": "212.41.3.163:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://www.roscongressclub.ru/news/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "212.41.3.163:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://www.roscongressclub.ru/news/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "212.41.3.163:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://russiacb.com/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "87.236.16.171:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://russiacb.com/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "87.236.16.171:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://russiacb.com/events/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "87.236.16.171:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://russiacb.com/events/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "87.236.16.171:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://russiacb.com/events/?start_date=2000-03-06&end_date=2022-06-01",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "87.236.16.171:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://russiacb.com/events/?start_date=2000-03-06&end_date=2022-06-01",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "87.236.16.171:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://online.russiacb.com/auth/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "87.236.16.171:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://online.russiacb.com/auth/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "87.236.16.171:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://online.russiacb.com/auth/restore/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "87.236.16.171:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://online.russiacb.com/auth/restore/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "87.236.16.171:443",
             "is_tls": true
           }
         }
@@ -576,6 +728,82 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "http://atr.gov.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.129.100.112:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://atr.gov.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.129.100.112:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://atr.gov.ru/news",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.129.100.112:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://atr.gov.ru/news",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.129.100.112:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "http://status-priority.com/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -614,14 +842,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://privetmir.ru",
+          "path": "http://forbusiness.roscongress.org/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "185.170.3.30:80",
+            "addr": "80.78.254.170:80",
             "is_tls": false
           }
         }
@@ -633,14 +861,52 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://privetmir.ru",
+          "path": "https://forbusiness.roscongress.org/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "185.170.3.30:443",
+            "addr": "80.78.254.170:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://lk.frprf.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "31.41.246.17:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://lk.frprf.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "31.41.246.17:443",
             "is_tls": true
           }
         }
@@ -1621,6 +1887,348 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "http://forumspb.com/en/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "78.155.198.18:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://forumspb.com/en/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "78.155.198.18:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://forumspb.com/en/news/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "78.155.198.18:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://forumspb.com/en/news/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "78.155.198.18:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://forumspb.com/en/partners/become-a-partner/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "78.155.198.18:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://forumspb.com/en/partners/become-a-partner/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "78.155.198.18:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://best-practices.roscongress.org/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "78.155.198.18:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://best-practices.roscongress.org/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "78.155.198.18:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://forumhealth.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "78.155.198.18:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://forumhealth.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "78.155.198.18:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://forumhealth.ru/spief-2022/programme/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "78.155.198.18:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://forumhealth.ru/spief-2022/programme/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "78.155.198.18:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://rusinvestforum.org/roscongress-club/roscongress-club/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "78.155.198.18:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://rusinvestforum.org/roscongress-club/roscongress-club/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "78.155.198.18:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://rusinvestforum.org/personal-account-login/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "78.155.198.18:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://rusinvestforum.org/personal-account-login/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "78.155.198.18:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://rusinvestforum.org/poisk/?q=%D1%80%D1%83",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "78.155.198.18:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://rusinvestforum.org/poisk/?q=%D1%80%D1%83",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "78.155.198.18:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "http://kodeks.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -1838,6 +2446,347 @@
         "client": {
           "static_host": {
             "addr": "109.248.46.141:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://privetmir.ru",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.170.3.30:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://privetmir.ru",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.170.3.30:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "tcp",
+      "count": 1,
+      "args": {
+        "address": "31.133.49.144:25",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://innosocium.org/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "87.236.16.244:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://innosocium.org/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "87.236.16.244:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://innosocium.org/search/?q=%D1%80%D1%83&how=r",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "87.236.16.244:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://innosocium.org/search/?q=%D1%80%D1%83&how=r",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "87.236.16.244:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "tcp",
+      "count": 1,
+      "args": {
+        "address": "31.133.50.139:25",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://ideas.roscongress.org/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "95.213.255.49:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://ideas.roscongress.org/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "95.213.255.49:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://ideas.roscongress.org/users/sign_in",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "95.213.255.49:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://ideas.roscongress.org/users/sign_in",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "95.213.255.49:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://ideas.roscongress.org/users/auth/leader_id",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "95.213.255.49:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://ideas.roscongress.org/users/auth/leader_id",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "95.213.255.49:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://ideas.roscongress.org/sections",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "95.213.255.49:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://ideas.roscongress.org/sections",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "95.213.255.49:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://rcz-dnr.ru/rezultatyi-poiska.html?search=%D1%83%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0&id=24",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "31.133.49.144:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://rcz-dnr.ru/rezultatyi-poiska.html?search=%D1%83%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0&id=24",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "31.133.49.144:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://mailadm.glavadnr.ru/?_task=login",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "31.133.50.139:443",
             "is_tls": true
           }
         }
@@ -2148,233 +3097,6 @@
       }
     },
     {
-      "type": "tcp",
-      "count": 1,
-      "args": {
-        "address": "31.133.49.144:25",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://innosocium.org/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "87.236.16.244:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://innosocium.org/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "87.236.16.244:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://innosocium.org/search/?q=%D1%80%D1%83&how=r",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "87.236.16.244:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://innosocium.org/search/?q=%D1%80%D1%83&how=r",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "87.236.16.244:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://mailadm.glavadnr.ru/?_task=login",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "31.133.50.139:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "tcp",
-      "count": 1,
-      "args": {
-        "address": "31.133.50.139:25",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://rcz-dnr.ru/rezultatyi-poiska.html?search=%D1%83%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0&id=24",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "31.133.49.144:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://rcz-dnr.ru/rezultatyi-poiska.html?search=%D1%83%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0&id=24",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "31.133.49.144:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://sudrf.cntd.ru/rospravo",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "5.61.15.111:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://sudrf.cntd.ru/rospravo",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "5.61.15.111:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://sudrf.cntd.ru/rospravo/documents?text=%D1%81%D1%83%D0%B4&type=&accepted_by_id=&accepted_by=&accepted_date_start=&accepted_date_end=&number=",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "5.61.15.111:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://sudrf.cntd.ru/rospravo/documents?text=%D1%81%D1%83%D0%B4&type=&accepted_by_id=&accepted_by=&accepted_date_start=&accepted_date_end=&number=",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "5.61.15.111:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
       "type": "http",
       "count": 1,
       "args": {
@@ -2608,6 +3330,82 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "http://www.businesspriority.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.129.100.112:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://www.businesspriority.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.129.100.112:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://businesspriority.ru/accel",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.129.100.112:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://businesspriority.ru/accel",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.129.100.112:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "http://veb.ventures/ru",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -2760,14 +3558,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://www.novatek.ru/en/",
+          "path": "http://sudrf.cntd.ru/rospravo",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "31.31.199.181:80",
+            "addr": "5.61.15.111:80",
             "is_tls": false
           }
         }
@@ -2779,14 +3577,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://www.novatek.ru/en/",
+          "path": "https://sudrf.cntd.ru/rospravo",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "31.31.199.181:443",
+            "addr": "5.61.15.111:443",
             "is_tls": true
           }
         }
@@ -2798,14 +3596,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://www.novatek.ru/ru/investors/",
+          "path": "http://sudrf.cntd.ru/rospravo/documents?text=%D1%81%D1%83%D0%B4&type=&accepted_by_id=&accepted_by=&accepted_date_start=&accepted_date_end=&number=",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "31.31.199.181:80",
+            "addr": "5.61.15.111:80",
             "is_tls": false
           }
         }
@@ -2817,128 +3615,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://www.novatek.ru/ru/investors/",
+          "path": "https://sudrf.cntd.ru/rospravo/documents?text=%D1%81%D1%83%D0%B4&type=&accepted_by_id=&accepted_by=&accepted_date_start=&accepted_date_end=&number=",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "31.31.199.181:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.novatek.ru/ru/press/releases/?newsFilterFormMode_4=all",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "31.31.199.181:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.novatek.ru/ru/press/releases/?newsFilterFormMode_4=all",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "31.31.199.181:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.novatek.ru/ru/search/?q_4=%D1%80%D1%83",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "31.31.199.181:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.novatek.ru/ru/search/?q_4=%D1%80%D1%83",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "31.31.199.181:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://www.novatek.ru/en/search/index.php?source_id_4=1&sortby_4=&q_4=ru&search_page_4=1001&te_object_id_4=&items_per_page_4=10&date_from_4=&date_to_4=",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "31.31.199.181:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.novatek.ru/en/search/index.php?source_id_4=1&sortby_4=&q_4=ru&search_page_4=1001&te_object_id_4=&items_per_page_4=10&date_from_4=&date_to_4=",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "31.31.199.181:443",
+            "addr": "5.61.15.111:443",
             "is_tls": true
           }
         }
@@ -4850,6 +5534,234 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "http://frprf.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "31.41.246.25:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://frprf.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "31.41.246.25:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://corpmsp.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "130.193.34.26:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://corpmsp.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "130.193.34.26:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://corpmsp.ru/search/?q=%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81&PAGEN_1=33&SIZEN_1=15",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "130.193.34.26:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://corpmsp.ru/search/?q=%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81&PAGEN_1=33&SIZEN_1=15",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "130.193.34.26:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://fiop.site/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "89.108.82.33:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://fiop.site/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "89.108.82.33:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://fiop.site/press-tsentr/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "89.108.82.33:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://fiop.site/press-tsentr/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "89.108.82.33:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://fiop.site/press-tsentr/page40/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "89.108.82.33:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://fiop.site/press-tsentr/page40/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "89.108.82.33:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "http://bsr.sudrf.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -5382,14 +6294,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://vebinfra.ru/",
+          "path": "http://www.novatek.ru/en/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "78.110.50.103:80",
+            "addr": "31.31.199.181:80",
             "is_tls": false
           }
         }
@@ -5401,14 +6313,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://vebinfra.ru/",
+          "path": "https://www.novatek.ru/en/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "78.110.50.103:443",
+            "addr": "31.31.199.181:443",
             "is_tls": true
           }
         }
@@ -5420,14 +6332,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://vebinfra.ru/news/?PAGEN_1=15",
+          "path": "http://www.novatek.ru/ru/investors/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "78.110.50.103:80",
+            "addr": "31.31.199.181:80",
             "is_tls": false
           }
         }
@@ -5439,14 +6351,128 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://vebinfra.ru/news/?PAGEN_1=15",
+          "path": "https://www.novatek.ru/ru/investors/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "78.110.50.103:443",
+            "addr": "31.31.199.181:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://www.novatek.ru/ru/press/releases/?newsFilterFormMode_4=all",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "31.31.199.181:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://www.novatek.ru/ru/press/releases/?newsFilterFormMode_4=all",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "31.31.199.181:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://www.novatek.ru/ru/search/?q_4=%D1%80%D1%83",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "31.31.199.181:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://www.novatek.ru/ru/search/?q_4=%D1%80%D1%83",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "31.31.199.181:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://www.novatek.ru/en/search/index.php?source_id_4=1&sortby_4=&q_4=ru&search_page_4=1001&te_object_id_4=&items_per_page_4=10&date_from_4=&date_to_4=",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "31.31.199.181:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://www.novatek.ru/en/search/index.php?source_id_4=1&sortby_4=&q_4=ru&search_page_4=1001&te_object_id_4=&items_per_page_4=10&date_from_4=&date_to_4=",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "31.31.199.181:443",
             "is_tls": true
           }
         }
@@ -6693,15 +7719,186 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://arbitr.ru/",
+          "path": "http://vebinfra.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "79.133.87.42:80",
+            "addr": "78.110.50.103:80",
             "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://vebinfra.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "78.110.50.103:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://vebinfra.ru/news/?PAGEN_1=15",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "78.110.50.103:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://vebinfra.ru/news/?PAGEN_1=15",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "78.110.50.103:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://priem.rsuj.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.141.124.234:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://priem.rsuj.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.141.124.234:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://fpk.rsuj.ru/login/index.php",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.141.124.234:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://fpk.rsuj.ru/login/index.php",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.141.124.234:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://fpk.rsuj.ru/login/forgot_password.php",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.141.124.234:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://fpk.rsuj.ru/login/forgot_password.php",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.141.124.234:443",
+            "is_tls": true
           }
         }
       }
@@ -19627,6 +20824,82 @@
       }
     },
     {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://supcourt-dpr.su/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.178.208.146:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://supcourt-dpr.su/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.178.208.146:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://rsuj.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "77.222.57.148:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://rsuj.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "77.222.57.148:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
       "type": "tcp",
       "count": 1,
       "args": {
@@ -20064,14 +21337,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://media2.ksrf.ru/",
+          "path": "http://arbitr.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "95.173.147.221:80",
+            "addr": "79.133.87.42:80",
             "is_tls": false
           }
         }
@@ -20300,6 +21573,144 @@
       }
     },
     {
+      "type": "tcp",
+      "count": 1,
+      "args": {
+        "address": "5.61.15.75:21",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    },
+    {
+      "type": "tcp",
+      "count": 1,
+      "args": {
+        "address": "5.61.15.75:25",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://fasszo.arbitr.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "5.61.15.75:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "tcp",
+      "count": 1,
+      "args": {
+        "address": "5.61.15.75:3306",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    },
+    {
+      "type": "tcp",
+      "count": 1,
+      "args": {
+        "address": "5.61.15.75:21",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    },
+    {
+      "type": "tcp",
+      "count": 1,
+      "args": {
+        "address": "5.61.15.75:25",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://fasszo.arbitr.ru/cases/ctimetable?tid=0&filter=true&college=&datefrom=16.01.1900&dateto=16.01.2023",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "5.61.15.75:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "tcp",
+      "count": 1,
+      "args": {
+        "address": "5.61.15.75:3306",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    },
+    {
+      "type": "tcp",
+      "count": 1,
+      "args": {
+        "address": "5.61.15.75:21",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    },
+    {
+      "type": "tcp",
+      "count": 1,
+      "args": {
+        "address": "5.61.15.75:25",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://fasszo.arbitr.ru/cases/ccaselist?searchtype=dealinfo&prefix=%D0%9056&numdeal=&yeardeal=&fld_12=%D1%88%D0%B5%D0%B2%D1%87%D0%B5%D0%BD%D0%BA%D0%BE&fld_14=",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "5.61.15.75:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "tcp",
+      "count": 1,
+      "args": {
+        "address": "5.61.15.75:3306",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    },
+    {
       "type": "http",
       "count": 1,
       "args": {
@@ -20449,144 +21860,6 @@
             "is_tls": true
           }
         }
-      }
-    },
-    {
-      "type": "tcp",
-      "count": 1,
-      "args": {
-        "address": "5.61.15.75:21",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    },
-    {
-      "type": "tcp",
-      "count": 1,
-      "args": {
-        "address": "5.61.15.75:25",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://fasszo.arbitr.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "5.61.15.75:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "tcp",
-      "count": 1,
-      "args": {
-        "address": "5.61.15.75:3306",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    },
-    {
-      "type": "tcp",
-      "count": 1,
-      "args": {
-        "address": "5.61.15.75:21",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    },
-    {
-      "type": "tcp",
-      "count": 1,
-      "args": {
-        "address": "5.61.15.75:25",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://fasszo.arbitr.ru/cases/ctimetable?tid=0&filter=true&college=&datefrom=16.01.1900&dateto=16.01.2023",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "5.61.15.75:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "tcp",
-      "count": 1,
-      "args": {
-        "address": "5.61.15.75:3306",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    },
-    {
-      "type": "tcp",
-      "count": 1,
-      "args": {
-        "address": "5.61.15.75:21",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    },
-    {
-      "type": "tcp",
-      "count": 1,
-      "args": {
-        "address": "5.61.15.75:25",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://fasszo.arbitr.ru/cases/ccaselist?searchtype=dealinfo&prefix=%D0%9056&numdeal=&yeardeal=&fld_12=%D1%88%D0%B5%D0%B2%D1%87%D0%B5%D0%BD%D0%BA%D0%BE&fld_14=",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "5.61.15.75:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "tcp",
-      "count": 1,
-      "args": {
-        "address": "5.61.15.75:3306",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
       }
     },
     {
@@ -22096,6 +23369,101 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "http://media2.ksrf.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "95.173.147.221:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://rgup.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "31.31.198.114:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://rgup.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "31.31.198.114:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://rgup.ru/search",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "31.31.198.114:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://rgup.ru/search",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "31.31.198.114:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "http://minfindnr.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -22191,6 +23559,25 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "http://gosstat-dnr.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.114.137.26:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "http://crb-dnr.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -22238,25 +23625,6 @@
           "static_host": {
             "addr": "31.133.58.198:443",
             "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://gosstat-dnr.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.114.137.26:80",
-            "is_tls": false
           }
         }
       }
@@ -22332,6 +23700,44 @@
         "client": {
           "static_host": {
             "addr": "185.114.136.60:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://denis-pushilin.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.178.208.185:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://denis-pushilin.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.178.208.185:443",
             "is_tls": true
           }
         }
@@ -22457,14 +23863,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://mininfodnr.ru/",
+          "path": "http://mzdnr.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "193.233.15.62:80",
+            "addr": "31.133.58.6:80",
             "is_tls": false
           }
         }
@@ -22476,14 +23882,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://mininfodnr.ru/",
+          "path": "https://mzdnr.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "193.233.15.62:443",
+            "addr": "31.133.58.6:443",
             "is_tls": true
           }
         }
@@ -22609,82 +24015,6 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://amvrosievka-gorsovet.umi.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "88.212.251.4:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://amvrosievka-gorsovet.umi.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "88.212.251.4:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://fgi.dnronline.su/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "193.233.15.62:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://fgi.dnronline.su/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "193.233.15.62:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
           "path": "http://dnrailway.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -22712,44 +24042,6 @@
         "client": {
           "static_host": {
             "addr": "188.120.242.133:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://doncsm.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "31.31.196.208:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://doncsm.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "31.31.196.208:443",
             "is_tls": true
           }
         }
@@ -22799,6 +24091,44 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "http://fgi.dnronline.su/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.233.15.62:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://fgi.dnronline.su/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.233.15.62:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "http://dokuchaevskga.ucoz.org/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -22826,82 +24156,6 @@
         "client": {
           "static_host": {
             "addr": "193.109.247.20:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://novoaz-adm.3dn.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "193.109.247.20:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://novoaz-adm.3dn.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "193.109.247.20:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://gsdsd-dnr.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "92.53.96.124:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://gsdsd-dnr.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "92.53.96.124:443",
             "is_tls": true
           }
         }
@@ -22951,6 +24205,44 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "http://gsdsd-dnr.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "92.53.96.124:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://gsdsd-dnr.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "92.53.96.124:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "http://donmarkets.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -22989,14 +24281,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://econri.org/",
+          "path": "http://novoaz-adm.3dn.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "92.53.96.249:80",
+            "addr": "193.109.247.20:80",
             "is_tls": false
           }
         }
@@ -23008,14 +24300,128 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://econri.org/",
+          "path": "https://novoaz-adm.3dn.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "92.53.96.249:443",
+            "addr": "193.109.247.20:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://doncsm.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "31.31.196.208:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://doncsm.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "31.31.196.208:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://amvrosievka-gorsovet.umi.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "88.212.251.4:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://amvrosievka-gorsovet.umi.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "88.212.251.4:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://mininfodnr.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.233.15.62:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://mininfodnr.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.233.15.62:443",
             "is_tls": true
           }
         }
@@ -23054,82 +24460,6 @@
         "client": {
           "static_host": {
             "addr": "193.109.247.20:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://gisnpa-dnr.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "149.154.66.122:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://gisnpa-dnr.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "149.154.66.122:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://dnr-live.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.224.22.215:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://dnr-live.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.224.22.215:443",
             "is_tls": true
           }
         }
@@ -23331,6 +24661,44 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "http://www.enakievo.org/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "217.112.35.72:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://www.enakievo.org/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "217.112.35.72:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "http://admin-gorlovka.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -23369,6 +24737,44 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "http://fsdnr.com/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "37.140.192.112:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://fsdnr.com/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "37.140.192.112:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "http://ggudoad-dnr.ugletele.com/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -23700,6 +25106,158 @@
         "client": {
           "static_host": {
             "addr": "31.133.58.102:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://dnmchs.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "31.133.49.105:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://dnmchs.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "31.133.49.105:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://dnmchs.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.229.235.197:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://dnmchs.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.229.235.197:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://gisnpa-dnr.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "149.154.66.122:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://gisnpa-dnr.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "149.154.66.122:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://oddr.info/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.178.208.137:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://oddr.info/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.178.208.137:443",
             "is_tls": true
           }
         }
@@ -23901,14 +25459,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://www.enakievo.org/",
+          "path": "http://dnr-live.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "217.112.35.72:80",
+            "addr": "91.224.22.215:80",
             "is_tls": false
           }
         }
@@ -23920,14 +25478,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://www.enakievo.org/",
+          "path": "https://dnr-live.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "217.112.35.72:443",
+            "addr": "91.224.22.215:443",
             "is_tls": true
           }
         }
@@ -23939,14 +25497,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://fsdnr.com/",
+          "path": "http://econri.org/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "37.140.192.112:80",
+            "addr": "92.53.96.249:80",
             "is_tls": false
           }
         }
@@ -23958,14 +25516,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://fsdnr.com/",
+          "path": "https://econri.org/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "37.140.192.112:443",
+            "addr": "92.53.96.249:443",
             "is_tls": true
           }
         }
@@ -23977,14 +25535,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://dnmchs.ru/",
+          "path": "http://mintek-dnr.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "31.133.49.105:80",
+            "addr": "172.67.203.253:80",
             "is_tls": false
           }
         }
@@ -23996,14 +25554,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://dnmchs.ru/",
+          "path": "https://mintek-dnr.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "31.133.49.105:443",
+            "addr": "172.67.203.253:443",
             "is_tls": true
           }
         }
@@ -24015,14 +25573,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "http://dnmchs.ru/",
+          "path": "http://mintek-dnr.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "185.229.235.197:80",
+            "addr": "104.21.77.31:80",
             "is_tls": false
           }
         }
@@ -24034,128 +25592,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://dnmchs.ru/",
+          "path": "https://mintek-dnr.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "185.229.235.197:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://glavstat.govdnr.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.114.137.26:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://gkgtn.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.114.246.9:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://gkgtn.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.114.246.9:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://ritualdnr.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.114.138.242:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://republic-tv.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "212.66.37.43:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://republic-tv.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "212.66.37.43:443",
+            "addr": "104.21.77.31:443",
             "is_tls": true
           }
         }
@@ -24205,6 +25649,63 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "http://ritualdnr.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.114.138.242:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://gkgtn.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.114.246.9:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://gkgtn.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.114.246.9:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "http://debalcevo-dnr.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -24224,52 +25725,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://most.tv/",
+          "path": "http://republic-tv.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "194.58.122.214:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://lipetskmedia.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.137.235.40:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://zauralonline.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.220.137.153:80",
+            "addr": "212.66.37.43:80",
             "is_tls": false
           }
         }
@@ -24281,33 +25744,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://kurgan.ru/",
+          "path": "https://republic-tv.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "195.161.62.72:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.selnow45.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.220.137.200:443",
+            "addr": "212.66.37.43:443",
             "is_tls": true
           }
         }
@@ -24338,6 +25782,44 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "http://zauralonline.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.220.137.153:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://lipetskmedia.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.137.235.40:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "https://www.oka.fm/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -24346,6 +25828,63 @@
         "client": {
           "static_host": {
             "addr": "62.152.39.9:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://most.tv/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "194.58.122.214:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://www.selnow45.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.220.137.200:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://kurgan.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "195.161.62.72:443",
             "is_tls": true
           }
         }
@@ -24376,15 +25915,15 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://online47.ru/",
+          "path": "http://glavstat.govdnr.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "91.215.42.107:443",
-            "is_tls": true
+            "addr": "185.114.137.26:80",
+            "is_tls": false
           }
         }
       }
@@ -24585,25 +26124,6 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://nsknews.info/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.215.42.24:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
           "path": "https://progorodnn.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -24623,14 +26143,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://omskinform.ru/",
+          "path": "https://nsknews.info/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "90.156.243.24:443",
+            "addr": "91.215.42.24:443",
             "is_tls": true
           }
         }
@@ -24650,6 +26170,25 @@
         "client": {
           "static_host": {
             "addr": "62.113.105.112:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://omskinform.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "90.156.243.24:443",
             "is_tls": true
           }
         }
@@ -24699,14 +26238,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://magadanpravda.ru/",
+          "path": "https://online47.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "185.200.242.211:443",
+            "addr": "91.215.42.107:443",
             "is_tls": true
           }
         }
@@ -24794,44 +26333,6 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://gorodn.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "94.228.116.39:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://biwork.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.200.242.179:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
           "path": "https://citytraffic.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -24889,14 +26390,52 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://pravdapskov.ru/",
+          "path": "https://biwork.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "178.69.0.242:443",
+            "addr": "185.200.242.179:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://gorodn.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "94.228.116.39:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://magadanpravda.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.200.242.211:443",
             "is_tls": true
           }
         }
@@ -24916,44 +26455,6 @@
         "client": {
           "static_host": {
             "addr": "195.19.220.27:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://wolsk.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "92.255.104.25:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://pln-pskov.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "193.9.22.20:443",
             "is_tls": true
           }
         }
@@ -25003,6 +26504,63 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "https://pln-pskov.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.9.22.20:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://pravdapskov.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "178.69.0.242:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://wolsk.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "92.255.104.25:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "https://tolknews.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -25030,25 +26588,6 @@
         "client": {
           "static_host": {
             "addr": "185.200.242.182:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://asn24.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "80.87.203.176:443",
             "is_tls": true
           }
         }
@@ -25402,14 +26941,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://region29.ru/tv/",
+          "path": "https://asn24.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "178.208.71.19:443",
+            "addr": "80.87.203.176:443",
             "is_tls": true
           }
         }
@@ -25725,14 +27264,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://newsvladimir.ru/",
+          "path": "https://volgograd24.tv/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "91.215.41.19:443",
+            "addr": "213.159.210.204:443",
             "is_tls": true
           }
         }
@@ -25744,14 +27283,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://volgograd24.tv/",
+          "path": "https://newsvladimir.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "213.159.210.204:443",
+            "addr": "91.215.41.19:443",
             "is_tls": true
           }
         }
@@ -25782,14 +27321,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://www.marpravda.ru/",
+          "path": "https://region29.ru/tv/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "92.255.104.40:443",
+            "addr": "178.208.71.19:443",
             "is_tls": true
           }
         }
@@ -25915,25 +27454,6 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://bloknot-astrakhan.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.206.127.28:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
           "path": "https://yocity12.com/news/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -25991,14 +27511,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://newsivanovo.ru/",
+          "path": "https://dvinatoday.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "91.215.41.23:443",
+            "addr": "94.228.116.253:443",
             "is_tls": true
           }
         }
@@ -26010,14 +27530,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://dvinatoday.ru/",
+          "path": "https://newsivanovo.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "94.228.116.253:443",
+            "addr": "91.215.41.23:443",
             "is_tls": true
           }
         }
@@ -26048,26 +27568,7 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://obozvrn.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "193.233.15.157:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://bloknot-volgograd.ru/",
+          "path": "https://bloknot-astrakhan.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
@@ -26124,14 +27625,33 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://vestinn.ru/",
+          "path": "https://bloknot-volgograd.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "93.120.235.197:443",
+            "addr": "91.206.127.28:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://obozvrn.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "193.233.15.157:443",
             "is_tls": true
           }
         }
@@ -26162,6 +27682,25 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "https://www.marpravda.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "92.255.104.40:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "https://chepetsk.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -26181,14 +27720,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://gtrkkursk.ru/",
+          "path": "https://vestinn.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "91.206.127.66:443",
+            "addr": "93.120.235.197:443",
             "is_tls": true
           }
         }
@@ -26257,25 +27796,6 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://stv-online.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "95.181.181.108:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
           "path": "https://www.cheltv.ru/rossiya-24-yuzhnyj-ural-onlajn-translyaciya/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -26303,6 +27823,25 @@
         "client": {
           "static_host": {
             "addr": "109.195.194.142:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://stv-online.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "95.181.181.108:443",
             "is_tls": true
           }
         }
@@ -26523,14 +28062,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://lentv24.ru/timetable",
+          "path": "https://vesti-perm.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "91.215.42.131:443",
+            "addr": "188.128.114.121:443",
             "is_tls": true
           }
         }
@@ -26542,14 +28081,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://vesti-perm.ru/",
+          "path": "https://lentv24.ru/timetable",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "188.128.114.121:443",
+            "addr": "91.215.42.131:443",
             "is_tls": true
           }
         }
@@ -26618,14 +28157,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://www.enisey.tv/live/",
+          "path": "https://gtrkkursk.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "151.236.80.36:443",
+            "addr": "91.206.127.66:443",
             "is_tls": true
           }
         }
@@ -26637,14 +28176,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://www.city-n.ru/",
+          "path": "https://www.enisey.tv/live/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "62.231.186.10:443",
+            "addr": "151.236.80.36:443",
             "is_tls": true
           }
         }
@@ -26865,6 +28404,25 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "https://www.city-n.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "62.231.186.10:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "https://istochnik.online/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -26941,14 +28499,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://vkirove.ru/",
+          "path": "https://78.ru/tv",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "92.39.76.53:443",
+            "addr": "95.181.181.207:443",
             "is_tls": true
           }
         }
@@ -26979,14 +28537,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://78.ru/tv",
+          "path": "https://vkirove.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "95.181.181.207:443",
+            "addr": "92.39.76.53:443",
             "is_tls": true
           }
         }
@@ -27017,25 +28575,6 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://kirovpravda.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "46.255.97.150:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
           "path": "https://www.tvtomsk.ru/tv.html",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -27055,14 +28594,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://irk.ru/",
+          "path": "https://kirovpravda.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "91.215.42.22:443",
+            "addr": "46.255.97.150:443",
             "is_tls": true
           }
         }
@@ -27074,14 +28613,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://kaluga24.tv/",
+          "path": "https://irk.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "82.202.170.138:443",
+            "addr": "91.215.42.22:443",
             "is_tls": true
           }
         }
@@ -27264,25 +28803,6 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://komigor.com/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "94.228.124.233:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
           "path": "https://lugpost.ru",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -27378,6 +28898,25 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "https://komigor.com/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "94.228.124.233:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "https://56orb.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -27405,6 +28944,44 @@
         "client": {
           "static_host": {
             "addr": "185.253.34.38:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://vesti92.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.114.246.82:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://kaluganews.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.215.41.18:443",
             "is_tls": true
           }
         }
@@ -27473,44 +29050,6 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://vesti92.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.114.246.82:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://kaluganews.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.215.41.18:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
           "path": "https://region-tyumen.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -27519,6 +29058,25 @@
         "client": {
           "static_host": {
             "addr": "92.255.106.246:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://bnkirov.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "92.255.104.233:443",
             "is_tls": true
           }
         }
@@ -27549,14 +29107,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://bnkirov.ru/",
+          "path": "https://kaluga24.tv/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "92.255.104.233:443",
+            "addr": "82.202.170.138:443",
             "is_tls": true
           }
         }
@@ -27595,25 +29153,6 @@
         "client": {
           "static_host": {
             "addr": "176.118.29.186:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://tomsk-time.ru/programs/itogi-nedeli/11006-itogo.html",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "176.120.29.54:443",
             "is_tls": true
           }
         }
@@ -27720,6 +29259,82 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "https://obl1.ru/online",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "89.108.84.126:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://tatarstan24.tv/news/rubric/list/programmy-telekanala",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.27.193.159:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://nvk-online.ru/new/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "151.236.80.40:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://gorodkirov.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "212.41.26.46:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "https://gtrksmolensk.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -27777,14 +29392,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://tatarstan24.tv/news/rubric/list/programmy-telekanala",
+          "path": "https://ntr-24.ru/index.php?do=static&page=live",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "185.27.193.159:443",
+            "addr": "77.246.144.87:443",
             "is_tls": true
           }
         }
@@ -27796,14 +29411,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://obl1.ru/online",
+          "path": "https://vesti-kaliningrad.ru/rossiya1-1/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "89.108.84.126:443",
+            "addr": "185.87.194.20:443",
             "is_tls": true
           }
         }
@@ -27815,14 +29430,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://nvk-online.ru/new/",
+          "path": "https://rostovgazeta.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "151.236.80.40:443",
+            "addr": "78.155.198.158:443",
             "is_tls": true
           }
         }
@@ -27834,14 +29449,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://gorodkirov.ru/",
+          "path": "https://lg.lpgzt.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "212.41.26.46:443",
+            "addr": "134.0.117.36:443",
             "is_tls": true
           }
         }
@@ -27891,71 +29506,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://lg.lpgzt.ru/",
+          "path": "https://vashgorod.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "134.0.117.36:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://ntr-24.ru/index.php?do=static&page=live",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "77.246.144.87:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://vesti-kaliningrad.ru/rossiya1-1/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "185.87.194.20:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://www.belpressa.ru/",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "91.215.41.42:443",
+            "addr": "185.98.87.245:443",
             "is_tls": true
           }
         }
@@ -27986,6 +29544,25 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "https://www.belpressa.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "91.215.41.42:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "https://www.kamchatka.tv/index.php/pryamoj-efir",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -28005,14 +29582,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://vashgorod.ru/",
+          "path": "https://trc33.ru/programm",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "185.98.87.245:443",
+            "addr": "82.202.172.117:443",
             "is_tls": true
           }
         }
@@ -28024,14 +29601,14 @@
       "args": {
         "request": {
           "method": "GET",
-          "path": "https://trc33.ru/programm",
+          "path": "https://tomsk-time.ru/programs/itogi-nedeli/11006-itogo.html",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
           }
         },
         "client": {
           "static_host": {
-            "addr": "82.202.172.117:443",
+            "addr": "176.120.29.54:443",
             "is_tls": true
           }
         }
