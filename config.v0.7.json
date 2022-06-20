@@ -26257,6 +26257,44 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "http://www.dstu.ru",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "176.120.222.6:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://www.dstu.ru",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "176.120.222.6:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "https://www.msal.ru",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
