@@ -25345,6 +25345,44 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "http://www.fa.ru",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "109.232.104.109:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://www.fa.ru",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "109.232.104.109:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "https://www.asu.ru",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
@@ -37483,82 +37521,6 @@
         "client": {
           "static_host": {
             "addr": "194.226.19.245:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://ba.hse.ru/documents",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.104:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://ba.hse.ru/documents",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.104:443",
-            "is_tls": true
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "http://ba.hse.ru/polls/660467570.html",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.104:80",
-            "is_tls": false
-          }
-        }
-      }
-    },
-    {
-      "type": "http",
-      "count": 1,
-      "args": {
-        "request": {
-          "method": "GET",
-          "path": "https://ba.hse.ru/polls/660467570.html",
-          "headers": {
-            "User-Agent": "{{ random_user_agent }}"
-          }
-        },
-        "client": {
-          "static_host": {
-            "addr": "178.248.234.104:443",
             "is_tls": true
           }
         }
