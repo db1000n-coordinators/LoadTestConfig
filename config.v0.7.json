@@ -31235,6 +31235,44 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "http://www.vgsa.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "45.134.27.129:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://www.vgsa.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "45.134.27.129:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "http://www.agni-rt.ru",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
