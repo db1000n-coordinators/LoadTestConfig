@@ -30342,6 +30342,44 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "http://www.nngasu.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "213.177.103.214:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://www.nngasu.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "213.177.103.214:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "https://www.novsu.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
