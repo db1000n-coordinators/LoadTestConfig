@@ -1132,6 +1132,44 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "http://www.muiv.ru/abiturient/epk/#epk_form",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "37.110.136.118:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://www.muiv.ru/abiturient/epk/#epk_form",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "37.110.136.118:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "http://inn.fsb.ru/pages/02-rules.html",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
