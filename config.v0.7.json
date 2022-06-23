@@ -14513,6 +14513,44 @@
       }
     },
     {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://213.59.254.8",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "213.59.254.8:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://213.59.254.8",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "213.59.254.8:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
       "type": "encrypted",
       "args": {
         "format": "json",
