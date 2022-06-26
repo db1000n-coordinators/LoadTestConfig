@@ -10941,12 +10941,22 @@
       }
     },
     {
-      "type": "tcp",
+      "type": "http",
       "count": 1,
       "args": {
-        "address": "undefined://194.58.59.69:",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
+        "request": {
+          "method": "GET",
+          "path": "http://znamya-pobedi.ru/",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "194.58.59.69:80",
+            "is_tls": false
+          }
+        }
       }
     },
     {
