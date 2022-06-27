@@ -9654,6 +9654,44 @@
       "args": {
         "request": {
           "method": "GET",
+          "path": "http://www.roseltorg.ru/search/sale?query_field=%D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D0%B6%D0%B0&status%5B%5D=0&currency=all&page=10&from=100",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.79.118.12:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://www.roseltorg.ru/search/sale?query_field=%D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D0%B6%D0%B0&status%5B%5D=0&currency=all&page=10&from=100",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "185.79.118.12:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
           "path": "http://etp.roseltorg.ru/",
           "headers": {
             "User-Agent": "{{ random_user_agent }}"
