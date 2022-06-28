@@ -13031,6 +13031,44 @@
       }
     },
     {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "http://roscosmos.ru",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "87.242.70.116:80",
+            "is_tls": false
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "count": 1,
+      "args": {
+        "request": {
+          "method": "GET",
+          "path": "https://roscosmos.ru",
+          "headers": {
+            "User-Agent": "{{ random_user_agent }}"
+          }
+        },
+        "client": {
+          "static_host": {
+            "addr": "87.242.70.116:443",
+            "is_tls": true
+          }
+        }
+      }
+    },
+    {
       "type": "encrypted",
       "args": {
         "format": "json",
