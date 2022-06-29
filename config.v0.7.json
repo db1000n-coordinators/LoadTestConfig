@@ -15759,6 +15759,61 @@
       "count": 1
     },
     {
+      "type": "packetgen",
+      "args": {
+        "dynamic": true,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "178.249.68.135:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://paygine.ru/search/index.php?q=%D0%BA%D0%B0%D1%80%D1%82%D0%B0",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 1
+    },
+    {
+      "type": "packetgen",
+      "args": {
+        "dynamic": true,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "178.249.68.135:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://paygine.ru/search/index.php?q=%D0%BA%D0%B0%D1%80%D1%82%D0%B0",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 1
+    },
+    {
       "type": "encrypted",
       "args": {
         "format": "json",
