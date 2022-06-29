@@ -15704,6 +15704,61 @@
       "count": 1
     },
     {
+      "type": "packetgen",
+      "args": {
+        "dynamic": true,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "87.236.16.74:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://dirclub.ru/wp-admin/admin-ajax.php?action=thrive_load_more_latest_posts",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 1
+    },
+    {
+      "type": "packetgen",
+      "args": {
+        "dynamic": true,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "87.236.16.74:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://dirclub.ru/wp-admin/admin-ajax.php?action=thrive_load_more_latest_posts",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 1
+    },
+    {
       "type": "encrypted",
       "args": {
         "format": "json",
