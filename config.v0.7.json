@@ -9589,6 +9589,116 @@
       "count": 2
     },
     {
+      "type": "packetgen",
+      "args": {
+        "dynamic": true,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "54.247.107.64:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://www.bitrix24.net/oauth/authorize/?user_lang=ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "args": {
+        "dynamic": true,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "54.247.107.64:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://www.bitrix24.net/oauth/authorize/?user_lang=ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "args": {
+        "dynamic": true,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "77.111.244.9:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://www.bitrix24.net/oauth/authorize/?user_lang=ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "args": {
+        "dynamic": true,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "77.111.244.9:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://www.bitrix24.net/oauth/authorize/?user_lang=ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
       "type": "encrypted",
       "args": {
         "format": "json",
