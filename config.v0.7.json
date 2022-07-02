@@ -10738,6 +10738,66 @@
     },
     {
       "type": "packetgen",
+      "name": "www.bankfax.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "92.255.104.152:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://www.bankfax.ru/search/?text=%D0%B3%D0%B0%D0%B7%D0%B5%D1%82%D0%B0&page=20",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "www.bankfax.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "92.255.104.152:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://www.bankfax.ru/opinions/?page=20",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
       "name": "xn----7sbemcagqeo2b3bkwe.xn--p1ai",
       "args": {
         "dynamic": false,
