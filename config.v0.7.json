@@ -1,61 +1,24 @@
 {
   "jobs": [
     {
-      "type": "packetgen",
+      "type": "tcp",
+      "count": 1,
       "name": "213.59.254.8",
       "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "213.59.254.8:80"
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "http://213.59.254.8",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 1
+        "address": "213.59.254.8:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
     },
     {
-      "type": "packetgen",
+      "type": "tcp",
+      "count": 1,
       "name": "213.59.254.8",
       "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "213.59.254.8:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://213.59.254.8",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 1
+        "address": "213.59.254.8:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
     },
     {
       "type": "tcp",
