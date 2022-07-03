@@ -7673,61 +7673,24 @@
       "count": 3
     },
     {
-      "type": "packetgen",
-      "name": "bel.ru",
+      "type": "tcp",
+      "count": 3,
+      "name": "78.155.198.158",
       "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "78.155.198.158:80"
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "http://bel.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 3
+        "address": "78.155.198.158:80",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
     },
     {
-      "type": "packetgen",
-      "name": "bel.ru",
+      "type": "tcp",
+      "count": 3,
+      "name": "78.155.198.158",
       "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "78.155.198.158:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://bel.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 3
+        "address": "78.155.198.158:443",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
     },
     {
       "type": "encrypted",
