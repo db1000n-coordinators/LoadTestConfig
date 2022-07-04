@@ -5854,6 +5854,63 @@
       "count": 4
     },
     {
+      "type": "packetgen",
+      "name": "agregatoreat.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "84.201.185.57:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://agregatoreat.ru/integration/ecom/classifier/eatCategoryCatalog.zip",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 4
+    },
+    {
+      "type": "packetgen",
+      "name": "agregatoreat.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "84.201.185.57:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://agregatoreat.ru/integration/ecom/classifier/eatCategoryCatalog.zip",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 4
+    },
+    {
       "type": "encrypted",
       "args": {
         "format": "json",
