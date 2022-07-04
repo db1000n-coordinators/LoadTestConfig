@@ -7421,12 +7421,15 @@
       "type": "packetgen",
       "name": "agregatoreat.ru",
       "args": {
-        "dynamic": false,
+        "dynamic": true,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "84.201.185.57:80"
+            "address": "84.201.185.57:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
           }
         },
         "packet": {
@@ -7434,7 +7437,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "http://agregatoreat.ru/classifier/ktru-list/?search=23",
+              "path": "https://agregatoreat.ru/classifier/ktru-list/?search={{ random_alphanum 100 }}",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
