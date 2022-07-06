@@ -16735,6 +16735,63 @@
       "count": 1
     },
     {
+      "type": "packetgen",
+      "name": "baids.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "51.250.7.153:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://baids.ru/catalog?q=12",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 1
+    },
+    {
+      "type": "packetgen",
+      "name": "baids.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "51.250.7.153:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://baids.ru/catalog?q=12",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 1
+    },
+    {
       "type": "encrypted",
       "args": {
         "format": "json",
