@@ -20902,14 +20902,31 @@
       "count": 1
     },
     {
-      "type": "tcp",
-      "count": 1,
-      "name": "undefined",
+      "type": "packetgen",
+      "name": "www.art-logistic.su",
       "args": {
-        "address": "undefined://87.236.16.203:",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "87.236.16.203:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://www.art-logistic.su/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 1
     },
     {
       "type": "packetgen",
