@@ -152,6 +152,66 @@
     },
     {
       "type": "packetgen",
+      "name": "www.mid.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "194.85.30.210:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://www.mid.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "www.mid.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "194.85.30.210:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://www.mid.ru/upload/medialibrary/4a0/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%A3%D0%9F%D0%9F%20%D0%B1%D0%B5%D0%B7%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8.pdf",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
       "name": "lk.mid.ru",
       "args": {
         "dynamic": false,
@@ -182,14 +242,17 @@
     },
     {
       "type": "packetgen",
-      "name": "www.college-mid.ru",
+      "name": "dgp.mid.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "91.106.207.3:80"
+            "address": "194.85.30.239:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
           }
         },
         "packet": {
@@ -197,7 +260,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "http://www.college-mid.ru/",
+              "path": "https://dgp.mid.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -225,6 +288,33 @@
             "data": {
               "method": "GET",
               "path": "http://learn.midpass.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "www.college-mid.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "91.106.207.3:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://www.college-mid.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -285,96 +375,6 @@
             "data": {
               "method": "GET",
               "path": "https://queue.midpass.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "dgp.mid.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "194.85.30.239:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://dgp.mid.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "www.mid.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "194.85.30.210:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://www.mid.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "www.mid.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "194.85.30.210:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://www.mid.ru/upload/medialibrary/4a0/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%A3%D0%9F%D0%9F%20%D0%B1%D0%B5%D0%B7%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8.pdf",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -806,6 +806,36 @@
     },
     {
       "type": "packetgen",
+      "name": "bbb.dipacademy.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "89.188.117.138:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://bbb.dipacademy.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
       "name": "support.midpass.ru",
       "args": {
         "dynamic": false,
@@ -866,36 +896,6 @@
     },
     {
       "type": "packetgen",
-      "name": "bbb.dipacademy.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "89.188.117.138:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://bbb.dipacademy.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
       "name": "rdgw.dipacademy.ru",
       "args": {
         "dynamic": false,
@@ -915,66 +915,6 @@
             "data": {
               "method": "GET",
               "path": "https://rdgw.dipacademy.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "visa.kdmid.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "193.47.146.133:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://visa.kdmid.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "visaonline.kdmid.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "193.47.146.133:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://visaonline.kdmid.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -1035,6 +975,66 @@
             "data": {
               "method": "GET",
               "path": "https://evisacheck.kdmid.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "visa.kdmid.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "193.47.146.133:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://visa.kdmid.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "visaonline.kdmid.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "193.47.146.133:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://visaonline.kdmid.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -4514,14 +4514,14 @@
     },
     {
       "type": "packetgen",
-      "name": "sdo.dipacademy.ru",
+      "name": "www.dipacademy.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "89.223.100.113:443",
+            "address": "89.188.105.12:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -4532,7 +4532,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://sdo.dipacademy.ru/",
+              "path": "https://www.dipacademy.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -4664,14 +4664,14 @@
     },
     {
       "type": "packetgen",
-      "name": "www.dipacademy.ru",
+      "name": "sdo.dipacademy.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "89.188.105.12:443",
+            "address": "89.223.100.113:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -4682,7 +4682,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://www.dipacademy.ru/",
+              "path": "https://sdo.dipacademy.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -6725,36 +6725,6 @@
     },
     {
       "type": "packetgen",
-      "name": "mml.beeline.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.7:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://mml.beeline.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
       "name": "trust.beeline.ru",
       "args": {
         "dynamic": false,
@@ -6774,66 +6744,6 @@
             "data": {
               "method": "GET",
               "path": "https://trust.beeline.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "remcomsc.beeline.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.30:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://remcomsc.beeline.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "slim.beeline.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.18:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://slim.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -6995,14 +6905,14 @@
     },
     {
       "type": "packetgen",
-      "name": "mailrelay-02.vimpelcom.ru",
+      "name": "mml.beeline.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.22:443",
+            "address": "217.118.84.7:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -7013,7 +6923,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://mailrelay-02.vimpelcom.ru",
+              "path": "https://mml.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -7025,14 +6935,14 @@
     },
     {
       "type": "packetgen",
-      "name": "cloudcc.beeline.ru",
+      "name": "slim.beeline.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.55:443",
+            "address": "217.118.84.18:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -7043,7 +6953,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://cloudcc.beeline.ru",
+              "path": "https://slim.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -7085,14 +6995,14 @@
     },
     {
       "type": "packetgen",
-      "name": "beepayxp.beeline.ru",
+      "name": "cloudcc.beeline.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.19:443",
+            "address": "217.118.84.55:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -7103,7 +7013,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://beepayxp.beeline.ru",
+              "path": "https://cloudcc.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -7115,14 +7025,14 @@
     },
     {
       "type": "packetgen",
-      "name": "atm2.beeline.ru",
+      "name": "mailrelay-02.vimpelcom.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.46:443",
+            "address": "217.118.84.22:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -7133,7 +7043,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://atm2.beeline.ru",
+              "path": "https://mailrelay-02.vimpelcom.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -7145,14 +7055,14 @@
     },
     {
       "type": "packetgen",
-      "name": "dealer.beeline.ru",
+      "name": "remcomsc.beeline.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.34:443",
+            "address": "217.118.84.30:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -7163,457 +7073,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://dealer.beeline.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "beeport.beeline.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.33:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://beeport.beeline.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "beekas-01.beeline.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.61:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://beekas-01.beeline.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "dncaps.beeline.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.74:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://dncaps.beeline.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "sms.beemail.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.56:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://sms.beemail.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "bolrelay.vimpelcom.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.58:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://bolrelay.vimpelcom.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "dr-uag2.beeline.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.103:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://dr-uag2.beeline.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "mn-uag2.beeline.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.101:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://mn-uag2.beeline.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "ple.beeline.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.75:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://ple.beeline.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "beekas-02.beeline.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.62:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://beekas-02.beeline.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "duality.beeline.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.76:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://duality.beeline.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "cardreg.beeline.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.129:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://cardreg.beeline.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "probe.beeline.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.68:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://probe.beeline.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "dealerpay.beeline.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.120:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://dealerpay.beeline.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "dncaps2.beeline.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.106:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://dncaps2.beeline.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "click537.beeline.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.87:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://click537.beeline.ru",
+              "path": "https://remcomsc.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -7655,14 +7115,14 @@
     },
     {
       "type": "packetgen",
-      "name": "atm3.beeline.ru",
+      "name": "sms.beemail.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.114:443",
+            "address": "217.118.84.56:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -7673,127 +7133,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://atm3.beeline.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "ms-vimss04.beeline.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.118:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://ms-vimss04.beeline.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "mn-uag1.beeline.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.100:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://mn-uag1.beeline.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "yaroslavl.beelinegsm.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.130:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://yaroslavl.beelinegsm.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "sourcing1.vimpelcom.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.116:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://sourcing1.vimpelcom.ru",
+              "path": "https://sms.beemail.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -7835,14 +7175,14 @@
     },
     {
       "type": "packetgen",
-      "name": "beepayxp-atm.beeline.ru",
+      "name": "probe.beeline.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.109:443",
+            "address": "217.118.84.68:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -7853,7 +7193,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://beepayxp-atm.beeline.ru",
+              "path": "https://probe.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -7865,14 +7205,14 @@
     },
     {
       "type": "packetgen",
-      "name": "omsk.beelinegsm.ru",
+      "name": "dr-uag2.beeline.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.135:443",
+            "address": "217.118.84.103:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -7883,7 +7223,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://omsk.beelinegsm.ru",
+              "path": "https://dr-uag2.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -7895,14 +7235,14 @@
     },
     {
       "type": "packetgen",
-      "name": "ufa.beelinegsm.ru",
+      "name": "cardreg.beeline.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.138:443",
+            "address": "217.118.84.129:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -7913,7 +7253,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://ufa.beelinegsm.ru",
+              "path": "https://cardreg.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -7925,14 +7265,14 @@
     },
     {
       "type": "packetgen",
-      "name": "barnaul.beelinegsm.ru",
+      "name": "beepayxp.beeline.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.136:443",
+            "address": "217.118.84.19:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -7943,7 +7283,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://barnaul.beelinegsm.ru",
+              "path": "https://beepayxp.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -7955,14 +7295,14 @@
     },
     {
       "type": "packetgen",
-      "name": "voronezh.beelinegsm.ru",
+      "name": "dealer.beeline.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.139:443",
+            "address": "217.118.84.34:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -7973,7 +7313,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://voronezh.beelinegsm.ru",
+              "path": "https://dealer.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -7985,14 +7325,14 @@
     },
     {
       "type": "packetgen",
-      "name": "brn.beelinegsm.ru",
+      "name": "duality.beeline.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.137:443",
+            "address": "217.118.84.76:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -8003,7 +7343,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://brn.beelinegsm.ru",
+              "path": "https://duality.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -8015,14 +7355,14 @@
     },
     {
       "type": "packetgen",
-      "name": "tver.beelinegsm.ru",
+      "name": "sourcing1.vimpelcom.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.142:443",
+            "address": "217.118.84.116:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -8033,7 +7373,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://tver.beelinegsm.ru",
+              "path": "https://sourcing1.vimpelcom.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -8045,14 +7385,14 @@
     },
     {
       "type": "packetgen",
-      "name": "kemerovo.beelinegsm.ru",
+      "name": "dealerpay.beeline.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.134:443",
+            "address": "217.118.84.120:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -8063,7 +7403,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://kemerovo.beelinegsm.ru",
+              "path": "https://dealerpay.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -8075,14 +7415,14 @@
     },
     {
       "type": "packetgen",
-      "name": "www.vimpelcom.ru",
+      "name": "beekas-01.beeline.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.173:443",
+            "address": "217.118.84.61:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -8093,7 +7433,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://www.vimpelcom.ru",
+              "path": "https://beekas-01.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -8105,14 +7445,14 @@
     },
     {
       "type": "packetgen",
-      "name": "audioconf2.beeline.ru",
+      "name": "beeport.beeline.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.193:443",
+            "address": "217.118.84.33:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -8123,7 +7463,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://audioconf2.beeline.ru",
+              "path": "https://beeport.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -8135,14 +7475,14 @@
     },
     {
       "type": "packetgen",
-      "name": "corpsms.beemail.ru",
+      "name": "dncaps2.beeline.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.188:443",
+            "address": "217.118.84.106:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -8153,7 +7493,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://corpsms.beemail.ru",
+              "path": "https://dncaps2.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -8165,14 +7505,14 @@
     },
     {
       "type": "packetgen",
-      "name": "yol.beelinegsm.ru",
+      "name": "mn-uag1.beeline.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.191:443",
+            "address": "217.118.84.100:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -8183,7 +7523,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://yol.beelinegsm.ru",
+              "path": "https://mn-uag1.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -8195,14 +7535,14 @@
     },
     {
       "type": "packetgen",
-      "name": "els.beelinegsm.ru",
+      "name": "ple.beeline.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.195:443",
+            "address": "217.118.84.75:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -8213,7 +7553,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://els.beelinegsm.ru",
+              "path": "https://ple.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -8225,14 +7565,14 @@
     },
     {
       "type": "packetgen",
-      "name": "cabinet.beeline.ru",
+      "name": "click537.beeline.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.202:443",
+            "address": "217.118.84.87:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -8243,7 +7583,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://cabinet.beeline.ru",
+              "path": "https://click537.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -8255,14 +7595,14 @@
     },
     {
       "type": "packetgen",
-      "name": "sms.beepost.ru",
+      "name": "beekas-02.beeline.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.184:443",
+            "address": "217.118.84.62:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -8273,7 +7613,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://sms.beepost.ru",
+              "path": "https://beekas-02.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -8285,14 +7625,14 @@
     },
     {
       "type": "packetgen",
-      "name": "khbr.beelinegsm.ru",
+      "name": "mn-uag2.beeline.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.212:443",
+            "address": "217.118.84.101:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -8303,7 +7643,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://khbr.beelinegsm.ru",
+              "path": "https://mn-uag2.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -8315,14 +7655,14 @@
     },
     {
       "type": "packetgen",
-      "name": "vladikavkaz.beelinegsm.ru",
+      "name": "dncaps.beeline.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.200:443",
+            "address": "217.118.84.74:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -8333,7 +7673,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://vladikavkaz.beelinegsm.ru",
+              "path": "https://dncaps.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -8345,14 +7685,14 @@
     },
     {
       "type": "packetgen",
-      "name": "cdp.beeline.ru",
+      "name": "yaroslavl.beelinegsm.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.205:443",
+            "address": "217.118.84.130:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -8363,7 +7703,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://cdp.beeline.ru",
+              "path": "https://yaroslavl.beelinegsm.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -8375,14 +7715,14 @@
     },
     {
       "type": "packetgen",
-      "name": "smsgame.beeline.ru",
+      "name": "bolrelay.vimpelcom.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.222:443",
+            "address": "217.118.84.58:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -8393,7 +7733,97 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://smsgame.beeline.ru",
+              "path": "https://bolrelay.vimpelcom.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "ms-vimss04.beeline.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.118:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://ms-vimss04.beeline.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "atm2.beeline.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.46:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://atm2.beeline.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "atm3.beeline.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.114:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://atm3.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -8435,14 +7865,14 @@
     },
     {
       "type": "packetgen",
-      "name": "fmtn-pilot.beeline.ru",
+      "name": "cabinet.beeline.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.192:443",
+            "address": "217.118.84.202:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -8453,7 +7883,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://fmtn-pilot.beeline.ru",
+              "path": "https://cabinet.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -8555,14 +7985,14 @@
     },
     {
       "type": "packetgen",
-      "name": "beepayxppg.beeline.ru",
+      "name": "smsgame.beeline.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.179:443",
+            "address": "217.118.84.222:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -8573,7 +8003,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://beepayxppg.beeline.ru",
+              "path": "https://smsgame.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -8585,14 +8015,14 @@
     },
     {
       "type": "packetgen",
-      "name": "privet.beeline.ru",
+      "name": "beepayxp-atm.beeline.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "193.232.167.168:443",
+            "address": "217.118.84.109:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -8603,7 +8033,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://privet.beeline.ru",
+              "path": "https://beepayxp-atm.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -8615,14 +8045,14 @@
     },
     {
       "type": "packetgen",
-      "name": "pnz.beelinegsm.ru",
+      "name": "sms.beepost.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.190:443",
+            "address": "217.118.84.184:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -8633,7 +8063,37 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://pnz.beelinegsm.ru",
+              "path": "https://sms.beepost.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "ufa.beelinegsm.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.138:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://ufa.beelinegsm.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -8705,6 +8165,246 @@
     },
     {
       "type": "packetgen",
+      "name": "vladikavkaz.beelinegsm.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.200:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://vladikavkaz.beelinegsm.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "els.beelinegsm.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.195:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://els.beelinegsm.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "pnz.beelinegsm.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.190:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://pnz.beelinegsm.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "omsk.beelinegsm.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.135:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://omsk.beelinegsm.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "tver.beelinegsm.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.142:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://tver.beelinegsm.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "audioconf2.beeline.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.193:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://audioconf2.beeline.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "www.vimpelcom.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.173:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://www.vimpelcom.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "yol.beelinegsm.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.191:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://yol.beelinegsm.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
       "name": "beepayxppg2.beeline.ru",
       "args": {
         "dynamic": false,
@@ -8724,6 +8424,306 @@
             "data": {
               "method": "GET",
               "path": "https://beepayxppg2.beeline.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "khbr.beelinegsm.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.212:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://khbr.beelinegsm.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "fmtn-pilot.beeline.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.192:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://fmtn-pilot.beeline.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "brn.beelinegsm.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.137:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://brn.beelinegsm.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "barnaul.beelinegsm.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.136:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://barnaul.beelinegsm.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "cdp.beeline.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.205:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://cdp.beeline.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "kemerovo.beelinegsm.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.134:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://kemerovo.beelinegsm.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "privet.beeline.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "193.232.167.168:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://privet.beeline.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "corpsms.beemail.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.188:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://corpsms.beemail.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "voronezh.beelinegsm.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.139:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://voronezh.beelinegsm.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "beepayxppg.beeline.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.179:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://beepayxppg.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -8765,36 +8765,6 @@
     },
     {
       "type": "packetgen",
-      "name": "lipetsk.beelinegsm.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.144:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://lipetsk.beelinegsm.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
       "name": "srt.beelinegsm.ru",
       "args": {
         "dynamic": false,
@@ -8825,14 +8795,14 @@
     },
     {
       "type": "packetgen",
-      "name": "nnov.beelinegsm.ru",
+      "name": "lipetsk.beelinegsm.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.131:443",
+            "address": "217.118.84.144:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -8843,97 +8813,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://nnov.beelinegsm.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "rostov-on-don.beelinegsm.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.133:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://rostov-on-don.beelinegsm.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "sts.beeline.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.149:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://sts.beeline.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "cheboksary.beelinegsm.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.151:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://cheboksary.beelinegsm.ru",
+              "path": "https://lipetsk.beelinegsm.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -8975,14 +8855,14 @@
     },
     {
       "type": "packetgen",
-      "name": "umcs.beeline.ru",
+      "name": "cheboksary.beelinegsm.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.118.84.146:443",
+            "address": "217.118.84.151:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -8993,7 +8873,37 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://umcs.beeline.ru",
+              "path": "https://cheboksary.beelinegsm.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "rostov-on-don.beelinegsm.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.133:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://rostov-on-don.beelinegsm.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -9024,6 +8934,96 @@
             "data": {
               "method": "GET",
               "path": "https://sml.beelinegsm.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "nnov.beelinegsm.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.131:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://nnov.beelinegsm.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "umcs.beeline.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.146:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://umcs.beeline.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "sts.beeline.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.149:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://sts.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -9155,36 +9155,6 @@
     },
     {
       "type": "packetgen",
-      "name": "blg.beelinegsm.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.158:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://blg.beelinegsm.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
       "name": "www.region.beeline.ru",
       "args": {
         "dynamic": false,
@@ -9204,6 +9174,36 @@
             "data": {
               "method": "GET",
               "path": "https://www.region.beeline.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "blg.beelinegsm.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.158:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://blg.beelinegsm.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -9305,6 +9305,36 @@
     },
     {
       "type": "packetgen",
+      "name": "ast.beelinegsm.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.156:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://ast.beelinegsm.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
       "name": "vlg.beelinegsm.ru",
       "args": {
         "dynamic": false,
@@ -9365,36 +9395,6 @@
     },
     {
       "type": "packetgen",
-      "name": "ast.beelinegsm.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.156:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://ast.beelinegsm.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
       "name": "chelyabinsk.beelinegsm.ru",
       "args": {
         "dynamic": false,
@@ -9425,36 +9425,6 @@
     },
     {
       "type": "packetgen",
-      "name": "ekb.beelinegsm.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.176:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://ekb.beelinegsm.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
       "name": "rma.beeline.ru",
       "args": {
         "dynamic": false,
@@ -9474,6 +9444,36 @@
             "data": {
               "method": "GET",
               "path": "https://rma.beeline.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "ekb.beelinegsm.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.176:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://ekb.beelinegsm.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -9605,6 +9605,66 @@
     },
     {
       "type": "packetgen",
+      "name": "kur.beelinegsm.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.154:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://kur.beelinegsm.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "dmpapi.beeline.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.229:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://dmpapi.beeline.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
       "name": "beelinegsm.ru",
       "args": {
         "dynamic": false,
@@ -9654,66 +9714,6 @@
             "data": {
               "method": "GET",
               "path": "https://beeplus.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "dmpapi.beeline.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.229:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://dmpapi.beeline.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "kur.beelinegsm.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.154:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://kur.beelinegsm.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -9785,36 +9785,6 @@
     },
     {
       "type": "packetgen",
-      "name": "elearn.beeline.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "217.118.84.240:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://elearn.beeline.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
       "name": "kamchatka.beelinegsm.ru",
       "args": {
         "dynamic": false,
@@ -9864,6 +9834,36 @@
             "data": {
               "method": "GET",
               "path": "https://madonna.beeline.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "elearn.beeline.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.118.84.240:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://elearn.beeline.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
