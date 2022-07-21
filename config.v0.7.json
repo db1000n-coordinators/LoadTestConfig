@@ -1928,14 +1928,17 @@
     },
     {
       "type": "packetgen",
-      "name": "camouflagenato.ru",
+      "name": "m65military.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "31.31.198.224:80"
+            "address": "31.31.198.224:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
           }
         },
         "packet": {
@@ -1943,7 +1946,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "http://camouflagenato.ru/",
+              "path": "https://m65military.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -2136,6 +2139,36 @@
             "data": {
               "method": "GET",
               "path": "http://voentorg-dmitrov.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 7
+    },
+    {
+      "type": "packetgen",
+      "name": "voentorg-dmitrov.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "185.32.58.197:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://voentorg-dmitrov.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
