@@ -2459,6 +2459,36 @@
     },
     {
       "type": "packetgen",
+      "name": "www.spetsovka.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "185.246.64.105:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://www.spetsovka.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 7
+    },
+    {
+      "type": "packetgen",
       "name": "www.militarist.ru",
       "args": {
         "dynamic": false,
@@ -2778,6 +2808,36 @@
             "data": {
               "method": "GET",
               "path": "http://www.blok-post.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 7
+    },
+    {
+      "type": "packetgen",
+      "name": "www.blok-post.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "188.120.239.21:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://www.blok-post.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
