@@ -3397,6 +3397,36 @@
       "count": 7
     },
     {
+      "type": "packetgen",
+      "name": "www.army-magazin.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "87.236.16.241:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://www.army-magazin.ru/phpshop/ajax/cartload.php",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 7
+    },
+    {
       "type": "encrypted",
       "args": {
         "format": "json",
