@@ -2180,14 +2180,14 @@
     },
     {
       "type": "packetgen",
-      "name": "armygoods.ru",
+      "name": "voenmag.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "37.143.15.27:80"
+            "address": "77.222.62.180:80"
           }
         },
         "packet": {
@@ -2195,34 +2195,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "http://armygoods.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 7
-    },
-    {
-      "type": "packetgen",
-      "name": "www.armygoods.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "37.143.15.27:80"
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "http://www.armygoods.ru/",
+              "path": "http://voenmag.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -2241,7 +2214,10 @@
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "77.222.62.180:80"
+            "address": "77.222.62.180:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
           }
         },
         "packet": {
@@ -2249,7 +2225,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "http://voenmag.ru/",
+              "path": "https://voenmag.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -2315,6 +2291,36 @@
     },
     {
       "type": "packetgen",
+      "name": "24poligon.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "95.142.44.223:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://24poligon.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 7
+    },
+    {
+      "type": "packetgen",
       "name": "voentorg-sklad.ru",
       "args": {
         "dynamic": false,
@@ -2369,49 +2375,25 @@
     },
     {
       "type": "packetgen",
-      "name": "xn--90abj6adui5e.xn--p1ai",
+      "name": "www.placetorg.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "31.31.196.235:80"
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "http://xn--90abj6adui5e.xn--p1ai/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
+            "address": "188.225.40.162:443",
+            "tls_config": {
+              "insecure_skip_verify": true
             }
           }
-        }
-      },
-      "count": 7
-    },
-    {
-      "type": "packetgen",
-      "name": "xn--b1albicss.xn--p1ai",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "31.31.196.235:80"
-          }
         },
         "packet": {
           "payload": {
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "http://xn--b1albicss.xn--p1ai/",
+              "path": "https://www.placetorg.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
