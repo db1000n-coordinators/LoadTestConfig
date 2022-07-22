@@ -3580,6 +3580,36 @@
       "count": 6
     },
     {
+      "type": "packetgen",
+      "name": "barrakuda.biz",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "45.130.41.30:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://barrakuda.biz/searchvm",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 6
+    },
+    {
       "type": "encrypted",
       "args": {
         "format": "json",
