@@ -3251,6 +3251,36 @@
     },
     {
       "type": "packetgen",
+      "name": "ed.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "178.248.232.136:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://ed.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 7
+    },
+    {
+      "type": "packetgen",
       "name": "er.ru",
       "args": {
         "dynamic": false,
@@ -3286,6 +3316,36 @@
           "args": {
             "protocol": "tcp",
             "address": "45.10.55.152:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://er.ru/media/documents/August2021/L4Sk4t74UXKF1MG1oFjh.pdf",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 7
+    },
+    {
+      "type": "packetgen",
+      "name": "er.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "178.248.232.136:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
