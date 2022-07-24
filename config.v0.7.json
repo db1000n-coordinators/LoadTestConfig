@@ -4506,6 +4506,33 @@
           "type": "net",
           "args": {
             "protocol": "tcp",
+            "address": "178.21.14.92:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://bryansk-news.net/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 3
+    },
+    {
+      "type": "packetgen",
+      "name": "bryansk-news.net",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
             "address": "178.21.14.92:443",
             "tls_config": {
               "insecure_skip_verify": true
