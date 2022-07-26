@@ -6404,6 +6404,63 @@
         }
       },
       "count": 4
+    },
+    {
+      "type": "packetgen",
+      "name": "www.kaznalnr.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "185.26.122.30:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://www.kaznalnr.ru/Purchases?field_full_name_value=авто",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 4
+    },
+    {
+      "type": "packetgen",
+      "name": "www.kaznalnr.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "185.26.122.30:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://www.kaznalnr.ru/Purchases?field_full_name_value=авто",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 4
     }
   ]
 }
