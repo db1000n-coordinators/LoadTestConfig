@@ -5117,6 +5117,33 @@
         }
       },
       "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "web.tema.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "62.213.108.183:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://web.tema.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
     }
   ]
 }
