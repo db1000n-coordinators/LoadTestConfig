@@ -4940,6 +4940,36 @@
     },
     {
       "type": "packetgen",
+      "name": "www.artlebedev.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "195.218.200.21:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://www.artlebedev.ru/svalka/api/2019/?lang_id=1&data=works&works_tags=&works_offset=0&works_limit=2022&works_not_update_price=1",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
       "name": "web.tema.ru",
       "args": {
         "dynamic": false,
