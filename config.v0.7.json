@@ -5144,6 +5144,36 @@
         }
       },
       "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "epc-lnr.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "193.228.162.153:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://epc-lnr.ru/index.html",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
     }
   ]
 }
