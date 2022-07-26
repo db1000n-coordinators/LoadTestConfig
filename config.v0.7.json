@@ -4880,6 +4880,36 @@
     },
     {
       "type": "packetgen",
+      "name": "www.artlebedev.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "195.218.200.21:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://www.artlebedev.ru/search/v5/v2.html?lang=en&is_dev=0&page=0&q=a",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
       "name": "web.tema.ru",
       "args": {
         "dynamic": false,
