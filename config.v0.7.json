@@ -10297,6 +10297,36 @@
         }
       },
       "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "ctlmbnk-insure.el-polis.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.74.33.84:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://ctlmbnk-insure.el-polis.ru/user/authorize",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
     }
   ]
 }
