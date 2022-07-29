@@ -10087,6 +10087,36 @@
         }
       },
       "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "www.kremlinbank.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "178.210.92.160:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://www.kremlinbank.ru/captcha.php?key=forms",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
     }
   ]
 }
