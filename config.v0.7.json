@@ -9175,6 +9175,33 @@
         }
       },
       "count": 3
+    },
+    {
+      "type": "packetgen",
+      "name": "mediaservice.mk.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "185.3.143.71:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://mediaservice.mk.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 3
     }
   ]
 }
