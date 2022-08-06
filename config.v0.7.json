@@ -6900,6 +6900,36 @@
       "count": 3
     },
     {
+      "type": "packetgen",
+      "name": "rs-portal.capitalbank.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "212.94.111.26:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://rs-portal.capitalbank.ru/RSPortal/StartHTML/start.htm",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 3
+    },
+    {
       "type": "encrypted",
       "args": {
         "format": "json",
