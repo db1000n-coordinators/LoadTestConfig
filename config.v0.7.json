@@ -5588,16 +5588,6 @@
       "count": 3
     },
     {
-      "type": "tcp",
-      "count": 3,
-      "name": "85.202.228.35",
-      "args": {
-        "address": "85.202.228.35:25",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    },
-    {
       "type": "packetgen",
       "name": "www.altbank.ru",
       "args": {
@@ -6980,6 +6970,36 @@
             "data": {
               "method": "GET",
               "path": "https://ib.sinara.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 3
+    },
+    {
+      "type": "packetgen",
+      "name": "ibank.mbbru.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "89.175.170.90:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://ibank.mbbru.ru/ibank2/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
