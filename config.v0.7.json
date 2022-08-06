@@ -4722,14 +4722,17 @@
     },
     {
       "type": "packetgen",
-      "name": "sinko-bank.ru",
+      "name": "www.sinko-bank.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "91.189.114.25:80"
+            "address": "195.208.1.160:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
           }
         },
         "packet": {
@@ -4737,7 +4740,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "http://sinko-bank.ru",
+              "path": "https://www.sinko-bank.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
