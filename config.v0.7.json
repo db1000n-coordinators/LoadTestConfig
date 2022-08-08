@@ -6940,6 +6940,36 @@
       "count": 3
     },
     {
+      "type": "packetgen",
+      "name": "vksprt.rtyva.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "94.230.242.123:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://vksprt.rtyva.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 3
+    },
+    {
       "type": "encrypted",
       "args": {
         "format": "json",
