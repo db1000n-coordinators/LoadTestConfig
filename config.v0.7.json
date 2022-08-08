@@ -12707,6 +12707,33 @@
       "count": 2
     },
     {
+      "type": "packetgen",
+      "name": "5.188.197.93:80",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "5.188.197.93:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "tcp://5.188.197.93:80",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
       "type": "encrypted",
       "args": {
         "format": "json",
