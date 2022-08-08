@@ -6917,7 +6917,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://tcvcs4.minobrnauki.gov.ru",
+              "path": "https://tcvcs4.minobrnauki.gov.ru/api/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -12609,6 +12609,66 @@
             "data": {
               "method": "GET",
               "path": "https://tconf.szgmu.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "tcvcs4.minobrnauki.gov.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.107.75.4:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://tcvcs4.minobrnauki.gov.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "tcvcs4.minobrnauki.gov.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.107.75.4:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://tcvcs4.minobrnauki.gov.ru/oauth2/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
