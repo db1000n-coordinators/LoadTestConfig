@@ -7090,6 +7090,36 @@
       "count": 3
     },
     {
+      "type": "packetgen",
+      "name": "trueconf.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "5.188.197.94:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://trueconf.ru/blog/wp-json/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 3
+    },
+    {
       "type": "encrypted",
       "args": {
         "format": "json",
