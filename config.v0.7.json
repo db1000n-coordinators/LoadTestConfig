@@ -4145,66 +4145,6 @@
     },
     {
       "type": "packetgen",
-      "name": "ibank2.sinko-bank.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "185.83.240.215:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://ibank2.sinko-bank.ru/web_banking/protected/welcome.jsf",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "ibank.sinko-bank.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "185.83.240.215:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://ibank.sinko-bank.ru/ibank2/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
       "name": "conf.corpmsp.ru",
       "args": {
         "dynamic": false,
@@ -6647,7 +6587,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://tconf.szgmu.ru",
+              "path": "https://tconf.szgmu.ru/api",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -12609,6 +12549,66 @@
             "data": {
               "method": "GET",
               "path": "https://mgblnr.org/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "tconf.szgmu.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "91.220.155.184:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://tconf.szgmu.ru/oauth2/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "tconf.szgmu.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "91.220.155.184:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://tconf.szgmu.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
