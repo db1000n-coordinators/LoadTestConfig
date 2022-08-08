@@ -2,63 +2,6 @@
   "jobs": [
     {
       "type": "packetgen",
-      "name": "phoenix-dnr.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "185.114.136.60:80"
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "http://phoenix-dnr.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "phoenix-dnr.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "185.114.136.60:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://phoenix-dnr.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
       "name": "ataman-23.ru",
       "args": {
         "dynamic": false,
@@ -12669,6 +12612,36 @@
             "data": {
               "method": "GET",
               "path": "https://tcvcs4.minobrnauki.gov.ru/oauth2/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "dnr-market.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "91.210.170.30:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://dnr-market.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
