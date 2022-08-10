@@ -12253,46 +12253,6 @@
       "count": 2
     },
     {
-      "type": "tcp",
-      "count": 2,
-      "name": "5.188.197.94",
-      "args": {
-        "address": "5.188.197.94:53",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    },
-    {
-      "type": "packetgen",
-      "name": "5.188.197.94:443",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "5.188.197.94:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "tcp://5.188.197.94:443",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
       "type": "packetgen",
       "name": "blog.trueconf.ru",
       "args": {
@@ -12468,83 +12428,6 @@
         }
       },
       "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "5.188.197.93:443",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "5.188.197.93:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "tcp://5.188.197.93:443",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "packetgen",
-      "name": "5.188.197.93:80",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "5.188.197.93:80"
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "tcp://5.188.197.93:80",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 2
-    },
-    {
-      "type": "tcp",
-      "count": 2,
-      "name": "46.29.118.140",
-      "args": {
-        "address": "46.29.118.140:22",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
-    },
-    {
-      "type": "tcp",
-      "count": 2,
-      "name": "85.202.226.194",
-      "args": {
-        "address": "85.202.226.194:1720",
-        "body": "{{ random_payload 10 }}",
-        "interval_ms": 1
-      }
     },
     {
       "type": "packetgen",
