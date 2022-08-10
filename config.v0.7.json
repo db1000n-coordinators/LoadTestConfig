@@ -12784,6 +12784,83 @@
       "count": 2
     },
     {
+      "type": "tcp",
+      "count": 2,
+      "name": "5.188.197.90",
+      "args": {
+        "address": "5.188.197.90:22",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    },
+    {
+      "type": "tcp",
+      "count": 2,
+      "name": "5.188.197.90",
+      "args": {
+        "address": "5.188.197.90:53",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    },
+    {
+      "type": "packetgen",
+      "name": "5.188.197.90:80",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "5.188.197.90:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "tcp://5.188.197.90:80",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "5.188.197.90:443",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "5.188.197.90:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "tcp://5.188.197.90:443",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
       "type": "encrypted",
       "args": {
         "format": "json",
