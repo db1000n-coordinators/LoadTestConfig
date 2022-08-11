@@ -5432,17 +5432,14 @@
     },
     {
       "type": "packetgen",
-      "name": "vcs.agprf.org",
+      "name": "vcs.agprf.org:8080",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "95.173.145.214:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
+            "address": "95.173.145.214:80"
           }
         },
         "packet": {
@@ -5450,7 +5447,34 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://vcs.agprf.org",
+              "path": "http://vcs.agprf.org:8080",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "type": "packetgen",
+      "name": "vcs.agprf.org:8080",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "95.173.145.214:8080"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://vcs.agprf.org:8080",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
