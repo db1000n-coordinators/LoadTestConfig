@@ -15299,6 +15299,36 @@
       "count": 1
     },
     {
+      "type": "packetgen",
+      "name": "my.webinar.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "37.130.193.7:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://my.webinar.ru/signin",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 1
+    },
+    {
       "type": "encrypted",
       "args": {
         "format": "json",
