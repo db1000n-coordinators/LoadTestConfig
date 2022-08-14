@@ -4979,6 +4979,63 @@
       "count": 5
     },
     {
+      "type": "packetgen",
+      "name": "ivavks.rosatom.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "93.187.73.199:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://ivavks.rosatom.ru/videoconference/service/login",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "ivavks.rosatom.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "93.187.73.199:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://ivavks.rosatom.ru/videoconference/service/login",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
       "type": "encrypted",
       "args": {
         "format": "json",
