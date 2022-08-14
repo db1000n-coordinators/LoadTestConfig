@@ -92,6 +92,66 @@
     },
     {
       "type": "packetgen",
+      "name": "mirbelogorya.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "194.190.30.202:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://mirbelogorya.ru/live.html",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "mirbelogorya.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "194.190.30.202:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://mirbelogorya.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
       "name": "volgograd24.tv",
       "args": {
         "dynamic": false,
@@ -422,14 +482,17 @@
     },
     {
       "type": "packetgen",
-      "name": "xn--80aaajllyo6c2h.xn--p1ai",
+      "name": "asn24.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "82.202.170.155:80"
+            "address": "80.87.203.176:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
           }
         },
         "packet": {
@@ -437,7 +500,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "http://xn--80aaajllyo6c2h.xn--p1ai/",
+              "path": "https://asn24.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -479,36 +542,6 @@
     },
     {
       "type": "packetgen",
-      "name": "istochnik.online",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "92.255.106.5:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://istochnik.online/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
       "name": "onlinevologda.ru",
       "args": {
         "dynamic": false,
@@ -539,14 +572,41 @@
     },
     {
       "type": "packetgen",
-      "name": "asn24.ru",
+      "name": "www.gtrk-vyatka.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "80.87.203.176:443",
+            "address": "178.141.249.250:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://www.gtrk-vyatka.ru/live/vyatka24/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "istochnik.online",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "92.255.106.5:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -557,7 +617,64 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://asn24.ru/",
+              "path": "https://istochnik.online/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "xn--80aaajllyo6c2h.xn--p1ai",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "82.202.170.155:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://xn--80aaajllyo6c2h.xn--p1ai/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "www.volga-tv.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "81.18.136.234:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://www.volga-tv.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -648,123 +765,6 @@
             "data": {
               "method": "GET",
               "path": "https://echosevera.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "mirbelogorya.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "194.190.30.202:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://mirbelogorya.ru/live.html",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "mirbelogorya.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "194.190.30.202:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://mirbelogorya.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "www.volga-tv.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "81.18.136.234:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://www.volga-tv.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "www.gtrk-vyatka.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "178.141.249.250:80"
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "http://www.gtrk-vyatka.ru/live/vyatka24/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -986,36 +986,6 @@
     },
     {
       "type": "packetgen",
-      "name": "cherkessk09.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "92.255.104.174:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://cherkessk09.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
       "name": "newsomsk.ru",
       "args": {
         "dynamic": false,
@@ -1035,6 +1005,36 @@
             "data": {
               "method": "GET",
               "path": "https://newsomsk.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "cherkessk09.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "92.255.104.174:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://cherkessk09.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -1076,33 +1076,6 @@
     },
     {
       "type": "packetgen",
-      "name": "noyabrsk24.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "213.59.224.191:80"
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "http://noyabrsk24.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
       "name": "ufanotes.ru",
       "args": {
         "dynamic": false,
@@ -1122,6 +1095,33 @@
             "data": {
               "method": "GET",
               "path": "https://ufanotes.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "noyabrsk24.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "213.59.224.191:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://noyabrsk24.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -1193,36 +1193,6 @@
     },
     {
       "type": "packetgen",
-      "name": "pln-pskov.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "193.9.22.20:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://pln-pskov.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
       "name": "trc33.ru",
       "args": {
         "dynamic": false,
@@ -1253,14 +1223,14 @@
     },
     {
       "type": "packetgen",
-      "name": "vestivrn.ru",
+      "name": "pln-pskov.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "188.225.87.192:443",
+            "address": "193.9.22.20:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -1271,7 +1241,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://vestivrn.ru/",
+              "path": "https://pln-pskov.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -1302,6 +1272,36 @@
             "data": {
               "method": "GET",
               "path": "https://tolknews.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "vestivrn.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "188.225.87.192:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://vestivrn.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -1493,216 +1493,6 @@
     },
     {
       "type": "packetgen",
-      "name": "nts-tv.com",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "185.253.34.38:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://nts-tv.com/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "yk24.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "151.236.80.39:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://yk24.ru/live/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "gordeevka-udarnik.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "80.87.203.20:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://gordeevka-udarnik.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "orelsreda.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "92.255.104.47:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://orelsreda.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "chepetsk.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "178.208.71.45:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://chepetsk.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "ngs.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "195.19.220.25:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://ngs.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "gazeta-n1.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "185.200.242.182:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://gazeta-n1.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
       "name": "region29.ru",
       "args": {
         "dynamic": false,
@@ -1793,6 +1583,216 @@
     },
     {
       "type": "packetgen",
+      "name": "nts-tv.com",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "185.253.34.38:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://nts-tv.com/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "chepetsk.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "178.208.71.45:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://chepetsk.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "gordeevka-udarnik.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "80.87.203.20:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://gordeevka-udarnik.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "ngs.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "195.19.220.25:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://ngs.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "yk24.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "151.236.80.39:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://yk24.ru/live/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "gazeta-n1.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "185.200.242.182:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://gazeta-n1.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "orelsreda.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "92.255.104.47:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://orelsreda.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
       "name": "zauralonline.ru",
       "args": {
         "dynamic": false,
@@ -1836,36 +1836,6 @@
             "data": {
               "method": "GET",
               "path": "http://www.myudm.ru/online-efir-udmurtia",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "tvkrasnodar.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "92.255.106.80:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://tvkrasnodar.ru/tv/pryamoy-efir/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -1926,6 +1896,36 @@
             "data": {
               "method": "GET",
               "path": "https://aisttv.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "tvkrasnodar.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "92.255.106.80:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://tvkrasnodar.ru/tv/pryamoy-efir/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -2267,36 +2267,6 @@
     },
     {
       "type": "packetgen",
-      "name": "penzanews.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "62.113.97.181:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://penzanews.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
       "name": "magadanpravda.ru",
       "args": {
         "dynamic": false,
@@ -2327,41 +2297,14 @@
     },
     {
       "type": "packetgen",
-      "name": "www.nnng.ru",
+      "name": "penzanews.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "77.222.56.37:80"
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "http://www.nnng.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "stavropolye.tv",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "92.255.104.60:443",
+            "address": "62.113.97.181:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -2372,7 +2315,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://stavropolye.tv/",
+              "path": "https://penzanews.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -2414,6 +2357,33 @@
     },
     {
       "type": "packetgen",
+      "name": "www.nnng.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "77.222.56.37:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://www.nnng.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
       "name": "riavrn.ru",
       "args": {
         "dynamic": false,
@@ -2433,6 +2403,36 @@
             "data": {
               "method": "GET",
               "path": "https://riavrn.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "stavropolye.tv",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "92.255.104.60:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://stavropolye.tv/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -2474,36 +2474,6 @@
     },
     {
       "type": "packetgen",
-      "name": "gtrk-volga.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "109.195.194.142:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://gtrk-volga.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
       "name": "tvsamara.ru",
       "args": {
         "dynamic": false,
@@ -2523,6 +2493,36 @@
             "data": {
               "method": "GET",
               "path": "https://tvsamara.ru/online/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "gtrk-volga.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "109.195.194.142:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://gtrk-volga.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -2583,6 +2583,36 @@
             "data": {
               "method": "GET",
               "path": "https://www.gtrkmariel.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "vesti-perm.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "188.128.114.121:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://vesti-perm.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -2681,36 +2711,6 @@
     },
     {
       "type": "packetgen",
-      "name": "vesti-perm.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "188.128.114.121:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://vesti-perm.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
       "name": "kuzbass-today.ru",
       "args": {
         "dynamic": false,
@@ -2741,36 +2741,6 @@
     },
     {
       "type": "packetgen",
-      "name": "bk55.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "193.233.15.244:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://bk55.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
       "name": "vesti-yamal.ru",
       "args": {
         "dynamic": false,
@@ -2790,6 +2760,36 @@
             "data": {
               "method": "GET",
               "path": "https://vesti-yamal.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "bk55.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "193.233.15.244:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://bk55.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -2975,14 +2975,41 @@
     },
     {
       "type": "packetgen",
-      "name": "vkurske.com",
+      "name": "www.selnow45.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "89.208.146.56:443",
+            "address": "91.220.137.200:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://www.selnow45.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "most.tv",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "194.58.122.214:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -2993,7 +3020,211 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://vkurske.com/",
+              "path": "https://most.tv/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "wolsk.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "92.255.104.25:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://wolsk.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "yocity12.com",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "185.200.242.160:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://yocity12.com/news/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "echonedeli.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "178.210.70.253:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://echonedeli.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "kirovpravda.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.255.97.150:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://kirovpravda.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "www.gtrkoka.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "80.87.203.88:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://www.gtrkoka.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "volsklife.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "92.255.106.28:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://volsklife.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "vesti-k.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "94.228.120.196:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://vesti-k.ru/online/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -3035,41 +3266,14 @@
     },
     {
       "type": "packetgen",
-      "name": "topspb.tv",
+      "name": "kaluga24.tv",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "158.160.0.44:80"
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "http://topspb.tv/live/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "nntv.media",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "185.165.123.36:443",
+            "address": "82.202.170.138:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -3080,7 +3284,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://nntv.media/volga24",
+              "path": "https://kaluga24.tv/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -3092,14 +3296,17 @@
     },
     {
       "type": "packetgen",
-      "name": "www.selnow45.ru",
+      "name": "vkurske.com",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "91.220.137.200:80"
+            "address": "89.208.146.56:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
           }
         },
         "packet": {
@@ -3107,7 +3314,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "http://www.selnow45.ru/",
+              "path": "https://vkurske.com/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -3119,14 +3326,17 @@
     },
     {
       "type": "packetgen",
-      "name": "www.pryamayarech.ru",
+      "name": "prufy.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "91.189.114.8:80"
+            "address": "85.119.149.231:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
           }
         },
         "packet": {
@@ -3134,7 +3344,247 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "http://www.pryamayarech.ru/",
+              "path": "https://prufy.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "penzavzglyad.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "185.253.34.151:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://penzavzglyad.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "www.bankfax.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "92.255.104.152:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://www.bankfax.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "trkmillet.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "212.110.158.70:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://trkmillet.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "vnru.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "193.233.15.90:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://vnru.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "obozvrn.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "193.233.15.157:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://obozvrn.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "portamur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "185.253.34.131:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://portamur.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "progorod33.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "5.188.131.51:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://progorod33.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "luki.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "91.213.196.10:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://luki.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -3236,426 +3686,6 @@
     },
     {
       "type": "packetgen",
-      "name": "vesti-k.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "94.228.120.196:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://vesti-k.ru/online/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "kaluga24.tv",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "82.202.170.138:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://kaluga24.tv/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "gazeta.a42.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "212.75.210.109:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://gazeta.a42.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "vnru.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "193.233.15.90:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://vnru.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "ranpress.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "82.202.170.145:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://ranpress.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "riastrela.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "82.202.172.38:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://riastrela.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "prufy.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "85.119.149.231:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://prufy.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "volsklife.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "92.255.106.28:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://volsklife.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "nvk-online.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "151.236.80.40:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://nvk-online.ru/new/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "www.mvestnik.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "185.253.34.49:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://www.mvestnik.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "wolsk.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "92.255.104.25:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://wolsk.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "obozvrn.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "193.233.15.157:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://obozvrn.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "penzavzglyad.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "185.253.34.151:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://penzavzglyad.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "portamur.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "185.253.34.131:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://portamur.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
       "name": "don24.ru",
       "args": {
         "dynamic": false,
@@ -3686,14 +3716,14 @@
     },
     {
       "type": "packetgen",
-      "name": "tomsk-time.ru",
+      "name": "tatarstan24.tv",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "176.120.29.54:80"
+            "address": "185.27.193.159:80"
           }
         },
         "packet": {
@@ -3701,7 +3731,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "http://tomsk-time.ru/programs/itogi-nedeli/11006-itogo.html",
+              "path": "http://tatarstan24.tv/news/rubric/list/programmy-telekanala",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -3713,14 +3743,41 @@
     },
     {
       "type": "packetgen",
-      "name": "lentv24.ru",
+      "name": "bryansk-news.net",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.28.225.173:443",
+            "address": "178.21.14.92:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://bryansk-news.net/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "nntv.media",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "185.165.123.36:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -3731,7 +3788,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://lentv24.ru/timetable",
+              "path": "https://nntv.media/volga24",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -3773,14 +3830,14 @@
     },
     {
       "type": "packetgen",
-      "name": "sev.tv",
+      "name": "gazeta.a42.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "82.202.224.195:443",
+            "address": "212.75.210.109:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -3791,7 +3848,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://sev.tv/",
+              "path": "https://gazeta.a42.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -3803,14 +3860,14 @@
     },
     {
       "type": "packetgen",
-      "name": "progorod33.ru",
+      "name": "ranpress.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "5.188.131.51:443",
+            "address": "82.202.170.145:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -3821,7 +3878,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://progorod33.ru/",
+              "path": "https://ranpress.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -3833,14 +3890,17 @@
     },
     {
       "type": "packetgen",
-      "name": "echonedeli.ru",
+      "name": "www.desnyanka.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "178.210.70.253:80"
+            "address": "188.127.241.86:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
           }
         },
         "packet": {
@@ -3848,7 +3908,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "http://echonedeli.ru/",
+              "path": "https://www.desnyanka.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -3860,17 +3920,14 @@
     },
     {
       "type": "packetgen",
-      "name": "luki.ru",
+      "name": "www.gazeta-navlya.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "91.213.196.10:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
+            "address": "37.140.192.245:80"
           }
         },
         "packet": {
@@ -3878,7 +3935,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://luki.ru/",
+              "path": "http://www.gazeta-navlya.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -3890,14 +3947,14 @@
     },
     {
       "type": "packetgen",
-      "name": "www.bankfax.ru",
+      "name": "rostovgazeta.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "92.255.104.152:443",
+            "address": "5.188.73.213:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -3908,7 +3965,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://www.bankfax.ru/",
+              "path": "https://rostovgazeta.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -3920,14 +3977,14 @@
     },
     {
       "type": "packetgen",
-      "name": "echokirova.ru",
+      "name": "riastrela.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "92.255.104.224:443",
+            "address": "82.202.172.38:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -3938,7 +3995,244 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://echokirova.ru/",
+              "path": "https://riastrela.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "volgograd-trv.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "80.87.203.23:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://volgograd-trv.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "otstv.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "185.200.242.234:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://otstv.ru/live/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "www.province-pskov.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "195.24.68.27:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://www.province-pskov.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "vektor-tv.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "91.242.171.212:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://vektor-tv.ru/tv/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "vesti92.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "185.114.246.82:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://vesti92.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "vn.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "78.40.218.109:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://vn.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "gubdaily.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "95.213.146.45:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://gubdaily.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "nvk-online.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "151.236.80.40:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://nvk-online.ru/new/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -4040,41 +4334,14 @@
     },
     {
       "type": "packetgen",
-      "name": "www.cheltv.ru",
+      "name": "www.ap22.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "185.41.162.125:80"
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "http://www.cheltv.ru/rossiya-24-yuzhnyj-ural-onlajn-translyaciya/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "yocity12.com",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "185.200.242.160:443",
+            "address": "82.202.172.15:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -4085,7 +4352,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://yocity12.com/news/",
+              "path": "https://www.ap22.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -4097,14 +4364,41 @@
     },
     {
       "type": "packetgen",
-      "name": "volgograd-trv.ru",
+      "name": "topspb.tv",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "80.87.203.23:443",
+            "address": "158.160.0.44:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://topspb.tv/live/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "lentv24.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.28.225.173:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -4115,7 +4409,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://volgograd-trv.ru/",
+              "path": "https://lentv24.ru/timetable",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -4127,14 +4421,14 @@
     },
     {
       "type": "packetgen",
-      "name": "kirovpravda.ru",
+      "name": "echokirova.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "46.255.97.150:443",
+            "address": "92.255.104.224:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -4145,124 +4439,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://kirovpravda.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "otstv.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "185.200.242.234:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://otstv.ru/live/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "vektor-tv.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "91.242.171.212:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://vektor-tv.ru/tv/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "tatarstan24.tv",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "185.27.193.159:80"
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "http://tatarstan24.tv/news/rubric/list/programmy-telekanala",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "www.desnyanka.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "188.127.241.86:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://www.desnyanka.ru/",
+              "path": "https://echokirova.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -4304,14 +4481,14 @@
     },
     {
       "type": "packetgen",
-      "name": "www.gazeta-navlya.ru",
+      "name": "www.pryamayarech.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "37.140.192.245:80"
+            "address": "91.189.114.8:80"
           }
         },
         "packet": {
@@ -4319,7 +4496,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "http://www.gazeta-navlya.ru/",
+              "path": "http://www.pryamayarech.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -4331,14 +4508,14 @@
     },
     {
       "type": "packetgen",
-      "name": "vesti92.ru",
+      "name": "sev.tv",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "185.114.246.82:443",
+            "address": "82.202.224.195:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -4349,7 +4526,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://vesti92.ru/",
+              "path": "https://sev.tv/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -4361,14 +4538,41 @@
     },
     {
       "type": "packetgen",
-      "name": "most.tv",
+      "name": "www.cheltv.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "194.58.122.214:443",
+            "address": "185.41.162.125:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://www.cheltv.ru/rossiya-24-yuzhnyj-ural-onlajn-translyaciya/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
+      "name": "www.mvestnik.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "185.253.34.49:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -4379,7 +4583,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://most.tv/",
+              "path": "https://www.mvestnik.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -4391,14 +4595,14 @@
     },
     {
       "type": "packetgen",
-      "name": "www.gtrkoka.ru",
+      "name": "tomsk-time.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "80.87.203.88:80"
+            "address": "176.120.29.54:80"
           }
         },
         "packet": {
@@ -4406,211 +4610,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "http://www.gtrkoka.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "trkmillet.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "212.110.158.70:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://trkmillet.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "www.ap22.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "82.202.172.15:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://www.ap22.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "bryansk-news.net",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "178.21.14.92:80"
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "http://bryansk-news.net/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "vn.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "78.40.218.109:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://vn.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "www.province-pskov.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "195.24.68.27:80"
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "http://www.province-pskov.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "gubdaily.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "95.213.146.45:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://gubdaily.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 5
-    },
-    {
-      "type": "packetgen",
-      "name": "rostovgazeta.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "5.188.73.213:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://rostovgazeta.ru/",
+              "path": "http://tomsk-time.ru/programs/itogi-nedeli/11006-itogo.html",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
