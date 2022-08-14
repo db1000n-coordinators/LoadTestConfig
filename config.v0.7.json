@@ -4919,6 +4919,36 @@
       "count": 5
     },
     {
+      "type": "packetgen",
+      "name": "dvinatoday.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "94.228.116.253:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://dvinatoday.ru/search/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
       "type": "encrypted",
       "args": {
         "format": "json",
