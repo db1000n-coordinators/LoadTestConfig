@@ -122,6 +122,36 @@
     },
     {
       "type": "packetgen",
+      "name": "www.videomost.com",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "212.24.35.118:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://www.videomost.com/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 7
+    },
+    {
+      "type": "packetgen",
       "name": "go.videomost.com",
       "args": {
         "dynamic": false,
@@ -3189,36 +3219,6 @@
             "data": {
               "method": "GET",
               "path": "https://smolensk.spravedlivo.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 7
-    },
-    {
-      "type": "packetgen",
-      "name": "otstv.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "185.200.242.234:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://otstv.ru/live/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
