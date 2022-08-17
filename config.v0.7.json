@@ -483,36 +483,6 @@
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "185.178.208.7:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://cbr.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 42
-    },
-    {
-      "type": "packetgen",
-      "name": "cbr.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
             "address": "185.178.208.7:80"
           }
         },
@@ -552,6 +522,36 @@
             "data": {
               "method": "GET",
               "path": "https://cbr.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 42
+    },
+    {
+      "type": "packetgen",
+      "name": "cbr.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "185.178.208.7:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://cbr.ru/Queries/AjaxDataSource/80028",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
