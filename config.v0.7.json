@@ -32,36 +32,6 @@
     },
     {
       "type": "packetgen",
-      "name": "bankrmp.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "85.193.87.114:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://bankrmp.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 35
-    },
-    {
-      "type": "packetgen",
       "name": "www.nkbank.ru",
       "args": {
         "dynamic": false,
@@ -81,6 +51,36 @@
             "data": {
               "method": "GET",
               "path": "https://www.nkbank.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 35
+    },
+    {
+      "type": "packetgen",
+      "name": "bankrmp.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "85.193.87.114:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://bankrmp.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -302,36 +302,6 @@
     },
     {
       "type": "packetgen",
-      "name": "cicd.unistream.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "212.24.57.169:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://cicd.unistream.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 35
-    },
-    {
-      "type": "packetgen",
       "name": "demo-board.unistream.ru",
       "args": {
         "dynamic": false,
@@ -362,14 +332,14 @@
     },
     {
       "type": "packetgen",
-      "name": "form.unistream.ru",
+      "name": "cicd.unistream.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "217.23.159.66:443",
+            "address": "212.24.57.169:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -380,7 +350,37 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://form.unistream.ru/",
+              "path": "https://cicd.unistream.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 35
+    },
+    {
+      "type": "packetgen",
+      "name": "acquirer-service-dev.unistream.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "212.24.40.76:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://acquirer-service-dev.unistream.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -422,6 +422,36 @@
     },
     {
       "type": "packetgen",
+      "name": "form.unistream.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "217.23.159.66:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://form.unistream.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 35
+    },
+    {
+      "type": "packetgen",
       "name": "servicelog.unistream.ru",
       "args": {
         "dynamic": false,
@@ -441,36 +471,6 @@
             "data": {
               "method": "GET",
               "path": "https://servicelog.unistream.ru/",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 35
-    },
-    {
-      "type": "packetgen",
-      "name": "acquirer-service-dev.unistream.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "212.24.40.76:443",
-            "tls_config": {
-              "insecure_skip_verify": true
-            }
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "https://acquirer-service-dev.unistream.ru/",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
