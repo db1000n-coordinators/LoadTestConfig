@@ -1659,6 +1659,36 @@
       "count": 13
     },
     {
+      "type": "packetgen",
+      "name": "195.93.246.202:443",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "195.93.246.202:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "tcp://195.93.246.202:443",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 13
+    },
+    {
       "type": "encrypted",
       "args": {
         "format": "json",
