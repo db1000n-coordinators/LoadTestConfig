@@ -1632,6 +1632,33 @@
       "count": 13
     },
     {
+      "type": "packetgen",
+      "name": "go.tass.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "51.250.2.101:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://go.tass.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 13
+    },
+    {
       "type": "encrypted",
       "args": {
         "format": "json",
