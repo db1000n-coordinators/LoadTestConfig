@@ -2,6 +2,36 @@
   "jobs": [
     {
       "type": "packetgen",
+      "name": "46.17.200.205",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.200.205:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://46.17.200.205",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 267
+    },
+    {
+      "type": "packetgen",
       "name": "express.kontur.ru",
       "args": {
         "dynamic": false,
@@ -28,7 +58,37 @@
           }
         }
       },
-      "count": 800
+      "count": 267
+    },
+    {
+      "type": "packetgen",
+      "name": "www.esphere.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "185.163.158.98:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://www.esphere.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 267
     },
     {
       "type": "encrypted",
