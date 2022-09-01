@@ -4268,6 +4268,33 @@
     },
     {
       "type": "packetgen",
+      "name": "diadoc-api2.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.207.19:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://diadoc-api2.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "type": "packetgen",
       "name": "kontur.ru",
       "args": {
         "dynamic": false,
