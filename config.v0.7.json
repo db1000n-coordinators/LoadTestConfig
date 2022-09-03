@@ -25,7 +25,7 @@
           }
         }
       },
-      "count": 89
+      "count": 73
     },
     {
       "type": "packetgen",
@@ -52,7 +52,7 @@
           }
         }
       },
-      "count": 89
+      "count": 73
     },
     {
       "type": "packetgen",
@@ -79,7 +79,7 @@
           }
         }
       },
-      "count": 89
+      "count": 73
     },
     {
       "type": "packetgen",
@@ -109,7 +109,7 @@
           }
         }
       },
-      "count": 89
+      "count": 73
     },
     {
       "type": "packetgen",
@@ -139,7 +139,7 @@
           }
         }
       },
-      "count": 89
+      "count": 73
     },
     {
       "type": "packetgen",
@@ -169,7 +169,7 @@
           }
         }
       },
-      "count": 89
+      "count": 73
     },
     {
       "type": "packetgen",
@@ -196,7 +196,7 @@
           }
         }
       },
-      "count": 89
+      "count": 73
     },
     {
       "type": "packetgen",
@@ -223,7 +223,7 @@
           }
         }
       },
-      "count": 89
+      "count": 73
     },
     {
       "type": "packetgen",
@@ -253,7 +253,67 @@
           }
         }
       },
-      "count": 89
+      "count": 73
+    },
+    {
+      "type": "packetgen",
+      "name": "www.rambler.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "81.19.82.98:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://www.rambler.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 73
+    },
+    {
+      "type": "packetgen",
+      "name": "secretmag.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "81.19.72.12:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://secretmag.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 73
     },
     {
       "type": "encrypted",
