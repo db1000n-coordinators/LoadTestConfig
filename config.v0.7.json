@@ -2,14 +2,14 @@
   "jobs": [
     {
       "type": "packetgen",
-      "name": "dev.mk.ru",
+      "name": "help.kontur.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "185.3.143.81:80"
+            "address": "185.161.180.20:80"
           }
         },
         "packet": {
@@ -17,7 +17,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "http://dev.mk.ru/",
+              "path": "http://help.kontur.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -25,72 +25,18 @@
           }
         }
       },
-      "count": 50
+      "count": 15
     },
     {
       "type": "packetgen",
-      "name": "backup.mk.ru",
+      "name": "help.kontur.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "92.242.37.195:80"
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "http://backup.mk.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 50
-    },
-    {
-      "type": "packetgen",
-      "name": "static.mk.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "185.3.143.71:80"
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "http://static.mk.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 50
-    },
-    {
-      "type": "packetgen",
-      "name": "static.mk.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "185.3.143.71:443",
+            "address": "185.161.180.20:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -101,7 +47,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://static.mk.ru",
+              "path": "https://help.kontur.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -109,18 +55,18 @@
           }
         }
       },
-      "count": 50
+      "count": 15
     },
     {
       "type": "packetgen",
-      "name": "api.mk.ru",
+      "name": "diadoc-api-test.kontur.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "185.3.143.71:443",
+            "address": "46.17.200.237:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -131,7 +77,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://api.mk.ru/search",
+              "path": "https://diadoc-api-test.kontur.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -139,7 +85,241 @@
           }
         }
       },
-      "count": 50
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "parc.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.200.242:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://parc.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "diadoc4google.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.200.239:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://diadoc4google.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "marking-api.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.200.241:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://marking-api.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "ex-test.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.200.244:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://ex-test.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "diadoc-widget.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.200.242:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://diadoc-widget.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "diadoc-api3.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.200.241:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://diadoc-api3.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "diadoc4google.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.200.239:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://diadoc4google.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "ndb.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.200.244:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://ndb.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
     },
     {
       "type": "packetgen",
@@ -169,18 +349,18 @@
           }
         }
       },
-      "count": 50
+      "count": 15
     },
     {
       "type": "packetgen",
-      "name": "bank.elba.kontur.ru",
+      "name": "diadoc-roaming.kontur.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "46.17.203.41:80"
+            "address": "46.17.200.238:80"
           }
         },
         "packet": {
@@ -188,7 +368,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "http://bank.elba.kontur.ru",
+              "path": "http://diadoc-roaming.kontur.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -196,45 +376,18 @@
           }
         }
       },
-      "count": 50
+      "count": 15
     },
     {
       "type": "packetgen",
-      "name": "www.gazeta.ru",
+      "name": "diadoc-roaming.kontur.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "81.19.72.0:80"
-          }
-        },
-        "packet": {
-          "payload": {
-            "type": "http",
-            "data": {
-              "method": "GET",
-              "path": "http://www.gazeta.ru",
-              "headers": {
-                "User-Agent": "{{ random_user_agent }}"
-              }
-            }
-          }
-        }
-      },
-      "count": 50
-    },
-    {
-      "type": "packetgen",
-      "name": "www.gazeta.ru",
-      "args": {
-        "dynamic": false,
-        "connection": {
-          "type": "net",
-          "args": {
-            "protocol": "tcp",
-            "address": "81.19.72.0:443",
+            "address": "46.17.200.238:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -245,7 +398,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://www.gazeta.ru",
+              "path": "https://diadoc-roaming.kontur.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -253,18 +406,18 @@
           }
         }
       },
-      "count": 50
+      "count": 15
     },
     {
       "type": "packetgen",
-      "name": "www.rambler.ru",
+      "name": "rs.kontur.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "81.19.82.98:443",
+            "address": "46.17.201.198:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -275,7 +428,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://www.rambler.ru",
+              "path": "https://rs.kontur.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -283,18 +436,45 @@
           }
         }
       },
-      "count": 50
+      "count": 15
     },
     {
       "type": "packetgen",
-      "name": "secretmag.ru",
+      "name": "rs.kontur.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "81.19.72.12:443",
+            "address": "46.17.201.198:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://rs.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "order.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.201.199:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -305,7 +485,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://secretmag.ru",
+              "path": "https://order.kontur.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -313,18 +493,99 @@
           }
         }
       },
-      "count": 50
+      "count": 15
     },
     {
       "type": "packetgen",
-      "name": "motor.ru",
+      "name": "sup.kontur.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "81.19.72.29:443",
+            "address": "46.17.201.199:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://sup.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "opros.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.203.9:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://opros.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "d42.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.203.39:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://d42.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "opros.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.203.9:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -335,7 +596,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://motor.ru",
+              "path": "https://opros.kontur.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -343,18 +604,99 @@
           }
         }
       },
-      "count": 50
+      "count": 15
     },
     {
       "type": "packetgen",
-      "name": "motor.ru",
+      "name": "postavki.kontur.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "81.19.72.28:443",
+            "address": "46.17.203.11:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://postavki.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "focus-lite.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.203.10:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://focus-lite.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "market-tips.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.203.34:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://market-tips.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "postavki.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.203.11:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -365,7 +707,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://motor.ru",
+              "path": "https://postavki.kontur.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -373,18 +715,18 @@
           }
         }
       },
-      "count": 50
+      "count": 15
     },
     {
       "type": "packetgen",
-      "name": "motor.ru",
+      "name": "d42.kontur.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "81.19.72.30:443",
+            "address": "46.17.203.39:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -395,7 +737,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://motor.ru",
+              "path": "https://d42.kontur.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -403,18 +745,72 @@
           }
         }
       },
-      "count": 50
+      "count": 15
     },
     {
       "type": "packetgen",
-      "name": "motor.ru",
+      "name": "install.kontur.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "81.19.72.31:443",
+            "address": "46.17.203.51:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://install.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "www.zakupki.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.203.73:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://www.zakupki.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "konturconference.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.203.72:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -425,7 +821,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://motor.ru",
+              "path": "https://konturconference.kontur.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -433,18 +829,18 @@
           }
         }
       },
-      "count": 50
+      "count": 15
     },
     {
       "type": "packetgen",
-      "name": "lenta.ru",
+      "name": "sc.kontur.ru",
       "args": {
         "dynamic": false,
         "connection": {
           "type": "net",
           "args": {
             "protocol": "tcp",
-            "address": "81.19.72.32:443",
+            "address": "46.17.203.102:443",
             "tls_config": {
               "insecure_skip_verify": true
             }
@@ -455,7 +851,7 @@
             "type": "http",
             "data": {
               "method": "GET",
-              "path": "https://lenta.ru",
+              "path": "https://sc.kontur.ru",
               "headers": {
                 "User-Agent": "{{ random_user_agent }}"
               }
@@ -463,7 +859,736 @@
           }
         }
       },
-      "count": 50
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "widget-product.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.203.102:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://widget-product.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "speechcore.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.203.90:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://speechcore.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "medi.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.203.142:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://medi.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "mail.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.203.130:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://mail.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "prod-cloud.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.203.206:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://prod-cloud.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "portal-api.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.203.203:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://portal-api.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "portal-api.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.203.203:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://portal-api.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "dev-cloud.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.203.231:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://dev-cloud.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "identity-gost.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.203.208:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://identity-gost.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "ssl.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.203.216:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://ssl.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "kassy-obsolete.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.203.245:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://kassy-obsolete.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "ceph-sd1.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.203.243:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://ceph-sd1.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "diadoc-connector-api-gost.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.203.208:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://diadoc-connector-api-gost.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "cash-ntt.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.204.250:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://cash-ntt.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "p.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.204.242:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://p.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "check.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.204.246:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://check.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "fms.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.204.236:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://fms.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "express.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.204.228:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://express.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "fms.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.204.236:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://fms.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "express.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.204.228:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://express.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "diadoc-api2.kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.207.19:80"
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "http://diadoc-api2.kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "kontur.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "46.17.203.102:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://kontur.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "www.esphere.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "185.163.158.98:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://www.esphere.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "is.astral.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "31.31.194.100:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://is.astral.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
+    },
+    {
+      "type": "packetgen",
+      "name": "sso.sbis.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "91.232.93.70:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://sso.sbis.ru",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 15
     },
     {
       "type": "encrypted",
