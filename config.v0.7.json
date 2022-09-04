@@ -1621,6 +1621,36 @@
       "count": 14
     },
     {
+      "type": "packetgen",
+      "name": "markirovka.crpt.ru",
+      "args": {
+        "dynamic": false,
+        "connection": {
+          "type": "net",
+          "args": {
+            "protocol": "tcp",
+            "address": "91.230.251.193:443",
+            "tls_config": {
+              "insecure_skip_verify": true
+            }
+          }
+        },
+        "packet": {
+          "payload": {
+            "type": "http",
+            "data": {
+              "method": "GET",
+              "path": "https://markirovka.crpt.ru/",
+              "headers": {
+                "User-Agent": "{{ random_user_agent }}"
+              }
+            }
+          }
+        }
+      },
+      "count": 14
+    },
+    {
       "type": "encrypted",
       "args": {
         "format": "json",
